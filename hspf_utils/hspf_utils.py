@@ -320,15 +320,22 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
             maprat = mapr
             sumop = test[0]
 
-        te = 0.0
+        te = [0.0]
         for sterm, operation in op:
-            te = (
-                te
-                + pd.np.array(
-                    [nsum[(*i, sterm)] for i in sorted(namelist) if i[0] == operation]
+            try:
+                te = (
+                    te
+                    + pd.np.array(
+                        [
+                            nsum[(*i, sterm)]
+                            for i in sorted(namelist)
+                            if i[0] == operation
+                        ]
+                    )
+                    * maprat[operation]
                 )
-                * maprat[operation]
-            )
+            except KeyError:
+                pass
         if uci is None:
             te = (
                 [term]
