@@ -5,6 +5,7 @@ import sys
 import re
 import warnings
 
+import numpy as np
 import pandas as pd
 
 from mando import command
@@ -59,6 +60,11 @@ docstrings = {
         A string prepended to the PERLND code, which would allow being
         run on different models and collected into one dataset by
         creating a unique ID.""",
+    "index_delimiter": r"""index_delimiter
+        [optional, defaults to '-']
+
+        Useful to separate the `index_prefix` from the PERLND/IMPLND number.
+        """,
 }
 
 
@@ -206,7 +212,7 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
     setl = [item for sublist in setl for item in sublist]
     for lue in ["PERLND", "IMPLND"]:
         for wbterm in [i[0] for i in setl if i[0]]:
-            for lc in list(range(1, 21)):
+            for lc in list(range(1, modulus + 1)):
                 try:
                     subset = pdf.loc[
                         :, (lue, slice(None), wbterm, lc, slice(None), slice(None))
@@ -214,10 +220,14 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
                 except KeyError:
                     continue
 
-                if pd.np.any(subset < 0):
+                if np.any(subset < 0):
+                    negs = subset.loc[
+                        subset < 0,
+                        (lue, slice(None), wbterm, lc, slice(None), slice(None)),
+                    ]["number"]
                     warnings.warn(
                         f"There is a negative value for {lue}, {wbterm}, "
-                        f"with land cover {lc}."
+                        f"with land cover {lc} and {lue} numbers {negs}."
                     )
 
                 if uci is None:
@@ -264,12 +274,12 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
     if uci is not None:
         pareas = [areas[i] for i in sorted(areas) if i[0] == "PERLND"]
         iareas = [areas[i] for i in sorted(areas) if i[0] == "IMPLND"]
-        ipratio = pd.np.array(iareas) / (pd.np.array(pareas) + pd.np.array(iareas))
+        ipratio = np.array(iareas) / (np.array(pareas) + np.array(iareas))
         sumareas = sum(pareas) + sum(iareas)
 
         percent_areas = {}
-        percent_areas["PERLND"] = pd.np.array(pareas) / sumareas * 100
-        percent_areas["IMPLND"] = pd.np.array(iareas) / sumareas * 100
+        percent_areas["PERLND"] = np.array(pareas) / sumareas * 100
+        percent_areas["IMPLND"] = np.array(iareas) / sumareas * 100
         percent_areas["COMBINED"] = percent_areas["PERLND"] + percent_areas["IMPLND"]
 
         printlist.append(["PERVIOUS"])
@@ -325,7 +335,7 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
             try:
                 te = (
                     te
-                    + pd.np.array(
+                    + np.array(
                         [
                             nsum[(*i, sterm)]
                             for i in sorted(namelist)
@@ -563,7 +573,7 @@ def mapping(hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix=""):
     mindex = pd.MultiIndex.from_tuples(mindex, names=["op", "number", "wbt"])
     pdf.columns = mindex
 
-    if pd.np.any(pdf < 0):
+    if np.any(pdf < 0):
         warnings.warn(f"There is a negative value.")
 
     pdf = pdf.mean(axis="index").to_frame()
@@ -600,13 +610,16 @@ def mapping(hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix=""):
 
 @command(doctype="numpy")
 @tsutils.doc(docstrings)
-def parameters(uci, index_prefix="", modulus=20, tablefmt="csv_nos"):
+def parameters(
+    uci, index_prefix="", index_delimiter="-", modulus=20, tablefmt="csv_nos"
+):
     """Develops a table of parameter values.
 
     Parameters
     ----------
     {uci}
     {index_prefix}
+    {index_delimiter}
     {modulus}
     {tablefmt}
 
@@ -688,7 +701,6 @@ def parameters(uci, index_prefix="", modulus=20, tablefmt="csv_nos"):
             ]
         )
 
-    param_values = defaults.copy()
     rngdata = []
     order = []
     for blk in blocklist:
@@ -711,13 +723,17 @@ def parameters(uci, index_prefix="", modulus=20, tablefmt="csv_nos"):
                 for index, par in enumerate(params[blk]):
                     if tilde:
                         rngdata.append(
-                            [index_prefix + str(rng), par, supfname[tilde][index]]
+                            [
+                                index_prefix + index_delimiter + str(rng),
+                                par,
+                                supfname[tilde][index],
+                            ]
                         )
                     else:
                         start = (index + 1) * 10
                         rngdata.append(
                             [
-                                index_prefix + str(rng),
+                                index_prefix + index_delimiter + str(rng),
                                 par,
                                 float(line[start : start + 10]),
                             ]
