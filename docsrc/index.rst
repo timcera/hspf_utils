@@ -9,7 +9,7 @@ This is the home page for hspf_utils.  hspf_utils is a command line program and
 Python library of utilities to work with the Hydrological Simulation Program
 - FORTRAN (HSPF).
 
-hspf_utils should work with Python 2.7+ and 3.0+.
+hspf_utils should work with Python 3.6+.
 
 Table of Contents
 -----------------
