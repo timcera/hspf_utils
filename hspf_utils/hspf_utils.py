@@ -74,6 +74,19 @@ def about():
     tsutils.about(__name__)
 
 
+def _give_negative_warning(df):
+    testpdf = df < 0
+    if testpdf.any(None):
+        warnings.warn(
+            f"""
+This may be OK, but FYI there are negative values at:
+
+{df.loc[testpdf.any(1), testpdf.any(0)]}
+
+                                            """
+        )
+
+
 def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
 
     from hspfbintoolbox.hspfbintoolbox import extract
@@ -220,15 +233,7 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
                 except KeyError:
                     continue
 
-                if np.any(subset < 0):
-                    negs = subset.loc[
-                        subset < 0,
-                        (lue, slice(None), wbterm, lc, slice(None), slice(None)),
-                    ]["number"]
-                    warnings.warn(
-                        f"There is a negative value for {lue}, {wbterm}, "
-                        f"with land cover {lc} and {lue} numbers {negs}."
-                    )
+                _give_negative_warning(subset)
 
                 if uci is None:
                     if subset.empty is True:
@@ -573,8 +578,7 @@ def mapping(hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix=""):
     mindex = pd.MultiIndex.from_tuples(mindex, names=["op", "number", "wbt"])
     pdf.columns = mindex
 
-    if np.any(pdf < 0):
-        warnings.warn(f"There is a negative value.")
+    _give_negative_warning(pdf)
 
     pdf = pdf.mean(axis="index").to_frame()
 
@@ -611,7 +615,7 @@ def mapping(hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix=""):
 @command(doctype="numpy")
 @tsutils.doc(docstrings)
 def parameters(
-    uci, index_prefix="", index_delimiter="-", modulus=20, tablefmt="csv_nos"
+    uci, index_prefix="", index_delimiter="", modulus=20, tablefmt="csv_nos"
 ):
     """Develops a table of parameter values.
 
@@ -744,14 +748,22 @@ def parameters(
     df = df.pivot(index="lue", columns="term")
     df.columns = [i[1] for i in df.columns]
     df = df.loc[:, order]
-    df = df.reindex(
-        index=df.index.to_series()
-        .str.rsplit("_")
-        .str[-1]
-        .astype(int)
-        .sort_values()
-        .index
-    )
+    if index_prefix:
+        spliton = index_prefix[-1]
+    if index_delimiter:
+        spliton = index_delimiter
+    if index_prefix or index_delimiter:
+        df = df.reindex(
+            index=df.index.to_series()
+            .str.rsplit(spliton)
+            .str[-1]
+            .astype(int)
+            .sort_values()
+            .index
+        )
+    else:
+        df.index = df.index.astype(int)
+        df = df.sort_index()
 
     if tablefmt in ["csv", "tsv", "csv_nos", "tsv_nos"]:
         sep = {"csv": ",", "tsv": "\t", "csv_nos": ",", "tsv_nos": "\t"}[tablefmt]
