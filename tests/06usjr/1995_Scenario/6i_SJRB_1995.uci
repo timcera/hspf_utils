@@ -1,0 +1,2097 @@
+RUN
+
+GLOBAL
+  PUZZLE LAKE UNIT TRIBUTARY MODEL FOR SJRB
+  START       1995/01/01 00:00  END    2016/12/31 24:00
+  RUN INTERP OUTPT LEVELS    4    0
+  RESUME     0 RUN     1                          UNITS    1
+END GLOBAL
+
+FILES
+<FILE>  <UN#>***<----FILE NAME------------------------------------------------->
+MESSU      24   6i.ech
+WDM1       25   sjrb_met.wdm
+WDM2       26   sjrb_usj.wdm
+           80   6i_land.out
+           82   6i_reach.out
+BINO       81   6i_land.hbn
+BINO       83   6i_reach.hbn
+PESTSU     41   6i_hspf.sup
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** 6I REACH 1      Savage Creek
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** 6I REACH 2      South Lake
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** 6I REACH 3      South Lake Outlet
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      RCHRES       3
+
+*** 6I REACH 4      Clark Lake Outlet
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** 6I REACH 5      Christmas Creek
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** 6I REACH 6      Buscombe Creek
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+*** 6I REACH 7      Jackson Ck Div
+      PERLND     121
+      PERLND     122
+      PERLND     123
+      PERLND     124
+      PERLND     125
+      PERLND     126
+      PERLND     127
+      PERLND     128
+      PERLND     129
+      PERLND     130
+      PERLND     131
+      PERLND     132
+      PERLND     133
+      IMPLND     121
+      IMPLND     122
+      IMPLND     123
+      IMPLND     124
+      PERLND     135
+      RCHRES       7
+
+*** 6I REACH 8      Unnamed Swamp
+      PERLND     141
+      PERLND     142
+      PERLND     143
+      PERLND     144
+      PERLND     145
+      PERLND     146
+      PERLND     147
+      PERLND     148
+      PERLND     149
+      PERLND     150
+      PERLND     151
+      PERLND     152
+      PERLND     153
+      IMPLND     141
+      IMPLND     142
+      IMPLND     143
+      IMPLND     144
+      PERLND     155
+      RCHRES       8
+
+*** 6I REACH 9      Cabbage Slough
+      PERLND     161
+      PERLND     162
+      PERLND     163
+      PERLND     164
+      PERLND     165
+      PERLND     166
+      PERLND     167
+      PERLND     168
+      PERLND     169
+      PERLND     170
+      PERLND     171
+      PERLND     172
+      PERLND     173
+      IMPLND     161
+      IMPLND     162
+      IMPLND     163
+      IMPLND     164
+      PERLND     175
+      RCHRES       9
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+  001  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>                       Print-flags                           BIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 6I REACH 1
+    1   19Savage Creek                      1    1   80    0   81    0
+*** 6I REACH 2
+   21   39South Lake                        1    1   80    0   81    0
+*** 6I REACH 3
+   41   59South Lake Outlet                 1    1   80    0   81    0
+*** 6I REACH 4
+   61   79Clark Lake Outlet                 1    1   80    0   81    0
+*** 6I REACH 5
+   81   99Christmas Creek                   1    1   80    0   81    0
+*** 6I REACH 6
+  101  119Buscombe Creek                    1    1   80    0   81    0
+*** 6I REACH 7
+  121  139Jackson Ck Div                    1    1   80    0   81    0
+*** 6I REACH 8
+  141  159Unnamed Swamp                     1    1   80    0   81    0
+*** 6I REACH 9
+  161  179Cabbage Slough                    1    1   80    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 6I REACH 1 - Savage Creek
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6I REACH 2 - South Lake
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6I REACH 3 - South Lake Outlet
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6I REACH 4 - Clark Lake Outlet
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6I REACH 5 - Christmas Creek
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6I REACH 6 - Buscombe Creek
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6I REACH 7 - Jackson Ck Div
+  121  131    0    0    1    0    0    0    0    0    0    1    0    0    0
+  132  133    0    3    1    0    0    0    0    0    0    1    0    0    0
+  135         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6I REACH 8 - Unnamed Swamp
+  141  151    0    0    1    0    0    0    0    0    0    1    0    0    0
+  152  153    0    3    1    0    0    0    0    0    0    1    0    0    0
+  155         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6I REACH 9 - Cabbage Slough
+  161  171    0    0    1    0    0    0    0    0    0    1    0    0    0
+  172  173    0    3    1    0    0    0    0    0    0    1    0    0    0
+  175         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+  PWAT-PARM2
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   1
+*** 6I REACH 1 - Savage Creek          Location  619
+    1     ~111161901~
+    2     ~111161902~
+    3     ~111161903~
+    4     ~111161904~
+    5     ~111161905~
+    6     ~111161906~
+    7     ~111161907~
+    8     ~111161908~
+    9     ~111161909~
+   10     ~111161910~
+   11     ~111161911~
+   12     ~111161912~
+   13     ~111161913~
+   15     ~111161913~
+*** 6I REACH 2 - South Lake            Location  619
+   21     ~111161901~
+   22     ~111161902~
+   23     ~111161903~
+   24     ~111161904~
+   25     ~111161905~
+   26     ~111161906~
+   27     ~111161907~
+   28     ~111161908~
+   29     ~111161909~
+   30     ~111161910~
+   31     ~111161911~
+   32     ~111161912~
+   33     ~111161913~
+   35     ~111161913~
+*** 6I REACH 3 - South Lake Outlet     Location  619
+   41     ~111161901~
+   42     ~111161902~
+   43     ~111161903~
+   44     ~111161904~
+   45     ~111161905~
+   46     ~111161906~
+   47     ~111161907~
+   48     ~111161908~
+   49     ~111161909~
+   50     ~111161910~
+   51     ~111161911~
+   52     ~111161912~
+   53     ~111161913~
+   55     ~111161913~
+*** 6I REACH 4 - Clark Lake Outlet     Location  619
+   61     ~111161901~
+   62     ~111161902~
+   63     ~111161903~
+   64     ~111161904~
+   65     ~111161905~
+   66     ~111161906~
+   67     ~111161907~
+   68     ~111161908~
+   69     ~111161909~
+   70     ~111161910~
+   71     ~111161911~
+   72     ~111161912~
+   73     ~111161913~
+   75     ~111161913~
+*** 6I REACH 5 - Christmas Creek       Location  619
+   81     ~111161901~
+   82     ~111161902~
+   83     ~111161903~
+   84     ~111161904~
+   85     ~111161905~
+   86     ~111161906~
+   87     ~111161907~
+   88     ~111161908~
+   89     ~111161909~
+   90     ~111161910~
+   91     ~111161911~
+   92     ~111161912~
+   93     ~111161913~
+   95     ~111161913~
+*** 6I REACH 6 - Buscombe Creek        Location  619
+  101     ~111161901~
+  102     ~111161902~
+  103     ~111161903~
+  104     ~111161904~
+  105     ~111161905~
+  106     ~111161906~
+  107     ~111161907~
+  108     ~111161908~
+  109     ~111161909~
+  110     ~111161910~
+  111     ~111161911~
+  112     ~111161912~
+  113     ~111161913~
+  115     ~111161913~
+*** 6I REACH 7 - Jackson Ck Div        Location  619
+  121     ~111161901~
+  122     ~111161902~
+  123     ~111161903~
+  124     ~111161904~
+  125     ~111161905~
+  126     ~111161906~
+  127     ~111161907~
+  128     ~111161908~
+  129     ~111161909~
+  130     ~111161910~
+  131     ~111161911~
+  132     ~111161912~
+  133     ~111161913~
+  135     ~111161913~
+*** 6I REACH 8 - Unnamed Swamp         Location  619
+  141     ~111161901~
+  142     ~111161902~
+  143     ~111161903~
+  144     ~111161904~
+  145     ~111161905~
+  146     ~111161906~
+  147     ~111161907~
+  148     ~111161908~
+  149     ~111161909~
+  150     ~111161910~
+  151     ~111161911~
+  152     ~111161912~
+  153     ~111161913~
+  155     ~111161913~
+*** 6I REACH 9 - Cabbage Slough        Location  619
+  161     ~111161901~
+  162     ~111161902~
+  163     ~111161903~
+  164     ~111161904~
+  165     ~111161905~
+  166     ~111161906~
+  167     ~111161907~
+  168     ~111161908~
+  169     ~111161909~
+  170     ~111161910~
+  171     ~111161911~
+  172     ~111161912~
+  173     ~111161913~
+  175     ~111161913~
+  END PWAT-PARM2
+
+  PWAT-PARM3
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   2
+*** 6I REACH 1 - Savage Creek          Location  619
+    1     ~111261901~
+    2     ~111261902~
+    3     ~111261903~
+    4     ~111261904~
+    5     ~111261905~
+    6     ~111261906~
+    7     ~111261907~
+    8     ~111261908~
+    9     ~111261909~
+   10     ~111261910~
+   11     ~111261911~
+   12     ~111261912~
+   13     ~111261913~
+   15     ~111261913~
+*** 6I REACH 2 - South Lake            Location  619
+   21     ~111261901~
+   22     ~111261902~
+   23     ~111261903~
+   24     ~111261904~
+   25     ~111261905~
+   26     ~111261906~
+   27     ~111261907~
+   28     ~111261908~
+   29     ~111261909~
+   30     ~111261910~
+   31     ~111261911~
+   32     ~111261912~
+   33     ~111261913~
+   35     ~111261913~
+*** 6I REACH 3 - South Lake Outlet     Location  619
+   41     ~111261901~
+   42     ~111261902~
+   43     ~111261903~
+   44     ~111261904~
+   45     ~111261905~
+   46     ~111261906~
+   47     ~111261907~
+   48     ~111261908~
+   49     ~111261909~
+   50     ~111261910~
+   51     ~111261911~
+   52     ~111261912~
+   53     ~111261913~
+   55     ~111261913~
+*** 6I REACH 4 - Clark Lake Outlet     Location  619
+   61     ~111261901~
+   62     ~111261902~
+   63     ~111261903~
+   64     ~111261904~
+   65     ~111261905~
+   66     ~111261906~
+   67     ~111261907~
+   68     ~111261908~
+   69     ~111261909~
+   70     ~111261910~
+   71     ~111261911~
+   72     ~111261912~
+   73     ~111261913~
+   75     ~111261913~
+*** 6I REACH 5 - Christmas Creek       Location  619
+   81     ~111261901~
+   82     ~111261902~
+   83     ~111261903~
+   84     ~111261904~
+   85     ~111261905~
+   86     ~111261906~
+   87     ~111261907~
+   88     ~111261908~
+   89     ~111261909~
+   90     ~111261910~
+   91     ~111261911~
+   92     ~111261912~
+   93     ~111261913~
+   95     ~111261913~
+*** 6I REACH 6 - Buscombe Creek        Location  619
+  101     ~111261901~
+  102     ~111261902~
+  103     ~111261903~
+  104     ~111261904~
+  105     ~111261905~
+  106     ~111261906~
+  107     ~111261907~
+  108     ~111261908~
+  109     ~111261909~
+  110     ~111261910~
+  111     ~111261911~
+  112     ~111261912~
+  113     ~111261913~
+  115     ~111261913~
+*** 6I REACH 7 - Jackson Ck Div        Location  619
+  121     ~111261901~
+  122     ~111261902~
+  123     ~111261903~
+  124     ~111261904~
+  125     ~111261905~
+  126     ~111261906~
+  127     ~111261907~
+  128     ~111261908~
+  129     ~111261909~
+  130     ~111261910~
+  131     ~111261911~
+  132     ~111261912~
+  133     ~111261913~
+  135     ~111261913~
+*** 6I REACH 8 - Unnamed Swamp         Location  619
+  141     ~111261901~
+  142     ~111261902~
+  143     ~111261903~
+  144     ~111261904~
+  145     ~111261905~
+  146     ~111261906~
+  147     ~111261907~
+  148     ~111261908~
+  149     ~111261909~
+  150     ~111261910~
+  151     ~111261911~
+  152     ~111261912~
+  153     ~111261913~
+  155     ~111261913~
+*** 6I REACH 9 - Cabbage Slough        Location  619
+  161     ~111261901~
+  162     ~111261902~
+  163     ~111261903~
+  164     ~111261904~
+  165     ~111261905~
+  166     ~111261906~
+  167     ~111261907~
+  168     ~111261908~
+  169     ~111261909~
+  170     ~111261910~
+  171     ~111261911~
+  172     ~111261912~
+  173     ~111261913~
+  175     ~111261913~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   3
+*** 6I REACH 1 - Savage Creek          Location  619
+    1     ~111361901~
+    2     ~111361902~
+    3     ~111361903~
+    4     ~111361904~
+    5     ~111361905~
+    6     ~111361906~
+    7     ~111361907~
+    8     ~111361908~
+    9     ~111361909~
+   10     ~111361910~
+   11     ~111361911~
+   12     ~111361912~
+   13     ~111361913~
+   15     ~111361913~
+*** 6I REACH 2 - South Lake            Location  619
+   21     ~111361901~
+   22     ~111361902~
+   23     ~111361903~
+   24     ~111361904~
+   25     ~111361905~
+   26     ~111361906~
+   27     ~111361907~
+   28     ~111361908~
+   29     ~111361909~
+   30     ~111361910~
+   31     ~111361911~
+   32     ~111361912~
+   33     ~111361913~
+   35     ~111361913~
+*** 6I REACH 3 - South Lake Outlet     Location  619
+   41     ~111361901~
+   42     ~111361902~
+   43     ~111361903~
+   44     ~111361904~
+   45     ~111361905~
+   46     ~111361906~
+   47     ~111361907~
+   48     ~111361908~
+   49     ~111361909~
+   50     ~111361910~
+   51     ~111361911~
+   52     ~111361912~
+   53     ~111361913~
+   55     ~111361913~
+*** 6I REACH 4 - Clark Lake Outlet     Location  619
+   61     ~111361901~
+   62     ~111361902~
+   63     ~111361903~
+   64     ~111361904~
+   65     ~111361905~
+   66     ~111361906~
+   67     ~111361907~
+   68     ~111361908~
+   69     ~111361909~
+   70     ~111361910~
+   71     ~111361911~
+   72     ~111361912~
+   73     ~111361913~
+   75     ~111361913~
+*** 6I REACH 5 - Christmas Creek       Location  619
+   81     ~111361901~
+   82     ~111361902~
+   83     ~111361903~
+   84     ~111361904~
+   85     ~111361905~
+   86     ~111361906~
+   87     ~111361907~
+   88     ~111361908~
+   89     ~111361909~
+   90     ~111361910~
+   91     ~111361911~
+   92     ~111361912~
+   93     ~111361913~
+   95     ~111361913~
+*** 6I REACH 6 - Buscombe Creek        Location  619
+  101     ~111361901~
+  102     ~111361902~
+  103     ~111361903~
+  104     ~111361904~
+  105     ~111361905~
+  106     ~111361906~
+  107     ~111361907~
+  108     ~111361908~
+  109     ~111361909~
+  110     ~111361910~
+  111     ~111361911~
+  112     ~111361912~
+  113     ~111361913~
+  115     ~111361913~
+*** 6I REACH 7 - Jackson Ck Div        Location  619
+  121     ~111361901~
+  122     ~111361902~
+  123     ~111361903~
+  124     ~111361904~
+  125     ~111361905~
+  126     ~111361906~
+  127     ~111361907~
+  128     ~111361908~
+  129     ~111361909~
+  130     ~111361910~
+  131     ~111361911~
+  132     ~111361912~
+  133     ~111361913~
+  135     ~111361913~
+*** 6I REACH 8 - Unnamed Swamp         Location  619
+  141     ~111361901~
+  142     ~111361902~
+  143     ~111361903~
+  144     ~111361904~
+  145     ~111361905~
+  146     ~111361906~
+  147     ~111361907~
+  148     ~111361908~
+  149     ~111361909~
+  150     ~111361910~
+  151     ~111361911~
+  152     ~111361912~
+  153     ~111361913~
+  155     ~111361913~
+*** 6I REACH 9 - Cabbage Slough        Location  619
+  161     ~111361901~
+  162     ~111361902~
+  163     ~111361903~
+  164     ~111361904~
+  165     ~111361905~
+  166     ~111361906~
+  167     ~111361907~
+  168     ~111361908~
+  169     ~111361909~
+  170     ~111361910~
+  171     ~111361911~
+  172     ~111361912~
+  173     ~111361913~
+  175     ~111361913~
+  END PWAT-PARM4
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 6I REACH 1 - Savage Creek                     Location  619
+    1   19       919
+*** 6I REACH 2 - South Lake                       Location  619
+   21   39       919
+*** 6I REACH 3 - South Lake Outlet                Location  619
+   41   59       919
+*** 6I REACH 4 - Clark Lake Outlet                Location  619
+   61   79       919
+*** 6I REACH 5 - Christmas Creek                  Location  619
+   81   99       919
+*** 6I REACH 6 - Buscombe Creek                   Location  619
+  101  119       919
+*** 6I REACH 7 - Jackson Ck Div                   Location  619
+  121  139       919
+*** 6I REACH 8 - Unnamed Swamp                    Location  619
+  141  159       919
+*** 6I REACH 9 - Cabbage Slough                   Location  619
+  161  179       919
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 6I REACH 1 - Savage Creek          Location  619
+    1     ~111661901~
+    2     ~111661902~
+    3     ~111661903~
+    4     ~111661904~
+    5     ~111661905~
+    6     ~111661906~
+    7     ~111661907~
+    8     ~111661908~
+    9     ~111661909~
+   10     ~111661910~
+   11     ~111661911~
+   12     ~111661912~
+   13     ~111661913~
+   15     ~111661913~
+*** 6I REACH 2 - South Lake            Location  619
+   21     ~111661901~
+   22     ~111661902~
+   23     ~111661903~
+   24     ~111661904~
+   25     ~111661905~
+   26     ~111661906~
+   27     ~111661907~
+   28     ~111661908~
+   29     ~111661909~
+   30     ~111661910~
+   31     ~111661911~
+   32     ~111661912~
+   33     ~111661913~
+   35     ~111661913~
+*** 6I REACH 3 - South Lake Outlet     Location  619
+   41     ~111661901~
+   42     ~111661902~
+   43     ~111661903~
+   44     ~111661904~
+   45     ~111661905~
+   46     ~111661906~
+   47     ~111661907~
+   48     ~111661908~
+   49     ~111661909~
+   50     ~111661910~
+   51     ~111661911~
+   52     ~111661912~
+   53     ~111661913~
+   55     ~111661913~
+*** 6I REACH 4 - Clark Lake Outlet     Location  619
+   61     ~111661901~
+   62     ~111661902~
+   63     ~111661903~
+   64     ~111661904~
+   65     ~111661905~
+   66     ~111661906~
+   67     ~111661907~
+   68     ~111661908~
+   69     ~111661909~
+   70     ~111661910~
+   71     ~111661911~
+   72     ~111661912~
+   73     ~111661913~
+   75     ~111661913~
+*** 6I REACH 5 - Christmas Creek       Location  619
+   81     ~111661901~
+   82     ~111661902~
+   83     ~111661903~
+   84     ~111661904~
+   85     ~111661905~
+   86     ~111661906~
+   87     ~111661907~
+   88     ~111661908~
+   89     ~111661909~
+   90     ~111661910~
+   91     ~111661911~
+   92     ~111661912~
+   93     ~111661913~
+   95     ~111661913~
+*** 6I REACH 6 - Buscombe Creek        Location  619
+  101     ~111661901~
+  102     ~111661902~
+  103     ~111661903~
+  104     ~111661904~
+  105     ~111661905~
+  106     ~111661906~
+  107     ~111661907~
+  108     ~111661908~
+  109     ~111661909~
+  110     ~111661910~
+  111     ~111661911~
+  112     ~111661912~
+  113     ~111661913~
+  115     ~111661913~
+*** 6I REACH 7 - Jackson Ck Div        Location  619
+  121     ~111661901~
+  122     ~111661902~
+  123     ~111661903~
+  124     ~111661904~
+  125     ~111661905~
+  126     ~111661906~
+  127     ~111661907~
+  128     ~111661908~
+  129     ~111661909~
+  130     ~111661910~
+  131     ~111661911~
+  132     ~111661912~
+  133     ~111661913~
+  135     ~111661913~
+*** 6I REACH 8 - Unnamed Swamp         Location  619
+  141     ~111661901~
+  142     ~111661902~
+  143     ~111661903~
+  144     ~111661904~
+  145     ~111661905~
+  146     ~111661906~
+  147     ~111661907~
+  148     ~111661908~
+  149     ~111661909~
+  150     ~111661910~
+  151     ~111661911~
+  152     ~111661912~
+  153     ~111661913~
+  155     ~111661913~
+*** 6I REACH 9 - Cabbage Slough        Location  619
+  161     ~111661901~
+  162     ~111661902~
+  163     ~111661903~
+  164     ~111661904~
+  165     ~111661905~
+  166     ~111661906~
+  167     ~111661907~
+  168     ~111661908~
+  169     ~111661909~
+  170     ~111661910~
+  171     ~111661911~
+  172     ~111661912~
+  173     ~111661913~
+  175     ~111661913~
+  END PWAT-STATE1
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+  001  999    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    5    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** <ILS > ******** Print-flags ******** BIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    5    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***             Name             Unit-systems   Printer BinaryOut
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+    1  999                             1    1   80    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+  001  999    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+*** <ILS >      LSUR     SLSUR      NSUR     RETSC
+*** x -  x      (ft)                          (in)
+  001  999      150.     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+*** <ILS >    PETMAX    PETMIN
+*** x -  x   (deg F)   (deg F)
+  001  999       40.       35.
+  END IWAT-PARM3
+
+  IWAT-STATE1
+*** <ILS >  IWATER state variables (inches)
+*** x -  x      RETS      SURS
+  001  999     0.000     0.000
+  END IWAT-STATE1
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1  999    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1  999    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1  999    3    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 6I REACH 1
+    1     Savage Creek            1         1    1   82    0    0   83    0
+*** 6I REACH 2
+    2     South Lake              1         1    1   82    0    0   83    0
+*** 6I REACH 3
+    3     South Lake Outlet       1         1    1   82    0    0   83    0
+*** 6I REACH 4
+    4     Clark Lake Outlet       1         1    1   82    0    0   83    0
+*** 6I REACH 5
+    5     Christmas Creek         1         1    1   82    0    0   83    0
+*** 6I REACH 6
+    6     Buscombe Creek          1         1    1   82    0    0   83    0
+*** 6I REACH 7
+    7     Jackson Ck Div          1         1    1   82    0    0   83    0
+*** 6I REACH 8
+    8     Unnamed Swamp           1         1    1   82    0    0   83    0
+*** 6I REACH 9
+    9     Cabbage Slough          1         1    1   82    0    0   83    0
+  END GEN-INFO
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 6I REACH 1 - Savage Creek
+    1        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6I REACH 2 - South Lake
+    2        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6I REACH 3 - South Lake Outlet
+    3        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6I REACH 4 - Clark Lake Outlet
+    4        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6I REACH 5 - Christmas Creek
+    5        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6I REACH 6 - Buscombe Creek
+    6        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6I REACH 7 - Jackson Ck Div
+    7        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6I REACH 8 - Unnamed Swamp
+    8        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6I REACH 9 - Cabbage Slough
+    9        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 6I REACH 1 - Savage Creek
+    1             1.      4.45     34.48      0.00       0.5      0.01
+*** 6I REACH 2 - South Lake
+    2             2.      1.71      1.68      0.00       0.5      0.01
+*** 6I REACH 3 - South Lake Outlet
+    3             3.      3.07      4.91      0.00       0.5      0.01
+*** 6I REACH 4 - Clark Lake Outlet
+    4             4.      4.66      1.15      0.00       0.5      0.01
+*** 6I REACH 5 - Christmas Creek
+    5             5.      7.54     61.19      0.00       0.5      0.01
+*** 6I REACH 6 - Buscombe Creek
+    6             6.      0.54      0.74      0.00       0.5      0.01
+*** 6I REACH 7 - Jackson Ck Div
+    7             7.      7.13     49.99      0.00       0.5      0.01
+*** 6I REACH 8 - Unnamed Swamp
+    8             8.      8.20      9.41      0.00       0.5      0.01
+*** 6I REACH 9 - Cabbage Slough
+    9             9.     11.55     16.92      0.00       0.5      0.01
+  END HYDR-PARM2
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 6I REACH 1 - Savage Creek
+    1           1.65       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6I REACH 2 - South Lake
+    2          13.41       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6I REACH 3 - South Lake Outlet
+    3           0.34       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6I REACH 4 - Clark Lake Outlet
+    4         706.81       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6I REACH 5 - Christmas Creek
+    5           3.41       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6I REACH 6 - Buscombe Creek
+    6           1.04       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6I REACH 7 - Jackson Ck Div
+    7           3.48       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6I REACH 8 - Unnamed Swamp
+    8          57.33       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6I REACH 9 - Cabbage Slough
+    9         108.55       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+END RCHRES
+
+FTABLES
+  FTABLE    001
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.15     25.00      1.90      0.70
+      0.21     35.00      3.60      1.70
+      0.26     45.00      5.90      3.30
+      0.31     52.00      8.10      5.00
+      0.34     58.00     10.00      6.60
+      0.44     76.00     16.80     13.20
+      0.63    106.00     33.40     33.00
+      0.81    138.00     56.20     66.00
+      1.15    195.00    111.70    165.00
+      1.49    252.00    187.80    330.00
+      1.93    327.00    315.90    660.00
+      2.72    462.00    628.10   1650.00
+      3.72    462.00   1090.10   5000.00
+  END FTABLE001
+
+  FTABLE    002
+ rows cols                               ***
+   13    4
+     depth      area    volume  outflow1 ***
+      0.00   1080.00      0.00      0.00
+      0.06   1113.00     62.40      1.00
+      0.10   1137.00    109.00      2.50
+      0.15   1164.00    164.80      4.90
+      0.19   1188.00    212.70      7.40
+      0.22   1207.00    253.40      9.80
+      0.33   1272.00    392.20     19.60
+      0.57   1408.00    707.70     49.00
+      0.85   1567.00   1119.70     98.00
+      1.41   1891.00   2091.60    245.00
+      2.04   2255.00   3401.60    490.00
+      2.91   2757.00   5587.80      8.00
+      4.56   3704.00  10896.00   2450.00
+  END FTABLE002
+
+*** This FTABLE is just a copy of FTABLE 1 - should be split from RCH2
+  FTABLE    003
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.15     25.00      1.90      0.70
+      0.21     35.00      3.60      1.70
+      0.26     45.00      5.90      3.30
+      0.31     52.00      8.10      5.00
+      0.34     58.00     10.00      6.60
+      0.44     76.00     16.80     13.20
+      0.63    106.00     33.40     33.00
+      0.81    138.00     56.20     66.00
+      1.15    195.00    111.70    165.00
+      1.49    252.00    187.80    330.00
+      1.93    327.00    315.90    660.00
+      2.72    462.00    628.10   1650.00
+      3.72    462.00   1090.10   5000.00
+  END FTABLE003
+
+  FTABLE    004
+ rows cols                               ***
+   13    4
+     depth      area    volume  outflow1 ***
+      0.00   1350.00      0.00      0.00
+      0.20   2059.00    373.30      5.10
+      0.40   2516.00    695.90     12.60
+      0.50   3034.00   1139.40     25.30
+      0.60   3419.00   1523.30     37.90
+      0.70   3738.00   1875.20     50.50
+      1.00   4689.00   3112.00    101.00
+      1.60   6442.00   6123.10    252.50
+      2.10   8261.00  10252.00    505.00
+      3.10  11552.00  20315.00   1262.50
+      4.20  14929.00  34118.40   2525.00
+      5.50  19321.00  57332.50   5050.00
+      8.00  27202.00 113918.00  12625.00
+  END FTABLE004
+
+  FTABLE    005
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.22     44.00      4.80      1.80
+      0.31     62.00      9.60      4.50
+      0.40     81.00     16.00      8.90
+      0.46     94.00     21.70     13.30
+      0.52    105.00     27.00     17.80
+      0.67    136.00     45.40     35.60
+      0.94    192.00     90.30     88.90
+      1.22    249.00    151.80    177.90
+      1.72    351.00    301.90    444.70
+      2.23    455.00    507.70    889.50
+      2.90    590.00    853.90   1778.90
+      4.08    832.00   1697.60   4447.30
+      5.08    832.00   2529.60   8000.00
+  END FTABLE005
+
+  FTABLE    006
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.16     21.00      1.70      0.60
+      0.23     29.00      3.30      1.50
+      0.29     37.00      5.50      2.90
+      0.34     44.00      7.50      4.40
+      0.38     48.00      9.20      5.80
+      0.49     63.00     15.40     11.60
+      0.69     88.00     30.70     29.00
+      0.90    115.00     51.60     58.00
+      1.27    162.00    102.60    145.00
+      1.65    210.00    172.50    290.00
+      2.14    272.00    290.10    580.00
+      3.01    383.00    576.80   1450.00
+      5.01    517.00   1476.80   5000.00
+  END FTABLE006
+
+  FTABLE    007
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.19     52.00      5.00      1.20
+      0.27     72.00      9.60      2.90
+      0.35     94.00     16.20      5.80
+      0.40    109.00     21.90      8.70
+      0.45    121.00     27.20     11.60
+      0.58    158.00     45.70     23.20
+      0.82    222.00     90.90     58.00
+      1.06    288.00    152.80    116.00
+      1.50    406.00    303.90    290.00
+      1.94    527.00    511.00    580.00
+      2.52    683.00    859.40   1160.00
+      3.55    963.00   1708.70   2900.00
+      4.55    963.00   2671.70   5000.00
+  END FTABLE007
+
+  FTABLE    008
+ rows cols                               ***
+   13    4
+     depth      area    volume  outflow1 ***
+      0.00    295.70      0.00      0.00
+      0.12    300.80     36.05      2.20
+      0.21    304.50     62.77      5.50
+      0.32    309.00     96.23     11.10
+      0.40    312.60    123.09     16.60
+      0.48    315.80    146.74     22.10
+      0.72    326.00    225.28     44.20
+      1.24    347.80    400.62    110.50
+      1.87    373.80    625.03    221.00
+      3.16    427.80   1143.34    552.50
+      4.66    490.40   1830.37   1105.00
+      6.78    579.10   2965.43   2210.00
+     10.89    751.20   5702.80   5525.00
+  END FTABLE008
+
+  FTABLE    009
+ rows cols                               ***
+   13    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.39    395.00     76.70      8.10
+      0.55    557.00    152.10     20.20
+      0.71    723.00    256.40     40.50
+      0.83    841.00    347.20     60.70
+      0.92    937.00    430.70     80.90
+      1.19   1215.00    724.40    161.80
+      1.68   1713.00   1440.20    404.50
+      2.18   2221.00   2422.20    809.00
+      3.08   3132.00   4815.70   2022.50
+      3.99   4061.00   8099.00   4045.00
+      5.17   5267.00  13620.90   8090.00
+      7.29   7426.00  27080.80  20225.00
+  END FTABLE009
+
+  FTABLE    919
+ ROWS COLS            ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 6.0000000       0.0
+      12. .012623392
+      24. .037870176
+      36. .063116960
+  END FTABLE919
+END FTABLES
+
+COPY
+  TIMESERIES
+  Copy-opn***
+*** x -  x  NPT  NMN
+   99         0    1
+  END TIMESERIES
+END COPY
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - Savage Creek
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - South Lake
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - South Lake Outlet
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Clark Lake Outlet
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - Christmas Creek
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - Buscombe Creek
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+*** Reach 7 - Jackson Ck Div
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND 121 139 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND 121 139 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   7     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 121 139 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 121 139 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   7     EXTNL  POTEV
+
+*** Reach 8 - Unnamed Swamp
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND 141 159 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND 141 159 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   8     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 141 159 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 141 159 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   8     EXTNL  POTEV
+
+*** Reach 9 - Cabbage Slough
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND 161 179 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND 161 179 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   9     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 161 179 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 161 179 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   9     EXTNL  POTEV
+END EXT SOURCES
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 6I REACH 1
+PERLND   1                        52.9     RCHRES   1      1
+PERLND   2                       101.5     RCHRES   1      1
+PERLND   3                         0.0     RCHRES   1      1
+PERLND   4                        36.8     RCHRES   1      1
+PERLND   5                         0.0     RCHRES   1      1
+PERLND   6                         2.2     RCHRES   1      1
+PERLND   7                        67.9     RCHRES   1      1
+PERLND   8                        57.5     RCHRES   1      1
+PERLND   9                         2.0     RCHRES   1      1
+PERLND  10                       171.2     RCHRES   1      1
+PERLND  11                       475.0     RCHRES   1      1
+PERLND  12***                     43.2     RCHRES   1      1
+PERLND  13                       438.8     RCHRES   1      1
+PERLND  15                       647.8     RCHRES   1      1
+IMPLND   1                         2.8     RCHRES   1      2
+IMPLND   2                        17.9     RCHRES   1      2
+IMPLND   3                         0.0     RCHRES   1      2
+IMPLND   4                        36.8     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                        56.9     PERLND  15     11
+PERLND   2                        61.0     PERLND  15     11
+PERLND   3                         0.0     PERLND  15     11
+PERLND   4                        19.8     PERLND  15     11
+PERLND   5                         0.0     PERLND  15     11
+PERLND   6                        47.1     PERLND  15     11
+PERLND   7                       259.1     PERLND  15     11
+PERLND   8                        39.6     PERLND  15     11
+PERLND   9                         1.6     PERLND  15     11
+PERLND  10                       566.1     PERLND  15     11
+PERLND  11                       998.4     PERLND  15     11
+PERLND  12                         8.8     PERLND  15     11
+IMPLND   1                         3.0     PERLND  15     12
+IMPLND   2                        10.8     PERLND  15     12
+IMPLND   3                         0.0     PERLND  15     12
+IMPLND   4                        19.8     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                        56.9     RCHRES   1      9
+PERLND   2                        61.0     RCHRES   1      9
+PERLND   3                         0.0     RCHRES   1      9
+PERLND   4                        19.8     RCHRES   1      9
+PERLND   5                         0.0     RCHRES   1      9
+PERLND   6                        47.1     RCHRES   1      9
+PERLND   7                       259.1     RCHRES   1      9
+PERLND   8                        39.6     RCHRES   1      9
+PERLND   9                         1.6     RCHRES   1      9
+PERLND  10                       566.1     RCHRES   1      9
+PERLND  11                       998.4     RCHRES   1      9
+PERLND  12                         8.8     RCHRES   1      9
+
+*** 6I REACH 2
+PERLND  21                        81.3     RCHRES   2      1
+PERLND  22                       342.1     RCHRES   2      1
+PERLND  23                        46.7     RCHRES   2      1
+PERLND  24                        25.4     RCHRES   2      1
+PERLND  25                         0.0     RCHRES   2      1
+PERLND  26                        36.5     RCHRES   2      1
+PERLND  27                         0.0     RCHRES   2      1
+PERLND  28                         4.9     RCHRES   2      1
+PERLND  29                        10.6     RCHRES   2      1
+PERLND  30                       461.1     RCHRES   2      1
+PERLND  31                       403.6     RCHRES   2      1
+PERLND  32***                    620.7     RCHRES   2      1
+PERLND  33                      1843.9     RCHRES   2      1
+PERLND  35                        51.1     RCHRES   2      1
+IMPLND  21                         4.3     RCHRES   2      2
+IMPLND  22                        60.4     RCHRES   2      2
+IMPLND  23                        25.1     RCHRES   2      2
+IMPLND  24                        25.4     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                         2.5     PERLND  35     21
+PERLND  22                        38.3     PERLND  35     21
+PERLND  23                        10.5     PERLND  35     21
+PERLND  24                         0.1     PERLND  35     21
+PERLND  25                         0.0     PERLND  35     21
+PERLND  26                         1.7     PERLND  35     21
+PERLND  27                         0.0     PERLND  35     21
+PERLND  28                         1.3     PERLND  35     21
+PERLND  29                         0.0     PERLND  35     21
+PERLND  30                        23.4     PERLND  35     21
+PERLND  31                        40.5     PERLND  35     21
+PERLND  32                         5.2     PERLND  35     21
+IMPLND  21                         0.1     PERLND  35     22
+IMPLND  22                         6.8     PERLND  35     22
+IMPLND  23                         5.6     PERLND  35     22
+IMPLND  24                         0.1     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                         2.5     RCHRES   2      9
+PERLND  22                        38.3     RCHRES   2      9
+PERLND  23                        10.5     RCHRES   2      9
+PERLND  24                         0.1     RCHRES   2      9
+PERLND  25                         0.0     RCHRES   2      9
+PERLND  26                         1.7     RCHRES   2      9
+PERLND  27                         0.0     RCHRES   2      9
+PERLND  28                         1.3     RCHRES   2      9
+PERLND  29                         0.0     RCHRES   2      9
+PERLND  30                        23.4     RCHRES   2      9
+PERLND  31                        40.5     RCHRES   2      9
+PERLND  32                         5.2     RCHRES   2      9
+
+*** 6I REACH 3
+PERLND  41                         0.0     RCHRES   3      1
+PERLND  42                         0.0     RCHRES   3      1
+PERLND  43                         0.0     RCHRES   3      1
+PERLND  44                         0.0     RCHRES   3      1
+PERLND  45                         0.0     RCHRES   3      1
+PERLND  46                         0.0     RCHRES   3      1
+PERLND  47                         0.0     RCHRES   3      1
+PERLND  48                         0.0     RCHRES   3      1
+PERLND  49                         0.0     RCHRES   3      1
+PERLND  50                       316.4     RCHRES   3      1
+PERLND  51                        75.1     RCHRES   3      1
+PERLND  52***                      5.6     RCHRES   3      1
+PERLND  53                      1612.8     RCHRES   3      1
+PERLND  55                        52.0     RCHRES   3      1
+IMPLND  41                         0.0     RCHRES   3      2
+IMPLND  42                         0.0     RCHRES   3      2
+IMPLND  43                         0.0     RCHRES   3      2
+IMPLND  44                         0.0     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                         0.0     PERLND  55     31
+PERLND  42                         0.0     PERLND  55     31
+PERLND  43                         0.0     PERLND  55     31
+PERLND  44                         0.0     PERLND  55     31
+PERLND  45                         0.0     PERLND  55     31
+PERLND  46                         0.0     PERLND  55     31
+PERLND  47                         0.0     PERLND  55     31
+PERLND  48                         0.0     PERLND  55     31
+PERLND  49                         0.0     PERLND  55     31
+PERLND  50                        59.6     PERLND  55     31
+PERLND  51                         0.5     PERLND  55     31
+PERLND  52                         0.0     PERLND  55     31
+IMPLND  41                         0.0     PERLND  55     32
+IMPLND  42                         0.0     PERLND  55     32
+IMPLND  43                         0.0     PERLND  55     32
+IMPLND  44                         0.0     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                         0.0     RCHRES   3      9
+PERLND  42                         0.0     RCHRES   3      9
+PERLND  43                         0.0     RCHRES   3      9
+PERLND  44                         0.0     RCHRES   3      9
+PERLND  45                         0.0     RCHRES   3      9
+PERLND  46                         0.0     RCHRES   3      9
+PERLND  47                         0.0     RCHRES   3      9
+PERLND  48                         0.0     RCHRES   3      9
+PERLND  49                         0.0     RCHRES   3      9
+PERLND  50                        59.6     RCHRES   3      9
+PERLND  51                         0.5     RCHRES   3      9
+PERLND  52                         0.0     RCHRES   3      9
+
+*** 6I REACH 4
+PERLND  61                      1625.6     RCHRES   4      1
+PERLND  62                      1004.8     RCHRES   4      1
+PERLND  63                       102.3     RCHRES   4      1
+PERLND  64                       230.6     RCHRES   4      1
+PERLND  65                         0.0     RCHRES   4      1
+PERLND  66                       327.7     RCHRES   4      1
+PERLND  67                       153.2     RCHRES   4      1
+PERLND  68                       338.8     RCHRES   4      1
+PERLND  69                       558.2     RCHRES   4      1
+PERLND  70                      2786.4     RCHRES   4      1
+PERLND  71                      3651.1     RCHRES   4      1
+PERLND  72***                   1627.2     RCHRES   4      1
+PERLND  73                      9980.7     RCHRES   4      1
+PERLND  75                      2822.2     RCHRES   4      1
+IMPLND  61                        85.6     RCHRES   4      2
+IMPLND  62                       177.3     RCHRES   4      2
+IMPLND  63                        55.1     RCHRES   4      2
+IMPLND  64                       230.6     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                       774.4     PERLND  75     41
+PERLND  62                       734.4     PERLND  75     41
+PERLND  63                        88.2     PERLND  75     41
+PERLND  64                       201.4     PERLND  75     41
+PERLND  65                         0.0     PERLND  75     41
+PERLND  66                       167.1     PERLND  75     41
+PERLND  67                       123.8     PERLND  75     41
+PERLND  68                       327.6     PERLND  75     41
+PERLND  69                       494.0     PERLND  75     41
+PERLND  70                       846.8     PERLND  75     41
+PERLND  71                      2470.1     PERLND  75     41
+PERLND  72                        80.4     PERLND  75     41
+IMPLND  61                        40.8     PERLND  75     42
+IMPLND  62                       129.6     PERLND  75     42
+IMPLND  63                        47.5     PERLND  75     42
+IMPLND  64                       201.4     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                       774.4     RCHRES   4      9
+PERLND  62                       734.4     RCHRES   4      9
+PERLND  63                        88.2     RCHRES   4      9
+PERLND  64                       201.4     RCHRES   4      9
+PERLND  65                         0.0     RCHRES   4      9
+PERLND  66                       167.1     RCHRES   4      9
+PERLND  67                       123.8     RCHRES   4      9
+PERLND  68                       327.6     RCHRES   4      9
+PERLND  69                       494.0     RCHRES   4      9
+PERLND  70                       846.8     RCHRES   4      9
+PERLND  71                      2470.1     RCHRES   4      9
+PERLND  72                        80.4     RCHRES   4      9
+
+*** 6I REACH 5
+PERLND  81                       186.9     RCHRES   5      1
+PERLND  82                         2.5     RCHRES   5      1
+PERLND  83                         0.0     RCHRES   5      1
+PERLND  84                         5.6     RCHRES   5      1
+PERLND  85                         0.2     RCHRES   5      1
+PERLND  86                        33.0     RCHRES   5      1
+PERLND  87                        78.5     RCHRES   5      1
+PERLND  88                       611.2     RCHRES   5      1
+PERLND  89                       147.3     RCHRES   5      1
+PERLND  90                      1015.9     RCHRES   5      1
+PERLND  91                       792.9     RCHRES   5      1
+PERLND  92***                     19.3     RCHRES   5      1
+PERLND  93                      2928.0     RCHRES   5      1
+PERLND  95                      1530.9     RCHRES   5      1
+IMPLND  81                         9.8     RCHRES   5      2
+IMPLND  82                         0.4     RCHRES   5      2
+IMPLND  83                         0.0     RCHRES   5      2
+IMPLND  84                         5.6     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                       235.5     PERLND  95     51
+PERLND  82                        33.4     PERLND  95     51
+PERLND  83                         0.0     PERLND  95     51
+PERLND  84                         0.8     PERLND  95     51
+PERLND  85                         0.0     PERLND  95     51
+PERLND  86                        72.3     PERLND  95     51
+PERLND  87                        13.4     PERLND  95     51
+PERLND  88                       418.7     PERLND  95     51
+PERLND  89                        33.5     PERLND  95     51
+PERLND  90                       906.5     PERLND  95     51
+PERLND  91                      1249.1     PERLND  95     51
+PERLND  92                        30.8     PERLND  95     51
+IMPLND  81                        12.4     PERLND  95     52
+IMPLND  82                         5.9     PERLND  95     52
+IMPLND  83                         0.0     PERLND  95     52
+IMPLND  84                         0.8     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                       235.5     RCHRES   5      9
+PERLND  82                        33.4     RCHRES   5      9
+PERLND  83                         0.0     RCHRES   5      9
+PERLND  84                         0.8     RCHRES   5      9
+PERLND  85                         0.0     RCHRES   5      9
+PERLND  86                        72.3     RCHRES   5      9
+PERLND  87                        13.4     RCHRES   5      9
+PERLND  88                       418.7     RCHRES   5      9
+PERLND  89                        33.5     RCHRES   5      9
+PERLND  90                       906.5     RCHRES   5      9
+PERLND  91                      1249.1     RCHRES   5      9
+PERLND  92                        30.8     RCHRES   5      9
+
+*** 6I REACH 6
+PERLND 101                        11.3     RCHRES   6      1
+PERLND 102                         0.0     RCHRES   6      1
+PERLND 103                         0.0     RCHRES   6      1
+PERLND 104                         0.0     RCHRES   6      1
+PERLND 105                         0.0     RCHRES   6      1
+PERLND 106                         0.0     RCHRES   6      1
+PERLND 107                       199.1     RCHRES   6      1
+PERLND 108                       102.8     RCHRES   6      1
+PERLND 109                         0.0     RCHRES   6      1
+PERLND 110                       412.0     RCHRES   6      1
+PERLND 111                       123.6     RCHRES   6      1
+PERLND 112***                      4.1     RCHRES   6      1
+PERLND 113                      1299.8     RCHRES   6      1
+PERLND 115                       452.7     RCHRES   6      1
+IMPLND 101                         0.6     RCHRES   6      2
+IMPLND 102                         0.0     RCHRES   6      2
+IMPLND 103                         0.0     RCHRES   6      2
+IMPLND 104                         0.0     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                        16.1     PERLND 115     61
+PERLND 102                         0.0     PERLND 115     61
+PERLND 103                         0.0     PERLND 115     61
+PERLND 104                         0.0     PERLND 115     61
+PERLND 105                         0.0     PERLND 115     61
+PERLND 106                         0.0     PERLND 115     61
+PERLND 107                       447.0     PERLND 115     61
+PERLND 108                       137.6     PERLND 115     61
+PERLND 109                         0.0     PERLND 115     61
+PERLND 110                       163.5     PERLND 115     61
+PERLND 111                       316.5     PERLND 115     61
+PERLND 112                         3.8     PERLND 115     61
+IMPLND 101                         0.8     PERLND 115     62
+IMPLND 102                         0.0     PERLND 115     62
+IMPLND 103                         0.0     PERLND 115     62
+IMPLND 104                         0.0     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                        16.1     RCHRES   6      9
+PERLND 102                         0.0     RCHRES   6      9
+PERLND 103                         0.0     RCHRES   6      9
+PERLND 104                         0.0     RCHRES   6      9
+PERLND 105                         0.0     RCHRES   6      9
+PERLND 106                         0.0     RCHRES   6      9
+PERLND 107                       447.0     RCHRES   6      9
+PERLND 108                       137.6     RCHRES   6      9
+PERLND 109                         0.0     RCHRES   6      9
+PERLND 110                       163.5     RCHRES   6      9
+PERLND 111                       316.5     RCHRES   6      9
+PERLND 112                         3.8     RCHRES   6      9
+
+*** 6I REACH 7
+PERLND 121                       308.8     RCHRES   7      1
+PERLND 122                        26.6     RCHRES   7      1
+PERLND 123                         0.0     RCHRES   7      1
+PERLND 124                         4.8     RCHRES   7      1
+PERLND 125                        14.7     RCHRES   7      1
+PERLND 126                        82.8     RCHRES   7      1
+PERLND 127                       408.2     RCHRES   7      1
+PERLND 128                       408.9     RCHRES   7      1
+PERLND 129                        10.4     RCHRES   7      1
+PERLND 130                       110.6     RCHRES   7      1
+PERLND 131                       597.7     RCHRES   7      1
+PERLND 132***                     15.8     RCHRES   7      1
+PERLND 133                      1281.4     RCHRES   7      1
+PERLND 135                       812.9     RCHRES   7      1
+IMPLND 121                        16.3     RCHRES   7      2
+IMPLND 122                         4.7     RCHRES   7      2
+IMPLND 123                         0.0     RCHRES   7      2
+IMPLND 124                         4.8     RCHRES   7      2
+      *** Surface runoff to non-reach wetland
+PERLND 121                       166.9     PERLND 135     71
+PERLND 122                       106.4     PERLND 135     71
+PERLND 123                         0.0     PERLND 135     71
+PERLND 124                         2.1     PERLND 135     71
+PERLND 125                        18.1     PERLND 135     71
+PERLND 126                        75.8     PERLND 135     71
+PERLND 127                       357.5     PERLND 135     71
+PERLND 128                       315.6     PERLND 135     71
+PERLND 129                        24.5     PERLND 135     71
+PERLND 130                       527.5     PERLND 135     71
+PERLND 131                       590.8     PERLND 135     71
+PERLND 132                        10.5     PERLND 135     71
+IMPLND 121                         8.8     PERLND 135     72
+IMPLND 122                        18.8     PERLND 135     72
+IMPLND 123                         0.0     PERLND 135     72
+IMPLND 124                         2.1     PERLND 135     72
+      *** Baseflow to reach
+PERLND 121                       166.9     RCHRES   7      9
+PERLND 122                       106.4     RCHRES   7      9
+PERLND 123                         0.0     RCHRES   7      9
+PERLND 124                         2.1     RCHRES   7      9
+PERLND 125                        18.1     RCHRES   7      9
+PERLND 126                        75.8     RCHRES   7      9
+PERLND 127                       357.5     RCHRES   7      9
+PERLND 128                       315.6     RCHRES   7      9
+PERLND 129                        24.5     RCHRES   7      9
+PERLND 130                       527.5     RCHRES   7      9
+PERLND 131                       590.8     RCHRES   7      9
+PERLND 132                        10.5     RCHRES   7      9
+
+*** 6I REACH 8
+PERLND 141                        12.8     RCHRES   8      1
+PERLND 142                         0.0     RCHRES   8      1
+PERLND 143                         0.0     RCHRES   8      1
+PERLND 144                       101.1     RCHRES   8      1
+PERLND 145                         0.0     RCHRES   8      1
+PERLND 146                         9.0     RCHRES   8      1
+PERLND 147                        16.3     RCHRES   8      1
+PERLND 148                        37.3     RCHRES   8      1
+PERLND 149                         0.0     RCHRES   8      1
+PERLND 150                       621.2     RCHRES   8      1
+PERLND 151                      3442.6     RCHRES   8      1
+PERLND 152***                    146.5     RCHRES   8      1
+PERLND 153                      5075.0     RCHRES   8      1
+PERLND 155                      1742.0     RCHRES   8      1
+IMPLND 141                         0.7     RCHRES   8      2
+IMPLND 142                         0.0     RCHRES   8      2
+IMPLND 143                         0.0     RCHRES   8      2
+IMPLND 144                       101.1     RCHRES   8      2
+      *** Surface runoff to non-reach wetland
+PERLND 141                        18.6     PERLND 155     81
+PERLND 142                         0.0     PERLND 155     81
+PERLND 143                         0.0     PERLND 155     81
+PERLND 144                        29.5     PERLND 155     81
+PERLND 145                         0.0     PERLND 155     81
+PERLND 146                        19.4     PERLND 155     81
+PERLND 147                        23.7     PERLND 155     81
+PERLND 148                        13.6     PERLND 155     81
+PERLND 149                         0.0     PERLND 155     81
+PERLND 150                       302.4     PERLND 155     81
+PERLND 151                      2385.5     PERLND 155     81
+PERLND 152                        10.1     PERLND 155     81
+IMPLND 141                         1.0     PERLND 155     82
+IMPLND 142                         0.0     PERLND 155     82
+IMPLND 143                         0.0     PERLND 155     82
+IMPLND 144                        29.5     PERLND 155     82
+      *** Baseflow to reach
+PERLND 141                        18.6     RCHRES   8      9
+PERLND 142                         0.0     RCHRES   8      9
+PERLND 143                         0.0     RCHRES   8      9
+PERLND 144                        29.5     RCHRES   8      9
+PERLND 145                         0.0     RCHRES   8      9
+PERLND 146                        19.4     RCHRES   8      9
+PERLND 147                        23.7     RCHRES   8      9
+PERLND 148                        13.6     RCHRES   8      9
+PERLND 149                         0.0     RCHRES   8      9
+PERLND 150                       302.4     RCHRES   8      9
+PERLND 151                      2385.5     RCHRES   8      9
+PERLND 152                        10.1     RCHRES   8      9
+
+*** 6I REACH 9
+PERLND 161                       139.8     RCHRES   9      1
+PERLND 162                         0.0     RCHRES   9      1
+PERLND 163                         0.0     RCHRES   9      1
+PERLND 164                         0.0     RCHRES   9      1
+PERLND 165                         0.0     RCHRES   9      1
+PERLND 166                        39.1     RCHRES   9      1
+PERLND 167                        44.2     RCHRES   9      1
+PERLND 168                       116.1     RCHRES   9      1
+PERLND 169                        22.3     RCHRES   9      1
+PERLND 170                       773.1     RCHRES   9      1
+PERLND 171                      6195.4     RCHRES   9      1
+PERLND 172***                    529.7     RCHRES   9      1
+PERLND 173                      8282.4     RCHRES   9      1
+PERLND 175                      1912.9     RCHRES   9      1
+IMPLND 161                         7.4     RCHRES   9      2
+IMPLND 162                         0.0     RCHRES   9      2
+IMPLND 163                         0.0     RCHRES   9      2
+IMPLND 164                         0.0     RCHRES   9      2
+      *** Surface runoff to non-reach wetland
+PERLND 161                       329.7     PERLND 175     91
+PERLND 162                         0.0     PERLND 175     91
+PERLND 163                         0.0     PERLND 175     91
+PERLND 164                         0.0     PERLND 175     91
+PERLND 165                         0.0     PERLND 175     91
+PERLND 166                        29.8     PERLND 175     91
+PERLND 167                       126.5     PERLND 175     91
+PERLND 168                        34.8     PERLND 175     91
+PERLND 169                        28.0     PERLND 175     91
+PERLND 170                       576.7     PERLND 175     91
+PERLND 171                      5195.6     PERLND 175     91
+PERLND 172                        10.0     PERLND 175     91
+IMPLND 161                        17.4     PERLND 175     92
+IMPLND 162                         0.0     PERLND 175     92
+IMPLND 163                         0.0     PERLND 175     92
+IMPLND 164                         0.0     PERLND 175     92
+      *** Baseflow to reach
+PERLND 161                       329.7     RCHRES   9      9
+PERLND 162                         0.0     RCHRES   9      9
+PERLND 163                         0.0     RCHRES   9      9
+PERLND 164                         0.0     RCHRES   9      9
+PERLND 165                         0.0     RCHRES   9      9
+PERLND 166                        29.8     RCHRES   9      9
+PERLND 167                       126.5     RCHRES   9      9
+PERLND 168                        34.8     RCHRES   9      9
+PERLND 169                        28.0     RCHRES   9      9
+PERLND 170                       576.7     RCHRES   9      9
+PERLND 171                      5195.6     RCHRES   9      9
+PERLND 172                        10.0     RCHRES   9      9
+
+*** 6I-1 Savage Creek TO 6Main2-8 St. Johns River Cone
+*** 6I-2 South Lake TO 6I-3 South Lake Outlet
+RCHRES   2                                 RCHRES   3      3
+*** 6I-3 South Lake Outlet TO 6Main2-8 St. Johns River Cone
+*** 6I-4 Clark Lake Outlet TO 6Main2-8 St. Johns River Cone
+*** 6I-5 Christmas Creek TO 6Main2-9 Puzzle Lake
+*** 6I-6 Buscombe Creek TO 6Main2-9 Puzzle Lake
+*** 6I-7 Jackson Ck Div TO 6Main2-9 Puzzle Lake
+*** 6I-8 Unnamed Swamp TO 6I-9 Cabbage Slough
+RCHRES   8                                 RCHRES   9      3
+*** 6I-9 Cabbage Slough TO 6Main2-9 Puzzle Lake
+***
+END SCHEMATIC
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 6I REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001544     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001544     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001544     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 6I REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.019561     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.019561     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.019561     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 6I REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.019243     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.019243     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.019243     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 6I REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000354     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000354     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000354     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 6I REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000653     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000653     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000653     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 6I REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002209     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002209     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002209     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+*** 6I REACH 7
+  MASS-LINK       71
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001230     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001230     PERLND         EXTNL  SURLI
+  END MASS-LINK   71
+
+  MASS-LINK       72
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001230     PERLND         EXTNL  SURLI
+  END MASS-LINK   72
+*** 6I REACH 8
+  MASS-LINK       81
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000574     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000574     PERLND         EXTNL  SURLI
+  END MASS-LINK   81
+
+  MASS-LINK       82
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000574     PERLND         EXTNL  SURLI
+  END MASS-LINK   82
+*** 6I REACH 9
+  MASS-LINK       91
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000523     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000523     PERLND         EXTNL  SURLI
+  END MASS-LINK   91
+
+  MASS-LINK       92
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000523     PERLND         EXTNL  SURLI
+  END MASS-LINK   92
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+*** Transfer datasets - hourly volume/mass
+*** 6I-1 Savage Creek TO 6Main2-8
+RCHRES   1 HYDR   ROVOL                    WDM2   581 FLOW     ENGL AGGR REPL
+*** 6I-3 South Lake Outlet TO 6Main2-8
+RCHRES   3 HYDR   ROVOL                    WDM2   582 FLOW     ENGL AGGR REPL
+*** 6I-4 Clark Lake Outlet TO 6Main2-8
+RCHRES   4 HYDR   ROVOL                    WDM2   583 FLOW     ENGL AGGR REPL
+*** 6I-5 Christmas Creek TO 6Main2-9
+RCHRES   5 HYDR   ROVOL                    WDM2   591 FLOW     ENGL AGGR REPL
+*** 6I-6 Buscombe Creek TO 6Main2-9
+RCHRES   6 HYDR   ROVOL                    WDM2   592 FLOW     ENGL AGGR REPL
+*** 6I-7 Jackson Ck Div TO 6Main2-9
+RCHRES   7 HYDR   ROVOL                    WDM2   593 FLOW     ENGL AGGR REPL
+*** 6I-9 Cabbage Slough TO 6Main2-9
+RCHRES   9 HYDR   ROVOL                    WDM2   594 FLOW     ENGL AGGR REPL
+
+*** Gages - None
+END EXT TARGETS
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+  UVQUAN rca7   RCHRES   7 SAREA            3 2.296E-05
+  UVQUAN rca8   RCHRES   8 SAREA            3 2.296E-05
+  UVQUAN rca9   RCHRES   9 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01
+  UVQUAN wla033 GLOBAL     WORKSP 02
+  UVQUAN wla053 GLOBAL     WORKSP 03
+  UVQUAN wla073 GLOBAL     WORKSP 04
+  UVQUAN wla093 GLOBAL     WORKSP 05
+  UVQUAN wla113 GLOBAL     WORKSP 06
+  UVQUAN wla133 GLOBAL     WORKSP 07
+  UVQUAN wla153 GLOBAL     WORKSP 08
+  UVQUAN wla173 GLOBAL     WORKSP 09
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+  UVNAME  WLA133  1 WORKSP 07        1.0  QUAN
+  UVNAME  WLA153  1 WORKSP 08        1.0  QUAN
+  UVNAME  WLA173  1 WORKSP 09        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =     482.3
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =    2432.0
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =    1620.7
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =   11405.7
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =    2945.4
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =    1303.9
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+*** Reach 7
+  COPY   99                               WLA133           =    1282.2
+  COPY   99                               WLA133          -=    rca7
+  COPY   99                               WLA133         MAX       0.0
+*** Reach 8
+  COPY   99                               WLA153           =    5251.4
+  COPY   99                               WLA153          -=    rca8
+  COPY   99                               WLA153         MAX       0.0
+*** Reach 9
+  COPY   99                               WLA173           =    9017.6
+  COPY   99                               WLA173          -=    rca9
+  COPY   99                               WLA173         MAX       0.0
+
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+MULT PERLND 133                    wla133= RCHRES  07
+MULT PERLND 153                    wla153= RCHRES  08
+MULT PERLND 173                    wla173= RCHRES  09
+
+*** Structures and Operations
+*** None
+END SPEC-ACTIONS
+
+END RUN

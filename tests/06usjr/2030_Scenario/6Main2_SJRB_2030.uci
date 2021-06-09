@@ -1,0 +1,2496 @@
+RUN
+
+GLOBAL
+  LOWER SJR MAIN STEM FOR SJRB
+  START       1995  1  1  0  0  END    2016 12 31 24  0
+  RUN INTERP OUTPUT LEVEL    4    0
+  RESUME     0 RUN     1                         UNITS     1
+END GLOBAL
+
+FILES
+<type>  <fun>***<------------fname--------------------------------------------->
+MESSU      24   6Main2.ech
+WDM1       25   sjrb_met.wdm
+WDM2       26   sjrb_usj.wdm
+           80   6Main2_land.out
+           82   6Main2_reach.out
+BINO       81   6Main2_land.hbn
+BINO       83   6Main2_reach.hbn
+PESTSU     41   6Main2_hspf.sup
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** 6Main2 REACH 1  Lake Winder
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** 6Main2 REACH 2  Taylor Ck Resv
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** 6Main2 REACH 3  Taylor Creek Gage
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      RCHRES       3
+
+*** 6Main2 REACH 4  Lower Taylor Creek
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** 6Main2 REACH 5  Lake Poinsett
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** 6Main2 REACH 6  SJR SR 528
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+*** 6Main2 REACH 7  SJR SR 50
+      PERLND     121
+      PERLND     122
+      PERLND     123
+      PERLND     124
+      PERLND     125
+      PERLND     126
+      PERLND     127
+      PERLND     128
+      PERLND     129
+      PERLND     130
+      PERLND     131
+      PERLND     132
+      PERLND     133
+      IMPLND     121
+      IMPLND     122
+      IMPLND     123
+      IMPLND     124
+      PERLND     135
+      RCHRES       7
+
+*** 6Main2 REACH 8  St. Johns River Cone
+      PERLND     141
+      PERLND     142
+      PERLND     143
+      PERLND     144
+      PERLND     145
+      PERLND     146
+      PERLND     147
+      PERLND     148
+      PERLND     149
+      PERLND     150
+      PERLND     151
+      PERLND     152
+      PERLND     153
+      IMPLND     141
+      IMPLND     142
+      IMPLND     143
+      IMPLND     144
+      PERLND     155
+      RCHRES       8
+
+*** 6Main2 REACH 9  Puzzle Lake
+      PERLND     161
+      PERLND     162
+      PERLND     163
+      PERLND     164
+      PERLND     165
+      PERLND     166
+      PERLND     167
+      PERLND     168
+      PERLND     169
+      PERLND     170
+      PERLND     171
+      PERLND     172
+      PERLND     173
+      IMPLND     161
+      IMPLND     162
+      IMPLND     163
+      IMPLND     164
+      PERLND     175
+      RCHRES       9
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+  001  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>                       Print-flags                           BIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 6Main2 REACH 1
+    1   19Lake Winder                       1    1   80    0   81    0
+*** 6Main2 REACH 2
+   21   39Taylor Ck Resv                    1    1   80    0   81    0
+*** 6Main2 REACH 3
+   41   59Taylor Creek Gage                 1    1   80    0   81    0
+*** 6Main2 REACH 4
+   61   79Lower Taylor Creek                1    1   80    0   81    0
+*** 6Main2 REACH 5
+   81   99Lake Poinsett                     1    1   80    0   81    0
+*** 6Main2 REACH 6
+  101  119SJR SR 528                        1    1   80    0   81    0
+*** 6Main2 REACH 7
+  121  139SJR SR 50                         1    1   80    0   81    0
+*** 6Main2 REACH 8
+  141  159St. Johns River Cone              1    1   80    0   81    0
+*** 6Main2 REACH 9
+  161  179Puzzle Lake                       1    1   80    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 6Main2 REACH 1 - Lake Winder
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6Main2 REACH 2 - Taylor Ck Resv
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6Main2 REACH 3 - Taylor Creek Gage
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6Main2 REACH 4 - Lower Taylor Creek
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6Main2 REACH 5 - Lake Poinsett
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6Main2 REACH 6 - SJR SR 528
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6Main2 REACH 7 - SJR SR 50
+  121  131    0    0    1    0    0    0    0    0    0    1    0    0    0
+  132  133    0    3    1    0    0    0    0    0    0    1    0    0    0
+  135         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6Main2 REACH 8 - St. Johns River Cone
+  141  151    0    0    1    0    0    0    0    0    0    1    0    0    0
+  152  153    0    3    1    0    0    0    0    0    0    1    0    0    0
+  155         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6Main2 REACH 9 - Puzzle Lake
+  161  171    0    0    1    0    0    0    0    0    0    1    0    0    0
+  172  173    0    3    1    0    0    0    0    0    0    1    0    0    0
+  175         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+  PWAT-PARM2
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   1
+*** 6Main2 REACH 1 - Lake Winder       Location  618
+    1     ~111161801~
+    2     ~111161802~
+    3     ~111161803~
+    4     ~111161804~
+    5     ~111161805~
+    6     ~111161806~
+    7     ~111161807~
+    8     ~111161808~
+    9     ~111161809~
+   10     ~111161810~
+   11     ~111161811~
+   12     ~111161812~
+   13     ~111161813~
+   15     ~111161813~
+*** 6Main2 REACH 2 - Taylor Ck Resv    Location  617
+   21     ~111161701~
+   22     ~111161702~
+   23     ~111161703~
+   24     ~111161704~
+   25     ~111161705~
+   26     ~111161706~
+   27     ~111161707~
+   28     ~111161708~
+   29     ~111161709~
+   30     ~111161710~
+   31     ~111161711~
+   32     ~111161712~
+   33     ~111161713~
+   35     ~111161713~
+*** 6Main2 REACH 3 - Taylor Creek Gage Location  617
+   41     ~111161701~
+   42     ~111161702~
+   43     ~111161703~
+   44     ~111161704~
+   45     ~111161705~
+   46     ~111161706~
+   47     ~111161707~
+   48     ~111161708~
+   49     ~111161709~
+   50     ~111161710~
+   51     ~111161711~
+   52     ~111161712~
+   53     ~111161713~
+   55     ~111161713~
+*** 6Main2 REACH 4 - Lower Taylor CreekLocation  618
+   61     ~111161801~
+   62     ~111161802~
+   63     ~111161803~
+   64     ~111161804~
+   65     ~111161805~
+   66     ~111161806~
+   67     ~111161807~
+   68     ~111161808~
+   69     ~111161809~
+   70     ~111161810~
+   71     ~111161811~
+   72     ~111161812~
+   73     ~111161813~
+   75     ~111161813~
+*** 6Main2 REACH 5 - Lake Poinsett     Location  618
+   81     ~111161801~
+   82     ~111161802~
+   83     ~111161803~
+   84     ~111161804~
+   85     ~111161805~
+   86     ~111161806~
+   87     ~111161807~
+   88     ~111161808~
+   89     ~111161809~
+   90     ~111161810~
+   91     ~111161811~
+   92     ~111161812~
+   93     ~111161813~
+   95     ~111161813~
+*** 6Main2 REACH 6 - SJR SR 528        Location  619
+  101     ~111161901~
+  102     ~111161902~
+  103     ~111161903~
+  104     ~111161904~
+  105     ~111161905~
+  106     ~111161906~
+  107     ~111161907~
+  108     ~111161908~
+  109     ~111161909~
+  110     ~111161910~
+  111     ~111161911~
+  112     ~111161912~
+  113     ~111161913~
+  115     ~111161913~
+*** 6Main2 REACH 7 - SJR SR 50         Location  619
+  121     ~111161901~
+  122     ~111161902~
+  123     ~111161903~
+  124     ~111161904~
+  125     ~111161905~
+  126     ~111161906~
+  127     ~111161907~
+  128     ~111161908~
+  129     ~111161909~
+  130     ~111161910~
+  131     ~111161911~
+  132     ~111161912~
+  133     ~111161913~
+  135     ~111161913~
+*** 6Main2 REACH 8 - St. Johns River CoLocation  619
+  141     ~111161901~
+  142     ~111161902~
+  143     ~111161903~
+  144     ~111161904~
+  145     ~111161905~
+  146     ~111161906~
+  147     ~111161907~
+  148     ~111161908~
+  149     ~111161909~
+  150     ~111161910~
+  151     ~111161911~
+  152     ~111161912~
+  153     ~111161913~
+  155     ~111161913~
+*** 6Main2 REACH 9 - Puzzle Lake       Location  619
+  161     ~111161901~
+  162     ~111161902~
+  163     ~111161903~
+  164     ~111161904~
+  165     ~111161905~
+  166     ~111161906~
+  167     ~111161907~
+  168     ~111161908~
+  169     ~111161909~
+  170     ~111161910~
+  171     ~111161911~
+  172     ~111161912~
+  173     ~111161913~
+  175     ~111161913~
+  END PWAT-PARM2
+
+  PWAT-PARM3
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   2
+*** 6Main2 REACH 1 - Lake Winder       Location  618
+    1     ~111261801~
+    2     ~111261802~
+    3     ~111261803~
+    4     ~111261804~
+    5     ~111261805~
+    6     ~111261806~
+    7     ~111261807~
+    8     ~111261808~
+    9     ~111261809~
+   10     ~111261810~
+   11     ~111261811~
+   12     ~111261812~
+   13     ~111261813~
+   15     ~111261813~
+*** 6Main2 REACH 2 - Taylor Ck Resv    Location  617
+   21     ~111261701~
+   22     ~111261702~
+   23     ~111261703~
+   24     ~111261704~
+   25     ~111261705~
+   26     ~111261706~
+   27     ~111261707~
+   28     ~111261708~
+   29     ~111261709~
+   30     ~111261710~
+   31     ~111261711~
+   32     ~111261712~
+   33     ~111261713~
+   35     ~111261713~
+*** 6Main2 REACH 3 - Taylor Creek Gage Location  617
+   41     ~111261701~
+   42     ~111261702~
+   43     ~111261703~
+   44     ~111261704~
+   45     ~111261705~
+   46     ~111261706~
+   47     ~111261707~
+   48     ~111261708~
+   49     ~111261709~
+   50     ~111261710~
+   51     ~111261711~
+   52     ~111261712~
+   53     ~111261713~
+   55     ~111261713~
+*** 6Main2 REACH 4 - Lower Taylor CreekLocation  618
+   61     ~111261801~
+   62     ~111261802~
+   63     ~111261803~
+   64     ~111261804~
+   65     ~111261805~
+   66     ~111261806~
+   67     ~111261807~
+   68     ~111261808~
+   69     ~111261809~
+   70     ~111261810~
+   71     ~111261811~
+   72     ~111261812~
+   73     ~111261813~
+   75     ~111261813~
+*** 6Main2 REACH 5 - Lake Poinsett     Location  618
+   81     ~111261801~
+   82     ~111261802~
+   83     ~111261803~
+   84     ~111261804~
+   85     ~111261805~
+   86     ~111261806~
+   87     ~111261807~
+   88     ~111261808~
+   89     ~111261809~
+   90     ~111261810~
+   91     ~111261811~
+   92     ~111261812~
+   93     ~111261813~
+   95     ~111261813~
+*** 6Main2 REACH 6 - SJR SR 528        Location  619
+  101     ~111261901~
+  102     ~111261902~
+  103     ~111261903~
+  104     ~111261904~
+  105     ~111261905~
+  106     ~111261906~
+  107     ~111261907~
+  108     ~111261908~
+  109     ~111261909~
+  110     ~111261910~
+  111     ~111261911~
+  112     ~111261912~
+  113     ~111261913~
+  115     ~111261913~
+*** 6Main2 REACH 7 - SJR SR 50         Location  619
+  121     ~111261901~
+  122     ~111261902~
+  123     ~111261903~
+  124     ~111261904~
+  125     ~111261905~
+  126     ~111261906~
+  127     ~111261907~
+  128     ~111261908~
+  129     ~111261909~
+  130     ~111261910~
+  131     ~111261911~
+  132     ~111261912~
+  133     ~111261913~
+  135     ~111261913~
+*** 6Main2 REACH 8 - St. Johns River CoLocation  619
+  141     ~111261901~
+  142     ~111261902~
+  143     ~111261903~
+  144     ~111261904~
+  145     ~111261905~
+  146     ~111261906~
+  147     ~111261907~
+  148     ~111261908~
+  149     ~111261909~
+  150     ~111261910~
+  151     ~111261911~
+  152     ~111261912~
+  153     ~111261913~
+  155     ~111261913~
+*** 6Main2 REACH 9 - Puzzle Lake       Location  619
+  161     ~111261901~
+  162     ~111261902~
+  163     ~111261903~
+  164     ~111261904~
+  165     ~111261905~
+  166     ~111261906~
+  167     ~111261907~
+  168     ~111261908~
+  169     ~111261909~
+  170     ~111261910~
+  171     ~111261911~
+  172     ~111261912~
+  173     ~111261913~
+  175     ~111261913~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   3
+*** 6Main2 REACH 1 - Lake Winder       Location  618
+    1     ~111361801~
+    2     ~111361802~
+    3     ~111361803~
+    4     ~111361804~
+    5     ~111361805~
+    6     ~111361806~
+    7     ~111361807~
+    8     ~111361808~
+    9     ~111361809~
+   10     ~111361810~
+   11     ~111361811~
+   12     ~111361812~
+   13     ~111361813~
+   15     ~111361813~
+*** 6Main2 REACH 2 - Taylor Ck Resv    Location  617
+   21     ~111361701~
+   22     ~111361702~
+   23     ~111361703~
+   24     ~111361704~
+   25     ~111361705~
+   26     ~111361706~
+   27     ~111361707~
+   28     ~111361708~
+   29     ~111361709~
+   30     ~111361710~
+   31     ~111361711~
+   32     ~111361712~
+   33     ~111361713~
+   35     ~111361713~
+*** 6Main2 REACH 3 - Taylor Creek Gage Location  617
+   41     ~111361701~
+   42     ~111361702~
+   43     ~111361703~
+   44     ~111361704~
+   45     ~111361705~
+   46     ~111361706~
+   47     ~111361707~
+   48     ~111361708~
+   49     ~111361709~
+   50     ~111361710~
+   51     ~111361711~
+   52     ~111361712~
+   53     ~111361713~
+   55     ~111361713~
+*** 6Main2 REACH 4 - Lower Taylor CreekLocation  618
+   61     ~111361801~
+   62     ~111361802~
+   63     ~111361803~
+   64     ~111361804~
+   65     ~111361805~
+   66     ~111361806~
+   67     ~111361807~
+   68     ~111361808~
+   69     ~111361809~
+   70     ~111361810~
+   71     ~111361811~
+   72     ~111361812~
+   73     ~111361813~
+   75     ~111361813~
+*** 6Main2 REACH 5 - Lake Poinsett     Location  618
+   81     ~111361801~
+   82     ~111361802~
+   83     ~111361803~
+   84     ~111361804~
+   85     ~111361805~
+   86     ~111361806~
+   87     ~111361807~
+   88     ~111361808~
+   89     ~111361809~
+   90     ~111361810~
+   91     ~111361811~
+   92     ~111361812~
+   93     ~111361813~
+   95     ~111361813~
+*** 6Main2 REACH 6 - SJR SR 528        Location  619
+  101     ~111361901~
+  102     ~111361902~
+  103     ~111361903~
+  104     ~111361904~
+  105     ~111361905~
+  106     ~111361906~
+  107     ~111361907~
+  108     ~111361908~
+  109     ~111361909~
+  110     ~111361910~
+  111     ~111361911~
+  112     ~111361912~
+  113     ~111361913~
+  115     ~111361913~
+*** 6Main2 REACH 7 - SJR SR 50         Location  619
+  121     ~111361901~
+  122     ~111361902~
+  123     ~111361903~
+  124     ~111361904~
+  125     ~111361905~
+  126     ~111361906~
+  127     ~111361907~
+  128     ~111361908~
+  129     ~111361909~
+  130     ~111361910~
+  131     ~111361911~
+  132     ~111361912~
+  133     ~111361913~
+  135     ~111361913~
+*** 6Main2 REACH 8 - St. Johns River CoLocation  619
+  141     ~111361901~
+  142     ~111361902~
+  143     ~111361903~
+  144     ~111361904~
+  145     ~111361905~
+  146     ~111361906~
+  147     ~111361907~
+  148     ~111361908~
+  149     ~111361909~
+  150     ~111361910~
+  151     ~111361911~
+  152     ~111361912~
+  153     ~111361913~
+  155     ~111361913~
+*** 6Main2 REACH 9 - Puzzle Lake       Location  619
+  161     ~111361901~
+  162     ~111361902~
+  163     ~111361903~
+  164     ~111361904~
+  165     ~111361905~
+  166     ~111361906~
+  167     ~111361907~
+  168     ~111361908~
+  169     ~111361909~
+  170     ~111361910~
+  171     ~111361911~
+  172     ~111361912~
+  173     ~111361913~
+  175     ~111361913~
+  END PWAT-PARM4
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 6Main2 REACH 1 - Lake Winder                  Location  618
+    1   19       918
+*** 6Main2 REACH 2 - Taylor Ck Resv               Location  617
+   21   39       917
+*** 6Main2 REACH 3 - Taylor Creek Gage            Location  617
+   41   59       917
+*** 6Main2 REACH 4 - Lower Taylor Creek           Location  618
+   61   79       918
+*** 6Main2 REACH 5 - Lake Poinsett                Location  618
+   81   99       918
+*** 6Main2 REACH 6 - SJR SR 528                   Location  619
+  101  119       919
+*** 6Main2 REACH 7 - SJR SR 50                    Location  619
+  121  139       919
+*** 6Main2 REACH 8 - St. Johns River Cone         Location  619
+  141  159       919
+*** 6Main2 REACH 9 - Puzzle Lake                  Location  619
+  161  179       919
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 6Main2 REACH 1 - Lake Winder       Location  618
+    1     ~111661801~
+    2     ~111661802~
+    3     ~111661803~
+    4     ~111661804~
+    5     ~111661805~
+    6     ~111661806~
+    7     ~111661807~
+    8     ~111661808~
+    9     ~111661809~
+   10     ~111661810~
+   11     ~111661811~
+   12     ~111661812~
+   13     ~111661813~
+   15     ~111661813~
+*** 6Main2 REACH 2 - Taylor Ck Resv    Location  617
+   21     ~111661701~
+   22     ~111661702~
+   23     ~111661703~
+   24     ~111661704~
+   25     ~111661705~
+   26     ~111661706~
+   27     ~111661707~
+   28     ~111661708~
+   29     ~111661709~
+   30     ~111661710~
+   31     ~111661711~
+   32     ~111661712~
+   33     ~111661713~
+   35     ~111661713~
+*** 6Main2 REACH 3 - Taylor Creek Gage Location  617
+   41     ~111661701~
+   42     ~111661702~
+   43     ~111661703~
+   44     ~111661704~
+   45     ~111661705~
+   46     ~111661706~
+   47     ~111661707~
+   48     ~111661708~
+   49     ~111661709~
+   50     ~111661710~
+   51     ~111661711~
+   52     ~111661712~
+   53     ~111661713~
+   55     ~111661713~
+*** 6Main2 REACH 4 - Lower Taylor CreekLocation  618
+   61     ~111661801~
+   62     ~111661802~
+   63     ~111661803~
+   64     ~111661804~
+   65     ~111661805~
+   66     ~111661806~
+   67     ~111661807~
+   68     ~111661808~
+   69     ~111661809~
+   70     ~111661810~
+   71     ~111661811~
+   72     ~111661812~
+   73     ~111661813~
+   75     ~111661813~
+*** 6Main2 REACH 5 - Lake Poinsett     Location  618
+   81     ~111661801~
+   82     ~111661802~
+   83     ~111661803~
+   84     ~111661804~
+   85     ~111661805~
+   86     ~111661806~
+   87     ~111661807~
+   88     ~111661808~
+   89     ~111661809~
+   90     ~111661810~
+   91     ~111661811~
+   92     ~111661812~
+   93     ~111661813~
+   95     ~111661813~
+*** 6Main2 REACH 6 - SJR SR 528        Location  619
+  101     ~111661901~
+  102     ~111661902~
+  103     ~111661903~
+  104     ~111661904~
+  105     ~111661905~
+  106     ~111661906~
+  107     ~111661907~
+  108     ~111661908~
+  109     ~111661909~
+  110     ~111661910~
+  111     ~111661911~
+  112     ~111661912~
+  113     ~111661913~
+  115     ~111661913~
+*** 6Main2 REACH 7 - SJR SR 50         Location  619
+  121     ~111661901~
+  122     ~111661902~
+  123     ~111661903~
+  124     ~111661904~
+  125     ~111661905~
+  126     ~111661906~
+  127     ~111661907~
+  128     ~111661908~
+  129     ~111661909~
+  130     ~111661910~
+  131     ~111661911~
+  132     ~111661912~
+  133     ~111661913~
+  135     ~111661913~
+*** 6Main2 REACH 8 - St. Johns River CoLocation  619
+  141     ~111661901~
+  142     ~111661902~
+  143     ~111661903~
+  144     ~111661904~
+  145     ~111661905~
+  146     ~111661906~
+  147     ~111661907~
+  148     ~111661908~
+  149     ~111661909~
+  150     ~111661910~
+  151     ~111661911~
+  152     ~111661912~
+  153     ~111661913~
+  155     ~111661913~
+*** 6Main2 REACH 9 - Puzzle Lake       Location  619
+  161     ~111661901~
+  162     ~111661902~
+  163     ~111661903~
+  164     ~111661904~
+  165     ~111661905~
+  166     ~111661906~
+  167     ~111661907~
+  168     ~111661908~
+  169     ~111661909~
+  170     ~111661910~
+  171     ~111661911~
+  172     ~111661912~
+  173     ~111661913~
+  175     ~111661913~
+  END PWAT-STATE1
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+  001  999    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+    <ILS > ******** Print-flags ******** PIVL  PYR
+    x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+    <ILS > ******** Print-flags ******** PIVL  PYR
+    x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+*** <ILS >      Name             Unit-systems   Printer  Binary
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+  001  999                             1    1   80    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+  001  999    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+***            LSUR      SLSUR      NSUR     RETSC
+***            (ft)                           (in)
+  001  999      150.     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+***           PETMAX    PETMIN
+  001 999       40.0      35.0
+  END IWAT-PARM3
+
+  IWAT-STATE1
+***             RETS      SURS
+***               in        in
+  001 999      0.000      0.00
+  END IWAT-STATE1
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1  999    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1  999    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1  999    3    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 6Main2 REACH 1
+    1     Lake Winder             1         1    1   82    0    0   83    0
+*** 6Main2 REACH 2
+    2     Taylor Ck Resv          2         1    1   82    0    0   83    0
+*** 6Main2 REACH 3
+    3     Taylor Creek Gage       1         1    1   82    0    0   83    0
+*** 6Main2 REACH 4
+    4     Lower Taylor Creek      2         1    1   82    0    0   83    0
+*** 6Main2 REACH 5
+    5     Lake Poinsett           1         1    1   82    0    0   83    0
+*** 6Main2 REACH 6
+    6     SJR SR 528              1         1    1   82    0    0   83    0
+*** 6Main2 REACH 7
+    7     SJR SR 50               1         1    1   82    0    0   83    0
+*** 6Main2 REACH 8
+    8     St. Johns River Cone    1         1    1   82    0    0   83    0
+*** 6Main2 REACH 9
+    9     Puzzle Lake             1         1    1   82    0    0   83    0
+  END GEN-INFO
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 6Main2 REACH 1 - Lake Winder
+    1        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6Main2 REACH 2 - Taylor Ck Resv
+    2        0  1  0  0    0  0  0  0  0       1  2  0  0  0       1  1  1  1  1
+*** 6Main2 REACH 3 - Taylor Creek Gage
+    3        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6Main2 REACH 4 - Lower Taylor Creek
+    4        0  1  0  0    4  5  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6Main2 REACH 5 - Lake Poinsett
+    5        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6Main2 REACH 6 - SJR SR 528
+    6        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6Main2 REACH 7 - SJR SR 50
+    7        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6Main2 REACH 8 - St. Johns River Cone
+    8        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6Main2 REACH 9 - Puzzle Lake
+    9        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 6Main2 REACH 1 - Lake Winder
+    1             1.      9.01      0.66      3.00       0.5      0.01
+*** 6Main2 REACH 2 - Taylor Ck Resv
+    2             2.      4.67      0.06     18.74       0.5      0.01
+*** 6Main2 REACH 3 - Taylor Creek Gage
+    3             3.      1.12      4.16     12.80       0.5      0.01
+*** 6Main2 REACH 4 - Lower Taylor Creek
+    4             4.      3.81      7.68     16.53       0.5      0.01
+*** 6Main2 REACH 5 - Lake Poinsett
+    5             5.      8.65      4.28      2.00       0.5      0.01
+*** 6Main2 REACH 6 - SJR SR 528
+    6             6.      8.61      1.84     -7.29       0.5      0.01
+*** 6Main2 REACH 7 - SJR SR 50
+    7             7.     12.69      4.56     -6.83       0.5      0.01
+*** 6Main2 REACH 8 - St. Johns River Cone
+    8             8.      8.31      0.59     -3.49       0.5      0.01
+*** 6Main2 REACH 9 - Puzzle Lake
+    9             9.     11.41      4.46     -3.30       0.5      0.01
+  END HYDR-PARM2
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 6Main2 REACH 1 - Lake Winder
+    1       10380.50       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6Main2 REACH 2 - Taylor Ck Resv
+    2       21713.10       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6Main2 REACH 3 - Taylor Creek Gage
+    3          82.40       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6Main2 REACH 4 - Lower Taylor Creek
+    4         326.91       4.0  5.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6Main2 REACH 5 - Lake Poinsett
+    5       27461.40       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6Main2 REACH 6 - SJR SR 528
+    6        4300.66       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6Main2 REACH 7 - SJR SR 50
+    7        6898.93       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6Main2 REACH 8 - St. Johns River Cone
+    8        3943.67       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6Main2 REACH 9 - Puzzle Lake
+    9        4679.38       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+END RCHRES
+
+FTABLES
+  FTABLE    001
+ rows cols ***      Lake Winder         STCOR           3.00
+   17    4
+     depth      area    volume  outflow1 ***
+      0.00       1.0      0.00       0.0
+      1.00      15.8      6.90       0.0
+      2.00     390.4    210.00       0.0
+      3.00     813.3    995.80       0.0
+      4.03    1255.8   1879.47       0.0
+      4.84    1465.4   2981.56      87.0
+      7.02    3116.0   7975.28     283.0
+      8.03    4771.0  11958.22     587.0
+     10.16   12241.0  30743.56    1201.0
+     10.58   12722.0  38587.60    2679.0
+     11.27   13082.0  47278.90    4800.0
+     12.09   13558.0  60709.90    7250.0
+     12.98   14272.0  70888.90    9980.0
+     13.83   15223.0  80938.90   12250.0
+     14.84   17636.0  96159.90   13700.0
+     15.01   17986.0  99263.90   14000.0
+     18.00   25521.0 164306.87   20000.0
+  END FTABLE001
+
+  FTABLE    002
+ rows cols ***      Taylor Ck Reservoir STCOR          18.74
+   17    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+     13.00    1254.0   5516.00       0.0
+     14.00    1439.0   6862.00       0.0
+     15.00    1642.0   8403.00       0.0
+     16.00    1948.0  10197.00       0.0
+     17.00    2322.0  12332.00       0.0
+     18.00    2616.0  14800.00       0.0
+     19.00    2945.0  17581.00       0.0
+     20.00    3302.0  20705.00      90.0
+     21.00    3454.0  24083.00     210.0
+     22.00    3609.0  27614.00     400.0
+     23.00    3738.0  31288.00     620.0
+     23.50    4147.0  33259.00    1150.0
+     25.00    5373.0  40399.00    1600.0
+     30.00   10177.5  79125.00    3500.0
+     32.00   10223.0  99525.50    4000.0
+     35.00   10223.0 130194.50    5500.0
+  END FTABLE002
+
+  FTABLE    003
+ rows cols ***      Taylor Creek Gage   STCOR          12.80
+   12    4
+     depth      area    volume  outflow1 ***
+      0.00       2.7      0.00       0.0
+      2.00       5.3      8.00       0.0
+      2.50      16.0     13.33       0.3
+      3.00      26.7     24.00       1.1
+      3.50      37.3     40.00       3.3
+      4.00      48.0     61.33       8.7
+      5.00      69.3    120.00      32.0
+      6.00     122.7    216.00     110.0
+      7.00     176.0    365.33     300.0
+      9.00     218.7    760.00    1300.0
+     11.00     261.3   1240.00    5400.0
+     14.00     421.3   2264.00   15000.0
+  END FTABLE003
+
+  FTABLE    004
+ rows cols ***      Lower Taylor Creek  STCOR          16.53
+   12    5
+     depth      area    volume  outflow1  outflow2 ***
+      0.00      14.2      0.00       0.0       0.0
+      2.00      23.6     37.82       0.0       0.0
+      2.50      66.2     60.27       0.3       0.0
+      3.00     108.7    104.00       1.2       0.0
+      3.50     151.3    169.00       3.6       0.0
+      4.00     193.8    255.27       9.4       0.0
+      5.00     278.9    491.64      34.7       0.0
+      6.00     486.9    874.55     119.3       0.0
+      7.00     694.9   1465.45     325.4       0.0
+      9.00    1110.9   3271.27    1410.0       0.0
+     11.00    1526.9   5909.09    5856.9       0.0
+     14.00    2150.9  11425.82   16269.2       0.0
+  END FTABLE004
+
+  FTABLE    005
+ rows cols ***      Lake Poinsett       STCOR           2.00
+   18    4
+     depth      area    volume  outflow1 ***
+      0.00       9.0       0.0       0.0
+      2.00      27.1      36.1       0.0
+      2.64     145.2      82.3       0.0
+      3.64    1926.4    1122.1       0.0
+      4.64    3259.9    3742.0       0.0
+      5.02    3753.2    4930.9       0.0
+      5.83    4018.0    8069.5      87.0
+      7.96    6294.0   19051.7     283.0
+      8.87   11363.0   27198.8     587.0
+      9.78   13793.0   42099.3    1117.0
+     10.80   16355.3   57221.8    2549.0
+     11.81   17011.1   76507.8    4098.0
+     12.80   18014.2  100431.8    5699.0
+     13.81   18878.9  126922.8    7384.0
+     14.80   19475.7  154707.8    9013.0
+     15.81   19881.4  184626.8   10710.0
+     15.97   19938.0  190035.8   12028.0
+     18.00   19938.0  230509.9   25000.0
+  END FTABLE005
+
+  FTABLE    006
+ rows cols ***      SJR SR 528          STCOR          -7.29
+   12    4
+     depth      area    volume  outflow1 ***
+      7.13     49.00      0.00      0.00
+     10.25     49.00    153.00      0.00
+     13.19    168.00    465.00     49.00
+     13.76    223.00    593.00     87.00
+     15.15   2008.00   1547.00    283.00
+     16.14   4731.00   3803.00    587.00
+     17.07   6180.00   7607.00   1130.00
+     18.34   8624.00  14891.00   2400.00
+     18.99  10045.00  20052.00   3390.00
+     21.65  14147.00  46037.00   9018.00
+     22.01  14962.00  51529.00  10700.00
+     26.89  19777.00 108487.00  18000.00
+  END FTABLE006
+
+  FTABLE    007
+ rows cols ***      SJR SR 50           STCOR          -6.83
+   12    4
+     depth      area    volume  outflow1 ***
+      5.67    374.00      0.00      0.00
+      8.10    374.00    908.00      0.00
+      8.97    476.00   1117.00     67.00
+      9.47    757.00   1393.00    108.00
+     11.13   2248.00   3258.00    378.00
+     12.56   5962.00   7697.00    807.00
+     13.72   9545.00  14644.00   1540.00
+     15.01  14586.00  28963.00   3070.00
+     15.96  17758.00  40246.00   4072.00
+     18.16  23993.00  81493.00  10300.00
+     18.50  24696.00  88899.00  11600.00
+     22.50  32241.001888221.00  18000.00
+  END FTABLE007
+
+  FTABLE    008
+ rows cols ***      SJR Cone Lake       STCOR          -3.49
+   12    4
+     depth      area    volume  outflow1 ***
+      0.30     40.00      0.00      0.00
+      2.25     40.00     78.00      0.00
+      4.42    623.00    467.00     67.00
+      4.80    839.00    689.00    108.00
+      5.89   1809.00   1829.00    378.00
+      6.75   5013.00   4039.00    807.00
+      7.60  11099.00  10259.00   1540.00
+      9.38  13450.00  22530.00   3070.00
+     11.23  15231.00  37424.00   4072.00
+     12.54  16607.00  59353.00  10300.00
+     12.74  16813.00  63140.00  11600.00
+     14.74  16813.00  96766.00  20000.00
+  END FTABLE008
+
+  FTABLE    009
+ rows cols ***      SJR Puzzle Lake     STCOR          -3.30
+   13    4
+     depth      area    volume  outflow1 ***
+      1.11    549.00      0.00      0.00
+      2.02    549.00    500.00      0.00
+      2.82   1051.00   1190.00    125.00
+      3.04   1259.00   1482.00    193.00
+      3.92   2352.00   3041.00    514.00
+      4.87   4005.00   5767.00   1046.00
+      6.21   6403.00  11284.00   1780.00
+      7.78   8748.00  21345.00   4056.00
+     10.40  13231.00  41915.00   5389.00
+     11.09  14464.00  50630.00   9181.00
+     11.20  14625.00  52070.00   9751.00
+     12.20  15375.00  67070.00  11000.00
+     14.20  15375.00  97820.00  25000.00
+  END FTABLE009
+
+  FTABLE    917
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 6.0000000       0.0
+      12. .002467640
+      24. .007402920
+      36. .012338200
+  END FTABLE917
+
+  FTABLE    918
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 6.0000000       0.0
+      12. .020000000
+      24. .060000000
+      36. .100000000
+  END FTABLE918
+
+  FTABLE    919
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 6.0000000       0.0
+      12. .012623392
+      24. .037870176
+      36. .063116960
+  END FTABLE919
+END FTABLES
+
+COPY
+  TIMESERIES
+    x -  x  NPT  NMN ***
+   99              1
+  END TIMESERIES
+END COPY
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - Lake Winder
+*** Rain station Melbourne WSO
+WDM1  3502 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1  3502 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1  3502 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Melbourne WSO
+WDM1  3506 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  3506 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  3506 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - Taylor Ck Resv
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - Taylor Creek Gage
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Lower Taylor Creek
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - Lake Poinsett
+*** Rain station Melbourne WSO
+WDM1  3502 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1  3502 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1  3502 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Melbourne WSO
+WDM1  3506 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  3506 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  3506 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - SJR SR 528
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+*** Reach 7 - SJR SR 50
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND 121 139 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND 121 139 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   7     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 121 139 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 121 139 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   7     EXTNL  POTEV
+
+*** Reach 8 - St. Johns River Cone
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND 141 159 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND 141 159 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   8     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 141 159 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 141 159 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   8     EXTNL  POTEV
+
+*** Reach 9 - Puzzle Lake
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND 161 179 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND 161 179 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   9     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 161 179 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 161 179 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   9     EXTNL  POTEV
+
+*** Tributary inflows - Transfers
+ *** FROM SJR Rockledge TO Lake Winder
+WDM2   510 FLOW     ENGL                   RCHRES   1     EXTNL  IVOL
+ *** FROM Mocc Isl Canal 6 TO Lake Winder
+WDM2   511 FLOW     ENGL                   RCHRES   1     EXTNL  IVOL
+ *** FROM Pennywash Ck Trib TO Lake Winder
+WDM2   512 FLOW     ENGL                   RCHRES   1     EXTNL  IVOL
+ *** FROM Pennywash Creek TO Lake Winder
+WDM2   513 FLOW     ENGL                   RCHRES   1     EXTNL  IVOL
+ *** FROM Wolf Creek Deer Park TO Lake Winder
+WDM2   514 FLOW     ENGL                   RCHRES   1     EXTNL  IVOL
+ *** FROM Mocc Isl Canal 3 TO Lake Winder
+WDM2   515 FLOW     ENGL                   RCHRES   1     EXTNL  IVOL
+ *** FROM Lower Cox Creek TO Lake Winder
+WDM2   516 FLOW     ENGL                   RCHRES   1     EXTNL  IVOL
+ *** FROM Upper Cox Creek TO Taylor Ck Resv
+WDM2   521 FLOW     ENGL                   RCHRES   2     EXTNL  IVOL
+ *** FROM Upper Taylor Creek TO Taylor Ck Resv
+WDM2   522 FLOW     ENGL                   RCHRES   2     EXTNL  IVOL
+ *** FROM NF Taylor Ck TO Taylor Ck Resv
+WDM2   523 FLOW     ENGL                   RCHRES   2     EXTNL  IVOL
+ *** FROM Bonnet Gully TO Taylor Ck Resv
+WDM2   524 FLOW     ENGL                   RCHRES   2     EXTNL  IVOL
+ *** FROM Mocc Isl Canal 1 TO Lake Poinsett
+WDM2   551 FLOW     ENGL                   RCHRES   5     EXTNL  IVOL
+ *** FROM SJR Trib 7 TO Lake Poinsett
+WDM2   552 FLOW     ENGL                   RCHRES   5     EXTNL  IVOL
+ *** FROM Rockledge Creek TO Lake Poinsett
+WDM2   553 FLOW     ENGL                   RCHRES   5     EXTNL  IVOL
+ *** FROM Cocoa Canals TO Lake Poinsett
+WDM2   554 FLOW     ENGL                   RCHRES   5     EXTNL  IVOL
+ *** FROM K 6 Ranch Canals TO Lake Poinsett
+WDM2   555 FLOW     ENGL                   RCHRES   5     EXTNL  IVOL
+ *** FROM King St. Canal TO SJR SR 528
+WDM2   561 FLOW     ENGL                   RCHRES   6     EXTNL  IVOL
+ *** FROM Lk Wilson Ca TO SJR SR 528
+WDM2   562 FLOW     ENGL                   RCHRES   6     EXTNL  IVOL
+ *** FROM Delespine Grant D TO SJR SR 50
+WDM2   571 FLOW     ENGL                   RCHRES   7     EXTNL  IVOL
+ *** FROM Bird Lake TO SJR SR 50
+WDM2   572 FLOW     ENGL                   RCHRES   7     EXTNL  IVOL
+ *** FROM Lower Jim Creek TO SJR SR 50
+WDM2   573 FLOW     ENGL                   RCHRES   7     EXTNL  IVOL
+ *** FROM Tootoosahatchee Ck TO SJR SR 50
+WDM2   574 FLOW     ENGL                   RCHRES   7     EXTNL  IVOL
+ *** FROM Savage Creek TO St. Johns River Cone
+WDM2   581 FLOW     ENGL                   RCHRES   8     EXTNL  IVOL
+ *** FROM South Lake Outlet TO St. Johns River Cone
+WDM2   582 FLOW     ENGL                   RCHRES   8     EXTNL  IVOL
+ *** FROM Clark Lake Outlet TO St. Johns River Cone
+WDM2   583 FLOW     ENGL                   RCHRES   8     EXTNL  IVOL
+ *** FROM Savage Creek TO St. Johns River Cone
+WDM2   581 FLOW     ENGL                   RCHRES   8     EXTNL  IVOL
+ *** FROM Buscombe Creek TO Puzzle Lake
+WDM2   592 FLOW     ENGL                   RCHRES   9     EXTNL  IVOL
+ *** FROM Jackson Ck Div TO Puzzle Lake
+WDM2   593 FLOW     ENGL                   RCHRES   9     EXTNL  IVOL
+ *** FROM Cabbage Slough TO Puzzle Lake
+WDM2   594 FLOW     ENGL                   RCHRES   9     EXTNL  IVOL
+
+*** Floridan Aquifer inflow to lower main stem, estimated by CDM based on earlier chloride work
+  *** convert from CFS to ac-ft/hr
+WDM2  9005 ESTQ     ENGL     0.082645 SAME RCHRES   5     EXTNL  IVOL
+WDM2  9006 ESTQ     ENGL     0.082645 SAME RCHRES   6     EXTNL  IVOL
+WDM2  9007 ESTQ     ENGL     0.082645 SAME RCHRES   7     EXTNL  IVOL
+WDM2  9007 ESTQ     ENGL     0.082645 SAME RCHRES   8     EXTNL  IVOL
+WDM2  9007 ESTQ     ENGL     0.082645 SAME RCHRES   9     EXTNL  IVOL
+END EXT SOURCES
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 6Main2 REACH 1
+PERLND   1                        31.0     RCHRES   1      1
+PERLND   2                         0.0     RCHRES   1      1
+PERLND   3                         0.0     RCHRES   1      1
+PERLND   4                         0.0     RCHRES   1      1
+PERLND   5                        31.5     RCHRES   1      1
+PERLND   6                       234.8     RCHRES   1      1
+PERLND   7                      6552.1     RCHRES   1      1
+PERLND   8                       702.3     RCHRES   1      1
+PERLND   9                         0.0     RCHRES   1      1
+PERLND  10                       603.7     RCHRES   1      1
+PERLND  11                      2913.8     RCHRES   1      1
+PERLND  12***                   2303.7     RCHRES   1      1
+PERLND  13                      7930.4     RCHRES   1      1
+PERLND  15                      2023.3     RCHRES   1      1
+IMPLND   1                         1.6     RCHRES   1      2
+IMPLND   2                         0.0     RCHRES   1      2
+IMPLND   3                         0.0     RCHRES   1      2
+IMPLND   4                         0.0     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                         7.9     PERLND  15     11
+PERLND   2                         0.0     PERLND  15     11
+PERLND   3                         0.0     PERLND  15     11
+PERLND   4                         0.0     PERLND  15     11
+PERLND   5                         8.0     PERLND  15     11
+PERLND   6                        59.9     PERLND  15     11
+PERLND   7                      1671.6     PERLND  15     11
+PERLND   8                       179.2     PERLND  15     11
+PERLND   9                         0.0     PERLND  15     11
+PERLND  10                       154.0     PERLND  15     11
+PERLND  11                       743.4     PERLND  15     11
+PERLND  12                       339.9     PERLND  15     11
+IMPLND   1                         0.4     PERLND  15     12
+IMPLND   2                         0.0     PERLND  15     12
+IMPLND   3                         0.0     PERLND  15     12
+IMPLND   4                         0.0     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                         7.9     RCHRES   1      9
+PERLND   2                         0.0     RCHRES   1      9
+PERLND   3                         0.0     RCHRES   1      9
+PERLND   4                         0.0     RCHRES   1      9
+PERLND   5                         8.0     RCHRES   1      9
+PERLND   6                        59.9     RCHRES   1      9
+PERLND   7                      1671.6     RCHRES   1      9
+PERLND   8                       179.2     RCHRES   1      9
+PERLND   9                         0.0     RCHRES   1      9
+PERLND  10                       154.0     RCHRES   1      9
+PERLND  11                       743.4     RCHRES   1      9
+PERLND  12                       339.9     RCHRES   1      9
+
+*** 6Main2 REACH 2
+PERLND  21                         0.0     RCHRES   2      1
+PERLND  22                         6.8     RCHRES   2      1
+PERLND  23                         0.0     RCHRES   2      1
+PERLND  24                         0.0     RCHRES   2      1
+PERLND  25                         0.0     RCHRES   2      1
+PERLND  26                        61.8     RCHRES   2      1
+PERLND  27                      1591.5     RCHRES   2      1
+PERLND  28                         0.0     RCHRES   2      1
+PERLND  29                        27.1     RCHRES   2      1
+PERLND  30                      1333.1     RCHRES   2      1
+PERLND  31                      1202.2     RCHRES   2      1
+PERLND  32***                   1858.4     RCHRES   2      1
+PERLND  33                      2011.8     RCHRES   2      1
+PERLND  35                       771.7     RCHRES   2      1
+IMPLND  21                         0.0     RCHRES   2      2
+IMPLND  22                         1.2     RCHRES   2      2
+IMPLND  23                         0.0     RCHRES   2      2
+IMPLND  24                         0.0     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                         0.0     PERLND  35     21
+PERLND  22                         2.6     PERLND  35     21
+PERLND  23                         0.0     PERLND  35     21
+PERLND  24                         0.0     PERLND  35     21
+PERLND  25                         0.0     PERLND  35     21
+PERLND  26                        23.7     PERLND  35     21
+PERLND  27                       610.5     PERLND  35     21
+PERLND  28                         0.0     PERLND  35     21
+PERLND  29                        10.4     PERLND  35     21
+PERLND  30                       511.3     PERLND  35     21
+PERLND  31                       461.1     PERLND  35     21
+PERLND  32                       442.5     PERLND  35     21
+IMPLND  21                         0.0     PERLND  35     22
+IMPLND  22                         0.5     PERLND  35     22
+IMPLND  23                         0.0     PERLND  35     22
+IMPLND  24                         0.0     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                         0.0     RCHRES   2      9
+PERLND  22                         2.6     RCHRES   2      9
+PERLND  23                         0.0     RCHRES   2      9
+PERLND  24                         0.0     RCHRES   2      9
+PERLND  25                         0.0     RCHRES   2      9
+PERLND  26                        23.7     RCHRES   2      9
+PERLND  27                       610.5     RCHRES   2      9
+PERLND  28                         0.0     RCHRES   2      9
+PERLND  29                        10.4     RCHRES   2      9
+PERLND  30                       511.3     RCHRES   2      9
+PERLND  31                       461.1     RCHRES   2      9
+PERLND  32                       442.5     RCHRES   2      9
+
+*** 6Main2 REACH 3
+PERLND  41                       358.0     RCHRES   3      1
+PERLND  42                         0.0     RCHRES   3      1
+PERLND  43                         0.0     RCHRES   3      1
+PERLND  44                         0.0     RCHRES   3      1
+PERLND  45                         3.0     RCHRES   3      1
+PERLND  46                        10.3     RCHRES   3      1
+PERLND  47                        19.1     RCHRES   3      1
+PERLND  48                         0.0     RCHRES   3      1
+PERLND  49                         0.0     RCHRES   3      1
+PERLND  50                        42.5     RCHRES   3      1
+PERLND  51                       122.9     RCHRES   3      1
+PERLND  52***                      1.7     RCHRES   3      1
+PERLND  53                       109.9     RCHRES   3      1
+PERLND  55                        77.0     RCHRES   3      1
+IMPLND  41                        18.8     RCHRES   3      2
+IMPLND  42                         0.0     RCHRES   3      2
+IMPLND  43                         0.0     RCHRES   3      2
+IMPLND  44                         0.0     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                       250.8     PERLND  55     31
+PERLND  42                         0.0     PERLND  55     31
+PERLND  43                         0.0     PERLND  55     31
+PERLND  44                         0.0     PERLND  55     31
+PERLND  45                         2.1     PERLND  55     31
+PERLND  46                         7.2     PERLND  55     31
+PERLND  47                        13.4     PERLND  55     31
+PERLND  48                         0.0     PERLND  55     31
+PERLND  49                         0.0     PERLND  55     31
+PERLND  50                        29.8     PERLND  55     31
+PERLND  51                        86.1     PERLND  55     31
+PERLND  52                         0.6     PERLND  55     31
+IMPLND  41                        13.2     PERLND  55     32
+IMPLND  42                         0.0     PERLND  55     32
+IMPLND  43                         0.0     PERLND  55     32
+IMPLND  44                         0.0     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                       250.8     RCHRES   3      9
+PERLND  42                         0.0     RCHRES   3      9
+PERLND  43                         0.0     RCHRES   3      9
+PERLND  44                         0.0     RCHRES   3      9
+PERLND  45                         2.1     RCHRES   3      9
+PERLND  46                         7.2     RCHRES   3      9
+PERLND  47                        13.4     RCHRES   3      9
+PERLND  48                         0.0     RCHRES   3      9
+PERLND  49                         0.0     RCHRES   3      9
+PERLND  50                        29.8     RCHRES   3      9
+PERLND  51                        86.1     RCHRES   3      9
+PERLND  52                         0.6     RCHRES   3      9
+
+*** 6Main2 REACH 4
+PERLND  61                        89.3     RCHRES   4      1
+PERLND  62                         0.0     RCHRES   4      1
+PERLND  63                         0.0     RCHRES   4      1
+PERLND  64                         0.0     RCHRES   4      1
+PERLND  65                        26.0     RCHRES   4      1
+PERLND  66                        89.3     RCHRES   4      1
+PERLND  67                       165.8     RCHRES   4      1
+PERLND  68                         0.0     RCHRES   4      1
+PERLND  69                         0.0     RCHRES   4      1
+PERLND  70                       368.5     RCHRES   4      1
+PERLND  71                      1065.4     RCHRES   4      1
+PERLND  72***                     35.9     RCHRES   4      1
+PERLND  73                       906.2     RCHRES   4      1
+PERLND  75                       638.7     RCHRES   4      1
+IMPLND  61                         4.7     RCHRES   4      2
+IMPLND  62                         0.0     RCHRES   4      2
+IMPLND  63                         0.0     RCHRES   4      2
+IMPLND  64                         0.0     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                        62.9     PERLND  75     41
+PERLND  62                         0.0     PERLND  75     41
+PERLND  63                         0.0     PERLND  75     41
+PERLND  64                         0.0     PERLND  75     41
+PERLND  65                        18.3     PERLND  75     41
+PERLND  66                        62.9     PERLND  75     41
+PERLND  67                       116.9     PERLND  75     41
+PERLND  68                         0.0     PERLND  75     41
+PERLND  69                         0.0     PERLND  75     41
+PERLND  70                       259.7     PERLND  75     41
+PERLND  71                       750.9     PERLND  75     41
+PERLND  72                         7.5     PERLND  75     41
+IMPLND  61                         3.3     PERLND  75     42
+IMPLND  62                         0.0     PERLND  75     42
+IMPLND  63                         0.0     PERLND  75     42
+IMPLND  64                         0.0     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                        62.9     RCHRES   4      9
+PERLND  62                         0.0     RCHRES   4      9
+PERLND  63                         0.0     RCHRES   4      9
+PERLND  64                         0.0     RCHRES   4      9
+PERLND  65                        18.3     RCHRES   4      9
+PERLND  66                        62.9     RCHRES   4      9
+PERLND  67                       116.9     RCHRES   4      9
+PERLND  68                         0.0     RCHRES   4      9
+PERLND  69                         0.0     RCHRES   4      9
+PERLND  70                       259.7     RCHRES   4      9
+PERLND  71                       750.9     RCHRES   4      9
+PERLND  72                         7.5     RCHRES   4      9
+
+*** 6Main2 REACH 5
+PERLND  81                        39.5     RCHRES   5      1
+PERLND  82                       313.0     RCHRES   5      1
+PERLND  83                        10.9     RCHRES   5      1
+PERLND  84                        83.4     RCHRES   5      1
+PERLND  85                         0.0     RCHRES   5      1
+PERLND  86                        19.0     RCHRES   5      1
+PERLND  87                       469.1     RCHRES   5      1
+PERLND  88                         5.2     RCHRES   5      1
+PERLND  89                         0.4     RCHRES   5      1
+PERLND  90                       214.8     RCHRES   5      1
+PERLND  91                      1188.0     RCHRES   5      1
+PERLND  92***                   4506.9     RCHRES   5      1
+PERLND  93                     12741.4     RCHRES   5      1
+PERLND  95                       209.9     RCHRES   5      1
+IMPLND  81                         2.1     RCHRES   5      2
+IMPLND  82                        55.2     RCHRES   5      2
+IMPLND  83                         5.9     RCHRES   5      2
+IMPLND  84                        83.4     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                         0.7     PERLND  95     51
+PERLND  82                         5.2     PERLND  95     51
+PERLND  83                         0.2     PERLND  95     51
+PERLND  84                         1.4     PERLND  95     51
+PERLND  85                         0.0     PERLND  95     51
+PERLND  86                         0.3     PERLND  95     51
+PERLND  87                         7.7     PERLND  95     51
+PERLND  88                         0.1     PERLND  95     51
+PERLND  89                         0.0     PERLND  95     51
+PERLND  90                         3.5     PERLND  95     51
+PERLND  91                        19.6     PERLND  95     51
+PERLND  92                        72.2     PERLND  95     51
+IMPLND  81                         0.0     PERLND  95     52
+IMPLND  82                         0.9     PERLND  95     52
+IMPLND  83                         0.1     PERLND  95     52
+IMPLND  84                         1.4     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                         0.7     RCHRES   5      9
+PERLND  82                         5.2     RCHRES   5      9
+PERLND  83                         0.2     RCHRES   5      9
+PERLND  84                         1.4     RCHRES   5      9
+PERLND  85                         0.0     RCHRES   5      9
+PERLND  86                         0.3     RCHRES   5      9
+PERLND  87                         7.7     RCHRES   5      9
+PERLND  88                         0.1     RCHRES   5      9
+PERLND  89                         0.0     RCHRES   5      9
+PERLND  90                         3.5     RCHRES   5      9
+PERLND  91                        19.6     RCHRES   5      9
+PERLND  92                        72.2     RCHRES   5      9
+
+*** 6Main2 REACH 6
+PERLND 101                      1726.7     RCHRES   6      1
+PERLND 102                        10.5     RCHRES   6      1
+PERLND 103                         0.6     RCHRES   6      1
+PERLND 104                       489.9     RCHRES   6      1
+PERLND 105                        67.5     RCHRES   6      1
+PERLND 106                        64.8     RCHRES   6      1
+PERLND 107                       268.1     RCHRES   6      1
+PERLND 108                         6.1     RCHRES   6      1
+PERLND 109                         0.0     RCHRES   6      1
+PERLND 110                       317.8     RCHRES   6      1
+PERLND 111                      1533.7     RCHRES   6      1
+PERLND 112***                    959.5     RCHRES   6      1
+PERLND 113                     11507.9     RCHRES   6      1
+PERLND 115                      1526.7     RCHRES   6      1
+IMPLND 101                        90.9     RCHRES   6      2
+IMPLND 102                         1.9     RCHRES   6      2
+IMPLND 103                         0.3     RCHRES   6      2
+IMPLND 104                       489.9     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                       229.1     PERLND 115     61
+PERLND 102                         1.4     PERLND 115     61
+PERLND 103                         0.1     PERLND 115     61
+PERLND 104                        65.0     PERLND 115     61
+PERLND 105                         8.9     PERLND 115     61
+PERLND 106                         8.6     PERLND 115     61
+PERLND 107                        35.6     PERLND 115     61
+PERLND 108                         0.8     PERLND 115     61
+PERLND 109                         0.0     PERLND 115     61
+PERLND 110                        42.2     PERLND 115     61
+PERLND 111                       203.5     PERLND 115     61
+PERLND 112                        71.0     PERLND 115     61
+IMPLND 101                        12.1     PERLND 115     62
+IMPLND 102                         0.2     PERLND 115     62
+IMPLND 103                         0.0     PERLND 115     62
+IMPLND 104                        65.0     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                       229.1     RCHRES   6      9
+PERLND 102                         1.4     RCHRES   6      9
+PERLND 103                         0.1     RCHRES   6      9
+PERLND 104                        65.0     RCHRES   6      9
+PERLND 105                         8.9     RCHRES   6      9
+PERLND 106                         8.6     RCHRES   6      9
+PERLND 107                        35.6     RCHRES   6      9
+PERLND 108                         0.8     RCHRES   6      9
+PERLND 109                         0.0     RCHRES   6      9
+PERLND 110                        42.2     RCHRES   6      9
+PERLND 111                       203.5     RCHRES   6      9
+PERLND 112                        71.0     RCHRES   6      9
+
+*** 6Main2 REACH 7
+PERLND 121                      1876.0     RCHRES   7      1
+PERLND 122                       649.4     RCHRES   7      1
+PERLND 123                        13.9     RCHRES   7      1
+PERLND 124                       975.4     RCHRES   7      1
+PERLND 125                        12.7     RCHRES   7      1
+PERLND 126                        47.1     RCHRES   7      1
+PERLND 127                        68.8     RCHRES   7      1
+PERLND 128                        47.5     RCHRES   7      1
+PERLND 129                        21.0     RCHRES   7      1
+PERLND 130                       160.5     RCHRES   7      1
+PERLND 131                       321.7     RCHRES   7      1
+PERLND 132***                   2261.5     RCHRES   7      1
+PERLND 133                     15155.1     RCHRES   7      1
+PERLND 135                      2421.4     RCHRES   7      1
+IMPLND 121                        98.7     RCHRES   7      2
+IMPLND 122                       114.6     RCHRES   7      2
+IMPLND 123                         7.5     RCHRES   7      2
+IMPLND 124                       975.4     RCHRES   7      2
+      *** Surface runoff to non-reach wetland
+PERLND 121                       299.7     PERLND 135     71
+PERLND 122                       103.8     PERLND 135     71
+PERLND 123                         2.2     PERLND 135     71
+PERLND 124                       155.9     PERLND 135     71
+PERLND 125                         2.0     PERLND 135     71
+PERLND 126                         7.5     PERLND 135     71
+PERLND 127                        11.0     PERLND 135     71
+PERLND 128                         7.6     PERLND 135     71
+PERLND 129                         3.4     PERLND 135     71
+PERLND 130                        25.6     PERLND 135     71
+PERLND 131                        51.4     PERLND 135     71
+PERLND 132                       148.3     PERLND 135     71
+IMPLND 121                        15.8     PERLND 135     72
+IMPLND 122                        18.3     PERLND 135     72
+IMPLND 123                         1.2     PERLND 135     72
+IMPLND 124                       155.9     PERLND 135     72
+      *** Baseflow to reach
+PERLND 121                       299.7     RCHRES   7      9
+PERLND 122                       103.8     RCHRES   7      9
+PERLND 123                         2.2     RCHRES   7      9
+PERLND 124                       155.9     RCHRES   7      9
+PERLND 125                         2.0     RCHRES   7      9
+PERLND 126                         7.5     RCHRES   7      9
+PERLND 127                        11.0     RCHRES   7      9
+PERLND 128                         7.6     RCHRES   7      9
+PERLND 129                         3.4     RCHRES   7      9
+PERLND 130                        25.6     RCHRES   7      9
+PERLND 131                        51.4     RCHRES   7      9
+PERLND 132                       148.3     RCHRES   7      9
+
+*** 6Main2 REACH 8
+PERLND 141                       637.5     RCHRES   8      1
+PERLND 142                      1086.0     RCHRES   8      1
+PERLND 143                       142.1     RCHRES   8      1
+PERLND 144                       693.6     RCHRES   8      1
+PERLND 145                         0.0     RCHRES   8      1
+PERLND 146                         9.5     RCHRES   8      1
+PERLND 147                         6.6     RCHRES   8      1
+PERLND 148                       107.9     RCHRES   8      1
+PERLND 149                         8.4     RCHRES   8      1
+PERLND 150                        68.4     RCHRES   8      1
+PERLND 151                       101.0     RCHRES   8      1
+PERLND 152***                   1326.6     RCHRES   8      1
+PERLND 153                     17797.6     RCHRES   8      1
+PERLND 155                      1141.9     RCHRES   8      1
+IMPLND 141                        33.6     RCHRES   8      2
+IMPLND 142                       191.7     RCHRES   8      2
+IMPLND 143                        76.5     RCHRES   8      2
+IMPLND 144                       693.6     RCHRES   8      2
+      *** Surface runoff to non-reach wetland
+PERLND 141                        40.9     PERLND 155     81
+PERLND 142                        69.7     PERLND 155     81
+PERLND 143                         9.1     PERLND 155     81
+PERLND 144                        44.5     PERLND 155     81
+PERLND 145                         0.0     PERLND 155     81
+PERLND 146                         0.6     PERLND 155     81
+PERLND 147                         0.4     PERLND 155     81
+PERLND 148                         6.9     PERLND 155     81
+PERLND 149                         0.5     PERLND 155     81
+PERLND 150                         4.4     PERLND 155     81
+PERLND 151                         6.5     PERLND 155     81
+PERLND 152                        68.2     PERLND 155     81
+IMPLND 141                         2.2     PERLND 155     82
+IMPLND 142                        12.3     PERLND 155     82
+IMPLND 143                         4.9     PERLND 155     82
+IMPLND 144                        44.5     PERLND 155     82
+      *** Baseflow to reach
+PERLND 141                        40.9     RCHRES   8      9
+PERLND 142                        69.7     RCHRES   8      9
+PERLND 143                         9.1     RCHRES   8      9
+PERLND 144                        44.5     RCHRES   8      9
+PERLND 145                         0.0     RCHRES   8      9
+PERLND 146                         0.6     RCHRES   8      9
+PERLND 147                         0.4     RCHRES   8      9
+PERLND 148                         6.9     RCHRES   8      9
+PERLND 149                         0.5     RCHRES   8      9
+PERLND 150                         4.4     RCHRES   8      9
+PERLND 151                         6.5     RCHRES   8      9
+PERLND 152                        68.2     RCHRES   8      9
+
+*** 6Main2 REACH 9
+PERLND 161                      1172.7     RCHRES   9      1
+PERLND 162                        13.5     RCHRES   9      1
+PERLND 163                         1.2     RCHRES   9      1
+PERLND 164                         0.0     RCHRES   9      1
+PERLND 165                         0.0     RCHRES   9      1
+PERLND 166                         3.3     RCHRES   9      1
+PERLND 167                       309.6     RCHRES   9      1
+PERLND 168                        38.8     RCHRES   9      1
+PERLND 169                         0.0     RCHRES   9      1
+PERLND 170                         6.0     RCHRES   9      1
+PERLND 171                       391.6     RCHRES   9      1
+PERLND 172***                   4170.4     RCHRES   9      1
+PERLND 173                      9190.2     RCHRES   9      1
+PERLND 175                       570.9     RCHRES   9      1
+IMPLND 161                        61.7     RCHRES   9      2
+IMPLND 162                         2.4     RCHRES   9      2
+IMPLND 163                         0.7     RCHRES   9      2
+IMPLND 164                         0.0     RCHRES   9      2
+      *** Surface runoff to non-reach wetland
+PERLND 161                        72.8     PERLND 175     91
+PERLND 162                         0.8     PERLND 175     91
+PERLND 163                         0.1     PERLND 175     91
+PERLND 164                         0.0     PERLND 175     91
+PERLND 165                         0.0     PERLND 175     91
+PERLND 166                         0.2     PERLND 175     91
+PERLND 167                        19.2     PERLND 175     91
+PERLND 168                         2.4     PERLND 175     91
+PERLND 169                         0.0     PERLND 175     91
+PERLND 170                         0.4     PERLND 175     91
+PERLND 171                        24.3     PERLND 175     91
+PERLND 172                       257.5     PERLND 175     91
+IMPLND 161                         3.8     PERLND 175     92
+IMPLND 162                         0.1     PERLND 175     92
+IMPLND 163                         0.0     PERLND 175     92
+IMPLND 164                         0.0     PERLND 175     92
+      *** Baseflow to reach
+PERLND 161                        72.8     RCHRES   9      9
+PERLND 162                         0.8     RCHRES   9      9
+PERLND 163                         0.1     RCHRES   9      9
+PERLND 164                         0.0     RCHRES   9      9
+PERLND 165                         0.0     RCHRES   9      9
+PERLND 166                         0.2     RCHRES   9      9
+PERLND 167                        19.2     RCHRES   9      9
+PERLND 168                         2.4     RCHRES   9      9
+PERLND 169                         0.0     RCHRES   9      9
+PERLND 170                         0.4     RCHRES   9      9
+PERLND 171                        24.3     RCHRES   9      9
+PERLND 172                       257.5     RCHRES   9      9
+
+*** 6Main2-1 Lake Winder TO 6Main2-5 Lake Poinsett
+RCHRES   1                                 RCHRES   5      3
+*** 6Main2-2 Taylor Ck Resv TO 6Main2-3 Taylor Creek Gage
+RCHRES   2                                 RCHRES   3      3
+*** 6Main2-2 Taylor Ck Resv TO Cocoa WS [External]
+*** 6Main2-3 Taylor Creek Gage TO 6Main2-4 Lower Taylor Creek
+RCHRES   3                                 RCHRES   4      3
+*** 6Main2-4 Lower Taylor Creek TO 6Main2-6 SJR SR 528
+RCHRES   4                                 RCHRES   6      4
+*** 6Main2-4 Lower Taylor Creek TO 6Main2-5 Lake Poinsett
+RCHRES   4                                 RCHRES   5      5
+*** 6Main2-5 Lake Poinsett TO 6Main2-6 SJR SR 528
+RCHRES   5                                 RCHRES   6      3
+*** 6Main2-6 SJR SR 528 TO 6Main2-7 SJR SR 50
+RCHRES   6                                 RCHRES   7      3
+*** 6Main2-7 SJR SR 50 TO 6Main2-8 St. Johns River Cone
+RCHRES   7                                 RCHRES   8      3
+*** 6Main2-8 St. Johns River Cone TO 6Main2-9 Puzzle Lake
+RCHRES   8                                 RCHRES   9      3
+*** 6Main2-9 Puzzle Lake TO 4B-9 SJR SR 46
+END SCHEMATIC
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 6Main2 REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000494     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000494     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000494     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 6Main2 REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001296     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001296     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001296     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 6Main2 REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.012985     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.012985     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.012985     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 6Main2 REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001566     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001566     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001566     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 6Main2 REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.004764     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.004764     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.004764     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 6Main2 REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000655     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000655     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000655     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+*** 6Main2 REACH 7
+  MASS-LINK       71
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000413     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000413     PERLND         EXTNL  SURLI
+  END MASS-LINK   71
+
+  MASS-LINK       72
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000413     PERLND         EXTNL  SURLI
+  END MASS-LINK   72
+*** 6Main2 REACH 8
+  MASS-LINK       81
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000876     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000876     PERLND         EXTNL  SURLI
+  END MASS-LINK   81
+
+  MASS-LINK       82
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000876     PERLND         EXTNL  SURLI
+  END MASS-LINK   82
+*** 6Main2 REACH 9
+  MASS-LINK       91
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001752     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001752     PERLND         EXTNL  SURLI
+  END MASS-LINK   91
+
+  MASS-LINK       92
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001752     PERLND         EXTNL  SURLI
+  END MASS-LINK   92
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+*** Transfer datasets - hourly volume/mass
+*** 6Main2-9 Puzzle Lake TO 4B-9
+RCHRES   9 HYDR   ROVOL                    WDM2   590 FLOW     ENGL AGGR REPL
+
+*** Gages
+*** 6Main2-3 617 - Taylor Creek | S-164
+RCHRES   3 HYDR   RO                       WDM2  1117 FLOW     ENGL AGGR REPL
+RCHRES   2 HYDR   STAGE                    WDM2  1317 STAGE    ENGL AGGR REPL
+*** 6Main2-5 618 - SJR Cocoa | Lake Poinsett stage
+RCHRES   5 HYDR   RO                       WDM2  1118 FLOW     ENGL AGGR REPL
+RCHRES   5 HYDR   STAGE                    WDM2  1318 STAGE    ENGL AGGR REPL
+*** 6Main2-7 619 - SJR Christmas | x
+RCHRES   7 HYDR   RO                       WDM2  1119 FLOW     ENGL AGGR REPL
+RCHRES   7 HYDR   STAGE                    WDM2  1319 STAGE    ENGL AGGR REPL
+END EXT TARGETS
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+  UVQUAN rca7   RCHRES   7 SAREA            3 2.296E-05
+  UVQUAN rca8   RCHRES   8 SAREA            3 2.296E-05
+  UVQUAN rca9   RCHRES   9 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01        3
+  UVQUAN wla033 GLOBAL     WORKSP 02        3
+  UVQUAN wla053 GLOBAL     WORKSP 03        3
+  UVQUAN wla073 GLOBAL     WORKSP 04        3
+  UVQUAN wla093 GLOBAL     WORKSP 05        3
+  UVQUAN wla113 GLOBAL     WORKSP 06        3
+  UVQUAN wla133 GLOBAL     WORKSP 07        3
+  UVQUAN wla153 GLOBAL     WORKSP 08        3
+  UVQUAN wla173 GLOBAL     WORKSP 09        3
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+  UVNAME  WLA133  1 WORKSP 07        1.0  QUAN
+  UVNAME  WLA153  1 WORKSP 08        1.0  QUAN
+  UVNAME  WLA173  1 WORKSP 09        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =    9262.7
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =    3165.4
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =     110.8
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =     916.8
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =   17125.8
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =   12043.3
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+*** Reach 7
+  COPY   99                               WLA133           =   16083.3
+  COPY   99                               WLA133          -=    rca7
+  COPY   99                               WLA133         MAX       0.0
+*** Reach 8
+  COPY   99                               WLA153           =   18861.2
+  COPY   99                               WLA153          -=    rca8
+  COPY   99                               WLA153         MAX       0.0
+*** Reach 9
+  COPY   99                               WLA173           =   13336.0
+  COPY   99                               WLA173          -=    rca9
+  COPY   99                               WLA173         MAX       0.0
+
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+MULT PERLND 133                    wla133= RCHRES  07
+MULT PERLND 153                    wla153= RCHRES  08
+MULT PERLND 173                    wla173= RCHRES  09
+
+*** Structures and Operations
+
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN month  RCHRES   1 MON              2
+  UVQUAN day    RCHRES   1 DAY              2
+  UVQUAN hour   RCHRES   1 HR               2
+
+*** (6G)
+  UVQUAN tcrstg RCHRES   2 STAGE            3
+
+  UVQUAN tsttcr GLOBAL     WORKSP 93
+  UVQUAN qhitcr GLOBAL     WORKSP 94
+  UVQUAN qlotcr GLOBAL     WORKSP 95
+  UVQUAN qtgtcr GLOBAL     WORKSP 96
+  UVQUAN smxtcr GLOBAL     WORKSP 97
+  UVQUAN daytcr GLOBAL     WORKSP 98
+  UVQUAN deltcr GLOBAL     WORKSP 99
+
+*** UVNAMES
+
+***
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+  UVNAME  TSTTCR  1 WORKSP 93        1.0  QUAN
+  UVNAME  QHITCR  1 WORKSP 94        1.0  QUAN
+  UVNAME  QLOTCR  1 WORKSP 95        1.0  QUAN
+  UVNAME  QTGTCR  1 WORKSP 96        1.0  QUAN
+  UVNAME  SMXTCR  1 WORKSP 97        1.0  QUAN
+  UVNAME  DAYTCR  1 WORKSP 98        1.0  QUAN
+  UVNAME  DELTCR  1 WORKSP 99        1.0  QUAN
+
+***
+***(6G)
+***            dc ds                 d t     or                   or   tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+  RCHRES  2         1995  1  1  0  0      QTGTCR          =        0.0
+  RCHRES  2         1995  1  1  0  0      SMXTCR          =     42.000
+  RCHRES  2         1995  1  1  0  0      QHITCR          =     1500.0
+  RCHRES  2         1995  1  1  0  0      QLOTCR          =       17.0
+  RCHRES  2         1995  1  1  0  0      TSTTCR          =     41.500
+
+IF (hour = 8) THEN
+ IF (month = 1) THEN
+  RCHRES  2                               TSTTCR          =     41.500
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+ ELSE IF (month = 2) THEN
+  RCHRES  2                               TSTTCR          =     41.500
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 3) THEN
+  RCHRES  2                               TSTTCR          =     41.500
+  IF (day > 10) THEN
+  RCHRES  2                               DAYTCR          =     day
+  RCHRES  2                               DAYTCR         -=         10
+  RCHRES  2                               DAYTCR          *=    0.0243
+
+  RCHRES  2                               TSTTCR          -=    daytcr
+  END IF
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 4) THEN
+  RCHRES  2                               DAYTCR          =     day
+  RCHRES  2                               DAYTCR          *=    0.0233
+
+  RCHRES  2                               TSTTCR          =     40.970
+  RCHRES  2                               TSTTCR          -=    daytcr
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 5) THEN
+  RCHRES  2                               DAYTCR          =     day
+  RCHRES  2                               DAYTCR          *=    0.0242
+
+  RCHRES  2                               TSTTCR          =     40.250
+  RCHRES  2                               TSTTCR          -=    daytcr
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 6) THEN
+  RCHRES  2                               TSTTCR          =     39.500
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 7) THEN
+  RCHRES  2                               TSTTCR          =     39.500
+
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 8) THEN
+  RCHRES  2                               TSTTCR          =     39.500
+  IF (day > 15) THEN
+  RCHRES  2                               DAYTCR          =     day
+  RCHRES  2                               DAYTCR         -=         15
+  RCHRES  2                               DAYTCR          *=    0.0256
+
+  RCHRES  2                               TSTTCR          +=    daytcr
+  END IF
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 9) THEN
+  RCHRES  2                               DAYTCR          =     day
+  RCHRES  2                               DAYTCR          *=    0.0247
+
+  RCHRES  2                               TSTTCR          =     39.940
+  RCHRES  2                               TSTTCR          +=    daytcr
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 10) THEN
+  RCHRES  2                               DAYTCR          =     day
+  RCHRES  2                               DAYTCR          *=    0.0255
+
+  RCHRES  2                               TSTTCR          =     40.710
+  RCHRES  2                               TSTTCR          +=    daytcr
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 11) THEN
+  RCHRES  2                               TSTTCR          =     41.500
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+
+ ELSE IF (month = 12) THEN
+  RCHRES  2                               TSTTCR          =     41.500
+
+  IF (tcrstg > smxtcr) THEN
+  RCHRES  2                               QTGTCR          =     qhitcr
+  ELSE IF (tcrstg <= tsttcr) THEN
+  RCHRES  2                               QTGTCR          =     qlotcr
+  ELSE
+  RCHRES  2                               DELTCR          =     tcrstg
+  RCHRES  2                               DELTCR          -=    tsttcr
+   IF (deltcr <= 0.40) THEN
+  RCHRES  2                               QTGTCR          =      100.0
+   ELSE IF (deltcr > 0.40 AND deltcr <= 1.00) THEN
+  RCHRES  2                               QTGTCR          =      250.0
+   ELSE
+  RCHRES  2                               QTGTCR          =     qhitcr
+   END IF
+  END IF
+ END IF
+END IF
+  RCHRES  2                               OUTDGT  1        =    qtgtcr
+
+END SPEC-ACTIONS
+
+END RUN

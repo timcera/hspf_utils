@@ -1,0 +1,1898 @@
+RUN
+
+GLOBAL
+  TOSOHATCHEE UNIT TRIBUTARY MODEL FOR SJRB
+  START       1995/01/01 00:00  END    2016/12/31 24:00
+  RUN INTERP OUTPT LEVELS    4    0
+  RESUME     0 RUN     1                          UNITS    1
+END GLOBAL
+
+FILES
+<FILE>  <UN#>***<----FILE NAME------------------------------------------------->
+MESSU      24   6h.ech
+WDM1       25   sjrb_met.wdm
+WDM2       26   sjrb_usj.wdm
+           80   6h_land.out
+           82   6h_reach.out
+BINO       81   6h_land.hbn
+BINO       83   6h_reach.hbn
+PESTSU     41   6h_hspf.sup
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** 6H REACH 1      King St. Canal
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** 6H REACH 2      Lk Wilson Ca
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** 6H REACH 3      Delespine Grant D
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      RCHRES       3
+
+*** 6H REACH 4      Bird Lake
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** 6H REACH 5      Upper Jim Creek
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** 6H REACH 6      Second Creek
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+*** 6H REACH 7      Lower Jim Creek
+      PERLND     121
+      PERLND     122
+      PERLND     123
+      PERLND     124
+      PERLND     125
+      PERLND     126
+      PERLND     127
+      PERLND     128
+      PERLND     129
+      PERLND     130
+      PERLND     131
+      PERLND     132
+      PERLND     133
+      IMPLND     121
+      IMPLND     122
+      IMPLND     123
+      IMPLND     124
+      PERLND     135
+      RCHRES       7
+
+*** 6H REACH 8      Tootoosahatchee Ck
+      PERLND     141
+      PERLND     142
+      PERLND     143
+      PERLND     144
+      PERLND     145
+      PERLND     146
+      PERLND     147
+      PERLND     148
+      PERLND     149
+      PERLND     150
+      PERLND     151
+      PERLND     152
+      PERLND     153
+      IMPLND     141
+      IMPLND     142
+      IMPLND     143
+      IMPLND     144
+      PERLND     155
+      RCHRES       8
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+  001  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>                       Print-flags                           BIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 6H REACH 1
+    1   19King St. Canal                    1    1   80    0   81    0
+*** 6H REACH 2
+   21   39Lk Wilson Ca                      1    1   80    0   81    0
+*** 6H REACH 3
+   41   59Delespine Grant D                 1    1   80    0   81    0
+*** 6H REACH 4
+   61   79Bird Lake                         1    1   80    0   81    0
+*** 6H REACH 5
+   81   99Upper Jim Creek                   1    1   80    0   81    0
+*** 6H REACH 6
+  101  119Second Creek                      1    1   80    0   81    0
+*** 6H REACH 7
+  121  139Lower Jim Creek                   1    1   80    0   81    0
+*** 6H REACH 8
+  141  159Tootoosahatchee Ck                1    1   80    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 6H REACH 1 - King St. Canal
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6H REACH 2 - Lk Wilson Ca
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6H REACH 3 - Delespine Grant D
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6H REACH 4 - Bird Lake
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6H REACH 5 - Upper Jim Creek
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6H REACH 6 - Second Creek
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6H REACH 7 - Lower Jim Creek
+  121  131    0    0    1    0    0    0    0    0    0    1    0    0    0
+  132  133    0    3    1    0    0    0    0    0    0    1    0    0    0
+  135         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 6H REACH 8 - Tootoosahatchee Ck
+  141  151    0    0    1    0    0    0    0    0    0    1    0    0    0
+  152  153    0    3    1    0    0    0    0    0    0    1    0    0    0
+  155         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+  PWAT-PARM2
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   1
+*** 6H REACH 1 - King St. Canal        Location  619
+    1     ~111161901~
+    2     ~111161902~
+    3     ~111161903~
+    4     ~111161904~
+    5     ~111161905~
+    6     ~111161906~
+    7     ~111161907~
+    8     ~111161908~
+    9     ~111161909~
+   10     ~111161910~
+   11     ~111161911~
+   12     ~111161912~
+   13     ~111161913~
+   15     ~111161913~
+*** 6H REACH 2 - Lk Wilson Ca          Location  619
+   21     ~111161901~
+   22     ~111161902~
+   23     ~111161903~
+   24     ~111161904~
+   25     ~111161905~
+   26     ~111161906~
+   27     ~111161907~
+   28     ~111161908~
+   29     ~111161909~
+   30     ~111161910~
+   31     ~111161911~
+   32     ~111161912~
+   33     ~111161913~
+   35     ~111161913~
+*** 6H REACH 3 - Delespine Grant D     Location  619
+   41     ~111161901~
+   42     ~111161902~
+   43     ~111161903~
+   44     ~111161904~
+   45     ~111161905~
+   46     ~111161906~
+   47     ~111161907~
+   48     ~111161908~
+   49     ~111161909~
+   50     ~111161910~
+   51     ~111161911~
+   52     ~111161912~
+   53     ~111161913~
+   55     ~111161913~
+*** 6H REACH 4 - Bird Lake             Location  619
+   61     ~111161901~
+   62     ~111161902~
+   63     ~111161903~
+   64     ~111161904~
+   65     ~111161905~
+   66     ~111161906~
+   67     ~111161907~
+   68     ~111161908~
+   69     ~111161909~
+   70     ~111161910~
+   71     ~111161911~
+   72     ~111161912~
+   73     ~111161913~
+   75     ~111161913~
+*** 6H REACH 5 - Upper Jim Creek       Location  619
+   81     ~111161901~
+   82     ~111161902~
+   83     ~111161903~
+   84     ~111161904~
+   85     ~111161905~
+   86     ~111161906~
+   87     ~111161907~
+   88     ~111161908~
+   89     ~111161909~
+   90     ~111161910~
+   91     ~111161911~
+   92     ~111161912~
+   93     ~111161913~
+   95     ~111161913~
+*** 6H REACH 6 - Second Creek          Location  619
+  101     ~111161901~
+  102     ~111161902~
+  103     ~111161903~
+  104     ~111161904~
+  105     ~111161905~
+  106     ~111161906~
+  107     ~111161907~
+  108     ~111161908~
+  109     ~111161909~
+  110     ~111161910~
+  111     ~111161911~
+  112     ~111161912~
+  113     ~111161913~
+  115     ~111161913~
+*** 6H REACH 7 - Lower Jim Creek       Location  619
+  121     ~111161901~
+  122     ~111161902~
+  123     ~111161903~
+  124     ~111161904~
+  125     ~111161905~
+  126     ~111161906~
+  127     ~111161907~
+  128     ~111161908~
+  129     ~111161909~
+  130     ~111161910~
+  131     ~111161911~
+  132     ~111161912~
+  133     ~111161913~
+  135     ~111161913~
+*** 6H REACH 8 - Tootoosahatchee Ck    Location  619
+  141     ~111161901~
+  142     ~111161902~
+  143     ~111161903~
+  144     ~111161904~
+  145     ~111161905~
+  146     ~111161906~
+  147     ~111161907~
+  148     ~111161908~
+  149     ~111161909~
+  150     ~111161910~
+  151     ~111161911~
+  152     ~111161912~
+  153     ~111161913~
+  155     ~111161913~
+  END PWAT-PARM2
+
+  PWAT-PARM3
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   2
+*** 6H REACH 1 - King St. Canal        Location  619
+    1     ~111261901~
+    2     ~111261902~
+    3     ~111261903~
+    4     ~111261904~
+    5     ~111261905~
+    6     ~111261906~
+    7     ~111261907~
+    8     ~111261908~
+    9     ~111261909~
+   10     ~111261910~
+   11     ~111261911~
+   12     ~111261912~
+   13     ~111261913~
+   15     ~111261913~
+*** 6H REACH 2 - Lk Wilson Ca          Location  619
+   21     ~111261901~
+   22     ~111261902~
+   23     ~111261903~
+   24     ~111261904~
+   25     ~111261905~
+   26     ~111261906~
+   27     ~111261907~
+   28     ~111261908~
+   29     ~111261909~
+   30     ~111261910~
+   31     ~111261911~
+   32     ~111261912~
+   33     ~111261913~
+   35     ~111261913~
+*** 6H REACH 3 - Delespine Grant D     Location  619
+   41     ~111261901~
+   42     ~111261902~
+   43     ~111261903~
+   44     ~111261904~
+   45     ~111261905~
+   46     ~111261906~
+   47     ~111261907~
+   48     ~111261908~
+   49     ~111261909~
+   50     ~111261910~
+   51     ~111261911~
+   52     ~111261912~
+   53     ~111261913~
+   55     ~111261913~
+*** 6H REACH 4 - Bird Lake             Location  619
+   61     ~111261901~
+   62     ~111261902~
+   63     ~111261903~
+   64     ~111261904~
+   65     ~111261905~
+   66     ~111261906~
+   67     ~111261907~
+   68     ~111261908~
+   69     ~111261909~
+   70     ~111261910~
+   71     ~111261911~
+   72     ~111261912~
+   73     ~111261913~
+   75     ~111261913~
+*** 6H REACH 5 - Upper Jim Creek       Location  619
+   81     ~111261901~
+   82     ~111261902~
+   83     ~111261903~
+   84     ~111261904~
+   85     ~111261905~
+   86     ~111261906~
+   87     ~111261907~
+   88     ~111261908~
+   89     ~111261909~
+   90     ~111261910~
+   91     ~111261911~
+   92     ~111261912~
+   93     ~111261913~
+   95     ~111261913~
+*** 6H REACH 6 - Second Creek          Location  619
+  101     ~111261901~
+  102     ~111261902~
+  103     ~111261903~
+  104     ~111261904~
+  105     ~111261905~
+  106     ~111261906~
+  107     ~111261907~
+  108     ~111261908~
+  109     ~111261909~
+  110     ~111261910~
+  111     ~111261911~
+  112     ~111261912~
+  113     ~111261913~
+  115     ~111261913~
+*** 6H REACH 7 - Lower Jim Creek       Location  619
+  121     ~111261901~
+  122     ~111261902~
+  123     ~111261903~
+  124     ~111261904~
+  125     ~111261905~
+  126     ~111261906~
+  127     ~111261907~
+  128     ~111261908~
+  129     ~111261909~
+  130     ~111261910~
+  131     ~111261911~
+  132     ~111261912~
+  133     ~111261913~
+  135     ~111261913~
+*** 6H REACH 8 - Tootoosahatchee Ck    Location  619
+  141     ~111261901~
+  142     ~111261902~
+  143     ~111261903~
+  144     ~111261904~
+  145     ~111261905~
+  146     ~111261906~
+  147     ~111261907~
+  148     ~111261908~
+  149     ~111261909~
+  150     ~111261910~
+  151     ~111261911~
+  152     ~111261912~
+  153     ~111261913~
+  155     ~111261913~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   3
+*** 6H REACH 1 - King St. Canal        Location  619
+    1     ~111361901~
+    2     ~111361902~
+    3     ~111361903~
+    4     ~111361904~
+    5     ~111361905~
+    6     ~111361906~
+    7     ~111361907~
+    8     ~111361908~
+    9     ~111361909~
+   10     ~111361910~
+   11     ~111361911~
+   12     ~111361912~
+   13     ~111361913~
+   15     ~111361913~
+*** 6H REACH 2 - Lk Wilson Ca          Location  619
+   21     ~111361901~
+   22     ~111361902~
+   23     ~111361903~
+   24     ~111361904~
+   25     ~111361905~
+   26     ~111361906~
+   27     ~111361907~
+   28     ~111361908~
+   29     ~111361909~
+   30     ~111361910~
+   31     ~111361911~
+   32     ~111361912~
+   33     ~111361913~
+   35     ~111361913~
+*** 6H REACH 3 - Delespine Grant D     Location  619
+   41     ~111361901~
+   42     ~111361902~
+   43     ~111361903~
+   44     ~111361904~
+   45     ~111361905~
+   46     ~111361906~
+   47     ~111361907~
+   48     ~111361908~
+   49     ~111361909~
+   50     ~111361910~
+   51     ~111361911~
+   52     ~111361912~
+   53     ~111361913~
+   55     ~111361913~
+*** 6H REACH 4 - Bird Lake             Location  619
+   61     ~111361901~
+   62     ~111361902~
+   63     ~111361903~
+   64     ~111361904~
+   65     ~111361905~
+   66     ~111361906~
+   67     ~111361907~
+   68     ~111361908~
+   69     ~111361909~
+   70     ~111361910~
+   71     ~111361911~
+   72     ~111361912~
+   73     ~111361913~
+   75     ~111361913~
+*** 6H REACH 5 - Upper Jim Creek       Location  619
+   81     ~111361901~
+   82     ~111361902~
+   83     ~111361903~
+   84     ~111361904~
+   85     ~111361905~
+   86     ~111361906~
+   87     ~111361907~
+   88     ~111361908~
+   89     ~111361909~
+   90     ~111361910~
+   91     ~111361911~
+   92     ~111361912~
+   93     ~111361913~
+   95     ~111361913~
+*** 6H REACH 6 - Second Creek          Location  619
+  101     ~111361901~
+  102     ~111361902~
+  103     ~111361903~
+  104     ~111361904~
+  105     ~111361905~
+  106     ~111361906~
+  107     ~111361907~
+  108     ~111361908~
+  109     ~111361909~
+  110     ~111361910~
+  111     ~111361911~
+  112     ~111361912~
+  113     ~111361913~
+  115     ~111361913~
+*** 6H REACH 7 - Lower Jim Creek       Location  619
+  121     ~111361901~
+  122     ~111361902~
+  123     ~111361903~
+  124     ~111361904~
+  125     ~111361905~
+  126     ~111361906~
+  127     ~111361907~
+  128     ~111361908~
+  129     ~111361909~
+  130     ~111361910~
+  131     ~111361911~
+  132     ~111361912~
+  133     ~111361913~
+  135     ~111361913~
+*** 6H REACH 8 - Tootoosahatchee Ck    Location  619
+  141     ~111361901~
+  142     ~111361902~
+  143     ~111361903~
+  144     ~111361904~
+  145     ~111361905~
+  146     ~111361906~
+  147     ~111361907~
+  148     ~111361908~
+  149     ~111361909~
+  150     ~111361910~
+  151     ~111361911~
+  152     ~111361912~
+  153     ~111361913~
+  155     ~111361913~
+  END PWAT-PARM4
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 6H REACH 1 - King St. Canal                   Location  619
+    1   19       919
+*** 6H REACH 2 - Lk Wilson Ca                     Location  619
+   21   39       919
+*** 6H REACH 3 - Delespine Grant D                Location  619
+   41   59       919
+*** 6H REACH 4 - Bird Lake                        Location  619
+   61   79       919
+*** 6H REACH 5 - Upper Jim Creek                  Location  619
+   81   99       919
+*** 6H REACH 6 - Second Creek                     Location  619
+  101  119       919
+*** 6H REACH 7 - Lower Jim Creek                  Location  619
+  121  139       919
+*** 6H REACH 8 - Tootoosahatchee Ck               Location  619
+  141  159       919
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 6H REACH 1 - King St. Canal        Location  619
+    1     ~111661901~
+    2     ~111661902~
+    3     ~111661903~
+    4     ~111661904~
+    5     ~111661905~
+    6     ~111661906~
+    7     ~111661907~
+    8     ~111661908~
+    9     ~111661909~
+   10     ~111661910~
+   11     ~111661911~
+   12     ~111661912~
+   13     ~111661913~
+   15     ~111661913~
+*** 6H REACH 2 - Lk Wilson Ca          Location  619
+   21     ~111661901~
+   22     ~111661902~
+   23     ~111661903~
+   24     ~111661904~
+   25     ~111661905~
+   26     ~111661906~
+   27     ~111661907~
+   28     ~111661908~
+   29     ~111661909~
+   30     ~111661910~
+   31     ~111661911~
+   32     ~111661912~
+   33     ~111661913~
+   35     ~111661913~
+*** 6H REACH 3 - Delespine Grant D     Location  619
+   41     ~111661901~
+   42     ~111661902~
+   43     ~111661903~
+   44     ~111661904~
+   45     ~111661905~
+   46     ~111661906~
+   47     ~111661907~
+   48     ~111661908~
+   49     ~111661909~
+   50     ~111661910~
+   51     ~111661911~
+   52     ~111661912~
+   53     ~111661913~
+   55     ~111661913~
+*** 6H REACH 4 - Bird Lake             Location  619
+   61     ~111661901~
+   62     ~111661902~
+   63     ~111661903~
+   64     ~111661904~
+   65     ~111661905~
+   66     ~111661906~
+   67     ~111661907~
+   68     ~111661908~
+   69     ~111661909~
+   70     ~111661910~
+   71     ~111661911~
+   72     ~111661912~
+   73     ~111661913~
+   75     ~111661913~
+*** 6H REACH 5 - Upper Jim Creek       Location  619
+   81     ~111661901~
+   82     ~111661902~
+   83     ~111661903~
+   84     ~111661904~
+   85     ~111661905~
+   86     ~111661906~
+   87     ~111661907~
+   88     ~111661908~
+   89     ~111661909~
+   90     ~111661910~
+   91     ~111661911~
+   92     ~111661912~
+   93     ~111661913~
+   95     ~111661913~
+*** 6H REACH 6 - Second Creek          Location  619
+  101     ~111661901~
+  102     ~111661902~
+  103     ~111661903~
+  104     ~111661904~
+  105     ~111661905~
+  106     ~111661906~
+  107     ~111661907~
+  108     ~111661908~
+  109     ~111661909~
+  110     ~111661910~
+  111     ~111661911~
+  112     ~111661912~
+  113     ~111661913~
+  115     ~111661913~
+*** 6H REACH 7 - Lower Jim Creek       Location  619
+  121     ~111661901~
+  122     ~111661902~
+  123     ~111661903~
+  124     ~111661904~
+  125     ~111661905~
+  126     ~111661906~
+  127     ~111661907~
+  128     ~111661908~
+  129     ~111661909~
+  130     ~111661910~
+  131     ~111661911~
+  132     ~111661912~
+  133     ~111661913~
+  135     ~111661913~
+*** 6H REACH 8 - Tootoosahatchee Ck    Location  619
+  141     ~111661901~
+  142     ~111661902~
+  143     ~111661903~
+  144     ~111661904~
+  145     ~111661905~
+  146     ~111661906~
+  147     ~111661907~
+  148     ~111661908~
+  149     ~111661909~
+  150     ~111661910~
+  151     ~111661911~
+  152     ~111661912~
+  153     ~111661913~
+  155     ~111661913~
+  END PWAT-STATE1
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+  001  999    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    5    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** <ILS > ******** Print-flags ******** BIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    5    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***             Name             Unit-systems   Printer BinaryOut
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+    1  999                             1    1   80    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+  001  999    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+*** <ILS >      LSUR     SLSUR      NSUR     RETSC
+*** x -  x      (ft)                          (in)
+  001  999      150.     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+*** <ILS >    PETMAX    PETMIN
+*** x -  x   (deg F)   (deg F)
+  001  999       40.       35.
+  END IWAT-PARM3
+
+  IWAT-STATE1
+*** <ILS >  IWATER state variables (inches)
+*** x -  x      RETS      SURS
+  001  999     0.000     0.000
+  END IWAT-STATE1
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1  999    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1  999    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1  999    3    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 6H REACH 1
+    1     King St. Canal          1         1    1   82    0    0   83    0
+*** 6H REACH 2
+    2     Lk Wilson Ca            1         1    1   82    0    0   83    0
+*** 6H REACH 3
+    3     Delespine Grant D       1         1    1   82    0    0   83    0
+*** 6H REACH 4
+    4     Bird Lake               1         1    1   82    0    0   83    0
+*** 6H REACH 5
+    5     Upper Jim Creek         1         1    1   82    0    0   83    0
+*** 6H REACH 6
+    6     Second Creek            1         1    1   82    0    0   83    0
+*** 6H REACH 7
+    7     Lower Jim Creek         1         1    1   82    0    0   83    0
+*** 6H REACH 8
+    8     Tootoosahatchee Ck      1         1    1   82    0    0   83    0
+  END GEN-INFO
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 6H REACH 1 - King St. Canal
+    1        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6H REACH 2 - Lk Wilson Ca
+    2        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6H REACH 3 - Delespine Grant D
+    3        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6H REACH 4 - Bird Lake
+    4        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6H REACH 5 - Upper Jim Creek
+    5        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6H REACH 6 - Second Creek
+    6        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6H REACH 7 - Lower Jim Creek
+    7        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 6H REACH 8 - Tootoosahatchee Ck
+    8        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 6H REACH 1 - King St. Canal
+    1             1.      2.30      1.76      0.00       0.5      0.01
+*** 6H REACH 2 - Lk Wilson Ca
+    2             2.      8.08      9.91      0.00       0.5      0.01
+*** 6H REACH 3 - Delespine Grant D
+    3             3.      6.25     26.36      0.00       0.5      0.01
+*** 6H REACH 4 - Bird Lake
+    4             4.     10.57     15.41      0.00       0.5      0.01
+*** 6H REACH 5 - Upper Jim Creek
+    5             5.      3.36     10.47      0.00       0.5      0.01
+*** 6H REACH 6 - Second Creek
+    6             6.      4.12     18.74      0.00       0.5      0.01
+*** 6H REACH 7 - Lower Jim Creek
+    7             7.      5.53     13.26      0.00       0.5      0.01
+*** 6H REACH 8 - Tootoosahatchee Ck
+    8             8.      3.57     18.70      0.00       0.5      0.01
+  END HYDR-PARM2
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 6H REACH 1 - King St. Canal
+    1           6.63       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6H REACH 2 - Lk Wilson Ca
+    2          31.32       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6H REACH 3 - Delespine Grant D
+    3          14.03       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6H REACH 4 - Bird Lake
+    4          37.19       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6H REACH 5 - Upper Jim Creek
+    5          13.06       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6H REACH 6 - Second Creek
+    6           6.03       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6H REACH 7 - Lower Jim Creek
+    7          17.97       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 6H REACH 8 - Tootoosahatchee Ck
+    8           6.35       0.0  4.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+END RCHRES
+
+FTABLES
+  FTABLE    001
+ rows cols                               ***
+   13    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.22     68.00      7.60      1.60
+      0.32     97.00     15.30      4.00
+      0.41    125.00     25.50      7.90
+      0.48    146.00     34.70     11.90
+      0.53    162.00     42.90     15.80
+      0.69    210.00     72.20     31.60
+      0.97    296.00    143.60     79.00
+      1.26    384.00    241.50    158.00
+      1.77    542.00    480.10    395.00
+      2.30    702.00    807.40    790.00
+      2.98    911.00   1358.50   1581.00
+      4.21   1284.00   2700.70   3952.00
+  END FTABLE001
+
+  FTABLE    002
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+        0.      0.00      0.00      0.00
+      0.17    123.00     10.60      1.70
+      0.24    174.00     21.40      4.30
+      0.32    226.00     35.90      8.60
+      0.37    263.00     48.70     12.90
+      0.41    293.00     60.40     17.20
+      0.53    380.00    101.60     34.40
+      0.75    537.00    202.10     86.10
+      0.98    696.00    339.70    172.10
+      1.38    981.00    675.50    430.30
+      1.79   1273.00   1136.10    860.60
+      2.32   1650.00   1910.80   1721.30
+      3.26   2327.00   3798.90   4303.10
+      5.00   3000.00   8433.40   7000.00
+  END FTABLE002
+
+  FTABLE    003
+ rows cols                               ***
+   15    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.11     68.00      3.80      0.50
+      0.16     98.00      7.80      1.30
+      0.20    125.00     12.80      2.50
+      0.24    146.00     17.50      3.80
+      0.27    162.00     21.50      5.00
+      0.34    210.00     36.20     10.00
+      0.49    297.00     72.30     25.10
+      0.63    385.00    121.50     50.20
+      0.89    543.00    241.60    125.50
+      1.15    704.00    406.20    250.90
+      1.50    914.00    683.30    501.90
+      2.11   1288.00   1358.40   1254.70
+      2.73   1671.00   2285.00   2509.00
+      3.55   2167.00   3842.00   5019.00
+  END FTABLE003
+
+  FTABLE    004
+ rows cols                               ***
+   13    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.21    219.00     23.50      1.80
+      0.30    309.00     46.80      4.50
+      0.39    400.00     78.70      9.00
+      0.46    466.00    106.60     13.50
+      0.51    519.00    132.30     18.00
+      0.66    674.00    223.00     36.10
+      0.93    950.00    443.20     90.20
+      1.21   1232.00    745.40    180.40
+      1.71   1737.00   1481.90    451.00
+      2.21   2253.00   2492.30    902.00
+      2.87   2922.00   4191.40   1803.90
+      4.05   4119.00   8333.30   4509.80
+  END FTABLE004
+
+  FTABLE    005
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.23    107.00     12.50      2.50
+      0.33    151.00     24.90      6.30
+      0.43    197.00     42.20     12.70
+      0.50    229.00     57.00     19.00
+      0.56    255.00     70.70     25.30
+      0.72    330.00    118.90     50.60
+      1.02    466.00    236.50    126.60
+      1.32    604.00    397.70    253.10
+      1.86    851.00    790.80    632.90
+      2.41   1104.00   1329.90   1265.70
+      3.12   1432.00   2236.60   2531.40
+      4.41   2019.00   4446.80   6328.50
+      6.41   2019.00   6446.80   9999.00
+  END FTABLE005
+
+  FTABLE    006
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.22     55.00      6.00      2.00
+      0.31     78.00     12.00      5.00
+      0.40    101.00     20.00      9.90
+      0.46    118.00     27.20     14.90
+      0.52    131.00     33.80     19.90
+      0.67    170.00     56.80     39.80
+      0.94    240.00    112.80     99.40
+      1.22    311.00    189.80    198.90
+      1.72    438.00    377.30    497.20
+      2.23    568.00    634.70    994.50
+      2.90    737.00   1067.30   1988.90
+      4.08   1039.00   2122.00   4972.30
+      6.08   1039.00   4122.00   9999.00
+  END FTABLE006
+
+  FTABLE    007
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.23    196.00     22.70      6.30
+      0.33    276.00     44.90     15.70
+      0.42    358.00     75.60     31.40
+      0.49    417.00    102.40     47.10
+      0.55    464.00    127.10     62.80
+      0.71    602.00    213.60    125.50
+      1.00    849.00    424.80    313.80
+      1.30   1101.00    714.40    627.50
+      1.83   1552.00   1420.30   1568.80
+      2.37   2013.00   2388.70   3137.70
+      3.08   2611.00   4017.30   6275.30
+      4.34   3682.00   7987.20  15688.30
+      6.34   3682.00   9987.20  25688.30
+  END FTABLE007
+
+  FTABLE    008
+ rows cols                               ***
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00      0.00      0.00      0.00
+      0.18     73.00      6.60      1.40
+      0.25    103.00     13.10      3.50
+      0.33    135.00     22.30      7.10
+      0.38    157.00     30.10     10.60
+      0.43    175.00     37.50     14.20
+      0.56    227.00     63.00     28.40
+      0.78    319.00    125.30     71.00
+      1.02    414.00    210.70    141.90
+      1.43    584.00    418.90    354.80
+      1.86    757.00    704.40    709.50
+      2.41    982.00   1184.60   1419.10
+      3.40   1385.00   2355.30   3547.70
+      5.40   1385.00   3355.30   5547.70
+  END FTABLE008
+
+  FTABLE    919
+ ROWS COLS            ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 6.0000000       0.0
+      12. .012623392
+      24. .037870176
+      36. .063116960
+  END FTABLE919
+END FTABLES
+
+COPY
+  TIMESERIES
+  Copy-opn***
+*** x -  x  NPT  NMN
+   99         0    1
+  END TIMESERIES
+END COPY
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - King St. Canal
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - Lk Wilson Ca
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - Delespine Grant D
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Bird Lake
+*** Rain station Titusville
+WDM1  4402 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1  4402 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - Upper Jim Creek
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - Second Creek
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+*** Reach 7 - Lower Jim Creek
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND 121 139 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND 121 139 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   7     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 121 139 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 121 139 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   7     EXTNL  POTEV
+
+*** Reach 8 - Tootoosahatchee Ck
+*** Rain station Bithlo
+WDM1   302 HPCP     ENGL                   PERLND 141 159 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   IMPLND 141 159 EXTNL  PREC
+WDM1   302 HPCP     ENGL                   RCHRES   8     EXTNL  PREC
+*** Evap station Titusville
+WDM1  4406 HPET     ENGL        1.0000     PERLND 141 159 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     IMPLND 141 159 EXTNL  PETINP
+WDM1  4406 HPET     ENGL        1.0000     RCHRES   8     EXTNL  POTEV
+END EXT SOURCES
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 6H REACH 1
+PERLND   1                       483.3     RCHRES   1      1
+PERLND   2                       187.4     RCHRES   1      1
+PERLND   3                        16.0     RCHRES   1      1
+PERLND   4                       121.9     RCHRES   1      1
+PERLND   5                         0.0     RCHRES   1      1
+PERLND   6                         9.1     RCHRES   1      1
+PERLND   7                         0.5     RCHRES   1      1
+PERLND   8                         2.0     RCHRES   1      1
+PERLND   9                         0.0     RCHRES   1      1
+PERLND  10                         3.9     RCHRES   1      1
+PERLND  11                        16.3     RCHRES   1      1
+PERLND  12***                     69.3     RCHRES   1      1
+PERLND  13                       565.8     RCHRES   1      1
+PERLND  15                       742.1     RCHRES   1      1
+IMPLND   1                        25.4     RCHRES   1      2
+IMPLND   2                        33.1     RCHRES   1      2
+IMPLND   3                         8.6     RCHRES   1      2
+IMPLND   4                       121.9     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                       633.9     PERLND  15     11
+PERLND   2                       245.7     PERLND  15     11
+PERLND   3                        21.0     PERLND  15     11
+PERLND   4                       159.8     PERLND  15     11
+PERLND   5                         0.0     PERLND  15     11
+PERLND   6                        11.9     PERLND  15     11
+PERLND   7                         0.6     PERLND  15     11
+PERLND   8                         2.7     PERLND  15     11
+PERLND   9                         0.0     PERLND  15     11
+PERLND  10                         5.1     PERLND  15     11
+PERLND  11                        21.4     PERLND  15     11
+PERLND  12                        31.6     PERLND  15     11
+IMPLND   1                        33.4     PERLND  15     12
+IMPLND   2                        43.4     PERLND  15     12
+IMPLND   3                        11.3     PERLND  15     12
+IMPLND   4                       159.8     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                       633.9     RCHRES   1      9
+PERLND   2                       245.7     RCHRES   1      9
+PERLND   3                        21.0     RCHRES   1      9
+PERLND   4                       159.8     RCHRES   1      9
+PERLND   5                         0.0     RCHRES   1      9
+PERLND   6                        11.9     RCHRES   1      9
+PERLND   7                         0.6     RCHRES   1      9
+PERLND   8                         2.7     RCHRES   1      9
+PERLND   9                         0.0     RCHRES   1      9
+PERLND  10                         5.1     RCHRES   1      9
+PERLND  11                        21.4     RCHRES   1      9
+PERLND  12                        31.6     RCHRES   1      9
+
+*** 6H REACH 2
+PERLND  21                      2965.4     RCHRES   2      1
+PERLND  22                      1440.2     RCHRES   2      1
+PERLND  23                       102.3     RCHRES   2      1
+PERLND  24                       380.0     RCHRES   2      1
+PERLND  25                       143.7     RCHRES   2      1
+PERLND  26                       105.4     RCHRES   2      1
+PERLND  27                        11.9     RCHRES   2      1
+PERLND  28                         8.4     RCHRES   2      1
+PERLND  29                         0.5     RCHRES   2      1
+PERLND  30                       110.7     RCHRES   2      1
+PERLND  31                       200.2     RCHRES   2      1
+PERLND  32***                    356.8     RCHRES   2      1
+PERLND  33                      3097.3     RCHRES   2      1
+PERLND  35                      2629.1     RCHRES   2      1
+IMPLND  21                       156.1     RCHRES   2      2
+IMPLND  22                       254.2     RCHRES   2      2
+IMPLND  23                        55.1     RCHRES   2      2
+IMPLND  24                       380.0     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                      2517.2     PERLND  35     21
+PERLND  22                      1222.5     PERLND  35     21
+PERLND  23                        86.9     PERLND  35     21
+PERLND  24                       322.6     PERLND  35     21
+PERLND  25                       122.0     PERLND  35     21
+PERLND  26                        89.4     PERLND  35     21
+PERLND  27                        10.1     PERLND  35     21
+PERLND  28                         7.1     PERLND  35     21
+PERLND  29                         0.4     PERLND  35     21
+PERLND  30                        94.0     PERLND  35     21
+PERLND  31                       169.9     PERLND  35     21
+PERLND  32                       170.1     PERLND  35     21
+IMPLND  21                       132.5     PERLND  35     22
+IMPLND  22                       215.7     PERLND  35     22
+IMPLND  23                        46.8     PERLND  35     22
+IMPLND  24                       322.6     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                      2517.2     RCHRES   2      9
+PERLND  22                      1222.5     RCHRES   2      9
+PERLND  23                        86.9     RCHRES   2      9
+PERLND  24                       322.6     RCHRES   2      9
+PERLND  25                       122.0     RCHRES   2      9
+PERLND  26                        89.4     RCHRES   2      9
+PERLND  27                        10.1     RCHRES   2      9
+PERLND  28                         7.1     RCHRES   2      9
+PERLND  29                         0.4     RCHRES   2      9
+PERLND  30                        94.0     RCHRES   2      9
+PERLND  31                       169.9     RCHRES   2      9
+PERLND  32                       170.1     RCHRES   2      9
+
+*** 6H REACH 3
+PERLND  41                       332.2     RCHRES   3      1
+PERLND  42                      1479.9     RCHRES   3      1
+PERLND  43                        16.2     RCHRES   3      1
+PERLND  44                       113.5     RCHRES   3      1
+PERLND  45                         9.5     RCHRES   3      1
+PERLND  46                        10.8     RCHRES   3      1
+PERLND  47                         5.3     RCHRES   3      1
+PERLND  48                         2.0     RCHRES   3      1
+PERLND  49                         5.6     RCHRES   3      1
+PERLND  50                        43.2     RCHRES   3      1
+PERLND  51                         9.2     RCHRES   3      1
+PERLND  52***                     86.7     RCHRES   3      1
+PERLND  53                      1531.6     RCHRES   3      1
+PERLND  55                      1361.8     RCHRES   3      1
+IMPLND  41                        17.5     RCHRES   3      2
+IMPLND  42                       261.2     RCHRES   3      2
+IMPLND  43                         8.7     RCHRES   3      2
+IMPLND  44                       113.5     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                       295.3     PERLND  55     31
+PERLND  42                      1315.9     PERLND  55     31
+PERLND  43                        14.4     PERLND  55     31
+PERLND  44                       100.9     PERLND  55     31
+PERLND  45                         8.5     PERLND  55     31
+PERLND  46                         9.6     PERLND  55     31
+PERLND  47                         4.7     PERLND  55     31
+PERLND  48                         1.8     PERLND  55     31
+PERLND  49                         4.9     PERLND  55     31
+PERLND  50                        38.4     PERLND  55     31
+PERLND  51                         8.2     PERLND  55     31
+PERLND  52                        40.2     PERLND  55     31
+IMPLND  41                        15.5     PERLND  55     32
+IMPLND  42                       232.2     PERLND  55     32
+IMPLND  43                         7.7     PERLND  55     32
+IMPLND  44                       100.9     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                       295.3     RCHRES   3      9
+PERLND  42                      1315.9     RCHRES   3      9
+PERLND  43                        14.4     RCHRES   3      9
+PERLND  44                       100.9     RCHRES   3      9
+PERLND  45                         8.5     RCHRES   3      9
+PERLND  46                         9.6     RCHRES   3      9
+PERLND  47                         4.7     RCHRES   3      9
+PERLND  48                         1.8     RCHRES   3      9
+PERLND  49                         4.9     RCHRES   3      9
+PERLND  50                        38.4     RCHRES   3      9
+PERLND  51                         8.2     RCHRES   3      9
+PERLND  52                        40.2     RCHRES   3      9
+
+*** 6H REACH 4
+PERLND  61                       865.1     RCHRES   4      1
+PERLND  62                       721.5     RCHRES   4      1
+PERLND  63                      1207.6     RCHRES   4      1
+PERLND  64                       486.0     RCHRES   4      1
+PERLND  65                         0.0     RCHRES   4      1
+PERLND  66                         1.9     RCHRES   4      1
+PERLND  67                         0.0     RCHRES   4      1
+PERLND  68                         5.6     RCHRES   4      1
+PERLND  69                         1.0     RCHRES   4      1
+PERLND  70                         9.4     RCHRES   4      1
+PERLND  71                         9.7     RCHRES   4      1
+PERLND  72***                    621.2     RCHRES   4      1
+PERLND  73                      4579.7     RCHRES   4      1
+PERLND  75                       754.7     RCHRES   4      1
+IMPLND  61                        45.5     RCHRES   4      2
+IMPLND  62                       127.3     RCHRES   4      2
+IMPLND  63                       650.3     RCHRES   4      2
+IMPLND  64                       486.0     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                       142.6     PERLND  75     41
+PERLND  62                       118.9     PERLND  75     41
+PERLND  63                       199.0     PERLND  75     41
+PERLND  64                        80.1     PERLND  75     41
+PERLND  65                         0.0     PERLND  75     41
+PERLND  66                         0.3     PERLND  75     41
+PERLND  67                         0.0     PERLND  75     41
+PERLND  68                         0.9     PERLND  75     41
+PERLND  69                         0.2     PERLND  75     41
+PERLND  70                         1.5     PERLND  75     41
+PERLND  71                         1.6     PERLND  75     41
+PERLND  72                        38.3     PERLND  75     41
+IMPLND  61                         7.5     PERLND  75     42
+IMPLND  62                        21.0     PERLND  75     42
+IMPLND  63                       107.2     PERLND  75     42
+IMPLND  64                        80.1     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                       142.6     RCHRES   4      9
+PERLND  62                       118.9     RCHRES   4      9
+PERLND  63                       199.0     RCHRES   4      9
+PERLND  64                        80.1     RCHRES   4      9
+PERLND  65                         0.0     RCHRES   4      9
+PERLND  66                         0.3     RCHRES   4      9
+PERLND  67                         0.0     RCHRES   4      9
+PERLND  68                         0.9     RCHRES   4      9
+PERLND  69                         0.2     RCHRES   4      9
+PERLND  70                         1.5     RCHRES   4      9
+PERLND  71                         1.6     RCHRES   4      9
+PERLND  72                        38.3     RCHRES   4      9
+
+*** 6H REACH 5
+PERLND  81                       250.4     RCHRES   5      1
+PERLND  82                         6.3     RCHRES   5      1
+PERLND  83                         0.0     RCHRES   5      1
+PERLND  84                         2.5     RCHRES   5      1
+PERLND  85                         2.0     RCHRES   5      1
+PERLND  86                        19.8     RCHRES   5      1
+PERLND  87                      1831.6     RCHRES   5      1
+PERLND  88                       718.7     RCHRES   5      1
+PERLND  89                         0.0     RCHRES   5      1
+PERLND  90                       781.2     RCHRES   5      1
+PERLND  91                      3142.2     RCHRES   5      1
+PERLND  92***                     31.5     RCHRES   5      1
+PERLND  93                      1593.4     RCHRES   5      1
+PERLND  95                      1620.5     RCHRES   5      1
+IMPLND  81                        13.2     RCHRES   5      2
+IMPLND  82                         1.1     RCHRES   5      2
+IMPLND  83                         0.0     RCHRES   5      2
+IMPLND  84                         2.5     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                       254.6     PERLND  95     51
+PERLND  82                         6.4     PERLND  95     51
+PERLND  83                         0.0     PERLND  95     51
+PERLND  84                         2.5     PERLND  95     51
+PERLND  85                         2.0     PERLND  95     51
+PERLND  86                        20.1     PERLND  95     51
+PERLND  87                      1862.7     PERLND  95     51
+PERLND  88                       730.9     PERLND  95     51
+PERLND  89                         0.0     PERLND  95     51
+PERLND  90                       794.5     PERLND  95     51
+PERLND  91                      3195.6     PERLND  95     51
+PERLND  92                        12.2     PERLND  95     51
+IMPLND  81                        13.4     PERLND  95     52
+IMPLND  82                         1.1     PERLND  95     52
+IMPLND  83                         0.0     PERLND  95     52
+IMPLND  84                         2.5     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                       254.6     RCHRES   5      9
+PERLND  82                         6.4     RCHRES   5      9
+PERLND  83                         0.0     RCHRES   5      9
+PERLND  84                         2.5     RCHRES   5      9
+PERLND  85                         2.0     RCHRES   5      9
+PERLND  86                        20.1     RCHRES   5      9
+PERLND  87                      1862.7     RCHRES   5      9
+PERLND  88                       730.9     RCHRES   5      9
+PERLND  89                         0.0     RCHRES   5      9
+PERLND  90                       794.5     RCHRES   5      9
+PERLND  91                      3195.6     RCHRES   5      9
+PERLND  92                        12.2     RCHRES   5      9
+
+*** 6H REACH 6
+PERLND 101                         0.0     RCHRES   6      1
+PERLND 102                       929.7     RCHRES   6      1
+PERLND 103                         0.0     RCHRES   6      1
+PERLND 104                        35.3     RCHRES   6      1
+PERLND 105                         0.0     RCHRES   6      1
+PERLND 106                        36.6     RCHRES   6      1
+PERLND 107                         0.0     RCHRES   6      1
+PERLND 108                         0.0     RCHRES   6      1
+PERLND 109                         0.0     RCHRES   6      1
+PERLND 110                      1049.0     RCHRES   6      1
+PERLND 111                      1802.6     RCHRES   6      1
+PERLND 112***                     45.5     RCHRES   6      1
+PERLND 113                      1166.9     RCHRES   6      1
+PERLND 115                      1668.9     RCHRES   6      1
+IMPLND 101                         0.0     RCHRES   6      2
+IMPLND 102                       164.1     RCHRES   6      2
+IMPLND 103                         0.0     RCHRES   6      2
+IMPLND 104                        35.3     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                         0.0     PERLND 115     61
+PERLND 102                      1329.6     PERLND 115     61
+PERLND 103                         0.0     PERLND 115     61
+PERLND 104                        50.4     PERLND 115     61
+PERLND 105                         0.0     PERLND 115     61
+PERLND 106                        52.4     PERLND 115     61
+PERLND 107                         0.0     PERLND 115     61
+PERLND 108                         0.0     PERLND 115     61
+PERLND 109                         0.0     PERLND 115     61
+PERLND 110                      1500.2     PERLND 115     61
+PERLND 111                      2577.9     PERLND 115     61
+PERLND 112                        23.1     PERLND 115     61
+IMPLND 101                         0.0     PERLND 115     62
+IMPLND 102                       234.6     PERLND 115     62
+IMPLND 103                         0.0     PERLND 115     62
+IMPLND 104                        50.4     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                         0.0     RCHRES   6      9
+PERLND 102                      1329.6     RCHRES   6      9
+PERLND 103                         0.0     RCHRES   6      9
+PERLND 104                        50.4     RCHRES   6      9
+PERLND 105                         0.0     RCHRES   6      9
+PERLND 106                        52.4     RCHRES   6      9
+PERLND 107                         0.0     RCHRES   6      9
+PERLND 108                         0.0     RCHRES   6      9
+PERLND 109                         0.0     RCHRES   6      9
+PERLND 110                      1500.2     RCHRES   6      9
+PERLND 111                      2577.9     RCHRES   6      9
+PERLND 112                        23.1     RCHRES   6      9
+
+*** 6H REACH 7
+PERLND 121                        38.6     RCHRES   7      1
+PERLND 122                       486.4     RCHRES   7      1
+PERLND 123                         0.0     RCHRES   7      1
+PERLND 124                        41.1     RCHRES   7      1
+PERLND 125                         0.0     RCHRES   7      1
+PERLND 126                        63.8     RCHRES   7      1
+PERLND 127                         0.0     RCHRES   7      1
+PERLND 128                        34.6     RCHRES   7      1
+PERLND 129                         0.0     RCHRES   7      1
+PERLND 130                       990.3     RCHRES   7      1
+PERLND 131                      4320.6     RCHRES   7      1
+PERLND 132***                    135.5     RCHRES   7      1
+PERLND 133                      4040.4     RCHRES   7      1
+PERLND 135                       393.8     RCHRES   7      1
+IMPLND 121                         2.0     RCHRES   7      2
+IMPLND 122                        85.8     RCHRES   7      2
+IMPLND 123                         0.0     RCHRES   7      2
+IMPLND 124                        41.1     RCHRES   7      2
+      *** Surface runoff to non-reach wetland
+PERLND 121                         3.8     PERLND 135     71
+PERLND 122                        47.4     PERLND 135     71
+PERLND 123                         0.0     PERLND 135     71
+PERLND 124                         4.0     PERLND 135     71
+PERLND 125                         0.0     PERLND 135     71
+PERLND 126                         6.2     PERLND 135     71
+PERLND 127                         0.0     PERLND 135     71
+PERLND 128                         3.4     PERLND 135     71
+PERLND 129                         0.0     PERLND 135     71
+PERLND 130                        96.5     PERLND 135     71
+PERLND 131                       421.1     PERLND 135     71
+PERLND 132                         8.1     PERLND 135     71
+IMPLND 121                         0.2     PERLND 135     72
+IMPLND 122                         8.4     PERLND 135     72
+IMPLND 123                         0.0     PERLND 135     72
+IMPLND 124                         4.0     PERLND 135     72
+      *** Baseflow to reach
+PERLND 121                         3.8     RCHRES   7      9
+PERLND 122                        47.4     RCHRES   7      9
+PERLND 123                         0.0     RCHRES   7      9
+PERLND 124                         4.0     RCHRES   7      9
+PERLND 125                         0.0     RCHRES   7      9
+PERLND 126                         6.2     RCHRES   7      9
+PERLND 127                         0.0     RCHRES   7      9
+PERLND 128                         3.4     RCHRES   7      9
+PERLND 129                         0.0     RCHRES   7      9
+PERLND 130                        96.5     RCHRES   7      9
+PERLND 131                       421.1     RCHRES   7      9
+PERLND 132                         8.1     RCHRES   7      9
+
+*** 6H REACH 8
+PERLND 141                        12.9     RCHRES   8      1
+PERLND 142                      2565.4     RCHRES   8      1
+PERLND 143                         0.0     RCHRES   8      1
+PERLND 144                         0.0     RCHRES   8      1
+PERLND 145                         0.0     RCHRES   8      1
+PERLND 146                         0.0     RCHRES   8      1
+PERLND 147                         0.0     RCHRES   8      1
+PERLND 148                         0.0     RCHRES   8      1
+PERLND 149                         0.0     RCHRES   8      1
+PERLND 150                         0.0     RCHRES   8      1
+PERLND 151                         0.0     RCHRES   8      1
+PERLND 152***                     11.2     RCHRES   8      1
+PERLND 153                      1042.4     RCHRES   8      1
+PERLND 155                      1278.4     RCHRES   8      1
+IMPLND 141                         0.7     RCHRES   8      2
+IMPLND 142                       452.7     RCHRES   8      2
+IMPLND 143                         0.0     RCHRES   8      2
+IMPLND 144                         0.0     RCHRES   8      2
+      *** Surface runoff to non-reach wetland
+PERLND 141                        15.9     PERLND 155     81
+PERLND 142                      3146.2     PERLND 155     81
+PERLND 143                         0.0     PERLND 155     81
+PERLND 144                         0.0     PERLND 155     81
+PERLND 145                         0.0     PERLND 155     81
+PERLND 146                         0.0     PERLND 155     81
+PERLND 147                         0.0     PERLND 155     81
+PERLND 148                         0.0     PERLND 155     81
+PERLND 149                         0.0     PERLND 155     81
+PERLND 150                         0.0     PERLND 155     81
+PERLND 151                         0.0     PERLND 155     81
+PERLND 152                         5.6     PERLND 155     81
+IMPLND 141                         0.8     PERLND 155     82
+IMPLND 142                       555.2     PERLND 155     82
+IMPLND 143                         0.0     PERLND 155     82
+IMPLND 144                         0.0     PERLND 155     82
+      *** Baseflow to reach
+PERLND 141                        15.9     RCHRES   8      9
+PERLND 142                      3146.2     RCHRES   8      9
+PERLND 143                         0.0     RCHRES   8      9
+PERLND 144                         0.0     RCHRES   8      9
+PERLND 145                         0.0     RCHRES   8      9
+PERLND 146                         0.0     RCHRES   8      9
+PERLND 147                         0.0     RCHRES   8      9
+PERLND 148                         0.0     RCHRES   8      9
+PERLND 149                         0.0     RCHRES   8      9
+PERLND 150                         0.0     RCHRES   8      9
+PERLND 151                         0.0     RCHRES   8      9
+PERLND 152                         5.6     RCHRES   8      9
+
+*** 6H-1 King St. Canal TO 6Main2-6 SJR SR 528
+*** 6H-2 Lk Wilson Ca TO 6Main2-6 SJR SR 528
+*** 6H-3 Delespine Grant D TO 6Main2-7 SJR SR 50
+*** 6H-4 Bird Lake TO 6Main2-7 SJR SR 50
+*** 6H-5 Upper Jim Creek TO 6H-7 Lower Jim Creek
+RCHRES   5                                 RCHRES   7      3
+*** 6H-6 Second Creek TO 6H-7 Lower Jim Creek
+RCHRES   6                                 RCHRES   7      3
+*** 6H-7 Lower Jim Creek TO 6Main2-7 SJR SR 50
+*** 6H-8 Tootoosahatchee Ck TO 6Main2-7 SJR SR 50
+***
+END SCHEMATIC
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 6H REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001347     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001347     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001347     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 6H REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000380     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000380     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000380     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 6H REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000734     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000734     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000734     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 6H REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001325     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001325     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001325     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 6H REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000617     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000617     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000617     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 6H REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000599     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000599     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000599     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+*** 6H REACH 7
+  MASS-LINK       71
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002539     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002539     PERLND         EXTNL  SURLI
+  END MASS-LINK   71
+
+  MASS-LINK       72
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002539     PERLND         EXTNL  SURLI
+  END MASS-LINK   72
+*** 6H REACH 8
+  MASS-LINK       81
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000782     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000782     PERLND         EXTNL  SURLI
+  END MASS-LINK   81
+
+  MASS-LINK       82
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000782     PERLND         EXTNL  SURLI
+  END MASS-LINK   82
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+*** Transfer datasets - hourly volume/mass
+*** 6H-1 King St. Canal TO 6Main2-6
+RCHRES   1 HYDR   ROVOL                    WDM2   561 FLOW     ENGL AGGR REPL
+*** 6H-2 Lk Wilson Ca TO 6Main2-6
+RCHRES   2 HYDR   ROVOL                    WDM2   562 FLOW     ENGL AGGR REPL
+*** 6H-3 Delespine Grant D TO 6Main2-7
+RCHRES   3 HYDR   ROVOL                    WDM2   571 FLOW     ENGL AGGR REPL
+*** 6H-4 Bird Lake TO 6Main2-7
+RCHRES   4 HYDR   ROVOL                    WDM2   572 FLOW     ENGL AGGR REPL
+*** 6H-7 Lower Jim Creek TO 6Main2-7
+RCHRES   7 HYDR   ROVOL                    WDM2   573 FLOW     ENGL AGGR REPL
+*** 6H-8 Tootoosahatchee Ck TO 6Main2-7
+RCHRES   8 HYDR   ROVOL                    WDM2   574 FLOW     ENGL AGGR REPL
+
+*** Gages - None
+END EXT TARGETS
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+  UVQUAN rca7   RCHRES   7 SAREA            3 2.296E-05
+  UVQUAN rca8   RCHRES   8 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01
+  UVQUAN wla033 GLOBAL     WORKSP 02
+  UVQUAN wla053 GLOBAL     WORKSP 03
+  UVQUAN wla073 GLOBAL     WORKSP 04
+  UVQUAN wla093 GLOBAL     WORKSP 05
+  UVQUAN wla113 GLOBAL     WORKSP 06
+  UVQUAN wla133 GLOBAL     WORKSP 07
+  UVQUAN wla153 GLOBAL     WORKSP 08
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+  UVNAME  WLA133  1 WORKSP 07        1.0  QUAN
+  UVNAME  WLA153  1 WORKSP 08        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =     590.0
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =    3297.7
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =    1576.8
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =    4812.1
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =    1605.4
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =    1183.1
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+*** Reach 7
+  COPY   99                               WLA133           =    4123.1
+  COPY   99                               WLA133          -=    rca7
+  COPY   99                               WLA133         MAX       0.0
+*** Reach 8
+  COPY   99                               WLA153           =    1047.0
+  COPY   99                               WLA153          -=    rca8
+  COPY   99                               WLA153         MAX       0.0
+
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+MULT PERLND 133                    wla133= RCHRES  07
+MULT PERLND 153                    wla153= RCHRES  08
+
+*** Structures and Operations
+*** None
+END SPEC-ACTIONS
+
+END RUN

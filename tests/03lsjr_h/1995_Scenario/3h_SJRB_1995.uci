@@ -1,0 +1,1929 @@
+RUN
+
+GLOBAL
+  Planning Unit: 3h
+  START       1995/01/01 00:00  END    2016/12/31 24:00
+  RUN INTERP OUTPT LEVELS    4    0
+  RESUME     0 RUN     1                          UNITS    1
+END GLOBAL
+
+FILES
+<FILE>  <UN#>***<----FILE NAME------------------------------------------------->
+MESSU      24   3h.ech
+WDM1       25   sjrb_met.wdm
+WDM2       26   sjrb_lsj.wdm
+WDM3       27   irrig_3H.wdm ***
+           80   3h_land.out
+           82   3h_reach.out
+BINO       81   3h_land.hbn
+BINO       83   3h_reach.hbn
+PESTSU     41   3h_hspf.sup
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** Main1 REACH 1   Durbin Creek
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** Main1 REACH 2   Pottsburg Ck Swamp
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** Main1 REACH 3   Big Davis Creek
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      RCHRES       3
+
+*** Main1 REACH 4   Oldfield Creek
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** Main1 REACH 5   Upp Julington Ck
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** Main1 REACH 6   Low Julington Ck
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+  001  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>                       Print-flags                           BIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 3H REACH 1
+    1   19Durbin Creek                      1    1   80    0   81    0
+*** 3H REACH 2
+   21   39Pottsburg Ck Swamp                1    1   80    0   81    0
+*** 3H REACH 3
+   41   59Big Davis Creek                   1    1   80    0   81    0
+*** 3H REACH 4
+   61   79Oldfield Creek                    1    1   80    0   81    0
+*** 3H REACH 5
+   81   99Upp Julington Ck                  1    1   80    0   81    0
+*** 3H REACH 6
+  101  119Low Julington Ck                  1    1   80    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 3H REACH 1 - Durbin Creek
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3H REACH 2 - Pottsburg Ck Swamp
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3H REACH 3 - Big Davis Creek
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3H REACH 4 - Oldfield Creek
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3H REACH 5 - Upp Julington Ck
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3H REACH 6 - Low Julington Ck
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+  PWAT-PARM2
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   1
+*** 3H REACH 1 - Durbin Creek          Location  313
+    1     ~111131301~
+    2     ~111131302~
+    3     ~111131303~
+    4     ~111131304~
+    5     ~111131305~
+    6     ~111131306~
+    7     ~111131307~
+    8     ~111131308~
+    9     ~111131309~
+   10     ~111131310~
+   11     ~111131311~
+   12     ~111131312~
+   13     ~111131313~
+   15     ~111131313~
+*** 3H REACH 2 - Pottsburg Ck Swamp    Location  313
+   21     ~111131301~
+   22     ~111131302~
+   23     ~111131303~
+   24     ~111131304~
+   25     ~111131305~
+   26     ~111131306~
+   27     ~111131307~
+   28     ~111131308~
+   29     ~111131309~
+   30     ~111131310~
+   31     ~111131311~
+   32     ~111131312~
+   33     ~111131313~
+   35     ~111131313~
+*** 3H REACH 3 - Big Davis Creek       Location  313
+   41     ~111131301~
+   42     ~111131302~
+   43     ~111131303~
+   44     ~111131304~
+   45     ~111131305~
+   46     ~111131306~
+   47     ~111131307~
+   48     ~111131308~
+   49     ~111131309~
+   50     ~111131310~
+   51     ~111131311~
+   52     ~111131312~
+   53     ~111131313~
+   55     ~111131313~
+*** 3H REACH 4 - Oldfield Creek        Location  313
+   61     ~111131301~
+   62     ~111131302~
+   63     ~111131303~
+   64     ~111131304~
+   65     ~111131305~
+   66     ~111131306~
+   67     ~111131307~
+   68     ~111131308~
+   69     ~111131309~
+   70     ~111131310~
+   71     ~111131311~
+   72     ~111131312~
+   73     ~111131313~
+   75     ~111131313~
+*** 3H REACH 5 - Upp Julington Ck      Location  313
+   81     ~111131301~
+   82     ~111131302~
+   83     ~111131303~
+   84     ~111131304~
+   85     ~111131305~
+   86     ~111131306~
+   87     ~111131307~
+   88     ~111131308~
+   89     ~111131309~
+   90     ~111131310~
+   91     ~111131311~
+   92     ~111131312~
+   93     ~111131313~
+   95     ~111131313~
+*** 3H REACH 6 - Low Julington Ck      Location  313
+  101     ~111131301~
+  102     ~111131302~
+  103     ~111131303~
+  104     ~111131304~
+  105     ~111131305~
+  106     ~111131306~
+  107     ~111131307~
+  108     ~111131308~
+  109     ~111131309~
+  110     ~111131310~
+  111     ~111131311~
+  112     ~111131312~
+  113     ~111131313~
+  115     ~111131313~
+  END PWAT-PARM2
+
+  PWAT-PARM3
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   2
+*** 3H REACH 1 - Durbin Creek          Location  313
+    1     ~111231301~
+    2     ~111231302~
+    3     ~111231303~
+    4     ~111231304~
+    5     ~111231305~
+    6     ~111231306~
+    7     ~111231307~
+    8     ~111231308~
+    9     ~111231309~
+   10     ~111231310~
+   11     ~111231311~
+   12     ~111231312~
+   13     ~111231313~
+   15     ~111231313~
+*** 3H REACH 2 - Pottsburg Ck Swamp    Location  313
+   21     ~111231301~
+   22     ~111231302~
+   23     ~111231303~
+   24     ~111231304~
+   25     ~111231305~
+   26     ~111231306~
+   27     ~111231307~
+   28     ~111231308~
+   29     ~111231309~
+   30     ~111231310~
+   31     ~111231311~
+   32     ~111231312~
+   33     ~111231313~
+   35     ~111231313~
+*** 3H REACH 3 - Big Davis Creek       Location  313
+   41     ~111231301~
+   42     ~111231302~
+   43     ~111231303~
+   44     ~111231304~
+   45     ~111231305~
+   46     ~111231306~
+   47     ~111231307~
+   48     ~111231308~
+   49     ~111231309~
+   50     ~111231310~
+   51     ~111231311~
+   52     ~111231312~
+   53     ~111231313~
+   55     ~111231313~
+*** 3H REACH 4 - Oldfield Creek        Location  313
+   61     ~111231301~
+   62     ~111231302~
+   63     ~111231303~
+   64     ~111231304~
+   65     ~111231305~
+   66     ~111231306~
+   67     ~111231307~
+   68     ~111231308~
+   69     ~111231309~
+   70     ~111231310~
+   71     ~111231311~
+   72     ~111231312~
+   73     ~111231313~
+   75     ~111231313~
+*** 3H REACH 5 - Upp Julington Ck      Location  313
+   81     ~111231301~
+   82     ~111231302~
+   83     ~111231303~
+   84     ~111231304~
+   85     ~111231305~
+   86     ~111231306~
+   87     ~111231307~
+   88     ~111231308~
+   89     ~111231309~
+   90     ~111231310~
+   91     ~111231311~
+   92     ~111231312~
+   93     ~111231313~
+   95     ~111231313~
+*** 3H REACH 6 - Low Julington Ck      Location  313
+  101     ~111231301~
+  102     ~111231302~
+  103     ~111231303~
+  104     ~111231304~
+  105     ~111231305~
+  106     ~111231306~
+  107     ~111231307~
+  108     ~111231308~
+  109     ~111231309~
+  110     ~111231310~
+  111     ~111231311~
+  112     ~111231312~
+  113     ~111231313~
+  115     ~111231313~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   3
+*** 3H REACH 1 - Durbin Creek          Location  313
+    1     ~111331301~
+    2     ~111331302~
+    3     ~111331303~
+    4     ~111331304~
+    5     ~111331305~
+    6     ~111331306~
+    7     ~111331307~
+    8     ~111331308~
+    9     ~111331309~
+   10     ~111331310~
+   11     ~111331311~
+   12     ~111331312~
+   13     ~111331313~
+   15     ~111331313~
+*** 3H REACH 2 - Pottsburg Ck Swamp    Location  313
+   21     ~111331301~
+   22     ~111331302~
+   23     ~111331303~
+   24     ~111331304~
+   25     ~111331305~
+   26     ~111331306~
+   27     ~111331307~
+   28     ~111331308~
+   29     ~111331309~
+   30     ~111331310~
+   31     ~111331311~
+   32     ~111331312~
+   33     ~111331313~
+   35     ~111331313~
+*** 3H REACH 3 - Big Davis Creek       Location  313
+   41     ~111331301~
+   42     ~111331302~
+   43     ~111331303~
+   44     ~111331304~
+   45     ~111331305~
+   46     ~111331306~
+   47     ~111331307~
+   48     ~111331308~
+   49     ~111331309~
+   50     ~111331310~
+   51     ~111331311~
+   52     ~111331312~
+   53     ~111331313~
+   55     ~111331313~
+*** 3H REACH 4 - Oldfield Creek        Location  313
+   61     ~111331301~
+   62     ~111331302~
+   63     ~111331303~
+   64     ~111331304~
+   65     ~111331305~
+   66     ~111331306~
+   67     ~111331307~
+   68     ~111331308~
+   69     ~111331309~
+   70     ~111331310~
+   71     ~111331311~
+   72     ~111331312~
+   73     ~111331313~
+   75     ~111331313~
+*** 3H REACH 5 - Upp Julington Ck      Location  313
+   81     ~111331301~
+   82     ~111331302~
+   83     ~111331303~
+   84     ~111331304~
+   85     ~111331305~
+   86     ~111331306~
+   87     ~111331307~
+   88     ~111331308~
+   89     ~111331309~
+   90     ~111331310~
+   91     ~111331311~
+   92     ~111331312~
+   93     ~111331313~
+   95     ~111331313~
+*** 3H REACH 6 - Low Julington Ck      Location  313
+  101     ~111331301~
+  102     ~111331302~
+  103     ~111331303~
+  104     ~111331304~
+  105     ~111331305~
+  106     ~111331306~
+  107     ~111331307~
+  108     ~111331308~
+  109     ~111331309~
+  110     ~111331310~
+  111     ~111331311~
+  112     ~111331312~
+  113     ~111331313~
+  115     ~111331313~
+  END PWAT-PARM4
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 3H REACH 1 - Durbin Creek                     Location  313
+    1   19       913
+*** 3H REACH 2 - Pottsburg Ck Swamp               Location  313
+   21   39       913
+*** 3H REACH 3 - Big Davis Creek                  Location  313
+   41   59       913
+*** 3H REACH 4 - Oldfield Creek                   Location  313
+   61   79       913
+*** 3H REACH 5 - Upp Julington Ck                 Location  313
+   81   99       913
+*** 3H REACH 6 - Low Julington Ck                 Location  313
+  101  119       913
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 3H REACH 1 - Durbin Creek          Location  313
+    1     ~111631301~
+    2     ~111631302~
+    3     ~111631303~
+    4     ~111631304~
+    5     ~111631305~
+    6     ~111631306~
+    7     ~111631307~
+    8     ~111631308~
+    9     ~111631309~
+   10     ~111631310~
+   11     ~111631311~
+   12     ~111631312~
+   13     ~111631313~
+   15     ~111631313~
+*** 3H REACH 2 - Pottsburg Ck Swamp    Location  313
+   21     ~111631301~
+   22     ~111631302~
+   23     ~111631303~
+   24     ~111631304~
+   25     ~111631305~
+   26     ~111631306~
+   27     ~111631307~
+   28     ~111631308~
+   29     ~111631309~
+   30     ~111631310~
+   31     ~111631311~
+   32     ~111631312~
+   33     ~111631313~
+   35     ~111631313~
+*** 3H REACH 3 - Big Davis Creek       Location  313
+   41     ~111631301~
+   42     ~111631302~
+   43     ~111631303~
+   44     ~111631304~
+   45     ~111631305~
+   46     ~111631306~
+   47     ~111631307~
+   48     ~111631308~
+   49     ~111631309~
+   50     ~111631310~
+   51     ~111631311~
+   52     ~111631312~
+   53     ~111631313~
+   55     ~111631313~
+*** 3H REACH 4 - Oldfield Creek        Location  313
+   61     ~111631301~
+   62     ~111631302~
+   63     ~111631303~
+   64     ~111631304~
+   65     ~111631305~
+   66     ~111631306~
+   67     ~111631307~
+   68     ~111631308~
+   69     ~111631309~
+   70     ~111631310~
+   71     ~111631311~
+   72     ~111631312~
+   73     ~111631313~
+   75     ~111631313~
+*** 3H REACH 5 - Upp Julington Ck      Location  313
+   81     ~111631301~
+   82     ~111631302~
+   83     ~111631303~
+   84     ~111631304~
+   85     ~111631305~
+   86     ~111631306~
+   87     ~111631307~
+   88     ~111631308~
+   89     ~111631309~
+   90     ~111631310~
+   91     ~111631311~
+   92     ~111631312~
+   93     ~111631313~
+   95     ~111631313~
+*** 3H REACH 6 - Low Julington Ck      Location  313
+  101     ~111631301~
+  102     ~111631302~
+  103     ~111631303~
+  104     ~111631304~
+  105     ~111631305~
+  106     ~111631306~
+  107     ~111631307~
+  108     ~111631308~
+  109     ~111631309~
+  110     ~111631310~
+  111     ~111631311~
+  112     ~111631312~
+  113     ~111631313~
+  115     ~111631313~
+  END PWAT-STATE1
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+  001  999    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** <ILS > ******** Print-flags ******** BIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***             Name             Unit-systems   Printer BinaryOut
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+  001  999                             1    1   80    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+  001  999    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+*** <ILS >      LSUR     SLSUR      NSUR     RETSC
+*** x -  x      (ft)                          (in)
+  001  999      150.     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+*** <ILS >    PETMAX    PETMIN
+*** x -  x   (deg F)   (deg F)
+  001  999       40.       35.
+  END IWAT-PARM3
+
+  IWAT-STATE1
+*** <ILS >  IWATER state variables (inches)
+*** x -  x      RETS      SURS
+  001  999     0.000     0.000
+  END IWAT-STATE1
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1    6    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1    6    3    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 3H REACH 1
+    1     Durbin Creek            2         1    1   82    0    0   83    0
+*** 3H REACH 2
+    2     Pottsburg Ck Swamp      2         1    1   82    0    0   83    0
+*** 3H REACH 3
+    3     Big Davis Creek         2         1    1   82    0    0   83    0
+*** 3H REACH 4
+    4     Oldfield Creek          1         1    1   82    0    0   83    0
+*** 3H REACH 5
+    5     Upp Julington Ck        2         1    1   82    0    0   83    0
+*** 3H REACH 6
+    6     Low Julington Ck        1         1    1   82    0    0   83    0
+  END GEN-INFO
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 3H REACH 1 - Durbin Creek
+    1        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3H REACH 2 - Pottsburg Ck Swamp
+    2        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3H REACH 3 - Big Davis Creek
+    3        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3H REACH 4 - Oldfield Creek
+    4        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3H REACH 5 - Upp Julington Ck
+    5        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3H REACH 6 - Low Julington Ck
+    6        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 3H REACH 1 - Durbin Creek
+    1             1.     13.78     16.26      0.00       0.5      0.01
+*** 3H REACH 2 - Pottsburg Ck Swamp
+    2             2.      1.41      2.73      0.00       0.5      0.01
+*** 3H REACH 3 - Big Davis Creek
+    3             3.      5.86     37.86      0.00       0.5      0.01
+*** 3H REACH 4 - Oldfield Creek
+    4             4.      2.69     19.19      0.00       0.5      0.01
+*** 3H REACH 5 - Upp Julington Ck
+    5             5.      6.77     15.68      0.00       0.5      0.01
+*** 3H REACH 6 - Low Julington Ck
+    6             6.      2.73      0.00      0.00       0.5      0.01
+  END HYDR-PARM2
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 3H REACH 1 - Durbin Creek
+    1         141.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3H REACH 2 - Pottsburg Ck Swamp
+    2          27.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3H REACH 3 - Big Davis Creek
+    3         307.80       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3H REACH 4 - Oldfield Creek
+    4         100.30       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3H REACH 5 - Upp Julington Ck
+    5         272.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3H REACH 6 - Low Julington Ck
+    6         137.33       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+
+END RCHRES
+
+FTABLES
+  FTABLE    001
+ rows cols ***      Durbin Creek        STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.42       6.0      1.00       1.0
+      0.60       9.0      3.00       2.0
+      0.77      12.0      4.00       3.0
+      0.90      13.0      6.00       5.0
+      1.00      15.0      8.00       6.0
+      1.30      19.0     13.00      12.0
+      1.83      27.0     25.00      31.0
+      2.38      36.0     42.00      61.0
+      3.35      50.0     84.00     153.0
+      4.35      65.0    141.00     305.0
+      5.64      84.0    238.00     610.0
+      7.06     106.0    373.00    1112.0
+     99.00    9999.0  99999.00   29999.0
+  END FTABLE001
+
+  FTABLE    002
+ rows cols ***      Pottsburg Ck Swamp  STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.42       1.0      0.50       0.5
+      0.60       1.5      0.70       1.0
+      0.77       2.0      1.00       1.5
+      0.90       2.5      1.20       2.5
+      1.00       3.0      1.50       3.5
+      1.30       3.5      2.50       7.0
+      1.83       5.0      5.00      17.5
+      2.38       7.0      8.00      35.0
+      3.35       9.5     16.00      87.5
+      4.35      12.5     27.00     175.0
+      5.64      16.0     45.00     350.0
+      7.06      20.0     71.00     637.5
+     99.00    4999.5  49999.50   14999.5
+  END FTABLE002
+
+  FTABLE    003
+ rows cols ***      Big Davis Creek     STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.42       8.5      2.20       1.0
+      0.60      11.8      4.30       1.0
+      0.77      15.1      6.90       3.0
+      0.90      17.7      9.30       4.0
+      1.00      19.0     11.50       6.0
+      1.30      24.9     17.00      11.0
+      1.83      35.9     32.90      28.0
+      2.38      45.9     54.80      56.0
+      3.35      64.6    109.10     139.0
+      4.35      84.6    183.00     279.0
+      5.64     109.4    307.80     557.0
+      7.06     136.9    483.40    1016.0
+     99.00    9999.0  99999.00   29999.0
+  END FTABLE003
+
+  FTABLE    004
+ rows cols ***      Oldfield Creek      STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.42       2.7      0.60       0.5
+      0.60       3.8      1.10       1.1
+      0.77       4.9      1.90       2.3
+      0.90       5.7      2.60       3.4
+      1.00       6.3      3.20       4.6
+      1.30       8.2      5.30       9.2
+      1.83      11.6     10.60      22.9
+      2.38      15.0     17.80      45.8
+      3.35      21.2     35.50     114.5
+      4.35      27.4     59.70     229.0
+      5.64      35.6    100.30     458.0
+      7.06      44.6    157.40     834.6
+     99.00    9999.0  99999.00   29999.0
+  END FTABLE004
+
+  FTABLE    005
+ rows cols ***      Upp Julington Ck    STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.42      12.0      2.50       0.0
+      0.60      16.5      5.50       1.0
+      0.77      22.0      9.00       2.0
+      0.90      25.5     11.00       2.0
+      1.00      29.0     14.50       3.0
+      1.30      37.5     24.50       7.0
+      1.83      52.0     49.00      16.0
+      2.38      69.0     81.00      33.0
+      3.35      96.5    162.00      82.0
+      4.35     125.5    272.00     164.0
+      5.64     162.0    457.00     328.0
+      7.06     203.0    716.00     598.0
+     99.00   14998.5 149998.50   29999.0
+  END FTABLE005
+
+  FTABLE    006
+ rows cols ***      Low Julington Ck    STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.42       3.7      0.67       0.0
+      0.60       5.0      1.67       1.0
+      0.77       6.7      2.67       2.0
+      0.90       7.7      3.33       2.0
+      1.00       8.7      4.33       3.0
+      1.30      11.3      7.33       7.0
+      1.83      15.7     14.67      16.0
+      2.38      20.7     24.33      33.0
+      3.35      29.0     48.67      82.0
+      4.35      37.7     81.67     164.0
+      5.64      48.7    137.33     328.0
+      7.06      61.0    215.00     598.0
+     99.00    9999.0  99999.00   29999.0
+  END FTABLE006
+
+*** From Pest calibration of BIG DAVIS Ck BAYARD
+  FTABLE    913
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 11.825000       0.0
+      18. .025361919
+      24. .050005079
+      36. .099291400
+  END FTABLE913
+
+END FTABLES
+
+COPY
+  TIMESERIES
+  Copy-opn***
+*** x -  x  NPT  NMN
+   99         0    1
+  END TIMESERIES
+END COPY
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - Durbin Creek
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - Pottsburg Ck Swamp
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - Big Davis Creek
+*** Rain station Jacksonville Beach
+WDM1  2502 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1  2502 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1  2502 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Oldfield Creek
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - Upp Julington Ck
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - Low Julington Ck
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+
+
+
+*** Agricultural irrigation, spread over land cover ids = 7, 8, and 9
+*** Source data is in/hour/per polygon
+*** Multiplier = (in/hour) * (area of irrigated polygon) / (area of all specified PERLND in that subwatershed)
+*** Surface water source multiplier is unit conversion from (acre) * (in/hour) -> (cfs) = (acre) * 1.0083374
+*** SAME is used since time intervals of time series and model run are equal
+
+*** Area=  4.1185, Area PERLND 8= 451.163, in/hr from StJo_24089
+*** From groundwater
+WDM3     1 AGGW     ENGL     0.0091286SAME PERLND   8     EXTNL  LZLI   ***
+*** From surface water
+WDM3     2 AGSW     ENGL        4.1528SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3     2 AGSW     ENGL     0.0091286SAME PERLND   8     EXTNL  LZLI   ***
+*** Area= 1.72399, Area PERLND 8= 451.163, in/hr from StJo_24090
+*** From groundwater
+WDM3     3 AGGW     ENGL     0.0038212SAME PERLND   8     EXTNL  LZLI   ***
+*** From surface water
+WDM3     4 AGSW     ENGL        1.7384SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3     4 AGSW     ENGL     0.0038212SAME PERLND   8     EXTNL  LZLI   ***
+*** Area= 1.67862, Area PERLND 8= 451.163, in/hr from StJo_24263
+*** From groundwater
+WDM3     5 AGGW     ENGL     0.0037207SAME PERLND   8     EXTNL  LZLI   ***
+*** From surface water
+WDM3     6 AGSW     ENGL        1.6926SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3     6 AGSW     ENGL     0.0037207SAME PERLND   8     EXTNL  LZLI   ***
+*** Area= 1.70407, Area PERLND 8= 451.163, in/hr from StJo_24454
+*** From groundwater
+WDM3     7 AGGW     ENGL     0.0037771SAME PERLND   8     EXTNL  LZLI   ***
+*** From surface water
+WDM3     8 AGSW     ENGL        1.7183SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3     8 AGSW     ENGL     0.0037771SAME PERLND   8     EXTNL  LZLI   ***
+*** Area= 1.73021, Area PERLND 8= 451.163, in/hr from StJo_24348
+*** From groundwater
+WDM3     9 AGGW     ENGL      0.003835SAME PERLND   8     EXTNL  LZLI   ***
+*** From surface water
+WDM3    10 AGSW     ENGL        1.7446SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3    10 AGSW     ENGL      0.003835SAME PERLND   8     EXTNL  LZLI   ***
+*** Area= 4.05033, Area PERLND 48= 54.2778, in/hr from Duva_3089
+*** From groundwater
+WDM3    11 AGGW     ENGL      0.074622SAME PERLND  48     EXTNL  LZLI   ***
+*** From surface water
+WDM3    12 AGSW     ENGL        4.0841SAME RCHRES   3     EXTNL  OUTDGT 2 ***
+WDM3    12 AGSW     ENGL      0.074622SAME PERLND  48     EXTNL  LZLI   ***
+*** Area= 2.14708, Area PERLND 48= 54.2778, in/hr from Duva_3122
+*** From groundwater
+WDM3    13 AGGW     ENGL      0.039557SAME PERLND  48     EXTNL  LZLI   ***
+*** From surface water
+WDM3    14 AGSW     ENGL         2.165SAME RCHRES   3     EXTNL  OUTDGT 2 ***
+WDM3    14 AGSW     ENGL      0.039557SAME PERLND  48     EXTNL  LZLI   ***
+*** Area=0.457688, Area PERLND 88= 142.254, in/hr from Duva_3110
+*** From groundwater
+WDM3    15 AGGW     ENGL     0.0032174SAME PERLND  88     EXTNL  LZLI   ***
+*** From surface water
+WDM3    16 AGSW     ENGL        0.4615SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    16 AGSW     ENGL     0.0032174SAME PERLND  88     EXTNL  LZLI   ***
+*** Area= 0.96753, Area PERLND 88= 142.254, in/hr from Duva_3129
+*** From groundwater
+WDM3    17 AGGW     ENGL     0.0068014SAME PERLND  88     EXTNL  LZLI   ***
+*** From surface water
+WDM3    18 AGSW     ENGL        0.9756SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    18 AGSW     ENGL     0.0068014SAME PERLND  88     EXTNL  LZLI   ***
+*** Area= 2.13232, Area PERLND 88= 142.254, in/hr from Duva_3086
+*** From groundwater
+WDM3    19 AGGW     ENGL      0.014989SAME PERLND  88     EXTNL  LZLI   ***
+*** From surface water
+WDM3    20 AGSW     ENGL        2.1501SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    20 AGSW     ENGL      0.014989SAME PERLND  88     EXTNL  LZLI   ***
+
+*** Golf course irrigation in Florida, applied to general agriculture.
+*** Source data is gallons/month/per golf course polygon
+
+*** APPLICATION:
+*** DIV handles conversion from 1/month to 1/hour
+*** Multiplier = 3.6826599e-05 gallons/month -> acre in/month
+***              --------------------------------------------
+***              (area of all general agricultural (HSPF LC code 8) in subwatershed)
+
+***              * (area of golf course in subwatershed)
+***                -------------------------------------
+***                (total area of golf course)
+
+*** IF SURFACE WATER SOURCE:
+*** SAME handles conversion of monthly time series to hourly.
+*** Multiplier = 5.083406e-08 gallons/month -> ft3/second
+
+***              * (area of golf course in subwatershed)
+***                -------------------------------------
+***                (total area of golf course)
+
+*** Total area of golf course is       98.1 acres, gal/month from AUTOID_1416.csv
+*** Area of golf course in this subwatershed is       18.9.
+*** Applied to PERLND 8 with        451 acres.
+*** From groundwater:
+WDM3    21 GFGW     ENGL    1.5709e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    22 GFSW     ENGL    9.7833e-09SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3    22 GFSW     ENGL    1.5709e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** Total area of golf course is       59.8 acres, gal/month from AUTOID_1417.csv
+*** Area of golf course in this subwatershed is       59.6.
+*** Applied to PERLND 8 with        451 acres.
+*** From groundwater:
+WDM3    23 GFGW     ENGL    8.1351e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    24 GFSW     ENGL    5.0663e-08SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3    24 GFSW     ENGL    8.1351e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** Total area of golf course is       68.8 acres, gal/month from AUTOID_1414.csv
+*** Area of golf course in this subwatershed is       7.76.
+*** Applied to PERLND 8 with        451 acres.
+*** From groundwater:
+WDM3    25 GFGW     ENGL    9.2046e-09DIV  PERLND   8     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    26 GFSW     ENGL    5.7324e-09SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3    26 GFSW     ENGL    9.2046e-09DIV  PERLND   8     EXTNL  SURLI ***
+
+*** Total area of golf course is       16.3 acres, gal/month from AUTOID_1415.csv
+*** Area of golf course in this subwatershed is       9.03.
+*** Applied to PERLND 8 with        451 acres.
+*** From groundwater:
+WDM3    27 GFGW     ENGL     4.516e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    28 GFSW     ENGL    2.8124e-08SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3    28 GFSW     ENGL     4.516e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** Total area of golf course is       64.5 acres, gal/month from AUTOID_1310.csv
+*** Area of golf course in this subwatershed is       31.1.
+*** Applied to PERLND 8 with        451 acres.
+*** From groundwater:
+WDM3    29 GFGW     ENGL     3.942e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    30 GFSW     ENGL     2.455e-08SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3    30 GFSW     ENGL     3.942e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** Total area of golf course is       27.3 acres, gal/month from AUTOID_1429.csv
+*** Area of golf course in this subwatershed is    0.00179.
+*** Applied to PERLND 8 with        451 acres.
+*** From groundwater:
+WDM3    31 GFGW     ENGL    5.3552e-12DIV  PERLND   8     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    32 GFSW     ENGL     3.335e-12SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3    32 GFSW     ENGL    5.3552e-12DIV  PERLND   8     EXTNL  SURLI ***
+
+*** Total area of golf course is     0.0443 acres, gal/month from AUTOID_1428.csv
+*** Area of golf course in this subwatershed is     0.0443.
+*** Applied to PERLND 8 with        451 acres.
+*** From groundwater:
+WDM3    33 GFGW     ENGL    8.1626e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    34 GFSW     ENGL    5.0834e-08SAME RCHRES   1     EXTNL  OUTDGT 2 ***
+WDM3    34 GFSW     ENGL    8.1626e-08DIV  PERLND   8     EXTNL  SURLI ***
+
+*** Total area of golf course is       10.4 acres, gal/month from AUTOID_1342.csv
+*** Area of golf course in this subwatershed is       4.23.
+*** Applied to PERLND 28 with       31.8 acres.
+*** From groundwater:
+WDM3    35 GFGW     ENGL    4.7282e-07DIV  PERLND  28     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    36 GFSW     ENGL    2.0749e-08SAME RCHRES   2     EXTNL  OUTDGT 2 ***
+WDM3    36 GFSW     ENGL    4.7282e-07DIV  PERLND  28     EXTNL  SURLI ***
+
+*** Total area of golf course is       31.4 acres, gal/month from AUTOID_1340.csv
+*** Area of golf course in this subwatershed is      0.254.
+*** Applied to PERLND 28 with       31.8 acres.
+*** From groundwater:
+WDM3    37 GFGW     ENGL    9.3632e-09DIV  PERLND  28     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    38 GFSW     ENGL     4.109e-10SAME RCHRES   2     EXTNL  OUTDGT 2 ***
+WDM3    38 GFSW     ENGL    9.3632e-09DIV  PERLND  28     EXTNL  SURLI ***
+
+*** Total area of golf course is       6.42 acres, gal/month from AUTOID_1343.csv
+*** Area of golf course in this subwatershed is        5.1.
+*** Applied to PERLND 28 with       31.8 acres.
+*** From groundwater:
+WDM3    39 GFGW     ENGL    9.1942e-07DIV  PERLND  28     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    40 GFSW     ENGL    4.0348e-08SAME RCHRES   2     EXTNL  OUTDGT 2 ***
+WDM3    40 GFSW     ENGL    9.1942e-07DIV  PERLND  28     EXTNL  SURLI ***
+
+*** Total area of golf course is       14.3 acres, gal/month from AUTOID_1338.csv
+*** Area of golf course in this subwatershed is       9.47.
+*** Applied to PERLND 28 with       31.8 acres.
+*** From groundwater:
+WDM3    41 GFGW     ENGL    7.6641e-07DIV  PERLND  28     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    42 GFSW     ENGL    3.3633e-08SAME RCHRES   2     EXTNL  OUTDGT 2 ***
+WDM3    42 GFSW     ENGL    7.6641e-07DIV  PERLND  28     EXTNL  SURLI ***
+
+*** Total area of golf course is       21.9 acres, gal/month from AUTOID_1337.csv
+*** Area of golf course in this subwatershed is       3.15.
+*** Applied to PERLND 28 with       31.8 acres.
+*** From groundwater:
+WDM3    43 GFGW     ENGL    1.6645e-07DIV  PERLND  28     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    44 GFSW     ENGL    7.3044e-09SAME RCHRES   2     EXTNL  OUTDGT 2 ***
+WDM3    44 GFSW     ENGL    1.6645e-07DIV  PERLND  28     EXTNL  SURLI ***
+
+*** Total area of golf course is       17.1 acres, gal/month from AUTOID_1352.csv
+*** Area of golf course in this subwatershed is       6.21.
+*** Applied to PERLND 48 with       54.3 acres.
+*** From groundwater:
+WDM3    45 GFGW     ENGL    2.4628e-07DIV  PERLND  48     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    46 GFSW     ENGL    1.8452e-08SAME RCHRES   3     EXTNL  OUTDGT 2 ***
+WDM3    46 GFSW     ENGL    2.4628e-07DIV  PERLND  48     EXTNL  SURLI ***
+
+*** Total area of golf course is       17.1 acres, gal/month from AUTOID_1352.csv
+*** Area of golf course in this subwatershed is       10.9.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    47 GFGW     ENGL    1.6491e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    48 GFSW     ENGL    3.2382e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    48 GFSW     ENGL    1.6491e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       3.88 acres, gal/month from AUTOID_1358.csv
+*** Area of golf course in this subwatershed is       3.88.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    49 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    50 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    50 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       7.38 acres, gal/month from AUTOID_1354.csv
+*** Area of golf course in this subwatershed is       7.38.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    51 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    52 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    52 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       6.14 acres, gal/month from AUTOID_1355.csv
+*** Area of golf course in this subwatershed is       6.14.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    53 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    54 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    54 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       10.4 acres, gal/month from AUTOID_1342.csv
+*** Area of golf course in this subwatershed is       6.13.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    55 GFGW     ENGL    1.5321e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    56 GFSW     ENGL    3.0085e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    56 GFSW     ENGL    1.5321e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       2.99 acres, gal/month from AUTOID_1344.csv
+*** Area of golf course in this subwatershed is       2.99.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    57 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    58 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    58 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       5.13 acres, gal/month from AUTOID_1356.csv
+*** Area of golf course in this subwatershed is       5.13.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    59 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    60 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    60 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       14.1 acres, gal/month from AUTOID_1341.csv
+*** Area of golf course in this subwatershed is       14.1.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    61 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    62 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    62 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       31.4 acres, gal/month from AUTOID_1340.csv
+*** Area of golf course in this subwatershed is       31.1.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    63 GFGW     ENGL    2.5678e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    64 GFSW     ENGL    5.0423e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    64 GFSW     ENGL    2.5678e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       20.9 acres, gal/month from AUTOID_1350.csv
+*** Area of golf course in this subwatershed is       20.9.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    65 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    66 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    66 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       6.42 acres, gal/month from AUTOID_1343.csv
+*** Area of golf course in this subwatershed is       1.32.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    67 GFGW     ENGL      5.34e-08DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    68 GFSW     ENGL    1.0486e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    68 GFSW     ENGL      5.34e-08DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       10.7 acres, gal/month from AUTOID_1353.csv
+*** Area of golf course in this subwatershed is       10.7.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    69 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    70 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    70 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       14.3 acres, gal/month from AUTOID_1338.csv
+*** Area of golf course in this subwatershed is       4.84.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    71 GFGW     ENGL    8.7595e-08DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    72 GFSW     ENGL    1.7201e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    72 GFSW     ENGL    8.7595e-08DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       21.9 acres, gal/month from AUTOID_1337.csv
+*** Area of golf course in this subwatershed is       18.8.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    73 GFGW     ENGL    2.2168e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    74 GFSW     ENGL     4.353e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    74 GFSW     ENGL    2.2168e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       18.7 acres, gal/month from AUTOID_1351.csv
+*** Area of golf course in this subwatershed is       18.7.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    75 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    76 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    76 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** Total area of golf course is       4.27 acres, gal/month from AUTOID_1357.csv
+*** Area of golf course in this subwatershed is       4.27.
+*** Applied to PERLND 88 with        142 acres.
+*** From groundwater:
+WDM3    77 GFGW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+*** From surface water:
+WDM3    78 GFSW     ENGL    5.0834e-08SAME RCHRES   5     EXTNL  OUTDGT 2 ***
+WDM3    78 GFSW     ENGL    2.5888e-07DIV  PERLND  88     EXTNL  SURLI ***
+
+
+*** Urban irrigation and septic in Florida, applied to urban land covers.
+*** Source data is gallons/month/per subwatershed
+*** Multiplier = (3.6826452e-05 gallons -> acre in) / (area of all urban uses (HSPF LC code 1,2,3,4) in subwatershed) = in/month
+*** All urban uses are assumed to come from groundwater
+*** DIV handles conversion from 1/month to 1/hour
+
+
+*** Model 3H, subwatershed 1
+*** Total area of all urban HSPF_LC codes 1,2,3,4) is   4.12e+03 acres
+WDM3  9010 SEGW     ENGL     8.939e-09DIV  PERLND   1   4 EXTNL  LZLI  ***
+WDM3  9011 IRGW     ENGL     8.939e-09DIV  PERLND   1   4 EXTNL  SURLI ***
+
+*** Model 3H, subwatershed 2
+*** Total area of all urban HSPF_LC codes 1,2,3,4) is   1.34e+03 acres
+WDM3  9020 SEGW     ENGL    2.7545e-08DIV  PERLND  21  24 EXTNL  LZLI  ***
+WDM3  9021 IRGW     ENGL    2.7545e-08DIV  PERLND  21  24 EXTNL  SURLI ***
+
+*** Model 3H, subwatershed 3
+*** Total area of all urban HSPF_LC codes 1,2,3,4) is        859 acres
+WDM3  9030 SEGW     ENGL    4.2851e-08DIV  PERLND  41  44 EXTNL  LZLI  ***
+WDM3  9031 IRGW     ENGL    4.2851e-08DIV  PERLND  41  44 EXTNL  SURLI ***
+
+*** Model 3H, subwatershed 4
+*** Total area of all urban HSPF_LC codes 1,2,3,4) is   2.83e+03 acres
+WDM3  9040 SEGW     ENGL    1.3017e-08DIV  PERLND  61  64 EXTNL  LZLI  ***
+WDM3  9041 IRGW     ENGL    1.3017e-08DIV  PERLND  61  64 EXTNL  SURLI ***
+
+*** Model 3H, subwatershed 5
+*** Total area of all urban HSPF_LC codes 1,2,3,4) is   3.77e+03 acres
+WDM3  9050 SEGW     ENGL    9.7644e-09DIV  PERLND  81  84 EXTNL  LZLI  ***
+WDM3  9051 IRGW     ENGL    9.7644e-09DIV  PERLND  81  84 EXTNL  SURLI ***
+
+*** Model 3H, subwatershed 6
+*** Total area of all urban HSPF_LC codes 1,2,3,4) is        683 acres
+WDM3  9060 SEGW     ENGL    5.3892e-08DIV  PERLND 101 104 EXTNL  LZLI  ***
+WDM3  9061 IRGW     ENGL    5.3892e-08DIV  PERLND 101 104 EXTNL  SURLI ***
+
+
+END EXT SOURCES
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 3H REACH 1
+PERLND   1                       378.0     RCHRES   1      1
+PERLND   2                         0.0     RCHRES   1      1
+PERLND   3                        38.4     RCHRES   1      1
+PERLND   4                       193.9     RCHRES   1      1
+PERLND   5                         0.0     RCHRES   1      1
+PERLND   6                       144.2     RCHRES   1      1
+PERLND   7                        41.7     RCHRES   1      1
+PERLND   8                       292.8     RCHRES   1      1
+PERLND   9                        74.3     RCHRES   1      1
+PERLND  10                       504.1     RCHRES   1      1
+PERLND  11                     10940.9     RCHRES   1      1
+PERLND  12                       210.8     RCHRES   1      1
+PERLND  13                      9179.3     RCHRES   1      1
+PERLND  15                      2730.1     RCHRES   1      1
+IMPLND   1                        19.9     RCHRES   1      2
+IMPLND   2                         0.0     RCHRES   1      2
+IMPLND   3                        20.7     RCHRES   1      2
+IMPLND   4                       193.9     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                       164.4     PERLND  15     11
+PERLND   2                         4.1     PERLND  15     11
+PERLND   3                        15.5     PERLND  15     11
+PERLND   4                        79.6     PERLND  15     11
+PERLND   5                         0.0     PERLND  15     11
+PERLND   6                       202.7     PERLND  15     11
+PERLND   7                        83.2     PERLND  15     11
+PERLND   8                       224.0     PERLND  15     11
+PERLND   9                        50.4     PERLND  15     11
+PERLND  10                       298.7     PERLND  15     11
+PERLND  11                      6632.1     PERLND  15     11
+PERLND  12                        31.4     PERLND  15     11
+IMPLND   1                         8.7     PERLND  15     12
+IMPLND   2                         0.7     PERLND  15     12
+IMPLND   3                         8.3     PERLND  15     12
+IMPLND   4                        79.6     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                       164.4     RCHRES   1      9
+PERLND   2                         4.1     RCHRES   1      9
+PERLND   3                        15.5     RCHRES   1      9
+PERLND   4                        79.6     RCHRES   1      9
+PERLND   5                         0.0     RCHRES   1      9
+PERLND   6                       202.7     RCHRES   1      9
+PERLND   7                        83.2     RCHRES   1      9
+PERLND   8                       224.0     RCHRES   1      9
+PERLND   9                        50.4     RCHRES   1      9
+PERLND  10                       298.7     RCHRES   1      9
+PERLND  11                      6632.1     RCHRES   1      9
+PERLND  12                        31.4     RCHRES   1      9
+
+*** 3H REACH 2
+PERLND  21                        95.1     RCHRES   2      1
+PERLND  22                        83.1     RCHRES   2      1
+PERLND  23                       116.7     RCHRES   2      1
+PERLND  24                       280.0     RCHRES   2      1
+PERLND  25                        15.5     RCHRES   2      1
+PERLND  26                        32.9     RCHRES   2      1
+PERLND  27                         0.0     RCHRES   2      1
+PERLND  28                        24.7     RCHRES   2      1
+PERLND  29                         0.0     RCHRES   2      1
+PERLND  30                        24.3     RCHRES   2      1
+PERLND  31                       291.8     RCHRES   2      1
+PERLND  32                        78.4     RCHRES   2      1
+PERLND  33                       649.9     RCHRES   2      1
+PERLND  35                       449.9     RCHRES   2      1
+IMPLND  21                         5.0     RCHRES   2      2
+IMPLND  22                        14.7     RCHRES   2      2
+IMPLND  23                        62.8     RCHRES   2      2
+IMPLND  24                       280.0     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                       105.0     PERLND  35     21
+PERLND  22                       198.1     PERLND  35     21
+PERLND  23                        61.5     PERLND  35     21
+PERLND  24                       172.7     PERLND  35     21
+PERLND  25                        17.0     PERLND  35     21
+PERLND  26                        21.3     PERLND  35     21
+PERLND  27                         0.0     PERLND  35     21
+PERLND  28                        20.0     PERLND  35     21
+PERLND  29                         0.0     PERLND  35     21
+PERLND  30                        78.9     PERLND  35     21
+PERLND  31                       416.8     PERLND  35     21
+PERLND  32                        47.5     PERLND  35     21
+IMPLND  21                         5.5     PERLND  35     22
+IMPLND  22                        35.0     PERLND  35     22
+IMPLND  23                        33.1     PERLND  35     22
+IMPLND  24                       172.7     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                       105.0     RCHRES   2      9
+PERLND  22                       198.1     RCHRES   2      9
+PERLND  23                        61.5     RCHRES   2      9
+PERLND  24                       172.7     RCHRES   2      9
+PERLND  25                        17.0     RCHRES   2      9
+PERLND  26                        21.3     RCHRES   2      9
+PERLND  27                         0.0     RCHRES   2      9
+PERLND  28                        20.0     RCHRES   2      9
+PERLND  29                         0.0     RCHRES   2      9
+PERLND  30                        78.9     RCHRES   2      9
+PERLND  31                       416.8     RCHRES   2      9
+PERLND  32                        47.5     RCHRES   2      9
+
+*** 3H REACH 3
+PERLND  41                        74.5     RCHRES   3      1
+PERLND  42                         0.1     RCHRES   3      1
+PERLND  43                         0.0     RCHRES   3      1
+PERLND  44                       105.9     RCHRES   3      1
+PERLND  45                        39.9     RCHRES   3      1
+PERLND  46                        45.5     RCHRES   3      1
+PERLND  47                         1.5     RCHRES   3      1
+PERLND  48                       138.0     RCHRES   3      1
+PERLND  49                         0.0     RCHRES   3      1
+PERLND  50                       133.0     RCHRES   3      1
+PERLND  51                      3261.8     RCHRES   3      1
+PERLND  52                        61.1     RCHRES   3      1
+PERLND  53                      3507.2     RCHRES   3      1
+PERLND  55                       748.5     RCHRES   3      1
+IMPLND  41                         3.9     RCHRES   3      2
+IMPLND  42                         0.0     RCHRES   3      2
+IMPLND  43                         0.0     RCHRES   3      2
+IMPLND  44                       105.9     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                        54.5     PERLND  55     31
+PERLND  42                         0.0     PERLND  55     31
+PERLND  43                         0.0     PERLND  55     31
+PERLND  44                       110.6     PERLND  55     31
+PERLND  45                        15.5     PERLND  55     31
+PERLND  46                        88.1     PERLND  55     31
+PERLND  47                        12.7     PERLND  55     31
+PERLND  48                        25.9     PERLND  55     31
+PERLND  49                         0.0     PERLND  55     31
+PERLND  50                        42.0     PERLND  55     31
+PERLND  51                      1368.6     PERLND  55     31
+PERLND  52                        41.7     PERLND  55     31
+IMPLND  41                         2.9     PERLND  55     32
+IMPLND  42                         0.0     PERLND  55     32
+IMPLND  43                         0.0     PERLND  55     32
+IMPLND  44                       110.6     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                        54.5     RCHRES   3      9
+PERLND  42                         0.0     RCHRES   3      9
+PERLND  43                         0.0     RCHRES   3      9
+PERLND  44                       110.6     RCHRES   3      9
+PERLND  45                        15.5     RCHRES   3      9
+PERLND  46                        88.1     RCHRES   3      9
+PERLND  47                        12.7     RCHRES   3      9
+PERLND  48                        25.9     RCHRES   3      9
+PERLND  49                         0.0     RCHRES   3      9
+PERLND  50                        42.0     RCHRES   3      9
+PERLND  51                      1368.6     RCHRES   3      9
+PERLND  52                        41.7     RCHRES   3      9
+
+*** 3H REACH 4
+PERLND  61                       535.2     RCHRES   4      1
+PERLND  62                      1032.8     RCHRES   4      1
+PERLND  63                       297.7     RCHRES   4      1
+PERLND  64                       108.6     RCHRES   4      1
+PERLND  65                         0.0     RCHRES   4      1
+PERLND  66                        96.5     RCHRES   4      1
+PERLND  67                         0.3     RCHRES   4      1
+PERLND  68                         1.1     RCHRES   4      1
+PERLND  69                         0.0     RCHRES   4      1
+PERLND  70                        54.8     RCHRES   4      1
+PERLND  71                       415.1     RCHRES   4      1
+PERLND  72                       134.6     RCHRES   4      1
+PERLND  73                       248.5     RCHRES   4      1
+PERLND  75                        98.0     RCHRES   4      1
+IMPLND  61                        28.2     RCHRES   4      2
+IMPLND  62                       182.3     RCHRES   4      2
+IMPLND  63                       160.3     RCHRES   4      2
+IMPLND  64                       108.6     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                       250.4     PERLND  75     41
+PERLND  62                       303.5     PERLND  75     41
+PERLND  63                        60.6     PERLND  75     41
+PERLND  64                        44.5     PERLND  75     41
+PERLND  65                         0.0     PERLND  75     41
+PERLND  66                        17.3     PERLND  75     41
+PERLND  67                         0.0     PERLND  75     41
+PERLND  68                         3.3     PERLND  75     41
+PERLND  69                         0.0     PERLND  75     41
+PERLND  70                        15.0     PERLND  75     41
+PERLND  71                       242.9     PERLND  75     41
+PERLND  72                        24.2     PERLND  75     41
+IMPLND  61                        13.2     PERLND  75     42
+IMPLND  62                        53.6     PERLND  75     42
+IMPLND  63                        32.6     PERLND  75     42
+IMPLND  64                        44.5     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                       250.4     RCHRES   4      9
+PERLND  62                       303.5     RCHRES   4      9
+PERLND  63                        60.6     RCHRES   4      9
+PERLND  64                        44.5     RCHRES   4      9
+PERLND  65                         0.0     RCHRES   4      9
+PERLND  66                        17.3     RCHRES   4      9
+PERLND  67                         0.0     RCHRES   4      9
+PERLND  68                         3.3     RCHRES   4      9
+PERLND  69                         0.0     RCHRES   4      9
+PERLND  70                        15.0     RCHRES   4      9
+PERLND  71                       242.9     RCHRES   4      9
+PERLND  72                        24.2     RCHRES   4      9
+
+*** 3H REACH 5
+PERLND  81                       535.9     RCHRES   5      1
+PERLND  82                      1191.0     RCHRES   5      1
+PERLND  83                        36.9     RCHRES   5      1
+PERLND  84                       154.9     RCHRES   5      1
+PERLND  85                         2.2     RCHRES   5      1
+PERLND  86                       111.7     RCHRES   5      1
+PERLND  87                         2.5     RCHRES   5      1
+PERLND  88                       258.9     RCHRES   5      1
+PERLND  89                         0.0     RCHRES   5      1
+PERLND  90                       155.0     RCHRES   5      1
+PERLND  91                      1382.5     RCHRES   5      1
+PERLND  92                       227.1     RCHRES   5      1
+PERLND  93                      1599.6     RCHRES   5      1
+PERLND  95                       670.5     RCHRES   5      1
+IMPLND  81                        28.2     RCHRES   5      2
+IMPLND  82                       210.2     RCHRES   5      2
+IMPLND  83                        19.9     RCHRES   5      2
+IMPLND  84                       154.9     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                       259.8     PERLND  95     51
+PERLND  82                       507.9     PERLND  95     51
+PERLND  83                         0.0     PERLND  95     51
+PERLND  84                        86.7     PERLND  95     51
+PERLND  85                        19.8     PERLND  95     51
+PERLND  86                       135.6     PERLND  95     51
+PERLND  87                        48.1     PERLND  95     51
+PERLND  88                        79.7     PERLND  95     51
+PERLND  89                         0.0     PERLND  95     51
+PERLND  90                        91.9     PERLND  95     51
+PERLND  91                       782.3     PERLND  95     51
+PERLND  92                        86.2     PERLND  95     51
+IMPLND  81                        13.7     PERLND  95     52
+IMPLND  82                        89.6     PERLND  95     52
+IMPLND  83                         0.0     PERLND  95     52
+IMPLND  84                        86.7     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                       259.8     RCHRES   5      9
+PERLND  82                       507.9     RCHRES   5      9
+PERLND  83                         0.0     RCHRES   5      9
+PERLND  84                        86.7     RCHRES   5      9
+PERLND  85                        19.8     RCHRES   5      9
+PERLND  86                       135.6     RCHRES   5      9
+PERLND  87                        48.1     RCHRES   5      9
+PERLND  88                        79.7     RCHRES   5      9
+PERLND  89                         0.0     RCHRES   5      9
+PERLND  90                        91.9     RCHRES   5      9
+PERLND  91                       782.3     RCHRES   5      9
+PERLND  92                        86.2     RCHRES   5      9
+
+*** 3H REACH 6
+PERLND 101                       406.4     RCHRES   6      1
+PERLND 102                        85.0     RCHRES   6      1
+PERLND 103                         0.1     RCHRES   6      1
+PERLND 104                        22.8     RCHRES   6      1
+PERLND 105                         0.0     RCHRES   6      1
+PERLND 106                        44.5     RCHRES   6      1
+PERLND 107                         3.3     RCHRES   6      1
+PERLND 108                         4.5     RCHRES   6      1
+PERLND 109                         0.0     RCHRES   6      1
+PERLND 110                         3.1     RCHRES   6      1
+PERLND 111                       156.8     RCHRES   6      1
+PERLND 112                       486.6     RCHRES   6      1
+PERLND 113                        99.2     RCHRES   6      1
+PERLND 115                        43.1     RCHRES   6      1
+IMPLND 101                        21.4     RCHRES   6      2
+IMPLND 102                        15.0     RCHRES   6      2
+IMPLND 103                         0.1     RCHRES   6      2
+IMPLND 104                        22.8     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                        36.5     PERLND 115     61
+PERLND 102                         6.0     PERLND 115     61
+PERLND 103                         0.0     PERLND 115     61
+PERLND 104                         4.9     PERLND 115     61
+PERLND 105                         0.0     PERLND 115     61
+PERLND 106                        20.1     PERLND 115     61
+PERLND 107                         7.2     PERLND 115     61
+PERLND 108                         8.6     PERLND 115     61
+PERLND 109                         0.0     PERLND 115     61
+PERLND 110                         0.0     PERLND 115     61
+PERLND 111                       105.0     PERLND 115     61
+PERLND 112                         0.4     PERLND 115     61
+IMPLND 101                         1.9     PERLND 115     62
+IMPLND 102                         1.1     PERLND 115     62
+IMPLND 103                         0.0     PERLND 115     62
+IMPLND 104                         4.9     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                        36.5     RCHRES   6      9
+PERLND 102                         6.0     RCHRES   6      9
+PERLND 103                         0.0     RCHRES   6      9
+PERLND 104                         4.9     RCHRES   6      9
+PERLND 105                         0.0     RCHRES   6      9
+PERLND 106                        20.1     RCHRES   6      9
+PERLND 107                         7.2     RCHRES   6      9
+PERLND 108                         8.6     RCHRES   6      9
+PERLND 109                         0.0     RCHRES   6      9
+PERLND 110                         0.0     RCHRES   6      9
+PERLND 111                       105.0     RCHRES   6      9
+PERLND 112                         0.4     RCHRES   6      9
+
+
+*** 3H-1 Durbin Creek TO 3H-6 Low Julington Ck
+RCHRES   1                                 RCHRES   6      4
+*** 3H-2 Pottsburg Ck Swamp TO 3H-5 Upp Julington Ck
+RCHRES   2                                 RCHRES   5      4
+*** 3H-3 Big Davis Creek TO 3H-5 Upp Julington Ck
+RCHRES   3                                 RCHRES   5      4
+*** 3H-4 Oldfield Creek TO 3H-6 Low Julington Ck
+RCHRES   4                                 RCHRES   6      3
+*** 3H-5 Upp Julington Ck TO 3H-6 Low Julington Ck
+RCHRES   5                                 RCHRES   6      4
+*** 3H-6 Low Julington Ck TO 3J-7 SJR u/s Buckman Br
+RCHRES   6                                 RCHRES   7      3
+END SCHEMATIC
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+*** Transfer datasets - hourly volume/mass                                        Reach   Exit
+*** 3H-6 Low Julington Ck TO 3J-7                                                   6        1
+RCHRES   6 HYDR   ROVOL                    WDM2  8060 FLOW     ENGL AGGR REPL
+
+*** Gages
+*** 3H-3 313 - USGS 02246150 BIG DAVIS CREEK AT BAYARD
+*** calibration
+*** subshed area: 10099.881 ac
+*** gage contributing area: 8704 ac
+*** areal ratio: 8704/10099.881 = 0.86179
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+RCHRES   3 HYDR   O      1     0.86179     WDM2  2013 FLOW     ENGL AGGR REPL
+
+*** 3H-3  - USGS 02246160 JULINGTON CRK AT OLD ST AUGUST RD NR BAYARD
+*** validation
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+RCHRES   3 HYDR   O      1                 WDM2  2024 FLOW     ENGL AGGR REPL
+
+END EXT TARGETS
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 3H REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000366     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000366     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000366     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 3H REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002223     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002223     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002223     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 3H REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001336     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001336     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001336     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 3H REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.010208     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.010208     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.010208     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 3H REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001491     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001491     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001491     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 3H REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.023213     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.023213     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.023213     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01
+  UVQUAN wla033 GLOBAL     WORKSP 02
+  UVQUAN wla053 GLOBAL     WORKSP 03
+  UVQUAN wla073 GLOBAL     WORKSP 04
+  UVQUAN wla093 GLOBAL     WORKSP 05
+  UVQUAN wla113 GLOBAL     WORKSP 06
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =    9390.1
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =     728.2
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =    3568.2
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =     383.1
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =    1826.7
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =     585.8
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+END SPEC-ACTIONS
+
+END RUN

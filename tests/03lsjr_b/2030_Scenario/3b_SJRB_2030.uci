@@ -1,0 +1,2740 @@
+RUN
+
+GLOBAL
+  Planning Unit: 3B
+  START       1995/01/01 00:00  END    2016/12/31 24:00
+  RUN INTERP OUTPT LEVELS    4    0
+  RESUME     0 RUN     1                          UNITS    1
+END GLOBAL
+
+FILES
+<FILE>  <UN#>***<----FILE NAME------------------------------------------------->
+MESSU      24   3b.ech
+WDM1       25   sjrb_met.wdm
+WDM2       26   sjrb_lsj.wdm
+WDM3       27   irrig_3B.wdm
+           80   3b_land.out
+           82   3b_reach.out
+BINO       81   3b_land.hbn
+BINO       83   3b_reach.hbn
+PESTSU     41   3b_hspf.sup
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** Main1 REACH 1   Keystone Lakes
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** Main1 REACH 2   Upper Etonia Lakes
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** Main1 REACH 3   Lake Grandin Outlet
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      RCHRES       3
+
+*** Main1 REACH 4   Upper Etonia Creek
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** Main1 REACH 5   Rice - Etonia Ck
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** Main1 REACH 6   Middle Etonia Creek
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+*** Main1 REACH 7   Upper Simms Creek
+      PERLND     121
+      PERLND     122
+      PERLND     123
+      PERLND     124
+      PERLND     125
+      PERLND     126
+      PERLND     127
+      PERLND     128
+      PERLND     129
+      PERLND     130
+      PERLND     131
+      PERLND     132
+      PERLND     133
+      IMPLND     121
+      IMPLND     122
+      IMPLND     123
+      IMPLND     124
+      PERLND     135
+      RCHRES       7
+
+*** Main1 REACH 8   Lower Simms Creek
+      PERLND     141
+      PERLND     142
+      PERLND     143
+      PERLND     144
+      PERLND     145
+      PERLND     146
+      PERLND     147
+      PERLND     148
+      PERLND     149
+      PERLND     150
+      PERLND     151
+      PERLND     152
+      PERLND     153
+      IMPLND     141
+      IMPLND     142
+      IMPLND     143
+      IMPLND     144
+      PERLND     155
+      RCHRES       8
+
+*** Main1 REACH 9   GP Settling Pond
+      PERLND     161
+      PERLND     162
+      PERLND     163
+      PERLND     164
+      PERLND     165
+      PERLND     166
+      PERLND     167
+      PERLND     168
+      PERLND     169
+      PERLND     170
+      PERLND     171
+      PERLND     172
+      PERLND     173
+      IMPLND     161
+      IMPLND     162
+      IMPLND     163
+      IMPLND     164
+      PERLND     175
+      RCHRES       9
+
+*** Main1 REACH 10  Lower Etonia Creek
+      PERLND     181
+      PERLND     182
+      PERLND     183
+      PERLND     184
+      PERLND     185
+      PERLND     186
+      PERLND     187
+      PERLND     188
+      PERLND     189
+      PERLND     190
+      PERLND     191
+      PERLND     192
+      PERLND     193
+      IMPLND     181
+      IMPLND     182
+      IMPLND     183
+      IMPLND     184
+      PERLND     195
+      RCHRES      10
+
+*** Main1 REACH 11  Upper Rice Creek
+      PERLND     201
+      PERLND     202
+      PERLND     203
+      PERLND     204
+      PERLND     205
+      PERLND     206
+      PERLND     207
+      PERLND     208
+      PERLND     209
+      PERLND     210
+      PERLND     211
+      PERLND     212
+      PERLND     213
+      IMPLND     201
+      IMPLND     202
+      IMPLND     203
+      IMPLND     204
+      PERLND     215
+      RCHRES      11
+
+*** Main1 REACH 12  Lower Rice Creek
+      PERLND     221
+      PERLND     222
+      PERLND     223
+      PERLND     224
+      PERLND     225
+      PERLND     226
+      PERLND     227
+      PERLND     228
+      PERLND     229
+      PERLND     230
+      PERLND     231
+      PERLND     232
+      PERLND     233
+      IMPLND     221
+      IMPLND     222
+      IMPLND     223
+      IMPLND     224
+      PERLND     235
+      RCHRES      12
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+  001  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>                       Print-flags                           BIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 3B REACH 1
+    1   19Keystone Lakes                    1    1   80    0   81    0
+*** 3B REACH 2
+   21   39Upper Etonia Lakes                1    1   80    0   81    0
+*** 3B REACH 3
+   41   59Lake Grandin Outlet               1    1   80    0   81    0
+*** 3B REACH 4
+   61   79Upper Etonia Creek                1    1   80    0   81    0
+*** 3B REACH 5
+   81   99Rice - Etonia Ck                  1    1   80    0   81    0
+*** 3B REACH 6
+  101  119Middle Etonia Creek               1    1   80    0   81    0
+*** 3B REACH 7
+  121  139Upper Simms Creek                 1    1   80    0   81    0
+*** 3B REACH 8
+  141  159Lower Simms Creek                 1    1   80    0   81    0
+*** 3B REACH 9
+  161  179GP Settling Pond                  1    1   80    0   81    0
+*** 3B REACH 10
+  181  199Lower Etonia Creek                1    1   80    0   81    0
+*** 3B REACH 11
+  201  219Upper Rice Creek                  1    1   80    0   81    0
+*** 3B REACH 12
+  221  239Lower Rice Creek                  1    1   80    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 3B REACH 1 - Keystone Lakes
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 2 - Upper Etonia Lakes
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 3 - Lake Grandin Outlet
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 4 - Upper Etonia Creek
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 5 - Rice - Etonia Ck
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 6 - Middle Etonia Creek
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 7 - Upper Simms Creek
+  121  131    0    0    1    0    0    0    0    0    0    1    0    0    0
+  132  133    0    3    1    0    0    0    0    0    0    1    0    0    0
+  135         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 8 - Lower Simms Creek
+  141  151    0    0    1    0    0    0    0    0    0    1    0    0    0
+  152  153    0    3    1    0    0    0    0    0    0    1    0    0    0
+  155         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 9 - GP Settling Pond
+  161  171    0    0    1    0    0    0    0    0    0    1    0    0    0
+  172  173    0    3    1    0    0    0    0    0    0    1    0    0    0
+  175         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 10 - Lower Etonia Creek
+  181  191    0    0    1    0    0    0    0    0    0    1    0    0    0
+  192  193    0    3    1    0    0    0    0    0    0    1    0    0    0
+  195         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 11 - Upper Rice Creek
+  201  211    0    0    1    0    0    0    0    0    0    1    0    0    0
+  212  213    0    3    1    0    0    0    0    0    0    1    0    0    0
+  215         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3B REACH 12 - Lower Rice Creek
+  221  231    0    0    1    0    0    0    0    0    0    1    0    0    0
+  232  233    0    3    1    0    0    0    0    0    0    1    0    0    0
+  235         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+  PWAT-PARM2
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   1
+*** 3B REACH 1 - Keystone Lakes        Location  304
+    1     ~111130401~
+    2     ~111130402~
+    3     ~111130403~
+    4     ~111130404~
+    5     ~111130405~
+    6     ~111130406~
+    7     ~111130407~
+    8     ~111130408~
+    9     ~111130409~
+   10     ~111130410~
+   11     ~111130411~
+   12     ~111130412~
+   13     ~111130413~
+   15     ~111130413~
+*** 3B REACH 2 - Upper Etonia Lakes    Location  304
+   21     ~111130401~
+   22     ~111130402~
+   23     ~111130403~
+   24     ~111130404~
+   25     ~111130405~
+   26     ~111130406~
+   27     ~111130407~
+   28     ~111130408~
+   29     ~111130409~
+   30     ~111130410~
+   31     ~111130411~
+   32     ~111130412~
+   33     ~111130413~
+   35     ~111130413~
+*** 3B REACH 3 - Lake Grandin Outlet   Location  304
+   41     ~111130401~
+   42     ~111130402~
+   43     ~111130403~
+   44     ~111130404~
+   45     ~111130405~
+   46     ~111130406~
+   47     ~111130407~
+   48     ~111130408~
+   49     ~111130409~
+   50     ~111130410~
+   51     ~111130411~
+   52     ~111130412~
+   53     ~111130413~
+   55     ~111130413~
+*** 3B REACH 4 - Upper Etonia Creek    Location  304
+   61     ~111130401~
+   62     ~111130402~
+   63     ~111130403~
+   64     ~111130404~
+   65     ~111130405~
+   66     ~111130406~
+   67     ~111130407~
+   68     ~111130408~
+   69     ~111130409~
+   70     ~111130410~
+   71     ~111130411~
+   72     ~111130412~
+   73     ~111130413~
+   75     ~111130413~
+*** 3B REACH 5 - Rice - Etonia Ck      Location  304
+   81     ~111130401~
+   82     ~111130402~
+   83     ~111130403~
+   84     ~111130404~
+   85     ~111130405~
+   86     ~111130406~
+   87     ~111130407~
+   88     ~111130408~
+   89     ~111130409~
+   90     ~111130410~
+   91     ~111130411~
+   92     ~111130412~
+   93     ~111130413~
+   95     ~111130413~
+*** 3B REACH 6 - Middle Etonia Creek   Location  304
+  101     ~111130401~
+  102     ~111130402~
+  103     ~111130403~
+  104     ~111130404~
+  105     ~111130405~
+  106     ~111130406~
+  107     ~111130407~
+  108     ~111130408~
+  109     ~111130409~
+  110     ~111130410~
+  111     ~111130411~
+  112     ~111130412~
+  113     ~111130413~
+  115     ~111130413~
+*** 3B REACH 7 - Upper Simms Creek     Location  306
+  121     ~111130601~
+  122     ~111130602~
+  123     ~111130603~
+  124     ~111130604~
+  125     ~111130605~
+  126     ~111130606~
+  127     ~111130607~
+  128     ~111130608~
+  129     ~111130609~
+  130     ~111130610~
+  131     ~111130611~
+  132     ~111130612~
+  133     ~111130613~
+  135     ~111130613~
+*** 3B REACH 8 - Lower Simms Creek     Location  306
+  141     ~111130601~
+  142     ~111130602~
+  143     ~111130603~
+  144     ~111130604~
+  145     ~111130605~
+  146     ~111130606~
+  147     ~111130607~
+  148     ~111130608~
+  149     ~111130609~
+  150     ~111130610~
+  151     ~111130611~
+  152     ~111130612~
+  153     ~111130613~
+  155     ~111130613~
+*** 3B REACH 9 - GP Settling Pond      Location  306
+  161     ~111130601~
+  162     ~111130602~
+  163     ~111130603~
+  164     ~111130604~
+  165     ~111130605~
+  166     ~111130606~
+  167     ~111130607~
+  168     ~111130608~
+  169     ~111130609~
+  170     ~111130610~
+  171     ~111130611~
+  172     ~111130612~
+  173     ~111130613~
+  175     ~111130613~
+*** 3B REACH 10 - Lower Etonia Creek   Location  306
+  181     ~111130601~
+  182     ~111130602~
+  183     ~111130603~
+  184     ~111130604~
+  185     ~111130605~
+  186     ~111130606~
+  187     ~111130607~
+  188     ~111130608~
+  189     ~111130609~
+  190     ~111130610~
+  191     ~111130611~
+  192     ~111130612~
+  193     ~111130613~
+  195     ~111130613~
+*** 3B REACH 11 - Upper Rice Creek     Location  305
+  201     ~111130501~
+  202     ~111130502~
+  203     ~111130503~
+  204     ~111130504~
+  205     ~111130505~
+  206     ~111130506~
+  207     ~111130507~
+  208     ~111130508~
+  209     ~111130509~
+  210     ~111130510~
+  211     ~111130511~
+  212     ~111130512~
+  213     ~111130513~
+  215     ~111130513~
+*** 3B REACH 12 - Lower Rice Creek     Location  305
+  221     ~111130501~
+  222     ~111130502~
+  223     ~111130503~
+  224     ~111130504~
+  225     ~111130505~
+  226     ~111130506~
+  227     ~111130507~
+  228     ~111130508~
+  229     ~111130509~
+  230     ~111130510~
+  231     ~111130511~
+  232     ~111130512~
+  233     ~111130513~
+  235     ~111130513~
+  END PWAT-PARM2
+
+  PWAT-PARM3
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   2
+*** 3B REACH 1 - Keystone Lakes        Location  304
+    1     ~111230401~
+    2     ~111230402~
+    3     ~111230403~
+    4     ~111230404~
+    5     ~111230405~
+    6     ~111230406~
+    7     ~111230407~
+    8     ~111230408~
+    9     ~111230409~
+   10     ~111230410~
+   11     ~111230411~
+   12     ~111230412~
+   13     ~111230413~
+   15     ~111230413~
+*** 3B REACH 2 - Upper Etonia Lakes    Location  304
+   21     ~111230401~
+   22     ~111230402~
+   23     ~111230403~
+   24     ~111230404~
+   25     ~111230405~
+   26     ~111230406~
+   27     ~111230407~
+   28     ~111230408~
+   29     ~111230409~
+   30     ~111230410~
+   31     ~111230411~
+   32     ~111230412~
+   33     ~111230413~
+   35     ~111230413~
+*** 3B REACH 3 - Lake Grandin Outlet   Location  304
+   41     ~111230401~
+   42     ~111230402~
+   43     ~111230403~
+   44     ~111230404~
+   45     ~111230405~
+   46     ~111230406~
+   47     ~111230407~
+   48     ~111230408~
+   49     ~111230409~
+   50     ~111230410~
+   51     ~111230411~
+   52     ~111230412~
+   53     ~111230413~
+   55     ~111230413~
+*** 3B REACH 4 - Upper Etonia Creek    Location  304
+   61     ~111230401~
+   62     ~111230402~
+   63     ~111230403~
+   64     ~111230404~
+   65     ~111230405~
+   66     ~111230406~
+   67     ~111230407~
+   68     ~111230408~
+   69     ~111230409~
+   70     ~111230410~
+   71     ~111230411~
+   72     ~111230412~
+   73     ~111230413~
+   75     ~111230413~
+*** 3B REACH 5 - Rice - Etonia Ck      Location  304
+   81     ~111230401~
+   82     ~111230402~
+   83     ~111230403~
+   84     ~111230404~
+   85     ~111230405~
+   86     ~111230406~
+   87     ~111230407~
+   88     ~111230408~
+   89     ~111230409~
+   90     ~111230410~
+   91     ~111230411~
+   92     ~111230412~
+   93     ~111230413~
+   95     ~111230413~
+*** 3B REACH 6 - Middle Etonia Creek   Location  304
+  101     ~111230401~
+  102     ~111230402~
+  103     ~111230403~
+  104     ~111230404~
+  105     ~111230405~
+  106     ~111230406~
+  107     ~111230407~
+  108     ~111230408~
+  109     ~111230409~
+  110     ~111230410~
+  111     ~111230411~
+  112     ~111230412~
+  113     ~111230413~
+  115     ~111230413~
+*** 3B REACH 7 - Upper Simms Creek     Location  306
+  121     ~111230601~
+  122     ~111230602~
+  123     ~111230603~
+  124     ~111230604~
+  125     ~111230605~
+  126     ~111230606~
+  127     ~111230607~
+  128     ~111230608~
+  129     ~111230609~
+  130     ~111230610~
+  131     ~111230611~
+  132     ~111230612~
+  133     ~111230613~
+  135     ~111230613~
+*** 3B REACH 8 - Lower Simms Creek     Location  306
+  141     ~111230601~
+  142     ~111230602~
+  143     ~111230603~
+  144     ~111230604~
+  145     ~111230605~
+  146     ~111230606~
+  147     ~111230607~
+  148     ~111230608~
+  149     ~111230609~
+  150     ~111230610~
+  151     ~111230611~
+  152     ~111230612~
+  153     ~111230613~
+  155     ~111230613~
+*** 3B REACH 9 - GP Settling Pond      Location  306
+  161     ~111230601~
+  162     ~111230602~
+  163     ~111230603~
+  164     ~111230604~
+  165     ~111230605~
+  166     ~111230606~
+  167     ~111230607~
+  168     ~111230608~
+  169     ~111230609~
+  170     ~111230610~
+  171     ~111230611~
+  172     ~111230612~
+  173     ~111230613~
+  175     ~111230613~
+*** 3B REACH 10 - Lower Etonia Creek   Location  306
+  181     ~111230601~
+  182     ~111230602~
+  183     ~111230603~
+  184     ~111230604~
+  185     ~111230605~
+  186     ~111230606~
+  187     ~111230607~
+  188     ~111230608~
+  189     ~111230609~
+  190     ~111230610~
+  191     ~111230611~
+  192     ~111230612~
+  193     ~111230613~
+  195     ~111230613~
+*** 3B REACH 11 - Upper Rice Creek     Location  305
+  201     ~111230501~
+  202     ~111230502~
+  203     ~111230503~
+  204     ~111230504~
+  205     ~111230505~
+  206     ~111230506~
+  207     ~111230507~
+  208     ~111230508~
+  209     ~111230509~
+  210     ~111230510~
+  211     ~111230511~
+  212     ~111230512~
+  213     ~111230513~
+  215     ~111230513~
+*** 3B REACH 12 - Lower Rice Creek     Location  305
+  221     ~111230501~
+  222     ~111230502~
+  223     ~111230503~
+  224     ~111230504~
+  225     ~111230505~
+  226     ~111230506~
+  227     ~111230507~
+  228     ~111230508~
+  229     ~111230509~
+  230     ~111230510~
+  231     ~111230511~
+  232     ~111230512~
+  233     ~111230513~
+  235     ~111230513~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   3
+*** 3B REACH 1 - Keystone Lakes        Location  304
+    1     ~111330401~
+    2     ~111330402~
+    3     ~111330403~
+    4     ~111330404~
+    5     ~111330405~
+    6     ~111330406~
+    7     ~111330407~
+    8     ~111330408~
+    9     ~111330409~
+   10     ~111330410~
+   11     ~111330411~
+   12     ~111330412~
+   13     ~111330413~
+   15     ~111330413~
+*** 3B REACH 2 - Upper Etonia Lakes    Location  304
+   21     ~111330401~
+   22     ~111330402~
+   23     ~111330403~
+   24     ~111330404~
+   25     ~111330405~
+   26     ~111330406~
+   27     ~111330407~
+   28     ~111330408~
+   29     ~111330409~
+   30     ~111330410~
+   31     ~111330411~
+   32     ~111330412~
+   33     ~111330413~
+   35     ~111330413~
+*** 3B REACH 3 - Lake Grandin Outlet   Location  304
+   41     ~111330401~
+   42     ~111330402~
+   43     ~111330403~
+   44     ~111330404~
+   45     ~111330405~
+   46     ~111330406~
+   47     ~111330407~
+   48     ~111330408~
+   49     ~111330409~
+   50     ~111330410~
+   51     ~111330411~
+   52     ~111330412~
+   53     ~111330413~
+   55     ~111330413~
+*** 3B REACH 4 - Upper Etonia Creek    Location  304
+   61     ~111330401~
+   62     ~111330402~
+   63     ~111330403~
+   64     ~111330404~
+   65     ~111330405~
+   66     ~111330406~
+   67     ~111330407~
+   68     ~111330408~
+   69     ~111330409~
+   70     ~111330410~
+   71     ~111330411~
+   72     ~111330412~
+   73     ~111330413~
+   75     ~111330413~
+*** 3B REACH 5 - Rice - Etonia Ck      Location  304
+   81     ~111330401~
+   82     ~111330402~
+   83     ~111330403~
+   84     ~111330404~
+   85     ~111330405~
+   86     ~111330406~
+   87     ~111330407~
+   88     ~111330408~
+   89     ~111330409~
+   90     ~111330410~
+   91     ~111330411~
+   92     ~111330412~
+   93     ~111330413~
+   95     ~111330413~
+*** 3B REACH 6 - Middle Etonia Creek   Location  304
+  101     ~111330401~
+  102     ~111330402~
+  103     ~111330403~
+  104     ~111330404~
+  105     ~111330405~
+  106     ~111330406~
+  107     ~111330407~
+  108     ~111330408~
+  109     ~111330409~
+  110     ~111330410~
+  111     ~111330411~
+  112     ~111330412~
+  113     ~111330413~
+  115     ~111330413~
+*** 3B REACH 7 - Upper Simms Creek     Location  306
+  121     ~111330601~
+  122     ~111330602~
+  123     ~111330603~
+  124     ~111330604~
+  125     ~111330605~
+  126     ~111330606~
+  127     ~111330607~
+  128     ~111330608~
+  129     ~111330609~
+  130     ~111330610~
+  131     ~111330611~
+  132     ~111330612~
+  133     ~111330613~
+  135     ~111330613~
+*** 3B REACH 8 - Lower Simms Creek     Location  306
+  141     ~111330601~
+  142     ~111330602~
+  143     ~111330603~
+  144     ~111330604~
+  145     ~111330605~
+  146     ~111330606~
+  147     ~111330607~
+  148     ~111330608~
+  149     ~111330609~
+  150     ~111330610~
+  151     ~111330611~
+  152     ~111330612~
+  153     ~111330613~
+  155     ~111330613~
+*** 3B REACH 9 - GP Settling Pond      Location  306
+  161     ~111330601~
+  162     ~111330602~
+  163     ~111330603~
+  164     ~111330604~
+  165     ~111330605~
+  166     ~111330606~
+  167     ~111330607~
+  168     ~111330608~
+  169     ~111330609~
+  170     ~111330610~
+  171     ~111330611~
+  172     ~111330612~
+  173     ~111330613~
+  175     ~111330613~
+*** 3B REACH 10 - Lower Etonia Creek   Location  306
+  181     ~111330601~
+  182     ~111330602~
+  183     ~111330603~
+  184     ~111330604~
+  185     ~111330605~
+  186     ~111330606~
+  187     ~111330607~
+  188     ~111330608~
+  189     ~111330609~
+  190     ~111330610~
+  191     ~111330611~
+  192     ~111330612~
+  193     ~111330613~
+  195     ~111330613~
+*** 3B REACH 11 - Upper Rice Creek     Location  305
+  201     ~111330501~
+  202     ~111330502~
+  203     ~111330503~
+  204     ~111330504~
+  205     ~111330505~
+  206     ~111330506~
+  207     ~111330507~
+  208     ~111330508~
+  209     ~111330509~
+  210     ~111330510~
+  211     ~111330511~
+  212     ~111330512~
+  213     ~111330513~
+  215     ~111330513~
+*** 3B REACH 12 - Lower Rice Creek     Location  305
+  221     ~111330501~
+  222     ~111330502~
+  223     ~111330503~
+  224     ~111330504~
+  225     ~111330505~
+  226     ~111330506~
+  227     ~111330507~
+  228     ~111330508~
+  229     ~111330509~
+  230     ~111330510~
+  231     ~111330511~
+  232     ~111330512~
+  233     ~111330513~
+  235     ~111330513~
+  END PWAT-PARM4
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 3B REACH 1 - Keystone Lakes                   Location  304
+    1   19       904
+*** 3B REACH 2 - Upper Etonia Lakes               Location  304
+   21   39       904
+*** 3B REACH 3 - Lake Grandin Outlet              Location  304
+   41   59       904
+*** 3B REACH 4 - Upper Etonia Creek               Location  304
+   61   79       904
+*** 3B REACH 5 - Rice - Etonia Ck                 Location  304
+   81   99       904
+*** 3B REACH 6 - Middle Etonia Creek              Location  304
+  101  119       904
+*** 3B REACH 7 - Upper Simms Creek                Location  306
+  121  139       906
+*** 3B REACH 8 - Lower Simms Creek                Location  306
+  141  159       906
+*** 3B REACH 9 - GP Settling Pond                 Location  306
+  161  179       906
+*** 3B REACH 10 - Lower Etonia Creek              Location  306
+  181  199       906
+*** 3B REACH 11 - Upper Rice Creek                Location  305
+  201  219       905
+*** 3B REACH 12 - Lower Rice Creek                Location  305
+  221  239       905
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 3B REACH 1 - Keystone Lakes        Location  304
+    1     ~111630401~
+    2     ~111630402~
+    3     ~111630403~
+    4     ~111630404~
+    5     ~111630405~
+    6     ~111630406~
+    7     ~111630407~
+    8     ~111630408~
+    9     ~111630409~
+   10     ~111630410~
+   11     ~111630411~
+   12     ~111630412~
+   13     ~111630413~
+   15     ~111630413~
+*** 3B REACH 2 - Upper Etonia Lakes    Location  304
+   21     ~111630401~
+   22     ~111630402~
+   23     ~111630403~
+   24     ~111630404~
+   25     ~111630405~
+   26     ~111630406~
+   27     ~111630407~
+   28     ~111630408~
+   29     ~111630409~
+   30     ~111630410~
+   31     ~111630411~
+   32     ~111630412~
+   33     ~111630413~
+   35     ~111630413~
+*** 3B REACH 3 - Lake Grandin Outlet   Location  304
+   41     ~111630401~
+   42     ~111630402~
+   43     ~111630403~
+   44     ~111630404~
+   45     ~111630405~
+   46     ~111630406~
+   47     ~111630407~
+   48     ~111630408~
+   49     ~111630409~
+   50     ~111630410~
+   51     ~111630411~
+   52     ~111630412~
+   53     ~111630413~
+   55     ~111630413~
+*** 3B REACH 4 - Upper Etonia Creek    Location  304
+   61     ~111630401~
+   62     ~111630402~
+   63     ~111630403~
+   64     ~111630404~
+   65     ~111630405~
+   66     ~111630406~
+   67     ~111630407~
+   68     ~111630408~
+   69     ~111630409~
+   70     ~111630410~
+   71     ~111630411~
+   72     ~111630412~
+   73     ~111630413~
+   75     ~111630413~
+*** 3B REACH 5 - Rice - Etonia Ck      Location  304
+   81     ~111630401~
+   82     ~111630402~
+   83     ~111630403~
+   84     ~111630404~
+   85     ~111630405~
+   86     ~111630406~
+   87     ~111630407~
+   88     ~111630408~
+   89     ~111630409~
+   90     ~111630410~
+   91     ~111630411~
+   92     ~111630412~
+   93     ~111630413~
+   95     ~111630413~
+*** 3B REACH 6 - Middle Etonia Creek   Location  304
+  101     ~111630401~
+  102     ~111630402~
+  103     ~111630403~
+  104     ~111630404~
+  105     ~111630405~
+  106     ~111630406~
+  107     ~111630407~
+  108     ~111630408~
+  109     ~111630409~
+  110     ~111630410~
+  111     ~111630411~
+  112     ~111630412~
+  113     ~111630413~
+  115     ~111630413~
+*** 3B REACH 7 - Upper Simms Creek     Location  306
+  121     ~111630601~
+  122     ~111630602~
+  123     ~111630603~
+  124     ~111630604~
+  125     ~111630605~
+  126     ~111630606~
+  127     ~111630607~
+  128     ~111630608~
+  129     ~111630609~
+  130     ~111630610~
+  131     ~111630611~
+  132     ~111630612~
+  133     ~111630613~
+  135     ~111630613~
+*** 3B REACH 8 - Lower Simms Creek     Location  306
+  141     ~111630601~
+  142     ~111630602~
+  143     ~111630603~
+  144     ~111630604~
+  145     ~111630605~
+  146     ~111630606~
+  147     ~111630607~
+  148     ~111630608~
+  149     ~111630609~
+  150     ~111630610~
+  151     ~111630611~
+  152     ~111630612~
+  153     ~111630613~
+  155     ~111630613~
+*** 3B REACH 9 - GP Settling Pond      Location  306
+  161     ~111630601~
+  162     ~111630602~
+  163     ~111630603~
+  164     ~111630604~
+  165     ~111630605~
+  166     ~111630606~
+  167     ~111630607~
+  168     ~111630608~
+  169     ~111630609~
+  170     ~111630610~
+  171     ~111630611~
+  172     ~111630612~
+  173     ~111630613~
+  175     ~111630613~
+*** 3B REACH 10 - Lower Etonia Creek   Location  306
+  181     ~111630601~
+  182     ~111630602~
+  183     ~111630603~
+  184     ~111630604~
+  185     ~111630605~
+  186     ~111630606~
+  187     ~111630607~
+  188     ~111630608~
+  189     ~111630609~
+  190     ~111630610~
+  191     ~111630611~
+  192     ~111630612~
+  193     ~111630613~
+  195     ~111630613~
+*** 3B REACH 11 - Upper Rice Creek     Location  305
+  201     ~111630501~
+  202     ~111630502~
+  203     ~111630503~
+  204     ~111630504~
+  205     ~111630505~
+  206     ~111630506~
+  207     ~111630507~
+  208     ~111630508~
+  209     ~111630509~
+  210     ~111630510~
+  211     ~111630511~
+  212     ~111630512~
+  213     ~111630513~
+  215     ~111630513~
+*** 3B REACH 12 - Lower Rice Creek     Location  305
+  221     ~111630501~
+  222     ~111630502~
+  223     ~111630503~
+  224     ~111630504~
+  225     ~111630505~
+  226     ~111630506~
+  227     ~111630507~
+  228     ~111630508~
+  229     ~111630509~
+  230     ~111630510~
+  231     ~111630511~
+  232     ~111630512~
+  233     ~111630513~
+  235     ~111630513~
+  END PWAT-STATE1
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+  001  999    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** <ILS > ******** Print-flags ******** BIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***             Name             Unit-systems   Printer BinaryOut
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+  001  999                             1    1   80    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+  001  999    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+*** <ILS >      LSUR     SLSUR      NSUR     RETSC
+*** x -  x      (ft)                          (in)
+  001  999      150.     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+*** <ILS >    PETMAX    PETMIN
+*** x -  x   (deg F)   (deg F)
+  001  999       40.       35.
+  END IWAT-PARM3
+
+  IWAT-STATE1
+*** <ILS >  IWATER state variables (inches)
+*** x -  x      RETS      SURS
+  001  999     0.000     0.000
+  END IWAT-STATE1
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1   12    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1   12    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1   12    3    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 3B REACH 1
+    1     Keystone Lakes          2         1    1   82    0    0   83    0
+*** 3B REACH 2
+    2     Upper Etonia Lakes      2         1    1   82    0    0   83    0
+*** 3B REACH 3
+    3     Lake Grandin Outlet     2         1    1   82    0    0   83    0
+*** 3B REACH 4
+    4     Upper Etonia Creek      2         1    1   82    0    0   83    0
+*** 3B REACH 5
+    5     Rice - Etonia Ck        1         1    1   82    0    0   83    0
+*** 3B REACH 6
+    6     Middle Etonia Creek     2         1    1   82    0    0   83    0
+*** 3B REACH 7
+    7     Upper Simms Creek       2         1    1   82    0    0   83    0
+*** 3B REACH 8
+    8     Lower Simms Creek       2         1    1   82    0    0   83    0
+*** 3B REACH 9
+    9     GP Settling Pond        1         1    1   82    0    0   83    0
+*** 3B REACH 10
+   10     Lower Etonia Creek      1         1    1   82    0    0   83    0
+*** 3B REACH 11
+   11     Upper Rice Creek        1         1    1   82    0    0   83    0
+*** 3B REACH 12
+   12     Lower Rice Creek        2         1    1   82    0    0   83    0
+  END GEN-INFO
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 3B REACH 1 - Keystone Lakes
+    1        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3B REACH 2 - Upper Etonia Lakes
+    2        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3B REACH 3 - Lake Grandin Outlet
+    3        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3B REACH 4 - Upper Etonia Creek
+    4        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3B REACH 5 - Rice - Etonia Ck
+    5        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3B REACH 6 - Middle Etonia Creek
+    6        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3B REACH 7 - Upper Simms Creek
+    7        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3B REACH 8 - Lower Simms Creek
+    8        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+*** 3B REACH 9 - GP Settling Pond
+    9        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3B REACH 10 - Lower Etonia Creek
+   10        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3B REACH 11 - Upper Rice Creek
+   11        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3B REACH 12 - Lower Rice Creek
+   12        0  1  0  0    4  0  0  0  0       0  2  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 3B REACH 1 - Keystone Lakes
+    1             1.     14.79     93.42      0.00       0.5      0.01
+*** 3B REACH 2 - Upper Etonia Lakes
+    2             2.     10.28     18.55      0.00       0.5      0.01
+*** 3B REACH 3 - Lake Grandin Outlet
+    3             3.      5.59     12.58      0.00       0.5      0.01
+*** 3B REACH 4 - Upper Etonia Creek
+    4             4.      6.43     18.88      0.00       0.5      0.01
+*** 3B REACH 5 - Rice - Etonia Ck
+    5             5.      7.50     66.15      0.00       0.5      0.01
+*** 3B REACH 6 - Middle Etonia Creek
+    6             6.     12.82     62.07      0.00       0.5      0.01
+*** 3B REACH 7 - Upper Simms Creek
+    7             7.     10.83    102.26      0.00       0.5      0.01
+*** 3B REACH 8 - Lower Simms Creek
+    8             8.      2.54      5.19      0.00       0.5      0.01
+*** 3B REACH 9 - GP Settling Pond
+    9             9.      1.21      0.71      0.00       0.5      0.01
+*** 3B REACH 10 - Lower Etonia Creek
+   10            10.      4.30      9.67      0.00       0.5      0.01
+*** 3B REACH 11 - Upper Rice Creek
+   11            11.      8.23     15.74      0.00       0.5      0.01
+*** 3B REACH 12 - Lower Rice Creek
+   12            12.      7.49      7.46      0.00       0.5      0.01
+  END HYDR-PARM2
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 3B REACH 1 - Keystone Lakes
+    1           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 2 - Upper Etonia Lakes
+    2           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 3 - Lake Grandin Outlet
+    3           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 4 - Upper Etonia Creek
+    4           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 5 - Rice - Etonia Ck
+    5           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 6 - Middle Etonia Creek
+    6           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 7 - Upper Simms Creek
+    7           0.80       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 8 - Lower Simms Creek
+    8           0.70       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 9 - GP Settling Pond
+    9           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 10 - Lower Etonia Creek
+   10           0.80       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 11 - Upper Rice Creek
+   11           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3B REACH 12 - Lower Rice Creek
+   12           0.70       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+
+END RCHRES
+
+FTABLES
+  FTABLE    001
+ rows cols ***      Keystone Lakes      STCOR           0.00
+    9    4
+     depth      area    volume  outflow1 ***
+      0.00         0      0.00       0.0
+     10.00    6777.0  67770.00       0.0
+     20.00    6777.0 135540.00       0.0
+     21.00    6777.0 142317.00       0.0
+     22.00    6777.0 149094.00      12.7
+     23.00    9434.0 158528.00      20.9
+     24.00   10000.0 282648.00      30.9
+     25.00   12777.02169425.00     136.7
+     99.00   99999.09999999.00   99999.9
+  END FTABLE001
+
+  FTABLE    002
+ rows cols ***      Upper Etonia Lakes  STCOR           0.00
+    8    4
+     depth      area    volume  outflow1 ***
+         0         0         0         0
+      0.50    2307.0   1000.00       0.0
+      1.00    2307.0   2000.00      50.0
+      2.00    2310.0   4600.00     141.0
+      3.00    2310.0   6900.00     260.0
+      4.00    2310.0   9200.00     400.0
+      5.00    2310.0  11500.00     560.0
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE002
+
+  FTABLE    003
+ rows cols ***      Lake Grandin Outlet STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      5.00     201.0    502.00       0.0
+     10.00     383.0   1960.00       0.0
+     11.00     439.0   2371.00       0.1
+     12.00     794.0   2988.00       6.1
+     13.00    1150.0   3960.00      19.5
+     14.00    1505.0   5287.00      39.2
+     15.00    1860.0   6969.00      65.1
+     16.00    2215.0   9007.00     100.0
+     17.00    2570.0  11400.00     160.0
+     18.00    2926.0  14148.00     250.0
+     19.00    3281.0  17251.00     380.0
+     20.00    3636.0  20709.00     550.0
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE003
+
+  FTABLE    004
+ rows cols ***      Upper Etonia Creek  STCOR           0.00
+   19    4
+     depth      area    volume  outflow1 ***
+      0.00      10.1      0.00       0.0
+      1.00      11.5     10.80       4.1
+      2.00      12.8     22.90      11.1
+      3.00      14.2     36.40      19.6
+      4.00      15.5     51.30      29.1
+      5.00      16.8     67.40      39.6
+      6.00      18.2     84.90      50.7
+      7.00      19.5    103.80      62.4
+      8.00      20.9    124.00      74.7
+      9.00      22.2    145.50      87.4
+     10.00      23.5    168.40     100.5
+     11.00      24.9    192.60     114.0
+     12.00      26.2    218.10     127.8
+     13.00      27.6    245.00     141.9
+     14.00      28.9    273.20     156.3
+     15.00      30.2    302.80     170.9
+     20.00      36.9    470.80     247.1
+     25.00    1345.0   3925.70     327.4
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE004
+
+  FTABLE    005
+ rows cols ***      Rice - Etonia Ck    STCOR           0.00
+   12    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.50       6.1      2.80       1.7
+      1.00       7.1      6.10       5.6
+      2.00       9.2     14.20      18.7
+      3.00      11.2     24.40      39.3
+      4.00      13.2     36.60      68.0
+      5.00      15.3     50.90     105.7
+      6.00     467.9    475.50     338.6
+      8.00     640.8   1584.30    1518.6
+     10.00     813.8   3038.90    3637.3
+     12.00     986.7   4839.40    6797.0
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE005
+
+  FTABLE    006
+ rows cols ***      Middle Etonia Creek STCOR           0.00
+   12    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.50      17.8      8.60       3.7
+      1.00      18.9     17.80      11.6
+      2.00      21.1     37.80      36.6
+      3.00      23.3     60.00      72.1
+      4.00      25.6     84.50     117.5
+      5.00      27.8    111.10     172.6
+      6.00     327.8    288.90     303.2
+      8.00     650.1   1336.30     945.9
+     10.00     972.4   2958.80    2287.5
+     12.00    1294.7   5225.90    4535.3
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE006
+
+  FTABLE    007
+ rows cols ***      Upper Simms Creek   STCOR           0.00
+   17    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      1.00       6.1      3.10       0.1
+      2.00      12.3     12.30       0.6
+      3.00      18.4     27.60       2.0
+      4.00      24.6     49.10       7.0
+      5.00      30.7     76.80      20.0
+      6.00     670.5    427.30      35.0
+      7.00     686.9   1106.00      80.0
+      8.00     703.3   1801.10     120.0
+      9.00     719.7   2512.50     350.0
+     10.00     736.1   3240.40     900.0
+     11.00     752.5   3984.70    1627.0
+     12.00     768.9   4745.40    2886.0
+     13.00     785.3   5522.40    4933.0
+     14.00     801.7   6315.90    8162.0
+     15.00     818.1   7125.80   13122.0
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE007
+
+  FTABLE    008
+ rows cols ***      Lower Simms Creek   STCOR           0.00
+   17    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      1.50       0.0      0.00       0.0
+      2.50       4.1      2.10       0.1
+      3.50       6.5      7.40       0.6
+      4.50       8.8     15.00       2.0
+      5.30      52.6     42.70       7.0
+      6.10     151.8    134.60      20.0
+      6.90     280.2    329.00      35.0
+      7.70     289.1    585.20      80.0
+      8.50     298.0    849.40     120.0
+      9.30     307.0   1121.60     350.0
+     10.10     315.9   1401.90     900.0
+     10.90     324.8   1690.20    1627.0
+     11.70     331.1   1985.40    2886.0
+     12.50     337.0   2286.10    4933.0
+     13.30     342.9   2592.10    8162.0
+     14.10     348.9   2903.40   13122.0
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE008
+
+  FTABLE    009
+ rows cols ***      GP Settling Pond    STCOR           0.00
+   18    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      1.50       0.0      0.00       0.0
+      2.50       4.1      2.10       0.1
+      3.50       6.5      7.40       0.6
+      4.50       8.8     15.00       2.0
+      5.30      52.6     42.70       7.0
+      6.10     151.8    134.60      20.0
+      6.90     280.2    329.00      35.0
+      7.70     289.1    585.20      80.0
+      8.50     298.0    849.40     120.0
+      9.30     307.0   1121.60     350.0
+     10.10     315.9   1401.90     900.0
+     10.90     324.8   1690.20    1627.0
+     11.70     331.1   1985.40    2886.0
+     12.50     337.0   2286.10    4933.0
+     13.30     342.9   2592.10    8162.0
+     14.10     348.9   2903.40   13122.0
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE009
+
+  FTABLE    010
+ rows cols ***      Lower Etonia Creek  STCOR           0.00
+   13    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.50      14.8      6.80       5.4
+      1.00      17.1     14.80      17.9
+      2.00      21.8     34.20      61.5
+      3.00      26.5     58.40     131.3
+      4.00      31.1     87.20     229.6
+      5.00      35.8    120.60     359.2
+      6.00      40.5    158.80     522.9
+      8.00      49.8    249.10     963.4
+     10.00     707.4   1305.20    2372.4
+     12.00    1066.1   3078.70    5329.5
+     15.00    1604.1   7083.90   13514.6
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE010
+
+  FTABLE    011
+ rows cols ***      Upper Rice Creek    STCOR           0.00
+   11    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      0.50       3.5      1.60       2.1
+      1.00       4.0      3.50       6.9
+      2.00       5.0      8.00      23.3
+      3.00       6.0     13.40      48.8
+      4.00     142.1    517.30     163.2
+      5.00     218.5   1097.50     439.6
+      6.00     294.9   2054.20     922.8
+      8.00     447.7   5096.70    2680.5
+     10.00    3207.7  12148.20    6320.6
+     99.00   99999.9  99999.90   99999.9
+  END FTABLE011
+
+  FTABLE    012
+ rows cols ***      Lower Rice Creek    STCOR           0.00
+   13    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      1.00      69.6     58.00      16.5
+      2.00      92.7    139.10      58.5
+      3.00     115.9    243.50     128.1
+      4.00     139.1    371.00     228.9
+      5.00     162.3    521.70     364.5
+      6.00     185.5    695.60     538.6
+      8.00     231.9   1112.90    1015.8
+     10.00     278.2   1623.00    1686.9
+     12.00    1428.3   3886.00    3054.5
+     15.00    2318.6   9506.40    6613.6
+     18.00    3209.0  17797.90   12397.9
+     99.00    9999.9  99999.90   99999.9
+  END FTABLE012
+
+*** From Pest calibration of ETONIA Ck BARDIN
+  FTABLE    904
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 10.895650       0.0
+      12. .003860678
+      24. .045811268
+      36. .087761858
+  END FTABLE904
+
+*** From Pest calibration of Rice Ck Springside
+  FTABLE    905
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 10.000000       0.0
+      12. 5.95199E-4
+      24. .005061394
+      36. .010000000
+  END FTABLE905
+
+*** From Pest calibration of Simms Ck Bardin
+  FTABLE    906
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 10.000000       0.0
+      12. 5.95199E-4
+      24. .005061394
+      36. .010000000
+  END FTABLE906
+
+END FTABLES
+
+
+COPY
+  TIMESERIES
+  Copy-opn***
+*** x -  x  NPT  NMN
+   99         0    1
+  END TIMESERIES
+END COPY
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - Keystone Lakes
+*** Rain station Cowpen
+WDM1  8002 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Starke
+WDM1  4206 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  4206 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  4206 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - Upper Etonia Lakes
+*** Rain station Cowpen
+WDM1  8002 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Starke
+WDM1  4206 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  4206 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  4206 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - Lake Grandin Outlet
+*** Rain station Cowpen
+WDM1  8002 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Upper Etonia Creek
+*** Rain station Cowpen
+WDM1  8002 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - Rice - Etonia Ck
+*** Rain station Palatka
+WDM1  4002 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - Middle Etonia Creek
+*** Rain station Palatka
+WDM1  4002 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+*** Reach 7 - Upper Simms Creek
+*** Rain station Palatka
+WDM1  4002 HPCP     ENGL                   PERLND 121 139 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   IMPLND 121 139 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   RCHRES   7     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND 121 139 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND 121 139 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES   7     EXTNL  POTEV
+
+*** Reach 8 - Lower Simms Creek
+*** Rain station Palatka
+WDM1  4002 HPCP     ENGL                   PERLND 141 159 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   IMPLND 141 159 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   RCHRES   8     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND 141 159 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND 141 159 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES   8     EXTNL  POTEV
+
+*** Reach 9 - GP Settling Pond
+*** Rain station Palatka
+WDM1  4002 HPCP     ENGL                   PERLND 161 179 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   IMPLND 161 179 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   RCHRES   9     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND 161 179 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND 161 179 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES   9     EXTNL  POTEV
+
+*** Reach 10 - Lower Etonia Creek
+*** Rain station Palatka
+WDM1  4002 HPCP     ENGL                   PERLND 181 199 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   IMPLND 181 199 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   RCHRES  10     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND 181 199 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND 181 199 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES  10     EXTNL  POTEV
+
+*** Reach 11 - Upper Rice Creek
+*** Rain station Palatka
+WDM1  4002 HPCP     ENGL                   PERLND 201 219 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   IMPLND 201 219 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   RCHRES  11     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND 201 219 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND 201 219 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES  11     EXTNL  POTEV
+
+*** Reach 12 - Lower Rice Creek
+*** Rain station Palatka
+WDM1  4002 HPCP     ENGL                   PERLND 221 239 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   IMPLND 221 239 EXTNL  PREC
+WDM1  4002 HPCP     ENGL                   RCHRES  12     EXTNL  PREC
+*** Evap station Palatka
+WDM1  4006 HPET     ENGL        1.0000     PERLND 221 239 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     IMPLND 221 239 EXTNL  PETINP
+WDM1  4006 HPET     ENGL        1.0000     RCHRES  12     EXTNL  POTEV
+
+*** Point Sources
+****** Unit conversion from MGD to acft/day: 3.06888785
+*** FL0002763
+WDM2   924 FLOW     ENGL    3.06888785DIV  RCHRES  12     EXTNL  IVOL
+WDM2   925 FLOW     ENGL    3.06888785DIV  RCHRES  12     EXTNL  IVOL
+WDM2   926 FLOW     ENGL    3.06888785DIV  RCHRES  12     EXTNL  IVOL
+
+
+
+
+
+
+END EXT SOURCES
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 3B REACH 1
+PERLND   1                     11536.5     RCHRES   1      1
+PERLND   2                      1209.8     RCHRES   1      1
+PERLND   3                         9.8     RCHRES   1      1
+PERLND   4                       604.9     RCHRES   1      1
+PERLND   5                       313.3     RCHRES   1      1
+PERLND   6                       601.4     RCHRES   1      1
+PERLND   7                       323.9     RCHRES   1      1
+PERLND   8                       193.8     RCHRES   1      1
+PERLND   9                         7.3     RCHRES   1      1
+PERLND  10                      1169.6     RCHRES   1      1
+PERLND  11                      8357.5     RCHRES   1      1
+  *** perlnd water area commented out (6/11/19) to avoid double count in rchres
+PERLND  12***                   3007.6     RCHRES   1      1
+PERLND  13                      2651.2     RCHRES   1      1
+PERLND  15                      1333.4     RCHRES   1      1
+IMPLND   1                       607.2     RCHRES   1      2
+IMPLND   2                       213.5     RCHRES   1      2
+IMPLND   3                         5.3     RCHRES   1      2
+IMPLND   4                       604.9     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                      5801.9     PERLND  15     11
+PERLND   2                       608.4     PERLND  15     11
+PERLND   3                         4.9     PERLND  15     11
+PERLND   4                       304.2     PERLND  15     11
+PERLND   5                       157.6     PERLND  15     11
+PERLND   6                       302.4     PERLND  15     11
+PERLND   7                       162.9     PERLND  15     11
+PERLND   8                        97.5     PERLND  15     11
+PERLND   9                         3.7     PERLND  15     11
+PERLND  10                       588.2     PERLND  15     11
+PERLND  11                      4203.1     PERLND  15     11
+PERLND  12                      1726.8     PERLND  15     11
+IMPLND   1                       305.4     PERLND  15     12
+IMPLND   2                       107.4     PERLND  15     12
+IMPLND   3                         2.6     PERLND  15     12
+IMPLND   4                       304.2     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                      5801.9     RCHRES   1      9
+PERLND   2                       608.4     RCHRES   1      9
+PERLND   3                         4.9     RCHRES   1      9
+PERLND   4                       304.2     RCHRES   1      9
+PERLND   5                       157.6     RCHRES   1      9
+PERLND   6                       302.4     RCHRES   1      9
+PERLND   7                       162.9     RCHRES   1      9
+PERLND   8                        97.5     RCHRES   1      9
+PERLND   9                         3.7     RCHRES   1      9
+PERLND  10                       588.2     RCHRES   1      9
+PERLND  11                      4203.1     RCHRES   1      9
+PERLND  12                      1726.8     RCHRES   1      9
+
+*** 3B REACH 2
+PERLND  21                      2956.5     RCHRES   2      1
+PERLND  22                       352.0     RCHRES   2      1
+PERLND  23                         1.3     RCHRES   2      1
+PERLND  24                        22.4     RCHRES   2      1
+PERLND  25                       170.4     RCHRES   2      1
+PERLND  26                       137.3     RCHRES   2      1
+PERLND  27                      1392.8     RCHRES   2      1
+PERLND  28                       174.6     RCHRES   2      1
+PERLND  29                       100.2     RCHRES   2      1
+PERLND  30                       348.2     RCHRES   2      1
+PERLND  31                      5196.9     RCHRES   2      1
+PERLND  32***                       842.1     RCHRES   2      1
+PERLND  33                      2894.6     RCHRES   2      1
+PERLND  35                      1453.3     RCHRES   2      1
+IMPLND  21                       155.6     RCHRES   2      2
+IMPLND  22                        62.1     RCHRES   2      2
+IMPLND  23                         0.7     RCHRES   2      2
+IMPLND  24                        22.4     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                      1484.4     PERLND  35     21
+PERLND  22                       176.7     PERLND  35     21
+PERLND  23                         0.7     PERLND  35     21
+PERLND  24                        11.2     PERLND  35     21
+PERLND  25                        85.5     PERLND  35     21
+PERLND  26                        68.9     PERLND  35     21
+PERLND  27                       699.3     PERLND  35     21
+PERLND  28                        87.7     PERLND  35     21
+PERLND  29                        50.3     PERLND  35     21
+PERLND  30                       174.8     PERLND  35     21
+PERLND  31                      2609.2     PERLND  35     21
+PERLND  32                       515.2     PERLND  35     21
+IMPLND  21                        78.1     PERLND  35     22
+IMPLND  22                        31.2     PERLND  35     22
+IMPLND  23                         0.4     PERLND  35     22
+IMPLND  24                        11.2     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                      1484.4     RCHRES   2      9
+PERLND  22                       176.7     RCHRES   2      9
+PERLND  23                         0.7     RCHRES   2      9
+PERLND  24                        11.2     RCHRES   2      9
+PERLND  25                        85.5     RCHRES   2      9
+PERLND  26                        68.9     RCHRES   2      9
+PERLND  27                       699.3     RCHRES   2      9
+PERLND  28                        87.7     RCHRES   2      9
+PERLND  29                        50.3     RCHRES   2      9
+PERLND  30                       174.8     RCHRES   2      9
+PERLND  31                      2609.2     RCHRES   2      9
+PERLND  32                       515.2     RCHRES   2      9
+
+*** 3B REACH 3
+PERLND  41                      1932.4     RCHRES   3      1
+PERLND  42                       383.1     RCHRES   3      1
+PERLND  43                        31.7     RCHRES   3      1
+PERLND  44                        13.0     RCHRES   3      1
+PERLND  45                        17.6     RCHRES   3      1
+PERLND  46                       557.9     RCHRES   3      1
+PERLND  47                      1075.9     RCHRES   3      1
+PERLND  48                       153.9     RCHRES   3      1
+PERLND  49                         0.0     RCHRES   3      1
+PERLND  50                       351.5     RCHRES   3      1
+PERLND  51                      5018.7     RCHRES   3      1
+PERLND  52***                       514.9     RCHRES   3      1
+PERLND  53                      2287.9     RCHRES   3      1
+PERLND  55                      2166.5     RCHRES   3      1
+IMPLND  41                       101.7     RCHRES   3      2
+IMPLND  42                        67.6     RCHRES   3      2
+IMPLND  43                        17.1     RCHRES   3      2
+IMPLND  44                        13.0     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                      1829.9     PERLND  55     31
+PERLND  42                       362.7     PERLND  55     31
+PERLND  43                        30.0     PERLND  55     31
+PERLND  44                        12.3     PERLND  55     31
+PERLND  45                        16.7     PERLND  55     31
+PERLND  46                       528.3     PERLND  55     31
+PERLND  47                      1018.8     PERLND  55     31
+PERLND  48                       145.8     PERLND  55     31
+PERLND  49                         0.0     PERLND  55     31
+PERLND  50                       332.9     PERLND  55     31
+PERLND  51                      4752.5     PERLND  55     31
+PERLND  52                       485.3     PERLND  55     31
+IMPLND  41                        96.3     PERLND  55     32
+IMPLND  42                        64.0     PERLND  55     32
+IMPLND  43                        16.2     PERLND  55     32
+IMPLND  44                        12.3     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                      1829.9     RCHRES   3      9
+PERLND  42                       362.7     RCHRES   3      9
+PERLND  43                        30.0     RCHRES   3      9
+PERLND  44                        12.3     RCHRES   3      9
+PERLND  45                        16.7     RCHRES   3      9
+PERLND  46                       528.3     RCHRES   3      9
+PERLND  47                      1018.8     RCHRES   3      9
+PERLND  48                       145.8     RCHRES   3      9
+PERLND  49                         0.0     RCHRES   3      9
+PERLND  50                       332.9     RCHRES   3      9
+PERLND  51                      4752.5     RCHRES   3      9
+PERLND  52                       485.3     RCHRES   3      9
+
+*** 3B REACH 4
+PERLND  61                      1544.2     RCHRES   4      1
+PERLND  62                        59.5     RCHRES   4      1
+PERLND  63                        11.2     RCHRES   4      1
+PERLND  64                         1.8     RCHRES   4      1
+PERLND  65                         0.0     RCHRES   4      1
+PERLND  66                        84.4     RCHRES   4      1
+PERLND  67                      1468.2     RCHRES   4      1
+PERLND  68                      1250.2     RCHRES   4      1
+PERLND  69                         0.0     RCHRES   4      1
+PERLND  70                       396.9     RCHRES   4      1
+PERLND  71                      4001.8     RCHRES   4      1
+PERLND  72***                        14.7     RCHRES   4      1
+PERLND  73                      1920.2     RCHRES   4      1
+PERLND  75                       746.6     RCHRES   4      1
+IMPLND  61                        81.3     RCHRES   4      2
+IMPLND  62                        10.5     RCHRES   4      2
+IMPLND  63                         6.0     RCHRES   4      2
+IMPLND  64                         1.8     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                       600.4     PERLND  75     41
+PERLND  62                        23.1     PERLND  75     41
+PERLND  63                         4.4     PERLND  75     41
+PERLND  64                         0.7     PERLND  75     41
+PERLND  65                         0.0     PERLND  75     41
+PERLND  66                        32.8     PERLND  75     41
+PERLND  67                       570.9     PERLND  75     41
+PERLND  68                       486.1     PERLND  75     41
+PERLND  69                         0.0     PERLND  75     41
+PERLND  70                       154.3     PERLND  75     41
+PERLND  71                      1556.0     PERLND  75     41
+PERLND  72                         7.0     PERLND  75     41
+IMPLND  61                        31.6     PERLND  75     42
+IMPLND  62                         4.1     PERLND  75     42
+IMPLND  63                         2.4     PERLND  75     42
+IMPLND  64                         0.7     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                       600.4     RCHRES   4      9
+PERLND  62                        23.1     RCHRES   4      9
+PERLND  63                         4.4     RCHRES   4      9
+PERLND  64                         0.7     RCHRES   4      9
+PERLND  65                         0.0     RCHRES   4      9
+PERLND  66                        32.8     RCHRES   4      9
+PERLND  67                       570.9     RCHRES   4      9
+PERLND  68                       486.1     RCHRES   4      9
+PERLND  69                         0.0     RCHRES   4      9
+PERLND  70                       154.3     RCHRES   4      9
+PERLND  71                      1556.0     RCHRES   4      9
+PERLND  72                         7.0     RCHRES   4      9
+
+*** 3B REACH 5
+PERLND  81                       431.8     RCHRES   5      1
+PERLND  82                         0.0     RCHRES   5      1
+PERLND  83                         0.4     RCHRES   5      1
+PERLND  84                         0.0     RCHRES   5      1
+PERLND  85                         0.0     RCHRES   5      1
+PERLND  86                       126.3     RCHRES   5      1
+PERLND  87                        42.8     RCHRES   5      1
+PERLND  88                       311.8     RCHRES   5      1
+PERLND  89                         0.0     RCHRES   5      1
+PERLND  90                       289.7     RCHRES   5      1
+PERLND  91                      6847.0     RCHRES   5      1
+PERLND  92***                         3.4     RCHRES   5      1
+PERLND  93                      1744.6     RCHRES   5      1
+PERLND  95                       849.3     RCHRES   5      1
+IMPLND  81                        22.7     RCHRES   5      2
+IMPLND  82                         0.0     RCHRES   5      2
+IMPLND  83                         0.2     RCHRES   5      2
+IMPLND  84                         0.0     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                       210.2     PERLND  95     51
+PERLND  82                         0.0     PERLND  95     51
+PERLND  83                         0.2     PERLND  95     51
+PERLND  84                         0.0     PERLND  95     51
+PERLND  85                         0.0     PERLND  95     51
+PERLND  86                        61.5     PERLND  95     51
+PERLND  87                        20.8     PERLND  95     51
+PERLND  88                       151.8     PERLND  95     51
+PERLND  89                         0.0     PERLND  95     51
+PERLND  90                       141.0     PERLND  95     51
+PERLND  91                      3333.3     PERLND  95     51
+PERLND  92                         0.3     PERLND  95     51
+IMPLND  81                        11.1     PERLND  95     52
+IMPLND  82                         0.0     PERLND  95     52
+IMPLND  83                         0.1     PERLND  95     52
+IMPLND  84                         0.0     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                       210.2     RCHRES   5      9
+PERLND  82                         0.0     RCHRES   5      9
+PERLND  83                         0.2     RCHRES   5      9
+PERLND  84                         0.0     RCHRES   5      9
+PERLND  85                         0.0     RCHRES   5      9
+PERLND  86                        61.5     RCHRES   5      9
+PERLND  87                        20.8     RCHRES   5      9
+PERLND  88                       151.8     RCHRES   5      9
+PERLND  89                         0.0     RCHRES   5      9
+PERLND  90                       141.0     RCHRES   5      9
+PERLND  91                      3333.3     RCHRES   5      9
+PERLND  92                         0.3     RCHRES   5      9
+
+*** 3B REACH 6
+PERLND 101                      1850.0     RCHRES   6      1
+PERLND 102                       183.3     RCHRES   6      1
+PERLND 103                        17.1     RCHRES   6      1
+PERLND 104                        12.2     RCHRES   6      1
+PERLND 105                         4.8     RCHRES   6      1
+PERLND 106                       388.7     RCHRES   6      1
+PERLND 107                       179.4     RCHRES   6      1
+PERLND 108                       468.7     RCHRES   6      1
+PERLND 109                         0.0     RCHRES   6      1
+PERLND 110                       831.4     RCHRES   6      1
+PERLND 111                      6222.4     RCHRES   6      1
+PERLND 112***                       791.4     RCHRES   6      1
+PERLND 113                      2102.0     RCHRES   6      1
+PERLND 115                       540.0     RCHRES   6      1
+IMPLND 101                        97.4     RCHRES   6      2
+IMPLND 102                        32.3     RCHRES   6      2
+IMPLND 103                         9.2     RCHRES   6      2
+IMPLND 104                        12.2     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                       475.3     PERLND 115     61
+PERLND 102                        47.1     PERLND 115     61
+PERLND 103                         4.4     PERLND 115     61
+PERLND 104                         3.1     PERLND 115     61
+PERLND 105                         1.2     PERLND 115     61
+PERLND 106                        99.9     PERLND 115     61
+PERLND 107                        46.1     PERLND 115     61
+PERLND 108                       120.4     PERLND 115     61
+PERLND 109                         0.0     PERLND 115     61
+PERLND 110                       213.6     PERLND 115     61
+PERLND 111                      1598.5     PERLND 115     61
+PERLND 112                       168.1     PERLND 115     61
+IMPLND 101                        25.0     PERLND 115     62
+IMPLND 102                         8.3     PERLND 115     62
+IMPLND 103                         2.4     PERLND 115     62
+IMPLND 104                         3.1     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                       475.3     RCHRES   6      9
+PERLND 102                        47.1     RCHRES   6      9
+PERLND 103                         4.4     RCHRES   6      9
+PERLND 104                         3.1     RCHRES   6      9
+PERLND 105                         1.2     RCHRES   6      9
+PERLND 106                        99.9     RCHRES   6      9
+PERLND 107                        46.1     RCHRES   6      9
+PERLND 108                       120.4     RCHRES   6      9
+PERLND 109                         0.0     RCHRES   6      9
+PERLND 110                       213.6     RCHRES   6      9
+PERLND 111                      1598.5     RCHRES   6      9
+PERLND 112                       168.1     RCHRES   6      9
+
+*** 3B REACH 7
+PERLND 121                      1732.6     RCHRES   7      1
+PERLND 122                         0.6     RCHRES   7      1
+PERLND 123                         0.0     RCHRES   7      1
+PERLND 124                       206.8     RCHRES   7      1
+PERLND 125                       338.2     RCHRES   7      1
+PERLND 126                       268.4     RCHRES   7      1
+PERLND 127                        82.6     RCHRES   7      1
+PERLND 128                       310.5     RCHRES   7      1
+PERLND 129                         0.0     RCHRES   7      1
+PERLND 130                       260.4     RCHRES   7      1
+PERLND 131                     11528.4     RCHRES   7      1
+PERLND 132***                        75.3     RCHRES   7      1
+PERLND 133                      4977.7     RCHRES   7      1
+PERLND 135                      2678.5     RCHRES   7      1
+IMPLND 121                        91.2     RCHRES   7      2
+IMPLND 122                         0.1     RCHRES   7      2
+IMPLND 123                         0.0     RCHRES   7      2
+IMPLND 124                       206.8     RCHRES   7      2
+      *** Surface runoff to non-reach wetland
+PERLND 121                       932.3     PERLND 135     71
+PERLND 122                         0.3     PERLND 135     71
+PERLND 123                         0.0     PERLND 135     71
+PERLND 124                       111.3     PERLND 135     71
+PERLND 125                       182.0     PERLND 135     71
+PERLND 126                       144.4     PERLND 135     71
+PERLND 127                        44.5     PERLND 135     71
+PERLND 128                       167.1     PERLND 135     71
+PERLND 129                         0.0     PERLND 135     71
+PERLND 130                       140.1     PERLND 135     71
+PERLND 131                      6203.5     PERLND 135     71
+PERLND 132                       146.1     PERLND 135     71
+IMPLND 121                        49.1     PERLND 135     72
+IMPLND 122                         0.1     PERLND 135     72
+IMPLND 123                         0.0     PERLND 135     72
+IMPLND 124                       111.3     PERLND 135     72
+      *** Baseflow to reach
+PERLND 121                       932.3     RCHRES   7      9
+PERLND 122                         0.3     RCHRES   7      9
+PERLND 123                         0.0     RCHRES   7      9
+PERLND 124                       111.3     RCHRES   7      9
+PERLND 125                       182.0     RCHRES   7      9
+PERLND 126                       144.4     RCHRES   7      9
+PERLND 127                        44.5     RCHRES   7      9
+PERLND 128                       167.1     RCHRES   7      9
+PERLND 129                         0.0     RCHRES   7      9
+PERLND 130                       140.1     RCHRES   7      9
+PERLND 131                      6203.5     RCHRES   7      9
+PERLND 132                       146.1     RCHRES   7      9
+
+*** 3B REACH 8
+PERLND 141                       192.3     RCHRES   8      1
+PERLND 142                         0.0     RCHRES   8      1
+PERLND 143                         0.0     RCHRES   8      1
+PERLND 144                         0.0     RCHRES   8      1
+PERLND 145                         0.0     RCHRES   8      1
+PERLND 146                        40.0     RCHRES   8      1
+PERLND 147                         9.7     RCHRES   8      1
+PERLND 148                        27.2     RCHRES   8      1
+PERLND 149                         0.0     RCHRES   8      1
+PERLND 150                        80.2     RCHRES   8      1
+PERLND 151                      1834.7     RCHRES   8      1
+PERLND 152***                         7.5     RCHRES   8      1
+PERLND 153                       713.9     RCHRES   8      1
+PERLND 155                       212.7     RCHRES   8      1
+IMPLND 141                        10.1     RCHRES   8      2
+IMPLND 142                         0.0     RCHRES   8      2
+IMPLND 143                         0.0     RCHRES   8      2
+IMPLND 144                         0.0     RCHRES   8      2
+      *** Surface runoff to non-reach wetland
+PERLND 141                        57.3     PERLND 155     81
+PERLND 142                         0.0     PERLND 155     81
+PERLND 143                         0.0     PERLND 155     81
+PERLND 144                         0.0     PERLND 155     81
+PERLND 145                         0.0     PERLND 155     81
+PERLND 146                        11.9     PERLND 155     81
+PERLND 147                         2.9     PERLND 155     81
+PERLND 148                         8.1     PERLND 155     81
+PERLND 149                         0.0     PERLND 155     81
+PERLND 150                        23.9     PERLND 155     81
+PERLND 151                       546.5     PERLND 155     81
+PERLND 152                         0.5     PERLND 155     81
+IMPLND 141                         3.0     PERLND 155     82
+IMPLND 142                         0.0     PERLND 155     82
+IMPLND 143                         0.0     PERLND 155     82
+IMPLND 144                         0.0     PERLND 155     82
+      *** Baseflow to reach
+PERLND 141                        57.3     RCHRES   8      9
+PERLND 142                         0.0     RCHRES   8      9
+PERLND 143                         0.0     RCHRES   8      9
+PERLND 144                         0.0     RCHRES   8      9
+PERLND 145                         0.0     RCHRES   8      9
+PERLND 146                        11.9     RCHRES   8      9
+PERLND 147                         2.9     RCHRES   8      9
+PERLND 148                         8.1     RCHRES   8      9
+PERLND 149                         0.0     RCHRES   8      9
+PERLND 150                        23.9     RCHRES   8      9
+PERLND 151                       546.5     RCHRES   8      9
+PERLND 152                         0.5     RCHRES   8      9
+
+*** 3B REACH 9
+PERLND 161                         0.0     RCHRES   9      1
+PERLND 162                         0.0     RCHRES   9      1
+PERLND 163                         0.0     RCHRES   9      1
+PERLND 164                         0.0     RCHRES   9      1
+PERLND 165                         0.0     RCHRES   9      1
+PERLND 166                         1.9     RCHRES   9      1
+PERLND 167                         0.0     RCHRES   9      1
+PERLND 168                         0.0     RCHRES   9      1
+PERLND 169                         0.0     RCHRES   9      1
+PERLND 170                         0.0     RCHRES   9      1
+PERLND 171                        34.1     RCHRES   9      1
+PERLND 172***                       873.2     RCHRES   9      1
+PERLND 173                         0.0     RCHRES   9      1
+PERLND 175                         0.0     RCHRES   9      1
+IMPLND 161                         0.0     RCHRES   9      2
+IMPLND 162                         0.0     RCHRES   9      2
+IMPLND 163                         0.0     RCHRES   9      2
+IMPLND 164                         0.0     RCHRES   9      2
+      *** Surface runoff to non-reach wetland
+PERLND 161                         0.0     PERLND 175     91
+PERLND 162                         0.0     PERLND 175     91
+PERLND 163                         0.0     PERLND 175     91
+PERLND 164                         0.0     PERLND 175     91
+PERLND 165                         0.0     PERLND 175     91
+PERLND 166                         0.0     PERLND 175     91
+PERLND 167                         0.0     PERLND 175     91
+PERLND 168                         0.0     PERLND 175     91
+PERLND 169                         0.0     PERLND 175     91
+PERLND 170                         0.0     PERLND 175     91
+PERLND 171                         0.3     PERLND 175     91
+PERLND 172                         7.9     PERLND 175     91
+IMPLND 161                         0.0     PERLND 175     92
+IMPLND 162                         0.0     PERLND 175     92
+IMPLND 163                         0.0     PERLND 175     92
+IMPLND 164                         0.0     PERLND 175     92
+      *** Baseflow to reach
+PERLND 161                         0.0     RCHRES   9      9
+PERLND 162                         0.0     RCHRES   9      9
+PERLND 163                         0.0     RCHRES   9      9
+PERLND 164                         0.0     RCHRES   9      9
+PERLND 165                         0.0     RCHRES   9      9
+PERLND 166                         0.0     RCHRES   9      9
+PERLND 167                         0.0     RCHRES   9      9
+PERLND 168                         0.0     RCHRES   9      9
+PERLND 169                         0.0     RCHRES   9      9
+PERLND 170                         0.0     RCHRES   9      9
+PERLND 171                         0.3     RCHRES   9      9
+PERLND 172                         7.9     RCHRES   9      9
+
+*** 3B REACH 10
+PERLND 181                       240.4     RCHRES  10      1
+PERLND 182                        31.6     RCHRES  10      1
+PERLND 183                         0.0     RCHRES  10      1
+PERLND 184                       186.1     RCHRES  10      1
+PERLND 185                         0.0     RCHRES  10      1
+PERLND 186                        99.2     RCHRES  10      1
+PERLND 187                         0.0     RCHRES  10      1
+PERLND 188                         6.3     RCHRES  10      1
+PERLND 189                         0.0     RCHRES  10      1
+PERLND 190                        47.2     RCHRES  10      1
+PERLND 191                      1148.0     RCHRES  10      1
+PERLND 192***                        57.5     RCHRES  10      1
+PERLND 193                      1373.0     RCHRES  10      1
+PERLND 195                       340.0     RCHRES  10      1
+IMPLND 181                        12.7     RCHRES  10      2
+IMPLND 182                         5.6     RCHRES  10      2
+IMPLND 183                         0.0     RCHRES  10      2
+IMPLND 184                       186.1     RCHRES  10      2
+      *** Surface runoff to non-reach wetland
+PERLND 181                        59.5     PERLND 195    101
+PERLND 182                         7.8     PERLND 195    101
+PERLND 183                         0.0     PERLND 195    101
+PERLND 184                        46.1     PERLND 195    101
+PERLND 185                         0.0     PERLND 195    101
+PERLND 186                        24.6     PERLND 195    101
+PERLND 187                         0.0     PERLND 195    101
+PERLND 188                         1.6     PERLND 195    101
+PERLND 189                         0.0     PERLND 195    101
+PERLND 190                        11.7     PERLND 195    101
+PERLND 191                       284.3     PERLND 195    101
+PERLND 192                        10.9     PERLND 195    101
+IMPLND 181                         3.1     PERLND 195    102
+IMPLND 182                         1.4     PERLND 195    102
+IMPLND 183                         0.0     PERLND 195    102
+IMPLND 184                        46.1     PERLND 195    102
+      *** Baseflow to reach
+PERLND 181                        59.5     RCHRES  10      9
+PERLND 182                         7.8     RCHRES  10      9
+PERLND 183                         0.0     RCHRES  10      9
+PERLND 184                        46.1     RCHRES  10      9
+PERLND 185                         0.0     RCHRES  10      9
+PERLND 186                        24.6     RCHRES  10      9
+PERLND 187                         0.0     RCHRES  10      9
+PERLND 188                         1.6     RCHRES  10      9
+PERLND 189                         0.0     RCHRES  10      9
+PERLND 190                        11.7     RCHRES  10      9
+PERLND 191                       284.3     RCHRES  10      9
+PERLND 192                        10.9     RCHRES  10      9
+
+*** 3B REACH 11
+PERLND 201                      4320.9     RCHRES  11      1
+PERLND 202                       229.5     RCHRES  11      1
+PERLND 203                        29.1     RCHRES  11      1
+PERLND 204                        60.9     RCHRES  11      1
+PERLND 205                         0.0     RCHRES  11      1
+PERLND 206                       286.1     RCHRES  11      1
+PERLND 207                       348.9     RCHRES  11      1
+PERLND 208                        68.9     RCHRES  11      1
+PERLND 209                        17.4     RCHRES  11      1
+PERLND 210                       593.4     RCHRES  11      1
+PERLND 211                      9405.7     RCHRES  11      1
+PERLND 212***                        34.5     RCHRES  11      1
+PERLND 213                      6881.8     RCHRES  11      1
+PERLND 215                      2501.9     RCHRES  11      1
+IMPLND 201                       227.4     RCHRES  11      2
+IMPLND 202                        40.5     RCHRES  11      2
+IMPLND 203                        15.7     RCHRES  11      2
+IMPLND 204                        60.9     RCHRES  11      2
+      *** Surface runoff to non-reach wetland
+PERLND 201                      1570.9     PERLND 215    111
+PERLND 202                        83.4     PERLND 215    111
+PERLND 203                        10.6     PERLND 215    111
+PERLND 204                        22.1     PERLND 215    111
+PERLND 205                         0.0     PERLND 215    111
+PERLND 206                       104.0     PERLND 215    111
+PERLND 207                       126.9     PERLND 215    111
+PERLND 208                        25.0     PERLND 215    111
+PERLND 209                         6.3     PERLND 215    111
+PERLND 210                       215.7     PERLND 215    111
+PERLND 211                      3419.5     PERLND 215    111
+PERLND 212                         8.5     PERLND 215    111
+IMPLND 201                        82.7     PERLND 215    112
+IMPLND 202                        14.7     PERLND 215    112
+IMPLND 203                         5.7     PERLND 215    112
+IMPLND 204                        22.1     PERLND 215    112
+      *** Baseflow to reach
+PERLND 201                      1570.9     RCHRES  11      9
+PERLND 202                        83.4     RCHRES  11      9
+PERLND 203                        10.6     RCHRES  11      9
+PERLND 204                        22.1     RCHRES  11      9
+PERLND 205                         0.0     RCHRES  11      9
+PERLND 206                       104.0     RCHRES  11      9
+PERLND 207                       126.9     RCHRES  11      9
+PERLND 208                        25.0     RCHRES  11      9
+PERLND 209                         6.3     RCHRES  11      9
+PERLND 210                       215.7     RCHRES  11      9
+PERLND 211                      3419.5     RCHRES  11      9
+PERLND 212                         8.5     RCHRES  11      9
+
+*** 3B REACH 12
+PERLND 221                      1662.6     RCHRES  12      1
+PERLND 222                       545.8     RCHRES  12      1
+PERLND 223                       103.9     RCHRES  12      1
+PERLND 224                      1584.1     RCHRES  12      1
+PERLND 225                        13.7     RCHRES  12      1
+PERLND 226                       177.9     RCHRES  12      1
+PERLND 227                       252.3     RCHRES  12      1
+PERLND 228                       157.3     RCHRES  12      1
+PERLND 229                         0.0     RCHRES  12      1
+PERLND 230                       231.3     RCHRES  12      1
+PERLND 231                      2838.2     RCHRES  12      1
+PERLND 232                       154.6     RCHRES  12      1
+PERLND 233                      3317.8     RCHRES  12      1
+PERLND 235                      1121.9     RCHRES  12      1
+IMPLND 221                        87.5     RCHRES  12      2
+IMPLND 222                        96.3     RCHRES  12      2
+IMPLND 223                        55.9     RCHRES  12      2
+IMPLND 224                      1584.1     RCHRES  12      2
+      *** Surface runoff to non-reach wetland
+PERLND 221                       562.2     PERLND 235    121
+PERLND 222                       184.5     PERLND 235    121
+PERLND 223                        35.1     PERLND 235    121
+PERLND 224                       535.6     PERLND 235    121
+PERLND 225                         4.6     PERLND 235    121
+PERLND 226                        60.1     PERLND 235    121
+PERLND 227                        85.3     PERLND 235    121
+PERLND 228                        53.2     PERLND 235    121
+PERLND 229                         0.0     PERLND 235    121
+PERLND 230                        78.2     PERLND 235    121
+PERLND 231                       959.7     PERLND 235    121
+PERLND 232***                        20.0     PERLND 235    121
+IMPLND 221                        29.6     PERLND 235    122
+IMPLND 222                        32.6     PERLND 235    122
+IMPLND 223                        18.9     PERLND 235    122
+IMPLND 224                       535.6     PERLND 235    122
+      *** Baseflow to reach
+PERLND 221                       562.2     RCHRES  12      9
+PERLND 222                       184.5     RCHRES  12      9
+PERLND 223                        35.1     RCHRES  12      9
+PERLND 224                       535.6     RCHRES  12      9
+PERLND 225                         4.6     RCHRES  12      9
+PERLND 226                        60.1     RCHRES  12      9
+PERLND 227                        85.3     RCHRES  12      9
+PERLND 228                        53.2     RCHRES  12      9
+PERLND 229                         0.0     RCHRES  12      9
+PERLND 230                        78.2     RCHRES  12      9
+PERLND 231                       959.7     RCHRES  12      9
+PERLND 232                        52.3     RCHRES  12      9
+
+
+*** 3B-1 Keystone Lakes TO 3B-2 Upper Etonia Lakes
+RCHRES   1                                 RCHRES   2      3
+*** 3B-2 Upper Etonia Lakes TO 3B-4 Upper Etonia Creek
+RCHRES   2                                 RCHRES   4      3
+*** 3B-3 Lake Grandin Outlet TO 3B-4 Upper Etonia Creek
+RCHRES   3                                 RCHRES   4      3
+*** 3B-4 Upper Etonia Creek TO 3B-6 Middle Etonia Creek
+RCHRES   4                                 RCHRES   6      3
+*** 3B-5 Rice - Etonia Ck TO 3B-6 Middle Etonia Creek
+RCHRES   5                                 RCHRES   6      3
+*** 3B-6 Middle Etonia Creek TO 3B-10 Lower Etonia Creek
+RCHRES   6                                 RCHRES  10      3
+*** 3B-7 Upper Simms Creek TO 3B-8 Lower Simms Creek
+RCHRES   7                                 RCHRES   8      3
+*** 3B-8 Lower Simms Creek TO 3B-10 Lower Etonia Creek
+RCHRES   8                                 RCHRES  10      3
+*** 3B-9 GP Settling Pond TO 3B-10 Lower Etonia Creek
+RCHRES   9                                 RCHRES  10      3
+*** 3B-10 Lower Etonia Creek TO 3B-12 Lower Rice Creek
+RCHRES  10                                 RCHRES  12      3
+*** 3B-11 Upper Rice Creek TO 3B-12 Lower Rice Creek
+RCHRES  11                                 RCHRES  12      3
+*** 3B-12 Lower Rice Creek TO 3J-4 SJR d/s Rice Ck
+***
+END SCHEMATIC
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+*** Transfer datasets - hourly volume/mass                                        Reach   Exit
+*** 3B-12 Lower Rice Creek TO 3J-4                                                      12        2
+RCHRES  12 HYDR   OVOL   1                 WDM2  1081 FLOW     ENGL AGGR REPL
+
+*** Gages
+*** 3B-6 304 - ETONIA Ck BARDIN (USGS 02245050)
+RCHRES   6 HYDR   O      1                 WDM2  2004 FLOW     ENGL AGGR REPL
+*** 3B-7 306 - Simms Ck Bardin (USGS 02244473) - typo? shouldn't be (USGS 02245140)?
+RCHRES   7 HYDR   O      1                 WDM2  2005 FLOW     ENGL AGGR REPL
+*** 3B-11 305 - Rice Ck Springside (USGS 02245140) - typo? shouldn't be (USGS 02244473)?
+RCHRES  11 HYDR   RO                       WDM2  2006 FLOW     ENGL AGGR REPL
+END EXT TARGETS
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 3B REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000750     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000750     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000750     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 3B REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000688     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000688     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000688     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 3B REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000462     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000462     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000462     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 3B REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001339     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001339     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001339     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 3B REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001177     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001177     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001177     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 3B REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001852     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001852     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001852     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+*** 3B REACH 7
+  MASS-LINK       71
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000373     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000373     PERLND         EXTNL  SURLI
+  END MASS-LINK   71
+
+  MASS-LINK       72
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000373     PERLND         EXTNL  SURLI
+  END MASS-LINK   72
+*** 3B REACH 8
+  MASS-LINK       81
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.004702     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.004702     PERLND         EXTNL  SURLI
+  END MASS-LINK   81
+
+  MASS-LINK       82
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.004702     PERLND         EXTNL  SURLI
+  END MASS-LINK   82
+*** 3B REACH 9
+  MASS-LINK       91
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        1.000000     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        1.000000     PERLND         EXTNL  SURLI
+  END MASS-LINK   91
+
+  MASS-LINK       92
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        1.000000     PERLND         EXTNL  SURLI
+  END MASS-LINK   92
+*** 3B REACH 10
+  MASS-LINK      101
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002941     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002941     PERLND         EXTNL  SURLI
+  END MASS-LINK  101
+
+  MASS-LINK      102
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002941     PERLND         EXTNL  SURLI
+  END MASS-LINK  102
+*** 3B REACH 11
+  MASS-LINK      111
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000400     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000400     PERLND         EXTNL  SURLI
+  END MASS-LINK  111
+
+  MASS-LINK      112
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000400     PERLND         EXTNL  SURLI
+  END MASS-LINK  112
+*** 3B REACH 12
+  MASS-LINK      121
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000891     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000891     PERLND         EXTNL  SURLI
+  END MASS-LINK  121
+
+  MASS-LINK      122
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000891     PERLND         EXTNL  SURLI
+  END MASS-LINK  122
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+  UVQUAN rca7   RCHRES   7 SAREA            3 2.296E-05
+  UVQUAN rca8   RCHRES   8 SAREA            3 2.296E-05
+  UVQUAN rca9   RCHRES   9 SAREA            3 2.296E-05
+  UVQUAN rca10  RCHRES  10 SAREA            3 2.296E-05
+  UVQUAN rca11  RCHRES  11 SAREA            3 2.296E-05
+  UVQUAN rca12  RCHRES  12 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01
+  UVQUAN wla033 GLOBAL     WORKSP 02
+  UVQUAN wla053 GLOBAL     WORKSP 03
+  UVQUAN wla073 GLOBAL     WORKSP 04
+  UVQUAN wla093 GLOBAL     WORKSP 05
+  UVQUAN wla113 GLOBAL     WORKSP 06
+  UVQUAN wla133 GLOBAL     WORKSP 07
+  UVQUAN wla153 GLOBAL     WORKSP 08
+  UVQUAN wla173 GLOBAL     WORKSP 09
+  UVQUAN wla193 GLOBAL     WORKSP 10
+  UVQUAN wla213 GLOBAL     WORKSP 11
+  UVQUAN wla233 GLOBAL     WORKSP 12
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+  UVNAME  WLA133  1 WORKSP 07        1.0  QUAN
+  UVNAME  WLA153  1 WORKSP 08        1.0  QUAN
+  UVNAME  WLA173  1 WORKSP 09        1.0  QUAN
+  UVNAME  WLA193  1 WORKSP 10        1.0  QUAN
+  UVNAME  WLA213  1 WORKSP 11        1.0  QUAN
+  UVNAME  WLA233  1 WORKSP 12        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+***
+*** area recomputed (6/11/2019) by adding commented out perlnd water area
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =    6084.8
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =    3920.8
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =    2800.3
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =    1938.3
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =    1745.2
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =    2756.1
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+*** Reach 7
+  COPY   99                               WLA133           =    5249.2
+  COPY   99                               WLA133          -=    rca7
+  COPY   99                               WLA133         MAX       0.0
+*** Reach 8
+  COPY   99                               WLA153           =     715.5
+  COPY   99                               WLA153          -=    rca8
+  COPY   99                               WLA153         MAX       0.0
+*** Reach 9
+  COPY   99                               WLA173           =     979.4
+  COPY   99                               WLA173          -=    rca9
+  COPY   99                               WLA173         MAX       0.0
+*** Reach 10
+  COPY   99                               WLA193           =    1417.1
+  COPY   99                               WLA193          -=    rca10
+  COPY   99                               WLA193         MAX       0.0
+*** Reach 11
+  COPY   99                               WLA213           =    6905.2
+  COPY   99                               WLA213          -=    rca11
+  COPY   99                               WLA213         MAX       0.0
+*** Reach 12
+  COPY   99                               WLA233           =    3472.4
+  COPY   99                               WLA233          -=    rca12
+  COPY   99                               WLA233         MAX       0.0
+
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+MULT PERLND 133                    wla133= RCHRES  07
+MULT PERLND 153                    wla153= RCHRES  08
+MULT PERLND 173                    wla173= RCHRES  09
+MULT PERLND 193                    wla193= RCHRES  10
+MULT PERLND 213                    wla213= RCHRES  11
+MULT PERLND 233                    wla233= RCHRES  12
+END SPEC-ACTIONS
+
+END RUN

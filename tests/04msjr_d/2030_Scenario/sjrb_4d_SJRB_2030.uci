@@ -1,0 +1,2388 @@
+RUN
+
+GLOBAL
+  Deep Creek Calibration UCI
+  START       1995/01/01 00:00  END    2016/12/31 24:00
+  RUN INTERP OUTPT LEVELS    4    0
+  RESUME     0 RUN     1                          UNITS      1
+END GLOBAL
+
+FILES
+<FILE>  <UN#>***<----FILE NAME------------------------------------------------->
+MESSU      24   4d.ech
+           30   4d.out
+WDM1       25   sjrb_met.wdm
+WDM2       26   4d.wdm
+           80   4d_land.out
+BINO       81   4d_land.hbn
+           82   4d_rchres.out
+BINO       83   4d_rchres.hbn
+PESTSU     41   4d_hspf.sup
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** 4D REACH 1      Little Lake Outlet
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** 4D REACH 2      Lake Viscaya
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** 4D REACH 3      Lake Marie
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      RCHRES       3
+
+*** 4D REACH 4      Lake Monroe
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** 4D REACH 5      Deforest Lake Outlet
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** 4D REACH 6      Ravenna Park Ditches
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+*** 4D REACH 7      Konomac Lk Resv
+      PERLND     121
+      PERLND     122
+      PERLND     123
+      PERLND     124
+      PERLND     125
+      PERLND     126
+      PERLND     127
+      PERLND     128
+      PERLND     129
+      PERLND     130
+      PERLND     131
+      PERLND     132
+      PERLND     133
+      IMPLND     121
+      IMPLND     122
+      IMPLND     123
+      IMPLND     124
+      PERLND     135
+      RCHRES       7
+
+*** 4D REACH 8      SJR Big Whirl
+      PERLND     141
+      PERLND     142
+      PERLND     143
+      PERLND     144
+      PERLND     145
+      PERLND     146
+      PERLND     147
+      PERLND     148
+      PERLND     149
+      PERLND     150
+      PERLND     151
+      PERLND     152
+      PERLND     153
+      IMPLND     141
+      IMPLND     142
+      IMPLND     143
+      IMPLND     144
+      PERLND     155
+      RCHRES       8
+
+*** 4D REACH 9      Deltona Sinks
+      PERLND     161
+      PERLND     162
+      PERLND     163
+      PERLND     164
+      PERLND     165
+      PERLND     166
+      PERLND     167
+      PERLND     168
+      PERLND     169
+      PERLND     170
+      PERLND     171
+      PERLND     172
+      PERLND     173
+      IMPLND     161
+      IMPLND     162
+      IMPLND     163
+      IMPLND     164
+      PERLND     175
+      RCHRES       9
+
+*** 4D REACH 10     Lake Butler Chain
+      PERLND     181
+      PERLND     182
+      PERLND     183
+      PERLND     184
+      PERLND     185
+      PERLND     186
+      PERLND     187
+      PERLND     188
+      PERLND     189
+      PERLND     190
+      PERLND     191
+      PERLND     192
+      PERLND     193
+      IMPLND     181
+      IMPLND     182
+      IMPLND     183
+      IMPLND     184
+      PERLND     195
+      RCHRES      10
+
+*** 4D REACH 11     Jenkins Pond
+      PERLND     201
+      PERLND     202
+      PERLND     203
+      PERLND     204
+      PERLND     205
+      PERLND     206
+      PERLND     207
+      PERLND     208
+      PERLND     209
+      PERLND     210
+      PERLND     211
+      PERLND     212
+      PERLND     213
+      IMPLND     201
+      IMPLND     202
+      IMPLND     203
+      IMPLND     204
+      PERLND     215
+      RCHRES      11
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+    1  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+    1  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+    1  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 4D REACH 1
+    1   19Little Lake Outlet                1    1    0    0   81    0
+*** 4D REACH 2
+   21   39Lake Viscaya                      1    1    0    0   81    0
+*** 4D REACH 3
+   41   59Lake Marie                        1    1    0    0   81    0
+*** 4D REACH 4
+   61   79Lake Monroe                       1    1    0    0   81    0
+*** 4D REACH 5
+   81   99Deforest Lake Outlet              1    1    0    0   81    0
+*** 4D REACH 6
+  101  119Ravenna Park Ditches              1    1    0    0   81    0
+*** 4D REACH 7
+  121  139Konomac Lk Resv                   1    1    0    0   81    0
+*** 4D REACH 8
+  141  159SJR Big Whirl                     1    1    0    0   81    0
+*** 4D REACH 9
+  161  179Deltona Sinks                     1    1    0    0   81    0
+*** 4D REACH 10
+  181  199Lake Butler Chain                 1    1    0    0   81    0
+*** 4D REACH 11
+  201  219Jenkins Pond                      1    1    0    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 4D REACH 1 - Little Lake Outlet
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 2 - Lake Viscaya
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 3 - Lake Marie
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 4 - Lake Monroe
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 5 - Deforest Lake Outlet
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 6 - Ravenna Park Ditches
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 7 - Konomac Lk Resv
+  121  131    0    0    1    0    0    0    0    0    0    1    0    0    0
+  132  133    0    3    1    0    0    0    0    0    0    1    0    0    0
+  135         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 8 - SJR Big Whirl
+  141  151    0    0    1    0    0    0    0    0    0    1    0    0    0
+  152  153    0    3    1    0    0    0    0    0    0    1    0    0    0
+  155         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 9 - Deltona Sinks
+  161  171    0    0    1    0    0    0    0    0    0    1    0    0    0
+  172  173    0    3    1    0    0    0    0    0    0    1    0    0    0
+  175         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 10 - Lake Butler Chain
+  181  191    0    0    1    0    0    0    0    0    0    1    0    0    0
+  192  193    0    3    1    0    0    0    0    0    0    1    0    0    0
+  195         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 4D REACH 11 - Jenkins Pond
+  201  211    0    0    1    0    0    0    0    0    0    1    0    0    0
+  212  213    0    3    1    0    0    0    0    0    0    1    0    0    0
+  215         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+  PWAT-PARM2
+***                           HYDROLOGY           PERLND              PWATER              PARM2
+***                                    1                   1                   1                   1
+*** 4D REACH 1 - Little Lake Outlet    Location  421
+    1     ~111141301~
+    2     ~111141302~
+    3     ~111141303~
+    4     ~111141304~
+    5     ~111141305~
+    6     ~111141306~
+    7     ~111141307~
+    8     ~111141308~
+    9     ~111141309~
+   10     ~111141310~
+   11     ~111141311~
+   12     ~111141312~
+   13     ~111141313~
+   15     ~111141313~
+*** 4D REACH 2 - Lake Viscaya          Location  421
+   21     ~111142401~
+   22     ~111142402~
+   23     ~111142403~
+   24     ~111142404~
+   25     ~111142405~
+   26     ~111142406~
+   27     ~111142407~
+   28     ~111142408~
+   29     ~111142409~
+   30     ~111142410~
+   31     ~111142411~
+   32     ~111142412~
+   33     ~111142413~
+   35     ~111142413~
+*** 4D REACH 3 - Lake Marie            Location  421
+   41     ~111142401~
+   42     ~111142402~
+   43     ~111142403~
+   44     ~111142404~
+   45     ~111142405~
+   46     ~111142406~
+   47     ~111142407~
+   48     ~111142408~
+   49     ~111142409~
+   50     ~111142410~
+   51     ~111142411~
+   52     ~111142412~
+   53     ~111142413~
+   55     ~111142413~
+*** 4D REACH 4 - Lake Monroe           Location  421
+   61     ~111141301~
+   62     ~111141302~
+   63     ~111141303~
+   64     ~111141304~
+   65     ~111141305~
+   66     ~111141306~
+   67     ~111141307~
+   68     ~111141308~
+   69     ~111141309~
+   70     ~111141310~
+   71     ~111141311~
+   72     ~111141312~
+   73     ~111141313~
+   75     ~111141313~
+*** 4D REACH 5 - Deforest Lake Outlet  Location  421
+   81     ~111142401~
+   82     ~111142402~
+   83     ~111142403~
+   84     ~111142404~
+   85     ~111142405~
+   86     ~111142406~
+   87     ~111142407~
+   88     ~111142408~
+   89     ~111142409~
+   90     ~111142410~
+   91     ~111142411~
+   92     ~111142412~
+   93     ~111142413~
+   95     ~111142413~
+*** 4D REACH 6 - Ravenna Park Ditches  Location  421
+  101     ~111142601~
+  102     ~111142602~
+  103     ~111142603~
+  104     ~111142604~
+  105     ~111142605~
+  106     ~111142606~
+  107     ~111142607~
+  108     ~111142608~
+  109     ~111142609~
+  110     ~111142610~
+  111     ~111142611~
+  112     ~111142612~
+  113     ~111142613~
+  115     ~111142613~
+*** 4D REACH 7 - Konomac Lk Resv       Location  421
+  121     ~111141301~
+  122     ~111141302~
+  123     ~111141303~
+  124     ~111141304~
+  125     ~111141305~
+  126     ~111141306~
+  127     ~111141307~
+  128     ~111141308~
+  129     ~111141309~
+  130     ~111141310~
+  131     ~111141311~
+  132     ~111141312~
+  133     ~111141313~
+  135     ~111141313~
+*** 4D REACH 8 - SJR Big Whirl         Location  421
+  141     ~111141301~
+  142     ~111141302~
+  143     ~111141303~
+  144     ~111141304~
+  145     ~111141305~
+  146     ~111141306~
+  147     ~111141307~
+  148     ~111141308~
+  149     ~111141309~
+  150     ~111141310~
+  151     ~111141311~
+  152     ~111141312~
+  153     ~111141313~
+  155     ~111141313~
+*** 4D REACH 9 - Deltona Sinks         Location  421
+  161     ~111142401~
+  162     ~111142402~
+  163     ~111142403~
+  164     ~111142404~
+  165     ~111142405~
+  166     ~111142406~
+  167     ~111142407~
+  168     ~111142408~
+  169     ~111142409~
+  170     ~111142410~
+  171     ~111142411~
+  172     ~111142412~
+  173     ~111142413~
+  175     ~111142413~
+*** 4D REACH 10 - Lake Butler Chain    Location  421
+  181     ~111142401~
+  182     ~111142402~
+  183     ~111142403~
+  184     ~111142404~
+  185     ~111142405~
+  186     ~111142406~
+  187     ~111142407~
+  188     ~111142408~
+  189     ~111142409~
+  190     ~111142410~
+  191     ~111142411~
+  192     ~111142412~
+  193     ~111142413~
+  195     ~111142413~
+*** 4D REACH 11 - Jenkins Pond         Location  421
+  201     ~111142401~
+  202     ~111142402~
+  203     ~111142403~
+  204     ~111142404~
+  205     ~111142405~
+  206     ~111142406~
+  207     ~111142407~
+  208     ~111142408~
+  209     ~111142409~
+  210     ~111142410~
+  211     ~111142411~
+  212     ~111142412~
+  213     ~111142413~
+  215     ~111142413~
+  END PWAT-PARM2
+
+  PWAT-PARM3
+***                           HYDROLOGY           PERLND              PWATER              PARM2
+***                                    1                   1                   1                   2
+*** 4D REACH 1 - Little Lake Outlet    Location  421
+    1     ~111241301~
+    2     ~111241302~
+    3     ~111241303~
+    4     ~111241304~
+    5     ~111241305~
+    6     ~111241306~
+    7     ~111241307~
+    8     ~111241308~
+    9     ~111241309~
+   10     ~111241310~
+   11     ~111241311~
+   12     ~111241312~
+   13     ~111241313~
+   15     ~111241313~
+*** 4D REACH 2 - Lake Viscaya          Location  421
+   21     ~111242401~
+   22     ~111242402~
+   23     ~111242403~
+   24     ~111242404~
+   25     ~111242405~
+   26     ~111242406~
+   27     ~111242407~
+   28     ~111242408~
+   29     ~111242409~
+   30     ~111242410~
+   31     ~111242411~
+   32     ~111242412~
+   33     ~111242413~
+   35     ~111242413~
+*** 4D REACH 3 - Lake Marie            Location  421
+   41     ~111242401~
+   42     ~111242402~
+   43     ~111242403~
+   44     ~111242404~
+   45     ~111242405~
+   46     ~111242406~
+   47     ~111242407~
+   48     ~111242408~
+   49     ~111242409~
+   50     ~111242410~
+   51     ~111242411~
+   52     ~111242412~
+   53     ~111242413~
+   55     ~111242413~
+*** 4D REACH 4 - Lake Monroe           Location  421
+   61     ~111241301~
+   62     ~111241302~
+   63     ~111241303~
+   64     ~111241304~
+   65     ~111241305~
+   66     ~111241306~
+   67     ~111241307~
+   68     ~111241308~
+   69     ~111241309~
+   70     ~111241310~
+   71     ~111241311~
+   72     ~111241312~
+   73     ~111241313~
+   75     ~111241313~
+*** 4D REACH 5 - Deforest Lake Outlet  Location  421
+   81     ~111242401~
+   82     ~111242402~
+   83     ~111242403~
+   84     ~111242404~
+   85     ~111242405~
+   86     ~111242406~
+   87     ~111242407~
+   88     ~111242408~
+   89     ~111242409~
+   90     ~111242410~
+   91     ~111242411~
+   92     ~111242412~
+   93     ~111242413~
+   95     ~111242413~
+*** 4D REACH 6 - Ravenna Park Ditches  Location  421
+  101     ~111242601~
+  102     ~111242602~
+  103     ~111242603~
+  104     ~111242604~
+  105     ~111242605~
+  106     ~111242606~
+  107     ~111242607~
+  108     ~111242608~
+  109     ~111242609~
+  110     ~111242610~
+  111     ~111242611~
+  112     ~111242612~
+  113     ~111242613~
+  115     ~111242613~
+*** 4D REACH 7 - Konomac Lk Resv       Location  421
+  121     ~111241301~
+  122     ~111241302~
+  123     ~111241303~
+  124     ~111241304~
+  125     ~111241305~
+  126     ~111241306~
+  127     ~111241307~
+  128     ~111241308~
+  129     ~111241309~
+  130     ~111241310~
+  131     ~111241311~
+  132     ~111241312~
+  133     ~111241313~
+  135     ~111241313~
+*** 4D REACH 8 - SJR Big Whirl         Location  421
+  141     ~111241301~
+  142     ~111241302~
+  143     ~111241303~
+  144     ~111241304~
+  145     ~111241305~
+  146     ~111241306~
+  147     ~111241307~
+  148     ~111241308~
+  149     ~111241309~
+  150     ~111241310~
+  151     ~111241311~
+  152     ~111241312~
+  153     ~111241313~
+  155     ~111241313~
+*** 4D REACH 9 - Deltona Sinks         Location  421
+  161     ~111242401~
+  162     ~111242402~
+  163     ~111242403~
+  164     ~111242404~
+  165     ~111242405~
+  166     ~111242406~
+  167     ~111242407~
+  168     ~111242408~
+  169     ~111242409~
+  170     ~111242410~
+  171     ~111242411~
+  172     ~111242412~
+  173     ~111242413~
+  175     ~111242413~
+*** 4D REACH 10 - Lake Butler Chain    Location  421
+  181     ~111242401~
+  182     ~111242402~
+  183     ~111242403~
+  184     ~111242404~
+  185     ~111242405~
+  186     ~111242406~
+  187     ~111242407~
+  188     ~111242408~
+  189     ~111242409~
+  190     ~111242410~
+  191     ~111242411~
+  192     ~111242412~
+  193     ~111242413~
+  195     ~111242413~
+*** 4D REACH 11 - Jenkins Pond         Location  421
+  201     ~111242401~
+  202     ~111242402~
+  203     ~111242403~
+  204     ~111242404~
+  205     ~111242405~
+  206     ~111242406~
+  207     ~111242407~
+  208     ~111242408~
+  209     ~111242409~
+  210     ~111242410~
+  211     ~111242411~
+  212     ~111242412~
+  213     ~111242413~
+  215     ~111242413~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                           HYDROLOGY           PERLND              PWATER              PARM2
+***                                    1                   1                   1                   3
+*** 4D REACH 1 - Little Lake Outlet    Location  421
+    1     ~111341301~
+    2     ~111341302~
+    3     ~111341303~
+    4     ~111341304~
+    5     ~111341305~
+    6     ~111341306~
+    7     ~111341307~
+    8     ~111341308~
+    9     ~111341309~
+   10     ~111341310~
+   11     ~111341311~
+   12     ~111341312~
+   13     ~111341313~
+   15     ~111341313~
+*** 4D REACH 2 - Lake Viscaya          Location  421
+   21     ~111342401~
+   22     ~111342402~
+   23     ~111342403~
+   24     ~111342404~
+   25     ~111342405~
+   26     ~111342406~
+   27     ~111342407~
+   28     ~111342408~
+   29     ~111342409~
+   30     ~111342410~
+   31     ~111342411~
+   32     ~111342412~
+   33     ~111342413~
+   35     ~111342413~
+*** 4D REACH 3 - Lake Marie            Location  421
+   41     ~111342401~
+   42     ~111342402~
+   43     ~111342403~
+   44     ~111342404~
+   45     ~111342405~
+   46     ~111342406~
+   47     ~111342407~
+   48     ~111342408~
+   49     ~111342409~
+   50     ~111342410~
+   51     ~111342411~
+   52     ~111342412~
+   53     ~111342413~
+   55     ~111342413~
+*** 4D REACH 4 - Lake Monroe           Location  421
+   61     ~111341301~
+   62     ~111341302~
+   63     ~111341303~
+   64     ~111341304~
+   65     ~111341305~
+   66     ~111341306~
+   67     ~111341307~
+   68     ~111341308~
+   69     ~111341309~
+   70     ~111341310~
+   71     ~111341311~
+   72     ~111341312~
+   73     ~111341313~
+   75     ~111341313~
+*** 4D REACH 5 - Deforest Lake Outlet  Location  421
+   81     ~111342401~
+   82     ~111342402~
+   83     ~111342403~
+   84     ~111342404~
+   85     ~111342405~
+   86     ~111342406~
+   87     ~111342407~
+   88     ~111342408~
+   89     ~111342409~
+   90     ~111342410~
+   91     ~111342411~
+   92     ~111342412~
+   93     ~111342413~
+   95     ~111342413~
+*** 4D REACH 6 - Ravenna Park Ditches  Location  421
+  101     ~111342601~
+  102     ~111342602~
+  103     ~111342603~
+  104     ~111342604~
+  105     ~111342605~
+  106     ~111342606~
+  107     ~111342607~
+  108     ~111342608~
+  109     ~111342609~
+  110     ~111342610~
+  111     ~111342611~
+  112     ~111342612~
+  113     ~111342613~
+  115     ~111342613~
+*** 4D REACH 7 - Konomac Lk Resv       Location  421
+  121     ~111341301~
+  122     ~111341302~
+  123     ~111341303~
+  124     ~111341304~
+  125     ~111341305~
+  126     ~111341306~
+  127     ~111341307~
+  128     ~111341308~
+  129     ~111341309~
+  130     ~111341310~
+  131     ~111341311~
+  132     ~111341312~
+  133     ~111341313~
+  135     ~111341313~
+*** 4D REACH 8 - SJR Big Whirl         Location  421
+  141     ~111341301~
+  142     ~111341302~
+  143     ~111341303~
+  144     ~111341304~
+  145     ~111341305~
+  146     ~111341306~
+  147     ~111341307~
+  148     ~111341308~
+  149     ~111341309~
+  150     ~111341310~
+  151     ~111341311~
+  152     ~111341312~
+  153     ~111341313~
+  155     ~111341313~
+*** 4D REACH 9 - Deltona Sinks         Location  421
+  161     ~111342401~
+  162     ~111342402~
+  163     ~111342403~
+  164     ~111342404~
+  165     ~111342405~
+  166     ~111342406~
+  167     ~111342407~
+  168     ~111342408~
+  169     ~111342409~
+  170     ~111342410~
+  171     ~111342411~
+  172     ~111342412~
+  173     ~111342413~
+  175     ~111342413~
+*** 4D REACH 10 - Lake Butler Chain    Location  421
+  181     ~111342401~
+  182     ~111342402~
+  183     ~111342403~
+  184     ~111342404~
+  185     ~111342405~
+  186     ~111342406~
+  187     ~111342407~
+  188     ~111342408~
+  189     ~111342409~
+  190     ~111342410~
+  191     ~111342411~
+  192     ~111342412~
+  193     ~111342413~
+  195     ~111342413~
+*** 4D REACH 11 - Jenkins Pond         Location  421
+  201     ~111342401~
+  202     ~111342402~
+  203     ~111342403~
+  204     ~111342404~
+  205     ~111342405~
+  206     ~111342406~
+  207     ~111342407~
+  208     ~111342408~
+  209     ~111342409~
+  210     ~111342410~
+  211     ~111342411~
+  212     ~111342412~
+  213     ~111342413~
+  215     ~111342413~
+  END PWAT-PARM4
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 4D REACH 1 - Little Lake Outlet               Location  421
+    1   19       921
+*** 4D REACH 2 - Lake Viscaya                     Location  421
+   21   39       921
+*** 4D REACH 3 - Lake Marie                       Location  421
+   41   59       921
+*** 4D REACH 4 - Lake Monroe                      Location  421
+   61   79       921
+*** 4D REACH 5 - Deforest Lake Outlet             Location  421
+   81   99       921
+*** 4D REACH 6 - Ravenna Park Ditches             Location  421
+  101  119       921
+*** 4D REACH 7 - Konomac Lk Resv                  Location  421
+  121  139       921
+*** 4D REACH 8 - SJR Big Whirl                    Location  421
+  141  159       921
+*** 4D REACH 9 - Deltona Sinks                    Location  421
+  161  179       921
+*** 4D REACH 10 - Lake Butler Chain               Location  421
+  181  199       921
+*** 4D REACH 11 - Jenkins Pond                    Location  421
+  201  219       921
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 4D REACH 1 - Little Lake Outlet    Location  421
+    1     ~111641301~
+    2     ~111641302~
+    3     ~111641303~
+    4     ~111641304~
+    5     ~111641305~
+    6     ~111641306~
+    7     ~111641307~
+    8     ~111641308~
+    9     ~111641309~
+   10     ~111641310~
+   11     ~111641311~
+   12     ~111641312~
+   13     ~111641313~
+   15     ~111641313~
+*** 4D REACH 2 - Lake Viscaya          Location  421
+   21     ~111642401~
+   22     ~111642402~
+   23     ~111642403~
+   24     ~111642404~
+   25     ~111642405~
+   26     ~111642406~
+   27     ~111642407~
+   28     ~111642408~
+   29     ~111642409~
+   30     ~111642410~
+   31     ~111642411~
+   32     ~111642412~
+   33     ~111642413~
+   35     ~111642413~
+*** 4D REACH 3 - Lake Marie            Location  421
+   41     ~111642401~
+   42     ~111642402~
+   43     ~111642403~
+   44     ~111642404~
+   45     ~111642405~
+   46     ~111642406~
+   47     ~111642407~
+   48     ~111642408~
+   49     ~111642409~
+   50     ~111642410~
+   51     ~111642411~
+   52     ~111642412~
+   53     ~111642413~
+   55     ~111642413~
+*** 4D REACH 4 - Lake Monroe           Location  421
+   61     ~111641301~
+   62     ~111641302~
+   63     ~111641303~
+   64     ~111641304~
+   65     ~111641305~
+   66     ~111641306~
+   67     ~111641307~
+   68     ~111641308~
+   69     ~111641309~
+   70     ~111641310~
+   71     ~111641311~
+   72     ~111641312~
+   73     ~111641313~
+   75     ~111641313~
+*** 4D REACH 5 - Deforest Lake Outlet  Location  421
+   81     ~111642401~
+   82     ~111642402~
+   83     ~111642403~
+   84     ~111642404~
+   85     ~111642405~
+   86     ~111642406~
+   87     ~111642407~
+   88     ~111642408~
+   89     ~111642409~
+   90     ~111642410~
+   91     ~111642411~
+   92     ~111642412~
+   93     ~111642413~
+   95     ~111642413~
+*** 4D REACH 6 - Ravenna Park Ditches  Location  421
+  101     ~111642601~
+  102     ~111642602~
+  103     ~111642603~
+  104     ~111642604~
+  105     ~111642605~
+  106     ~111642606~
+  107     ~111642607~
+  108     ~111642608~
+  109     ~111642609~
+  110     ~111642610~
+  111     ~111642611~
+  112     ~111642612~
+  113     ~111642613~
+  115     ~111642613~
+*** 4D REACH 7 - Konomac Lk Resv       Location  421
+  121     ~111641301~
+  122     ~111641302~
+  123     ~111641303~
+  124     ~111641304~
+  125     ~111641305~
+  126     ~111641306~
+  127     ~111641307~
+  128     ~111641308~
+  129     ~111641309~
+  130     ~111641310~
+  131     ~111641311~
+  132     ~111641312~
+  133     ~111641313~
+  135     ~111641313~
+*** 4D REACH 8 - SJR Big Whirl         Location  421
+  141     ~111641301~
+  142     ~111641302~
+  143     ~111641303~
+  144     ~111641304~
+  145     ~111641305~
+  146     ~111641306~
+  147     ~111641307~
+  148     ~111641308~
+  149     ~111641309~
+  150     ~111641310~
+  151     ~111641311~
+  152     ~111641312~
+  153     ~111641313~
+  155     ~111641313~
+*** 4D REACH 9 - Deltona Sinks         Location  421
+  161     ~111642401~
+  162     ~111642402~
+  163     ~111642403~
+  164     ~111642404~
+  165     ~111642405~
+  166     ~111642406~
+  167     ~111642407~
+  168     ~111642408~
+  169     ~111642409~
+  170     ~111642410~
+  171     ~111642411~
+  172     ~111642412~
+  173     ~111642413~
+  175     ~111642413~
+*** 4D REACH 10 - Lake Butler Chain    Location  421
+  181     ~111642401~
+  182     ~111642402~
+  183     ~111642403~
+  184     ~111642404~
+  185     ~111642405~
+  186     ~111642406~
+  187     ~111642407~
+  188     ~111642408~
+  189     ~111642409~
+  190     ~111642410~
+  191     ~111642411~
+  192     ~111642412~
+  193     ~111642413~
+  195     ~111642413~
+*** 4D REACH 11 - Jenkins Pond         Location  421
+  201     ~111642401~
+  202     ~111642402~
+  203     ~111642403~
+  204     ~111642404~
+  205     ~111642405~
+  206     ~111642406~
+  207     ~111642407~
+  208     ~111642408~
+  209     ~111642409~
+  210     ~111642410~
+  211     ~111642411~
+  212     ~111642412~
+  213     ~111642413~
+  215     ~111642413~
+  END PWAT-STATE1
+
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+    1  999    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+    1  999    6    6    5    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+    1  924    6    6    5    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***             Name             Unit-systems   Printer BinaryOut
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+    1  999                             1    1    0    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+    1  999    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+*** <ILS >      LSUR     SLSUR      NSUR     RETSC
+*** x -  x      (ft)                          (in)
+    1  999      150.     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+*** <ILS >    PETMAX    PETMIN
+*** x -  x   (deg F)   (deg F)
+    1  999       40.       35.
+  END IWAT-PARM3
+
+  IWAT-STATE1
+*** <ILS >  IWATER state variables (inches)
+*** x -  x      RETS      SURS
+    1  999        0.        0.
+  END IWAT-STATE1
+
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1  999    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1  999    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1  999    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 4D REACH 1
+    1     Little Lake Outlet      1         1    1   82    0    0   83    0
+*** 4D REACH 2
+    2     Lake Viscaya            2         1    1   82    0    0   83    0
+*** 4D REACH 3
+    3     Lake Marie              2         1    1   82    0    0   83    0
+*** 4D REACH 4
+    4     Lake Monroe             1         1    1   82    0    0   83    0
+*** 4D REACH 5
+    5     Deforest Lake Outlet    1         1    1   82    0    0   83    0
+*** 4D REACH 6
+    6     Ravenna Park Ditches    1         1    1   82    0    0   83    0
+*** 4D REACH 7
+    7     Konomac Lk Resv         1         1    1   82    0    0   83    0
+*** 4D REACH 8
+    8     SJR Big Whirl           1         1    1   82    0    0   83    0
+*** 4D REACH 9
+    9     Deltona Sinks           1         1    1   82    0    0   83    0
+*** 4D REACH 10
+   10     Lake Butler Chain       1         1    1   82    0    0   83    0
+*** 4D REACH 11
+   11     Jenkins Pond            2         1    1   82    0    0   83    0
+  END GEN-INFO
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 4D REACH 1 - Little Lake Outlet
+    1        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 2 - Lake Viscaya
+    2        0  1  0  0    4  5  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 3 - Lake Marie
+    3        0  1  0  0    4  5  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 4 - Lake Monroe
+    4        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 5 - Deforest Lake Outlet
+    5        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 6 - Ravenna Park Ditches
+    6        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 7 - Konomac Lk Resv
+    7        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 8 - SJR Big Whirl
+    8        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 9 - Deltona Sinks
+    9        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 10 - Lake Butler Chain
+   10        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 4D REACH 11 - Jenkins Pond
+   11        0  1  0  0    4  5  0  0  0       0  0  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 4D REACH 1 - Little Lake Outlet
+    1             1.      2.29     21.51      0.00       0.5      0.01
+*** 4D REACH 2 - Lake Viscaya
+    2             2.      1.14     54.27      0.00       0.5      0.01
+*** 4D REACH 3 - Lake Marie
+    3             3.      1.91     20.92      0.00       0.5      0.01
+*** 4D REACH 4 - Lake Monroe
+    4             4.     11.57      1.74      0.00       0.5      0.01
+*** 4D REACH 5 - Deforest Lake Outlet
+    5             5.      4.06     16.96      0.00       0.5      0.01
+*** 4D REACH 6 - Ravenna Park Ditches
+    6             6.      4.62     28.74      0.00       0.5      0.01
+*** 4D REACH 7 - Konomac Lk Resv
+    7             7.      2.53      0.01      0.00       0.5      0.01
+*** 4D REACH 8 - SJR Big Whirl
+    8             8.      5.65      0.00      0.00       0.5      0.01
+*** 4D REACH 9 - Deltona Sinks
+    9             9.      1.00      1.00      0.00       0.5      0.01
+*** 4D REACH 10 - Lake Butler Chain
+   10            10.      1.00      1.00      0.00       0.5      0.01
+*** 4D REACH 11 - Jenkins Pond
+   11            11.      4.97     33.23      0.00       0.5      0.01
+  END HYDR-PARM2
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 4D REACH 1 - Little Lake Outlet
+    1           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 2 - Lake Viscaya
+    2         169.00       4.0  5.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 3 - Lake Marie
+    3         105.00       4.0  5.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 4 - Lake Monroe
+    4           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 5 - Deforest Lake Outlet
+    5        1769.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 6 - Ravenna Park Ditches
+    6           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 7 - Konomac Lk Resv
+    7           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 8 - SJR Big Whirl
+    8           0.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 9 - Deltona Sinks
+    9           0.00       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 10 - Lake Butler Chain
+   10           0.00       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 4D REACH 11 - Jenkins Pond
+   11       12625.00       4.0  5.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+
+END RCHRES
+
+FTABLES
+
+  FTABLE      1
+ rows cols   (dummy/Unnamed wetlands)    ***
+    2    4
+     depth      area    volume  outflow1 ***
+        0.        0.        0.        0.
+      15.0      99.9    9999.9    9999.9
+  END FTABLE  1
+
+  FTABLE      2
+ rows cols   (Lake Gleason/Big)          ***
+    9    5
+     depth      area    volume  outflow1  outflow2 ***
+        0.      159.        0.        0.        0.
+       1.0      179.      169.        0.       1.0
+       5.0      258.     1043.       1.0       1.0
+       6.0      278.     1312.       1.5       1.0
+       7.0      299.     1600.       2.0       1.0
+       8.0      318.     1908.      11.6       1.0
+       9.0      338.     2236.      46.3       1.0
+      10.0      358.     2584.     192.0       1.0
+      12.0      358.     3300.     500.0       1.0
+  END FTABLE  2
+
+  FTABLE      3
+ rows cols   (Lake Chain)                ***
+    9    5
+     depth      area    volume  outflow1  outflow2 ***
+        0.      100.        0.        0.        0.
+       1.0      110.      105.        0.       1.0
+       5.0      150.      625.       1.0       1.0
+       6.0      160.      780.       1.5       1.0
+       7.0      170.      945.       2.0       1.0
+       8.0      180.     1120.      11.6       1.0
+       9.0      190.     1305.      26.3       1.0
+      10.0      200.     1500.      150.       1.0
+      12.0      200.     4500.      350.       1.0
+  END FTABLE  3
+
+  FTABLE      4
+ rows cols   (dummy/Lake Monroe)         ***
+    2    4
+     depth      area    volume  outflow1 ***
+        0.        0.        0.        0.
+      15.0      99.9    9999.9    9999.9
+  END FTABLE  4
+
+  FTABLE      5
+ rows cols   (Crystal Lake Chain)        ***
+   15    4
+     depth      area    volume  outflow1 ***
+        0.      10.0       0.0        0.
+        1.      11.2      10.6        0.
+        2.      66.3      22.3        0.
+        3.     144.9      92.9        0.
+        4.     161.7     246.2        0.
+        5.     178.4     416.2        0.
+        6.     195.2     603.0        0.
+        7.     242.2     821.7        0.
+        8.     308.0    1096.8        0.
+        9.     336.1    1418.8        0.
+       10.     364.2    1769.0        0.
+       12.     410.7    2544.0       27.
+       14.     459.3    3414.0       52.
+       16.     537.7    4411.0       70.
+       18.     537.7    8411.0      500.
+  END FTABLE  5
+
+  FTABLE      6
+ rows cols   (Lockhart-Smith Canal)      ***
+   12    4
+     depth      area    volume  outflow1 ***
+        0.        0.        0.        0.
+       0.5      11.5       4.6       3.4
+        1.      16.2      11.5      12.7
+        2.      25.7      32.5      52.6
+        3.      35.2      62.9     128.4
+        4.      44.7     102.9     248.4
+        5.      54.1     152.3     420.0
+        6.     178.7     268.7     720.1
+        7.     303.2     509.6    1172.6
+        8.     427.7     875.1    1834.3
+        9.     552.2    1365.0    2752.3
+       10.     676.8    1979.5    3968.8
+  END FTABLE  6
+
+  FTABLE      7
+ rows cols  (dummy/FPL)   ***
+    2    4
+     depth      area    volume  outflow1 ***
+        0.        0.        0.        0.
+      15.0      99.9    9999.9    9999.9
+  END FTABLE  7
+
+  FTABLE      8
+ rows cols  (dummy/SJR below Lake Monroe)   ***
+    2    4
+     depth      area    volume  outflow1 ***
+        0.        0.        0.        0.
+      15.0      99.9    9999.9    9999.9
+  END FTABLE  8
+
+  FTABLE      9
+ rows cols   (Dummy)    ***
+    2    4
+     depth      area    volume  outflow1 ***
+        0.        0.        0.        0.
+      15.0      99.9    9999.9    9999.9
+  END FTABLE  9
+
+  FTABLE     10
+ rows cols   (Dummy)    ***
+    2    4
+     depth      area    volume  outflow1 ***
+        0.        0.        0.        0.
+      15.0      99.9    9999.9    9999.9
+  END FTABLE 10
+
+  FTABLE     11
+ rows cols   (Lake Chain)                ***
+    9    5
+     depth      area    volume  outflow1  outflow2 ***
+        0.     2525.        0.        0.        0.
+       1.0     2525.     2525.        0.       1.0
+       5.0     2525.    12625.        0.       1.0
+       6.0     2525.    15150.       50.       1.0
+       7.0     2525.    17675.      100.       1.0
+       8.0     2525.    20200.      300.       1.0
+       9.0     2525.    22725.      550.       1.0
+      10.0     2525.    25250.     1950.       1.0
+      12.0     2525.    30300.     5950.       1.0
+  END FTABLE 11
+
+  FTABLE    921
+ ROWS COLS            ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+3.00000000       0.0
+      12.0 1.5088E-6
+      24.0 1.0436E-4
+      36.0 .00100000
+  END FTABLE921
+
+END FTABLES
+
+
+COPY
+  TIMESERIES
+  Copy-opn***
+*** x -  x  NPT  NMN
+   99         0    1
+  END TIMESERIES
+END COPY
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - Little Lake Outlet
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - Lake Viscaya
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - Lake Marie
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Lake Monroe
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - Deforest Lake Outlet
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - Ravenna Park Ditches
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+*** Reach 7 - Konomac Lk Resv
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND 121 139 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND 121 139 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES   7     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND 121 139 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND 121 139 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES   7     EXTNL  POTEV
+
+*** Reach 8 - SJR Big Whirl
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND 141 159 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND 141 159 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES   8     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND 141 159 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND 141 159 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES   8     EXTNL  POTEV
+
+*** Reach 9 - Deltona Sinks
+*** Rain station Deland
+WDM1   802 HPCP     ENGL                   PERLND 161 179 EXTNL  PREC
+WDM1   802 HPCP     ENGL                   IMPLND 161 179 EXTNL  PREC
+WDM1   802 HPCP     ENGL                   RCHRES   9     EXTNL  PREC
+*** Evap station Deland
+WDM1   806 HPET     ENGL        1.0000     PERLND 161 179 EXTNL  PETINP
+WDM1   806 HPET     ENGL        1.0000     IMPLND 161 179 EXTNL  PETINP
+WDM1   806 HPET     ENGL        1.0000     RCHRES   9     EXTNL  POTEV
+
+*** Reach 10 - Lake Butler Chain
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND 181 199 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND 181 199 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES  10     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND 181 199 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND 181 199 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES  10     EXTNL  POTEV
+
+*** Reach 11 - Jenkins Pond
+*** Rain station Sanford
+WDM1  4102 HPCP     ENGL                   PERLND 201 219 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   IMPLND 201 219 EXTNL  PREC
+WDM1  4102 HPCP     ENGL                   RCHRES  11     EXTNL  PREC
+*** Evap station Sanford
+WDM1  4106 HPET     ENGL        1.0000     PERLND 201 219 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     IMPLND 201 219 EXTNL  PETINP
+WDM1  4106 HPET     ENGL        1.0000     RCHRES  11     EXTNL  POTEV
+
+END EXT SOURCES
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 4D REACH 1
+PERLND   1                       142.3     RCHRES   1      1
+PERLND   2                        23.4     RCHRES   1      1
+PERLND   3                         0.0     RCHRES   1      1
+PERLND   4                         0.0     RCHRES   1      1
+PERLND   5                         0.0     RCHRES   1      1
+PERLND   6                         0.0     RCHRES   1      1
+PERLND   7                       245.8     RCHRES   1      1
+PERLND   8                        26.5     RCHRES   1      1
+PERLND   9                         0.0     RCHRES   1      1
+PERLND  10                       273.3     RCHRES   1      1
+PERLND  11                        67.4     RCHRES   1      1
+PERLND  12***                     19.4     RCHRES   1      1
+PERLND  13                      1040.0     RCHRES   1      1
+PERLND  15                       435.8     RCHRES   1      1
+IMPLND   1                         7.5     RCHRES   1      2
+IMPLND   2                         4.1     RCHRES   1      2
+IMPLND   3                         0.0     RCHRES   1      2
+IMPLND   4                         0.0     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                        59.6     PERLND  15     11
+PERLND   2                         9.8     PERLND  15     11
+PERLND   3                         0.0     PERLND  15     11
+PERLND   4                         0.0     PERLND  15     11
+PERLND   5                         0.0     PERLND  15     11
+PERLND   6                         0.0     PERLND  15     11
+PERLND   7                       103.0     PERLND  15     11
+PERLND   8                        11.1     PERLND  15     11
+PERLND   9                         0.0     PERLND  15     11
+PERLND  10                       114.5     PERLND  15     11
+PERLND  11                        28.3     PERLND  15     11
+PERLND  12                         5.4     PERLND  15     11
+IMPLND   1                         3.1     PERLND  15     12
+IMPLND   2                         1.7     PERLND  15     12
+IMPLND   3                         0.0     PERLND  15     12
+IMPLND   4                         0.0     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                        59.6     RCHRES   1      9
+PERLND   2                         9.8     RCHRES   1      9
+PERLND   3                         0.0     RCHRES   1      9
+PERLND   4                         0.0     RCHRES   1      9
+PERLND   5                         0.0     RCHRES   1      9
+PERLND   6                         0.0     RCHRES   1      9
+PERLND   7                       103.0     RCHRES   1      9
+PERLND   8                        11.1     RCHRES   1      9
+PERLND   9                         0.0     RCHRES   1      9
+PERLND  10                       114.5     RCHRES   1      9
+PERLND  11                        28.3     RCHRES   1      9
+PERLND  12                         5.4     RCHRES   1      9
+
+*** 4D REACH 2
+PERLND  21                        70.9     RCHRES   2      1
+PERLND  22                       754.0     RCHRES   2      1
+PERLND  23                         7.3     RCHRES   2      1
+PERLND  24                        19.6     RCHRES   2      1
+PERLND  25                         0.7     RCHRES   2      1
+PERLND  26                         5.2     RCHRES   2      1
+PERLND  27                         1.4     RCHRES   2      1
+PERLND  28                         5.0     RCHRES   2      1
+PERLND  29                         2.8     RCHRES   2      1
+PERLND  30                         4.0     RCHRES   2      1
+PERLND  31                        32.9     RCHRES   2      1
+PERLND  32***                     42.2     RCHRES   2      1
+PERLND  33                        20.3     RCHRES   2      1
+PERLND  35                        19.8     RCHRES   2      1
+IMPLND  21                         3.7     RCHRES   2      2
+IMPLND  22                       133.1     RCHRES   2      2
+IMPLND  23                         3.9     RCHRES   2      2
+IMPLND  24                        19.6     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                        68.9     PERLND  35     21
+PERLND  22                       733.0     PERLND  35     21
+PERLND  23                         7.1     PERLND  35     21
+PERLND  24                        19.0     PERLND  35     21
+PERLND  25                         0.7     PERLND  35     21
+PERLND  26                         5.0     PERLND  35     21
+PERLND  27                         1.4     PERLND  35     21
+PERLND  28                         4.8     PERLND  35     21
+PERLND  29                         2.8     PERLND  35     21
+PERLND  30                         3.9     PERLND  35     21
+PERLND  31                        31.9     PERLND  35     21
+PERLND  32                        87.6     PERLND  35     21
+IMPLND  21                         3.6     PERLND  35     22
+IMPLND  22                       129.3     PERLND  35     22
+IMPLND  23                         3.8     PERLND  35     22
+IMPLND  24                        19.0     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                        68.9     RCHRES   2      9
+PERLND  22                       733.0     RCHRES   2      9
+PERLND  23                         7.1     RCHRES   2      9
+PERLND  24                        19.0     RCHRES   2      9
+PERLND  25                         0.7     RCHRES   2      9
+PERLND  26                         5.0     RCHRES   2      9
+PERLND  27                         1.4     RCHRES   2      9
+PERLND  28                         4.8     RCHRES   2      9
+PERLND  29                         2.8     RCHRES   2      9
+PERLND  30                         3.9     RCHRES   2      9
+PERLND  31                        31.9     RCHRES   2      9
+PERLND  32                        87.6     RCHRES   2      9
+
+*** 4D REACH 3
+PERLND  41                       113.5     RCHRES   3      1
+PERLND  42                       669.3     RCHRES   3      1
+PERLND  43                        40.9     RCHRES   3      1
+PERLND  44                        81.1     RCHRES   3      1
+PERLND  45                         0.0     RCHRES   3      1
+PERLND  46                        45.5     RCHRES   3      1
+PERLND  47                         0.0     RCHRES   3      1
+PERLND  48                        53.7     RCHRES   3      1
+PERLND  49                         0.0     RCHRES   3      1
+PERLND  50                        31.5     RCHRES   3      1
+PERLND  51                       188.5     RCHRES   3      1
+PERLND  52***                    101.0     RCHRES   3      1
+PERLND  53                        66.6     RCHRES   3      1
+PERLND  55                        38.6     RCHRES   3      1
+IMPLND  41                         6.0     RCHRES   3      2
+IMPLND  42                       118.1     RCHRES   3      2
+IMPLND  43                        22.0     RCHRES   3      2
+IMPLND  44                        81.1     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                        65.7     PERLND  55     31
+PERLND  42                       387.7     PERLND  55     31
+PERLND  43                        23.7     PERLND  55     31
+PERLND  44                        47.0     PERLND  55     31
+PERLND  45                         0.0     PERLND  55     31
+PERLND  46                        26.3     PERLND  55     31
+PERLND  47                         0.0     PERLND  55     31
+PERLND  48                        31.1     PERLND  55     31
+PERLND  49                         0.0     PERLND  55     31
+PERLND  50                        18.2     PERLND  55     31
+PERLND  51                       109.2     PERLND  55     31
+PERLND  52                        49.1     PERLND  55     31
+IMPLND  41                         3.5     PERLND  55     32
+IMPLND  42                        68.4     PERLND  55     32
+IMPLND  43                        12.7     PERLND  55     32
+IMPLND  44                        47.0     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                        65.7     RCHRES   3      9
+PERLND  42                       387.7     RCHRES   3      9
+PERLND  43                        23.7     RCHRES   3      9
+PERLND  44                        47.0     RCHRES   3      9
+PERLND  45                         0.0     RCHRES   3      9
+PERLND  46                        26.3     RCHRES   3      9
+PERLND  47                         0.0     RCHRES   3      9
+PERLND  48                        31.1     RCHRES   3      9
+PERLND  49                         0.0     RCHRES   3      9
+PERLND  50                        18.2     RCHRES   3      9
+PERLND  51                       109.2     RCHRES   3      9
+PERLND  52                        49.1     RCHRES   3      9
+
+*** 4D REACH 4
+PERLND  61                      2747.5     RCHRES   4      1
+PERLND  62                      2789.2     RCHRES   4      1
+PERLND  63                       680.8     RCHRES   4      1
+PERLND  64                      1001.9     RCHRES   4      1
+PERLND  65                        45.9     RCHRES   4      1
+PERLND  66                       205.2     RCHRES   4      1
+PERLND  67                       480.2     RCHRES   4      1
+PERLND  68                       470.4     RCHRES   4      1
+PERLND  69                        13.8     RCHRES   4      1
+PERLND  70                       217.1     RCHRES   4      1
+PERLND  71                       987.2     RCHRES   4      1
+PERLND  72***                    720.5     RCHRES   4      1
+PERLND  73                      6046.7     RCHRES   4      1
+PERLND  75                      2336.7     RCHRES   4      1
+IMPLND  61                       144.6     RCHRES   4      2
+IMPLND  62                       492.2     RCHRES   4      2
+IMPLND  63                       366.6     RCHRES   4      2
+IMPLND  64                      1001.9     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                      1061.8     PERLND  75     41
+PERLND  62                      1077.9     PERLND  75     41
+PERLND  63                       263.1     PERLND  75     41
+PERLND  64                       387.2     PERLND  75     41
+PERLND  65                        17.7     PERLND  75     41
+PERLND  66                        79.3     PERLND  75     41
+PERLND  67                       185.6     PERLND  75     41
+PERLND  68                       181.8     PERLND  75     41
+PERLND  69                         5.3     PERLND  75     41
+PERLND  70                        83.9     PERLND  75     41
+PERLND  71                       381.5     PERLND  75     41
+PERLND  72                       321.5     PERLND  75     41
+IMPLND  61                        55.9     PERLND  75     42
+IMPLND  62                       190.2     PERLND  75     42
+IMPLND  63                       141.7     PERLND  75     42
+IMPLND  64                       387.2     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                      1061.8     RCHRES   4      9
+PERLND  62                      1077.9     RCHRES   4      9
+PERLND  63                       263.1     RCHRES   4      9
+PERLND  64                       387.2     RCHRES   4      9
+PERLND  65                        17.7     RCHRES   4      9
+PERLND  66                        79.3     RCHRES   4      9
+PERLND  67                       185.6     RCHRES   4      9
+PERLND  68                       181.8     RCHRES   4      9
+PERLND  69                         5.3     RCHRES   4      9
+PERLND  70                        83.9     RCHRES   4      9
+PERLND  71                       381.5     RCHRES   4      9
+PERLND  72                       321.5     RCHRES   4      9
+
+*** 4D REACH 5
+PERLND  81                       134.9     RCHRES   5      1
+PERLND  82                       503.1     RCHRES   5      1
+PERLND  83                       120.2     RCHRES   5      1
+PERLND  84                        55.5     RCHRES   5      1
+PERLND  85                         2.1     RCHRES   5      1
+PERLND  86                        69.2     RCHRES   5      1
+PERLND  87                        15.3     RCHRES   5      1
+PERLND  88                       187.8     RCHRES   5      1
+PERLND  89                        65.4     RCHRES   5      1
+PERLND  90                       113.7     RCHRES   5      1
+PERLND  91                       202.2     RCHRES   5      1
+PERLND  92***                    130.1     RCHRES   5      1
+PERLND  93                       148.0     RCHRES   5      1
+PERLND  95                       110.2     RCHRES   5      1
+IMPLND  81                         7.1     RCHRES   5      2
+IMPLND  82                        88.8     RCHRES   5      2
+IMPLND  83                        64.7     RCHRES   5      2
+IMPLND  84                        55.5     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                       100.4     PERLND  95     51
+PERLND  82                       374.5     PERLND  95     51
+PERLND  83                        89.5     PERLND  95     51
+PERLND  84                        41.3     PERLND  95     51
+PERLND  85                         1.6     PERLND  95     51
+PERLND  86                        51.5     PERLND  95     51
+PERLND  87                        11.4     PERLND  95     51
+PERLND  88                       139.8     PERLND  95     51
+PERLND  89                        48.7     PERLND  95     51
+PERLND  90                        84.6     PERLND  95     51
+PERLND  91                       150.6     PERLND  95     51
+PERLND  92                       153.8     PERLND  95     51
+IMPLND  81                         5.3     PERLND  95     52
+IMPLND  82                        66.1     PERLND  95     52
+IMPLND  83                        48.2     PERLND  95     52
+IMPLND  84                        41.3     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                       100.4     RCHRES   5      9
+PERLND  82                       374.5     RCHRES   5      9
+PERLND  83                        89.5     RCHRES   5      9
+PERLND  84                        41.3     RCHRES   5      9
+PERLND  85                         1.6     RCHRES   5      9
+PERLND  86                        51.5     RCHRES   5      9
+PERLND  87                        11.4     RCHRES   5      9
+PERLND  88                       139.8     RCHRES   5      9
+PERLND  89                        48.7     RCHRES   5      9
+PERLND  90                        84.6     RCHRES   5      9
+PERLND  91                       150.6     RCHRES   5      9
+PERLND  92                       153.8     RCHRES   5      9
+
+*** 4D REACH 6
+PERLND 101                       341.5     RCHRES   6      1
+PERLND 102                       409.6     RCHRES   6      1
+PERLND 103                       249.1     RCHRES   6      1
+PERLND 104                       230.1     RCHRES   6      1
+PERLND 105                         0.0     RCHRES   6      1
+PERLND 106                       148.4     RCHRES   6      1
+PERLND 107                       111.0     RCHRES   6      1
+PERLND 108                        98.2     RCHRES   6      1
+PERLND 109                        87.9     RCHRES   6      1
+PERLND 110                       165.1     RCHRES   6      1
+PERLND 111                       409.3     RCHRES   6      1
+PERLND 112***                    204.6     RCHRES   6      1
+PERLND 113                       405.9     RCHRES   6      1
+PERLND 115                       337.2     RCHRES   6      1
+IMPLND 101                        18.0     RCHRES   6      2
+IMPLND 102                        72.3     RCHRES   6      2
+IMPLND 103                       134.1     RCHRES   6      2
+IMPLND 104                       230.1     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                       283.7     PERLND 115     61
+PERLND 102                       340.2     PERLND 115     61
+PERLND 103                       207.0     PERLND 115     61
+PERLND 104                       191.1     PERLND 115     61
+PERLND 105                         0.0     PERLND 115     61
+PERLND 106                       123.3     PERLND 115     61
+PERLND 107                        92.2     PERLND 115     61
+PERLND 108                        81.6     PERLND 115     61
+PERLND 109                        73.0     PERLND 115     61
+PERLND 110                       137.1     PERLND 115     61
+PERLND 111                       340.0     PERLND 115     61
+PERLND 112                        80.2     PERLND 115     61
+IMPLND 101                        14.9     PERLND 115     62
+IMPLND 102                        60.0     PERLND 115     62
+IMPLND 103                       111.4     PERLND 115     62
+IMPLND 104                       191.1     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                       283.7     RCHRES   6      9
+PERLND 102                       340.2     RCHRES   6      9
+PERLND 103                       207.0     RCHRES   6      9
+PERLND 104                       191.1     RCHRES   6      9
+PERLND 105                         0.0     RCHRES   6      9
+PERLND 106                       123.3     RCHRES   6      9
+PERLND 107                        92.2     RCHRES   6      9
+PERLND 108                        81.6     RCHRES   6      9
+PERLND 109                        73.0     RCHRES   6      9
+PERLND 110                       137.1     RCHRES   6      9
+PERLND 111                       340.0     RCHRES   6      9
+PERLND 112                        80.2     RCHRES   6      9
+
+*** 4D REACH 7
+PERLND 121                        26.2     RCHRES   7      1
+PERLND 122                        56.4     RCHRES   7      1
+PERLND 123                         1.1     RCHRES   7      1
+PERLND 124                        42.9     RCHRES   7      1
+PERLND 125                        40.1     RCHRES   7      1
+PERLND 126                         8.8     RCHRES   7      1
+PERLND 127                         3.5     RCHRES   7      1
+PERLND 128                         4.0     RCHRES   7      1
+PERLND 129                         0.0     RCHRES   7      1
+PERLND 130                        11.1     RCHRES   7      1
+PERLND 131                         3.9     RCHRES   7      1
+PERLND 132***                    576.4     RCHRES   7      1
+PERLND 133                        54.5     RCHRES   7      1
+PERLND 135                        44.4     RCHRES   7      1
+IMPLND 121                         1.4     RCHRES   7      2
+IMPLND 122                        10.0     RCHRES   7      2
+IMPLND 123                         0.6     RCHRES   7      2
+IMPLND 124                        42.9     RCHRES   7      2
+      *** Surface runoff to non-reach wetland
+PERLND 121                        21.4     PERLND 135     71
+PERLND 122                        46.0     PERLND 135     71
+PERLND 123                         0.9     PERLND 135     71
+PERLND 124                        34.9     PERLND 135     71
+PERLND 125                        32.6     PERLND 135     71
+PERLND 126                         7.2     PERLND 135     71
+PERLND 127                         2.8     PERLND 135     71
+PERLND 128                         3.2     PERLND 135     71
+PERLND 129                         0.0     PERLND 135     71
+PERLND 130                         9.0     PERLND 135     71
+PERLND 131                         3.2     PERLND 135     71
+PERLND 132                       496.1     PERLND 135     71
+IMPLND 121                         1.1     PERLND 135     72
+IMPLND 122                         8.1     PERLND 135     72
+IMPLND 123                         0.5     PERLND 135     72
+IMPLND 124                        34.9     PERLND 135     72
+      *** Baseflow to reach
+PERLND 121                        21.4     RCHRES   7      9
+PERLND 122                        46.0     RCHRES   7      9
+PERLND 123                         0.9     RCHRES   7      9
+PERLND 124                        34.9     RCHRES   7      9
+PERLND 125                        32.6     RCHRES   7      9
+PERLND 126                         7.2     RCHRES   7      9
+PERLND 127                         2.8     RCHRES   7      9
+PERLND 128                         3.2     RCHRES   7      9
+PERLND 129                         0.0     RCHRES   7      9
+PERLND 130                         9.0     RCHRES   7      9
+PERLND 131                         3.2     RCHRES   7      9
+PERLND 132                       496.1     RCHRES   7      9
+
+*** 4D REACH 8
+PERLND 141                       865.0     RCHRES   8      1
+PERLND 142                       191.4     RCHRES   8      1
+PERLND 143                        77.2     RCHRES   8      1
+PERLND 144                        88.2     RCHRES   8      1
+PERLND 145                         0.0     RCHRES   8      1
+PERLND 146                        12.0     RCHRES   8      1
+PERLND 147                       279.3     RCHRES   8      1
+PERLND 148                        93.8     RCHRES   8      1
+PERLND 149                         9.8     RCHRES   8      1
+PERLND 150                       107.4     RCHRES   8      1
+PERLND 151                       660.2     RCHRES   8      1
+PERLND 152***                    147.2     RCHRES   8      1
+PERLND 153                      2687.0     RCHRES   8      1
+PERLND 155                       374.6     RCHRES   8      1
+IMPLND 141                        45.5     RCHRES   8      2
+IMPLND 142                        33.8     RCHRES   8      2
+IMPLND 143                        41.6     RCHRES   8      2
+IMPLND 144                        88.2     RCHRES   8      2
+      *** Surface runoff to non-reach wetland
+PERLND 141                       120.6     PERLND 155     81
+PERLND 142                        26.7     PERLND 155     81
+PERLND 143                        10.8     PERLND 155     81
+PERLND 144                        12.3     PERLND 155     81
+PERLND 145                         0.0     PERLND 155     81
+PERLND 146                         1.7     PERLND 155     81
+PERLND 147                        38.9     PERLND 155     81
+PERLND 148                        13.1     PERLND 155     81
+PERLND 149                         1.4     PERLND 155     81
+PERLND 150                        15.0     PERLND 155     81
+PERLND 151                        92.0     PERLND 155     81
+PERLND 152                        16.1     PERLND 155     81
+IMPLND 141                         6.3     PERLND 155     82
+IMPLND 142                         4.7     PERLND 155     82
+IMPLND 143                         5.8     PERLND 155     82
+IMPLND 144                        12.3     PERLND 155     82
+      *** Baseflow to reach
+PERLND 141                       120.6     RCHRES   8      9
+PERLND 142                        26.7     RCHRES   8      9
+PERLND 143                        10.8     RCHRES   8      9
+PERLND 144                        12.3     RCHRES   8      9
+PERLND 145                         0.0     RCHRES   8      9
+PERLND 146                         1.7     RCHRES   8      9
+PERLND 147                        38.9     RCHRES   8      9
+PERLND 148                        13.1     RCHRES   8      9
+PERLND 149                         1.4     RCHRES   8      9
+PERLND 150                        15.0     RCHRES   8      9
+PERLND 151                        92.0     RCHRES   8      9
+PERLND 152                        16.1     RCHRES   8      9
+
+*** 4D REACH 9
+PERLND 161                       818.7     RCHRES   9      1
+PERLND 162                      1635.8     RCHRES   9      1
+PERLND 163                        67.0     RCHRES   9      1
+PERLND 164                       159.2     RCHRES   9      1
+PERLND 165                        30.4     RCHRES   9      1
+PERLND 166                       225.7     RCHRES   9      1
+PERLND 167                        61.4     RCHRES   9      1
+PERLND 168                       216.6     RCHRES   9      1
+PERLND 169                       124.0     RCHRES   9      1
+PERLND 170                       173.3     RCHRES   9      1
+PERLND 171                      1434.3     RCHRES   9      1
+PERLND 172***                     27.9     RCHRES   9      1
+PERLND 173                        14.9     RCHRES   9      1
+PERLND 175                         1.4     RCHRES   9      1
+IMPLND 161                        43.1     RCHRES   9      2
+IMPLND 162                       288.7     RCHRES   9      2
+IMPLND 163                        36.1     RCHRES   9      2
+IMPLND 164                       159.2     RCHRES   9      2
+      *** Surface runoff to non-reach wetland
+PERLND 161                        74.8     PERLND 175     91
+PERLND 162                       149.5     PERLND 175     91
+PERLND 163                         6.1     PERLND 175     91
+PERLND 164                        14.6     PERLND 175     91
+PERLND 165                         2.8     PERLND 175     91
+PERLND 166                        20.6     PERLND 175     91
+PERLND 167                         5.6     PERLND 175     91
+PERLND 168                        19.8     PERLND 175     91
+PERLND 169                        11.3     PERLND 175     91
+PERLND 170                        15.8     PERLND 175     91
+PERLND 171                       131.1     PERLND 175     91
+PERLND 172                         2.1     PERLND 175     91
+IMPLND 161                         3.9     PERLND 175     92
+IMPLND 162                        26.4     PERLND 175     92
+IMPLND 163                         3.3     PERLND 175     92
+IMPLND 164                        14.6     PERLND 175     92
+      *** Baseflow to reach
+PERLND 161                        74.8     RCHRES   9      9
+PERLND 162                       149.5     RCHRES   9      9
+PERLND 163                         6.1     RCHRES   9      9
+PERLND 164                        14.6     RCHRES   9      9
+PERLND 165                         2.8     RCHRES   9      9
+PERLND 166                        20.6     RCHRES   9      9
+PERLND 167                         5.6     RCHRES   9      9
+PERLND 168                        19.8     RCHRES   9      9
+PERLND 169                        11.3     RCHRES   9      9
+PERLND 170                        15.8     RCHRES   9      9
+PERLND 171                       131.1     RCHRES   9      9
+PERLND 172                         2.1     RCHRES   9      9
+
+*** 4D REACH 10
+PERLND 181                      1147.4     RCHRES  10      1
+PERLND 182                      2300.4     RCHRES  10      1
+PERLND 183                         5.2     RCHRES  10      1
+PERLND 184                        60.5     RCHRES  10      1
+PERLND 185                        11.2     RCHRES  10      1
+PERLND 186                        83.3     RCHRES  10      1
+PERLND 187                        22.6     RCHRES  10      1
+PERLND 188                        79.9     RCHRES  10      1
+PERLND 189                        45.7     RCHRES  10      1
+PERLND 190                        64.0     RCHRES  10      1
+PERLND 191                       529.1     RCHRES  10      1
+PERLND 192***                     99.4     RCHRES  10      1
+PERLND 193                       527.0     RCHRES  10      1
+PERLND 195                       979.6     RCHRES  10      1
+IMPLND 181                        60.4     RCHRES  10      2
+IMPLND 182                       405.9     RCHRES  10      2
+IMPLND 183                         2.8     RCHRES  10      2
+IMPLND 184                        60.5     RCHRES  10      2
+      *** Surface runoff to non-reach wetland
+PERLND 181                      2133.1     PERLND 195    101
+PERLND 182                      4276.5     PERLND 195    101
+PERLND 183                         9.6     PERLND 195    101
+PERLND 184                       112.6     PERLND 195    101
+PERLND 185                        20.8     PERLND 195    101
+PERLND 186                       154.8     PERLND 195    101
+PERLND 187                        42.1     PERLND 195    101
+PERLND 188                       148.5     PERLND 195    101
+PERLND 189                        85.0     PERLND 195    101
+PERLND 190                       118.9     PERLND 195    101
+PERLND 191                       983.6     PERLND 195    101
+PERLND 192                      1525.5     PERLND 195    101
+IMPLND 181                       112.3     PERLND 195    102
+IMPLND 182                       754.7     PERLND 195    102
+IMPLND 183                         5.2     PERLND 195    102
+IMPLND 184                       112.6     PERLND 195    102
+      *** Baseflow to reach
+PERLND 181                      2133.1     RCHRES  10      9
+PERLND 182                      4276.5     RCHRES  10      9
+PERLND 183                         9.6     RCHRES  10      9
+PERLND 184                       112.6     RCHRES  10      9
+PERLND 185                        20.8     RCHRES  10      9
+PERLND 186                       154.8     RCHRES  10      9
+PERLND 187                        42.1     RCHRES  10      9
+PERLND 188                       148.5     RCHRES  10      9
+PERLND 189                        85.0     RCHRES  10      9
+PERLND 190                       118.9     RCHRES  10      9
+PERLND 191                       983.6     RCHRES  10      9
+PERLND 192                      1525.5     RCHRES  10      9
+
+*** 4D REACH 11
+PERLND 201                       220.4     RCHRES  11      1
+PERLND 202                      1016.9     RCHRES  11      1
+PERLND 203                       287.1     RCHRES  11      1
+PERLND 204                        17.6     RCHRES  11      1
+PERLND 205                         0.9     RCHRES  11      1
+PERLND 206                         6.9     RCHRES  11      1
+PERLND 207                         1.9     RCHRES  11      1
+PERLND 208                         6.6     RCHRES  11      1
+PERLND 209                         3.8     RCHRES  11      1
+PERLND 210                         5.3     RCHRES  11      1
+PERLND 211                        43.7     RCHRES  11      1
+PERLND 212***                    244.6     RCHRES  11      1
+PERLND 213                        53.7     RCHRES  11      1
+PERLND 215                         7.9     RCHRES  11      1
+IMPLND 201                        11.6     RCHRES  11      2
+IMPLND 202                       179.4     RCHRES  11      2
+IMPLND 203                       154.6     RCHRES  11      2
+IMPLND 204                        17.6     RCHRES  11      2
+      *** Surface runoff to non-reach wetland
+PERLND 201                        32.6     PERLND 215    111
+PERLND 202                       150.2     PERLND 215    111
+PERLND 203                        42.4     PERLND 215    111
+PERLND 204                         2.6     PERLND 215    111
+PERLND 205                         0.1     PERLND 215    111
+PERLND 206                         1.0     PERLND 215    111
+PERLND 207                         0.3     PERLND 215    111
+PERLND 208                         1.0     PERLND 215    111
+PERLND 209                         0.6     PERLND 215    111
+PERLND 210                         0.8     PERLND 215    111
+PERLND 211                         6.5     PERLND 215    111
+PERLND 212                        58.3     PERLND 215    111
+IMPLND 201                         1.7     PERLND 215    112
+IMPLND 202                        26.5     PERLND 215    112
+IMPLND 203                        22.8     PERLND 215    112
+IMPLND 204                         2.6     PERLND 215    112
+      *** Baseflow to reach
+PERLND 201                        32.6     RCHRES  11      9
+PERLND 202                       150.2     RCHRES  11      9
+PERLND 203                        42.4     RCHRES  11      9
+PERLND 204                         2.6     RCHRES  11      9
+PERLND 205                         0.1     RCHRES  11      9
+PERLND 206                         1.0     RCHRES  11      9
+PERLND 207                         0.3     RCHRES  11      9
+PERLND 208                         1.0     RCHRES  11      9
+PERLND 209                         0.6     RCHRES  11      9
+PERLND 210                         0.8     RCHRES  11      9
+PERLND 211                         6.5     RCHRES  11      9
+PERLND 212                        58.3     RCHRES  11      9
+
+*** 4D-2 Lake Viscaya TO 4D-11 Jenkins Pond
+RCHRES   2                                 RCHRES  11      4
+*** 4D-5 Deforest Lake Outlet TO 4D-6 Ravenna Park Ditches
+RCHRES   5                                 RCHRES   6      3
+END SCHEMATIC
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+
+END EXT TARGETS
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 4D REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002294     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002294     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002294     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 4D REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.050605     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.050605     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.050605     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 4D REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.025911     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.025911     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.025911     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 4D REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000428     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000428     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000428     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 4D REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.009074     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.009074     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.009074     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 4D REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002966     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002966     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002966     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+*** 4D REACH 7
+  MASS-LINK       71
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.022547     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.022547     PERLND         EXTNL  SURLI
+  END MASS-LINK   71
+
+  MASS-LINK       72
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.022547     PERLND         EXTNL  SURLI
+  END MASS-LINK   72
+*** 4D REACH 8
+  MASS-LINK       81
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002670     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002670     PERLND         EXTNL  SURLI
+  END MASS-LINK   81
+
+  MASS-LINK       82
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002670     PERLND         EXTNL  SURLI
+  END MASS-LINK   82
+*** 4D REACH 9
+  MASS-LINK       91
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.732133     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.732133     PERLND         EXTNL  SURLI
+  END MASS-LINK   91
+
+  MASS-LINK       92
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.732133     PERLND         EXTNL  SURLI
+  END MASS-LINK   92
+*** 4D REACH 10
+  MASS-LINK      101
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001021     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001021     PERLND         EXTNL  SURLI
+  END MASS-LINK  101
+
+  MASS-LINK      102
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001021     PERLND         EXTNL  SURLI
+  END MASS-LINK  102
+*** 4D REACH 11
+  MASS-LINK      111
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.126170     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.126170     PERLND         EXTNL  SURLI
+  END MASS-LINK  111
+
+  MASS-LINK      112
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.126170     PERLND         EXTNL  SURLI
+  END MASS-LINK  112
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+  UVQUAN rca7   RCHRES   7 SAREA            3 2.296E-05
+  UVQUAN rca8   RCHRES   8 SAREA            3 2.296E-05
+  UVQUAN rca9   RCHRES   9 SAREA            3 2.296E-05
+  UVQUAN rca10  RCHRES  10 SAREA            3 2.296E-05
+  UVQUAN rca11  RCHRES  11 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01
+  UVQUAN wla033 GLOBAL     WORKSP 02
+  UVQUAN wla053 GLOBAL     WORKSP 03
+  UVQUAN wla073 GLOBAL     WORKSP 04
+  UVQUAN wla093 GLOBAL     WORKSP 05
+  UVQUAN wla113 GLOBAL     WORKSP 06
+  UVQUAN wla133 GLOBAL     WORKSP 07
+  UVQUAN wla153 GLOBAL     WORKSP 08
+  UVQUAN wla173 GLOBAL     WORKSP 09
+  UVQUAN wla193 GLOBAL     WORKSP 10
+  UVQUAN wla213 GLOBAL     WORKSP 11
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+  UVNAME  WLA133  1 WORKSP 07        1.0  QUAN
+  UVNAME  WLA153  1 WORKSP 08        1.0  QUAN
+  UVNAME  WLA173  1 WORKSP 09        1.0  QUAN
+  UVNAME  WLA193  1 WORKSP 10        1.0  QUAN
+  UVNAME  WLA213  1 WORKSP 11        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =    1052.8
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =     110.5
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =     151.4
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =    6878.7
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =     354.6
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =     502.4
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+*** Reach 7
+  COPY   99                               WLA133           =     663.5
+  COPY   99                               WLA133          -=    rca7
+  COPY   99                               WLA133         MAX       0.0
+*** Reach 8
+  COPY   99                               WLA153           =    2802.7
+  COPY   99                               WLA153          -=    rca8
+  COPY   99                               WLA153         MAX       0.0
+*** Reach 9
+  COPY   99                               WLA173           =      38.2
+  COPY   99                               WLA173          -=    rca9
+  COPY   99                               WLA173         MAX       0.0
+*** Reach 10
+  COPY   99                               WLA193           =    1347.5
+  COPY   99                               WLA193          -=    rca10
+  COPY   99                               WLA193         MAX       0.0
+*** Reach 11
+  COPY   99                               WLA213           =     448.0
+  COPY   99                               WLA213          -=    rca11
+  COPY   99                               WLA213         MAX       0.0
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+MULT PERLND 133                    wla133= RCHRES  07
+MULT PERLND 153                    wla153= RCHRES  08
+MULT PERLND 173                    wla173= RCHRES  09
+MULT PERLND 193                    wla193= RCHRES  10
+MULT PERLND 213                    wla213= RCHRES  11
+END SPEC-ACTIONS
+
+END RUN

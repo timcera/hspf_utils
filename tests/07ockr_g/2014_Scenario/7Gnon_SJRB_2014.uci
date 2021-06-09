@@ -1,0 +1,3098 @@
+RUN
+
+*** Comments
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+***
+
+GLOBAL
+  UCI for Orange Creek Basin
+  START       1995/01/01 00:00  END    2016/12/31 24:00
+  RUN INTERP OUTPT LEVELS    4    0
+  RESUME     0 RUN     1                          UNITS    1
+END GLOBAL
+
+FILES
+<FILE>  <UN#>***<----FILE NAME------------------------------------------------->
+MESSU      24   7gnon.ech
+           80   7gnon_land.out
+           82   7gnon_reach.out
+BINO       81   7gnon_land.hbn
+BINO       83   7gnon_reach.hbn
+WDM1       26   sjrb_met.wdm
+WDM2       28   sjrb_ock.wdm
+WDM3       29   orbinput.wdm
+PESTSU     30   7G_hspf_calib.sup
+
+*** FTABLE Column Indicators
+           14   newnans13.cln
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** Main1 REACH 1   Bivans Arm
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** Main1 REACH 2   Sweetwater Branch
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** Main1 REACH 12  Walberg Lake Outlet
+      PERLND     221
+      PERLND     222
+      PERLND     223
+      PERLND     224
+      PERLND     225
+      PERLND     226
+      PERLND     227
+      PERLND     228
+      PERLND     229
+      PERLND     230
+      PERLND     231
+      PERLND     232
+      PERLND     233
+      IMPLND     221
+      IMPLND     222
+      IMPLND     223
+      IMPLND     224
+      PERLND     235
+      RCHRES      12
+
+*** Main1 REACH 3   Paynes Prairie
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      COPY        61
+      RCHRES       3
+
+*** Main1 REACH 4   Liberty Hill Drain
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** Main1 REACH 5   Hogtown Creek
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** Main1 REACH 6   Irving Sink
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+*** Main1 REACH 7   Lake Kanapaha
+      PERLND     121
+      PERLND     122
+      PERLND     123
+      PERLND     124
+      PERLND     125
+      PERLND     126
+      PERLND     127
+      PERLND     128
+      PERLND     129
+      PERLND     130
+      PERLND     131
+      PERLND     132
+      PERLND     133
+      IMPLND     121
+      IMPLND     122
+      IMPLND     123
+      IMPLND     124
+      PERLND     135
+      RCHRES       7
+
+*** Main1 REACH 8   Reddick Quarry
+      PERLND     141
+      PERLND     142
+      PERLND     143
+      PERLND     144
+      PERLND     145
+      PERLND     146
+      PERLND     147
+      PERLND     148
+      PERLND     149
+      PERLND     150
+      PERLND     151
+      PERLND     152
+      PERLND     153
+      IMPLND     141
+      IMPLND     142
+      IMPLND     143
+      IMPLND     144
+      PERLND     155
+      RCHRES       8
+
+*** Main1 REACH 9   Tuscawilla Lake
+      PERLND     161
+      PERLND     162
+      PERLND     163
+      PERLND     164
+      PERLND     165
+      PERLND     166
+      PERLND     167
+      PERLND     168
+      PERLND     169
+      PERLND     170
+      PERLND     171
+      PERLND     172
+      PERLND     173
+      IMPLND     161
+      IMPLND     162
+      IMPLND     163
+      IMPLND     164
+      PERLND     175
+      RCHRES       9
+
+*** Main1 REACH 10  Hawthorn Prairie
+      PERLND     181
+      PERLND     182
+      PERLND     183
+      PERLND     184
+      PERLND     185
+      PERLND     186
+      PERLND     187
+      PERLND     188
+      PERLND     189
+      PERLND     190
+      PERLND     191
+      PERLND     192
+      PERLND     193
+      IMPLND     181
+      IMPLND     182
+      IMPLND     183
+      IMPLND     184
+      PERLND     195
+      RCHRES      10
+
+*** Main1 REACH 11  Cowpen Lake
+      PERLND     201
+      PERLND     202
+      PERLND     203
+      PERLND     204
+      PERLND     205
+      PERLND     206
+      PERLND     207
+      PERLND     208
+      PERLND     209
+      PERLND     210
+      PERLND     211
+      PERLND     212
+      PERLND     213
+      IMPLND     201
+      IMPLND     202
+      IMPLND     203
+      IMPLND     204
+      PERLND     215
+      RCHRES      11
+
+*** Main1 REACH 13  Irvine Sink
+      PERLND     241
+      PERLND     242
+      PERLND     243
+      PERLND     244
+      PERLND     245
+      PERLND     246
+      PERLND     247
+      PERLND     248
+      PERLND     249
+      PERLND     250
+      PERLND     251
+      PERLND     252
+      PERLND     253
+      IMPLND     241
+      IMPLND     242
+      IMPLND     243
+      IMPLND     244
+      PERLND     255
+      RCHRES      13
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+
+*** Add to Open Sequence when needed for groundwater
+*** Special Action for recharge to groundwater
+      COPY        52 ***
+      GENER       52 ***
+      RCHRES      13 ***
+      GENER       62 ***
+
+*** PEST calibration
+      PLTGEN     113 ***
+      PLTGEN     205 ***
+      PLTGEN     207 ***
+      PLTGEN     209 ***
+      PLTGEN     211 ***
+    END INGRP ***
+
+COPY
+  TIMESERIES
+  Copy-opn***
+*** x -  x  NPT  NMN
+    1   44    0    8
+  Copy-opn***
+*** x -  x  NPT  NMN
+   50   98    0    1
+  END TIMESERIES
+END COPY
+
+GENER
+  OPCODE
+*** GENER   OP-
+*** x -  x CODE
+    1   44    8
+   50   98   24
+  113        24   ***
+  END OPCODE
+
+  NTERMS
+***<range><-nt>
+*** x -  xNTERM
+    1   44    2
+  END NTERMS
+
+  COEFFS
+*** GENER         K1          K2
+*** x -  x
+    1   44        0.           1
+  END COEFFS
+
+  PARM
+*** GENER          K
+*** x -  x
+   50   98        1.
+  113             0.   ***
+  END PARM
+END GENER
+
+PLTGEN
+  PLOTINFO
+    # -  # FILE  NPT  NMN LABL  PYR PIVL TYPE***
+  113        53    1    1        12   24    1
+  205        65    1    0        12   24    1
+  207        67    1    0        12   24    1
+  209        69    1    0        12   24    1
+  211        61    1    0        12   24    1
+  END PLOTINFO
+
+  GEN-LABELS
+    # -  #<----------------Title----------------->   ***    <------Y axis------>
+*** in each case, stage at, site
+  113     Plot of Newnans Lake                              Stage (ft)
+  205     Plot of Hatchet Creek                             Simulated Flow (cfs)
+  207     Plot of Bee Tree Creek                            Simulated Flow (cfs)
+  209     Plot of Little Hatchet Creek                      Simulated Flow (cfs)
+  211     Plot of Forest Creek                              Simulated Flow (cfs)
+  END GEN-LABELS
+
+  SCALING
+    # -  #      YMIN      YMAX     IVLIN ***
+  113            50.       65.       20.
+  205  211        0.     2000.       20.
+  END SCALING
+
+  CURV-DATA
+              <-Curve label--> Line Intg  Col Tran ***
+    # -  #                     type  eqv code code ***
+  113         Simulated Stage          1    1 AVER
+  205  211    Simulated Flow           1    1 AVER
+  END CURV-DATA
+
+***  CURV-DATA
+              <-Curve label--> Line Intg  Col Tran ***
+    # -  #                     type  eqv code code ***
+  113         Observed Stage           1    1 AVER
+***  END CURV-DATA
+END PLTGEN
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+    1  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+    1  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>               Binary Output Flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+    1  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 7Gnon REACH 1
+    1   19Bivans Arm                        1    1   80    0   81    0
+*** 7Gnon REACH 2
+   21   39Sweetwater Branch                 1    1   80    0   81    0
+*** 7Gnon REACH 3
+   41   59Paynes Prairie                    1    1   80    0   81    0
+*** 7Gnon REACH 4
+   61   79Liberty Hill Drain                1    1   80    0   81    0
+*** 7Gnon REACH 5
+   81   99Hogtown Creek                     1    1   80    0   81    0
+*** 7Gnon REACH 6
+  101  119Irving Sink                       1    1   80    0   81    0
+*** 7Gnon REACH 7
+  121  139Lake Kanapaha                     1    1   80    0   81    0
+*** 7Gnon REACH 8
+  141  159Reddick Quarry                    1    1   80    0   81    0
+*** 7Gnon REACH 9
+  161  179Tuscawilla Lake                   1    1   80    0   81    0
+*** 7Gnon REACH 10
+  181  199Hawthorn Prairie                  1    1   80    0   81    0
+*** 7Gnon REACH 11
+  201  219Cowpen Lake                       1    1   80    0   81    0
+*** 7Gnon REACH 12
+  221  239Walberg Lake Outlet               1    1   80    0   81    0
+*** 7Gnon REACH 13
+  241  259Irvine Sink                       1    1   80    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 7Gnon REACH 1 - Bivans Arm
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 2 - Sweetwater Branch
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 3 - Paynes Prairie
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 4 - Liberty Hill Drain
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 5 - Hogtown Creek
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 6 - Irving Sink
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 7 - Lake Kanapaha
+  121  131    0    0    1    0    0    0    0    0    0    1    0    0    0
+  132  133    0    3    1    0    0    0    0    0    0    1    0    0    0
+  135         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 8 - Reddick Quarry
+  141  151    0    0    1    0    0    0    0    0    0    1    0    0    0
+  152  153    0    3    1    0    0    0    0    0    0    1    0    0    0
+  155         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 9 - Tuscawilla Lake
+  161  171    0    0    1    0    0    0    0    0    0    1    0    0    0
+  172  173    0    3    1    0    0    0    0    0    0    1    0    0    0
+  175         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 10 - Hawthorn Prairie
+  181  191    0    0    1    0    0    0    0    0    0    1    0    0    0
+  192  193    0    3    1    0    0    0    0    0    0    1    0    0    0
+  195         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 11 - Cowpen Lake
+  201  211    0    0    1    0    0    0    0    0    0    1    0    0    0
+  212  213    0    3    1    0    0    0    0    0    0    1    0    0    0
+  215         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 12 - Walberg Lake Outlet
+  221  231    0    0    1    0    0    0    0    0    0    1    0    0    0
+  232  233    0    3    1    0    0    0    0    0    0    1    0    0    0
+  235         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 7Gnon REACH 13 - Irvine Sink
+  241  251    0    0    1    0    0    0    0    0    0    1    0    0    0
+  252  253    0    3    1    0    0    0    0    0    0    1    0    0    0
+  255         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+
+  PWAT-PARM2
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   1
+*** 7Gnon REACH 1 - Bivans Arm         Location  763
+    1     ~111175401~
+    2     ~111175402~
+    3     ~111175403~
+    4     ~111175404~
+    5     ~111175405~
+    6     ~111175406~
+    7     ~111175407~
+    8     ~111175408~
+    9     ~111175409~
+   10     ~111175410~
+   11     ~111175411~
+   12     ~111175412~
+   13     ~111175413~
+   15     ~111175413~
+*** 7Gnon REACH 2 - Sweetwater Branch  Location  763
+   21     ~111175401~
+   22     ~111175402~
+   23     ~111175403~
+   24     ~111175404~
+   25     ~111175405~
+   26     ~111175406~
+   27     ~111175407~
+   28     ~111175408~
+   29     ~111175409~
+   30     ~111175410~
+   31     ~111175411~
+   32     ~111175412~
+   33     ~111175413~
+   35     ~111175413~
+*** 7Gnon REACH 3 - Paynes Prairie     Location  765
+   41     ~111176101~
+   42     ~111176102~
+   43     ~111176103~
+   44     ~111176104~
+   45     ~111176105~
+   46     ~111176106~
+   47     ~111176107~
+   48     ~111176108~
+   49     ~111176109~
+   50     ~111176110~
+   51     ~111176111~
+   52     ~111176112~
+   53     ~111176113~
+   55     ~111176113~
+*** 7Gnon REACH 4 - Liberty Hill Drain Location  763
+   61     ~111175401~
+   62     ~111175402~
+   63     ~111175403~
+   64     ~111175404~
+   65     ~111175405~
+   66     ~111175406~
+   67     ~111175407~
+   68     ~111175408~
+   69     ~111175409~
+   70     ~111175410~
+   71     ~111175411~
+   72     ~111175412~
+   73     ~111175413~
+   75     ~111175413~
+*** 7Gnon REACH 5 - Hogtown Creek      Location  763
+   81     ~111175401~
+   82     ~111175402~
+   83     ~111175403~
+   84     ~111175404~
+   85     ~111175405~
+   86     ~111175406~
+   87     ~111175407~
+   88     ~111175408~
+   89     ~111175409~
+   90     ~111175410~
+   91     ~111175411~
+   92     ~111175412~
+   93     ~111175413~
+   95     ~111175413~
+*** 7Gnon REACH 6 - Irving Sink        Location  765
+  101     ~111176101~
+  102     ~111176102~
+  103     ~111176103~
+  104     ~111176104~
+  105     ~111176105~
+  106     ~111176106~
+  107     ~111176107~
+  108     ~111176108~
+  109     ~111176109~
+  110     ~111176110~
+  111     ~111176111~
+  112     ~111176112~
+  113     ~111176113~
+  115     ~111176113~
+*** 7Gnon REACH 7 - Lake Kanapaha      Location  763
+  121     ~111175401~
+  122     ~111175404~
+  123     ~111175403~
+  124     ~111175404~
+  125     ~111175405~
+  126     ~111175406~
+  127     ~111175407~
+  128     ~111175408~
+  129     ~111175409~
+  130     ~111175410~
+  131     ~111175411~
+  132     ~111175412~
+  133     ~111175413~
+  135     ~111175413~
+*** 7Gnon REACH 8 - Reddick Quarry     Location  765
+  141     ~111176101~
+  142     ~111176102~
+  143     ~111176103~
+  144     ~111176104~
+  145     ~111176105~
+  146     ~111176106~
+  147     ~111176107~
+  148     ~111176108~
+  149     ~111176109~
+  150     ~111176110~
+  151     ~111176111~
+  152     ~111176112~
+  153     ~111176113~
+  155     ~111176113~
+*** 7Gnon REACH 9 - Tuscawilla Lake    Location  765
+  161     ~111176101~
+  162     ~111176102~
+  163     ~111176103~
+  164     ~111176104~
+  165     ~111176105~
+  166     ~111176106~
+  167     ~111176107~
+  168     ~111176108~
+  169     ~111176109~
+  170     ~111176110~
+  171     ~111176111~
+  172     ~111176112~
+  173     ~111176113~
+  175     ~111176113~
+*** 7Gnon REACH 10 - Hawthorn Prairie  Location  765
+  181     ~111176101~
+  182     ~111176102~
+  183     ~111176103~
+  184     ~111176104~
+  185     ~111176105~
+  186     ~111176106~
+  187     ~111176107~
+  188     ~111176108~
+  189     ~111176109~
+  190     ~111176110~
+  191     ~111176111~
+  192     ~111176112~
+  193     ~111176113~
+  195     ~111176113~
+*** 7Gnon REACH 11 - Cowpen Lake       Location  764
+  201     ~111175301~
+  202     ~111175302~
+  203     ~111175303~
+  204     ~111175304~
+  205     ~111175305~
+  206     ~111175306~
+  207     ~111175307~
+  208     ~111175308~
+  209     ~111175309~
+  210     ~111175310~
+  211     ~111175311~
+  212     ~111175312~
+  213     ~111175313~
+  215     ~111175313~
+*** 7Gnon REACH 12 - Walberg Lake OutleLocation  765
+  221     ~111176101~
+  222     ~111176102~
+  223     ~111176103~
+  224     ~111176104~
+  225     ~111176105~
+  226     ~111176106~
+  227     ~111176107~
+  228     ~111176108~
+  229     ~111176109~
+  230     ~111176110~
+  231     ~111176111~
+  232     ~111176112~
+  233     ~111176113~
+  235     ~111176113~
+*** 7Gnon REACH 13 - Irvine Sink       Location  765
+  241     ~111176101~
+  242     ~111176102~
+  243     ~111176103~
+  244     ~111176104~
+  245     ~111176105~
+  246     ~111176106~
+  247     ~111176107~
+  248     ~111176108~
+  249     ~111176109~
+  250     ~111176110~
+  251     ~111176111~
+  252     ~111176112~
+  253     ~111176113~
+  255     ~111176113~
+  END PWAT-PARM2
+
+
+  PWAT-PARM3
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   2
+*** 7Gnon REACH 1 - Bivans Arm         Location  763
+    1     ~111275401~
+    2     ~111275402~
+    3     ~111275403~
+    4     ~111275404~
+    5     ~111275405~
+    6     ~111275406~
+    7     ~111275407~
+    8     ~111275408~
+    9     ~111275409~
+   10     ~111275410~
+   11     ~111275411~
+   12     ~111275412~
+   13     ~111275413~
+   15     ~111275413~
+*** 7Gnon REACH 2 - Sweetwater Branch  Location  763
+   21     ~111275401~
+   22     ~111275402~
+   23     ~111275403~
+   24     ~111275404~
+   25     ~111275405~
+   26     ~111275406~
+   27     ~111275407~
+   28     ~111275408~
+   29     ~111275409~
+   30     ~111275410~
+   31     ~111275411~
+   32     ~111275412~
+   33     ~111275413~
+   35     ~111275413~
+*** 7Gnon REACH 3 - Paynes Prairie     Location  765
+   41     ~111276101~
+   42     ~111276102~
+   43     ~111276103~
+   44     ~111276104~
+   45     ~111276105~
+   46     ~111276106~
+   47     ~111276107~
+   48     ~111276108~
+   49     ~111276109~
+   50     ~111276110~
+   51     ~111276111~
+   52     ~111276112~
+   53     ~111276113~
+   55     ~111276113~
+*** 7Gnon REACH 4 - Liberty Hill Drain Location  763
+   61     ~111275401~
+   62     ~111275402~
+   63     ~111275403~
+   64     ~111275404~
+   65     ~111275405~
+   66     ~111275406~
+   67     ~111275407~
+   68     ~111275408~
+   69     ~111275409~
+   70     ~111275410~
+   71     ~111275411~
+   72     ~111275412~
+   73     ~111275413~
+   75     ~111275413~
+*** 7Gnon REACH 5 - Hogtown Creek      Location  763
+   81     ~111275401~
+   82     ~111275402~
+   83     ~111275403~
+   84     ~111275404~
+   85     ~111275405~
+   86     ~111275406~
+   87     ~111275407~
+   88     ~111275408~
+   89     ~111275409~
+   90     ~111275410~
+   91     ~111275411~
+   92     ~111275412~
+   93     ~111275413~
+   95     ~111275413~
+*** 7Gnon REACH 6 - Irving Sink        Location  765
+  101     ~111276101~
+  102     ~111276102~
+  103     ~111276103~
+  104     ~111276104~
+  105     ~111276105~
+  106     ~111276106~
+  107     ~111276107~
+  108     ~111276108~
+  109     ~111276109~
+  110     ~111276110~
+  111     ~111276111~
+  112     ~111276112~
+  113     ~111276113~
+  115     ~111276113~
+*** 7Gnon REACH 7 - Lake Kanapaha      Location  763
+  121     ~111275401~
+  122     ~111275402~
+  123     ~111275403~
+  124     ~111275404~
+  125     ~111275405~
+  126     ~111275406~
+  127     ~111275407~
+  128     ~111275408~
+  129     ~111275409~
+  130     ~111275410~
+  131     ~111275411~
+  132     ~111275412~
+  133     ~111275413~
+  135     ~111275413~
+*** 7Gnon REACH 8 - Reddick Quarry     Location  765
+  141     ~111276101~
+  142     ~111276102~
+  143     ~111276103~
+  144     ~111276104~
+  145     ~111276105~
+  146     ~111276106~
+  147     ~111276107~
+  148     ~111276108~
+  149     ~111276109~
+  150     ~111276110~
+  151     ~111276111~
+  152     ~111276112~
+  153     ~111276113~
+  155     ~111276113~
+*** 7Gnon REACH 9 - Tuscawilla Lake    Location  765
+  161     ~111276101~
+  162     ~111276102~
+  163     ~111276103~
+  164     ~111276104~
+  165     ~111276105~
+  166     ~111276106~
+  167     ~111276107~
+  168     ~111276108~
+  169     ~111276109~
+  170     ~111276110~
+  171     ~111276111~
+  172     ~111276112~
+  173     ~111276113~
+  175     ~111276113~
+*** 7Gnon REACH 10 - Hawthorn Prairie  Location  765
+  181     ~111276101~
+  182     ~111276102~
+  183     ~111276103~
+  184     ~111276104~
+  185     ~111276105~
+  186     ~111276106~
+  187     ~111276107~
+  188     ~111276108~
+  189     ~111276109~
+  190     ~111276110~
+  191     ~111276111~
+  192     ~111276112~
+  193     ~111276113~
+  195     ~111276113~
+*** 7Gnon REACH 11 - Cowpen Lake       Location  764
+  201     ~111275301~
+  202     ~111275302~
+  203     ~111275303~
+  204     ~111275304~
+  205     ~111275305~
+  206     ~111275306~
+  207     ~111275307~
+  208     ~111275308~
+  209     ~111275309~
+  210     ~111275310~
+  211     ~111275311~
+  212     ~111275312~
+  213     ~111275313~
+  215     ~111275313~
+*** 7Gnon REACH 12 - Walberg Lake OutleLocation  765
+  221     ~111276101~
+  222     ~111276102~
+  223     ~111276103~
+  224     ~111276104~
+  225     ~111276105~
+  226     ~111276106~
+  227     ~111276107~
+  228     ~111276108~
+  229     ~111276109~
+  230     ~111276110~
+  231     ~111276111~
+  232     ~111276112~
+  233     ~111276113~
+  235     ~111276113~
+*** 7Gnon REACH 13 - Irvine Sink       Location  765
+  241     ~111276101~
+  242     ~111276102~
+  243     ~111276103~
+  244     ~111276104~
+  245     ~111276105~
+  246     ~111276106~
+  247     ~111276107~
+  248     ~111276108~
+  249     ~111276109~
+  250     ~111276110~
+  251     ~111276111~
+  252     ~111276112~
+  253     ~111276113~
+  255     ~111276113~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   3
+*** 7Gnon REACH 1 - Bivans Arm         Location  763
+    1     ~111375401~
+    2     ~111375402~
+    3     ~111375403~
+    4     ~111375404~
+    5     ~111375405~
+    6     ~111375406~
+    7     ~111375407~
+    8     ~111375408~
+    9     ~111375409~
+   10     ~111375410~
+   11     ~111375411~
+   12     ~111375412~
+   13     ~111375413~
+   15     ~111375413~
+*** 7Gnon REACH 2 - Sweetwater Branch  Location  763
+   21     ~111375401~
+   22     ~111375402~
+   23     ~111375403~
+   24     ~111375404~
+   25     ~111375405~
+   26     ~111375406~
+   27     ~111375407~
+   28     ~111375408~
+   29     ~111375409~
+   30     ~111375410~
+   31     ~111375411~
+   32     ~111375412~
+   33     ~111375413~
+   35     ~111375413~
+*** 7Gnon REACH 3 - Paynes Prairie     Location  765
+   41     ~111376101~
+   42     ~111376102~
+   43     ~111376103~
+   44     ~111376104~
+   45     ~111376105~
+   46     ~111376106~
+   47     ~111376107~
+   48     ~111376108~
+   49     ~111376109~
+   50     ~111376110~
+   51     ~111376111~
+   52     ~111376112~
+   53     ~111376113~
+   55     ~111376113~
+*** 7Gnon REACH 4 - Liberty Hill Drain Location  763
+   61     ~111375401~
+   62     ~111375402~
+   63     ~111375403~
+   64     ~111375404~
+   65     ~111375405~
+   66     ~111375406~
+   67     ~111375407~
+   68     ~111375408~
+   69     ~111375409~
+   70     ~111375410~
+   71     ~111375411~
+   72     ~111375412~
+   73     ~111375413~
+   75     ~111375413~
+*** 7Gnon REACH 5 - Hogtown Creek      Location  763
+   81     ~111375401~
+   82     ~111375402~
+   83     ~111375403~
+   84     ~111375404~
+   85     ~111375405~
+   86     ~111375406~
+   87     ~111375407~
+   88     ~111375408~
+   89     ~111375409~
+   90     ~111375410~
+   91     ~111375411~
+   92     ~111375412~
+   93     ~111375413~
+   95     ~111375413~
+*** 7Gnon REACH 6 - Irving Sink        Location  765
+  101     ~111376101~
+  102     ~111376102~
+  103     ~111376103~
+  104     ~111376104~
+  105     ~111376105~
+  106     ~111376106~
+  107     ~111376107~
+  108     ~111376108~
+  109     ~111376109~
+  110     ~111376110~
+  111     ~111376111~
+  112     ~111376112~
+  113     ~111376113~
+  115     ~111376113~
+*** 7Gnon REACH 7 - Lake Kanapaha      Location  763
+  121     ~111375401~
+  122     ~111375402~
+  123     ~111375403~
+  124     ~111375404~
+  125     ~111375405~
+  126     ~111375406~
+  127     ~111375407~
+  128     ~111375408~
+  129     ~111375409~
+  130     ~111375410~
+  131     ~111375411~
+  132     ~111375412~
+  133     ~111375413~
+  135     ~111375413~
+*** 7Gnon REACH 8 - Reddick Quarry     Location  765
+  141     ~111376101~
+  142     ~111376102~
+  143     ~111376103~
+  144     ~111376104~
+  145     ~111376105~
+  146     ~111376106~
+  147     ~111376107~
+  148     ~111376108~
+  149     ~111376109~
+  150     ~111376110~
+  151     ~111376111~
+  152     ~111376112~
+  153     ~111376113~
+  155     ~111376113~
+*** 7Gnon REACH 9 - Tuscawilla Lake    Location  765
+  161     ~111376101~
+  162     ~111376102~
+  163     ~111376103~
+  164     ~111376104~
+  165     ~111376105~
+  166     ~111376106~
+  167     ~111376107~
+  168     ~111376108~
+  169     ~111376109~
+  170     ~111376110~
+  171     ~111376111~
+  172     ~111376112~
+  173     ~111376113~
+  175     ~111376113~
+*** 7Gnon REACH 10 - Hawthorn Prairie  Location  765
+  181     ~111376101~
+  182     ~111376102~
+  183     ~111376103~
+  184     ~111376104~
+  185     ~111376105~
+  186     ~111376106~
+  187     ~111376107~
+  188     ~111376108~
+  189     ~111376109~
+  190     ~111376110~
+  191     ~111376111~
+  192     ~111376112~
+  193     ~111376113~
+  195     ~111376113~
+*** 7Gnon REACH 11 - Cowpen Lake       Location  764
+  201     ~111375301~
+  202     ~111375302~
+  203     ~111375303~
+  204     ~111375304~
+  205     ~111375305~
+  206     ~111375306~
+  207     ~111375307~
+  208     ~111375308~
+  209     ~111375309~
+  210     ~111375310~
+  211     ~111375311~
+  212     ~111375312~
+  213     ~111375313~
+  215     ~111375313~
+*** 7Gnon REACH 12 - Walberg Lake OutleLocation  765
+  221     ~111376101~
+  222     ~111376102~
+  223     ~111376103~
+  224     ~111376104~
+  225     ~111376105~
+  226     ~111376106~
+  227     ~111376107~
+  228     ~111376108~
+  229     ~111376109~
+  230     ~111376110~
+  231     ~111376111~
+  232     ~111376112~
+  233     ~111376113~
+  235     ~111376113~
+*** 7Gnon REACH 13 - Irvine Sink       Location  765
+  241     ~111376101~
+  242     ~111376102~
+  243     ~111376103~
+  244     ~111376104~
+  245     ~111376105~
+  246     ~111376106~
+  247     ~111376107~
+  248     ~111376108~
+  249     ~111376109~
+  250     ~111376110~
+  251     ~111376111~
+  252     ~111376112~
+  253     ~111376113~
+  255     ~111376113~
+  END PWAT-PARM4
+
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 7Gnon REACH 1 - Bivans Arm                    Location  763
+    1   19       901
+*** 7Gnon REACH 2 - Sweetwater Branch             Location  763
+   21   39       901
+*** 7Gnon REACH 3 - Paynes Prairie                Location  765
+   41   59       904
+*** 7Gnon REACH 4 - Liberty Hill Drain            Location  763
+   61   79       901
+*** 7Gnon REACH 5 - Hogtown Creek                 Location  763
+   81   99       901
+*** 7Gnon REACH 6 - Irving Sink                   Location  765
+  101  119       904
+*** 7Gnon REACH 7 - Lake Kanapaha                 Location  763
+  121  139       901
+*** 7Gnon REACH 8 - Reddick Quarry                Location  765
+  141  159       904
+*** 7Gnon REACH 9 - Tuscawilla Lake               Location  765
+  161  179       904
+*** 7Gnon REACH 10 - Hawthorn Prairie             Location  765
+  181  199       904
+*** 7Gnon REACH 11 - Cowpen Lake                  Location  764
+  201  219       902
+*** 7Gnon REACH 12 - Walberg Lake Outlet          Location  765
+  221  239       902
+*** 7Gnon REACH 13 - Irvine Sink                  Location  765
+  241  259       904
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 7Gnon REACH 1 - Bivans Arm         Location  763
+    1     ~111675401~
+    2     ~111675402~
+    3     ~111675403~
+    4     ~111675404~
+    5     ~111675405~
+    6     ~111675406~
+    7     ~111675407~
+    8     ~111675408~
+    9     ~111675409~
+   10     ~111675410~
+   11     ~111675411~
+   12     ~111675412~
+   13     ~111675413~
+   15     ~111675413~
+*** 7Gnon REACH 2 - Sweetwater Branch  Location  763
+   21     ~111675401~
+   22     ~111675402~
+   23     ~111675403~
+   24     ~111675404~
+   25     ~111675405~
+   26     ~111675406~
+   27     ~111675407~
+   28     ~111675408~
+   29     ~111675409~
+   30     ~111675410~
+   31     ~111675411~
+   32     ~111675412~
+   33     ~111675413~
+   35     ~111675413~
+*** 7Gnon REACH 3 - Paynes Prairie     Location  765
+   41     ~111676101~
+   42     ~111676102~
+   43     ~111676103~
+   44     ~111676104~
+   45     ~111676105~
+   46     ~111676106~
+   47     ~111676107~
+   48     ~111676108~
+   49     ~111676109~
+   50     ~111676110~
+   51     ~111676111~
+   52     ~111676112~
+   53     ~111676113~
+   55     ~111676113~
+*** 7Gnon REACH 4 - Liberty Hill Drain Location  763
+   61     ~111675401~
+   62     ~111675402~
+   63     ~111675403~
+   64     ~111675404~
+   65     ~111675405~
+   66     ~111675406~
+   67     ~111675407~
+   68     ~111675408~
+   69     ~111675409~
+   70     ~111675410~
+   71     ~111675411~
+   72     ~111675402~
+   73     ~111675413~
+   75     ~111675413~
+*** 7Gnon REACH 5 - Hogtown Creek      Location  763
+   81     ~111675401~
+   82     ~111675402~
+   83     ~111675403~
+   84     ~111675404~
+   85     ~111675405~
+   86     ~111675406~
+   87     ~111675407~
+   88     ~111675408~
+   89     ~111675409~
+   90     ~111675410~
+   91     ~111675411~
+   92     ~111675412~
+   93     ~111675413~
+   95     ~111675413~
+*** 7Gnon REACH 6 - Irving Sink        Location  765
+  101     ~111676101~
+  102     ~111676102~
+  103     ~111676103~
+  104     ~111676104~
+  105     ~111676105~
+  106     ~111676106~
+  107     ~111676107~
+  108     ~111676108~
+  109     ~111676109~
+  110     ~111676110~
+  111     ~111676111~
+  112     ~111676112~
+  113     ~111676113~
+  115     ~111676113~
+*** 7Gnon REACH 7 - Lake Kanapaha      Location  763
+  121     ~111675401~
+  122     ~111675402~
+  123     ~111675403~
+  124     ~111675404~
+  125     ~111675405~
+  126     ~111675406~
+  127     ~111675407~
+  128     ~111675408~
+  129     ~111675409~
+  130     ~111675410~
+  131     ~111675411~
+  132     ~111675412~
+  133     ~111675413~
+  135     ~111675413~
+*** 7Gnon REACH 8 - Reddick Quarry     Location  765
+  141     ~111676101~
+  142     ~111676102~
+  143     ~111676103~
+  144     ~111676104~
+  145     ~111676105~
+  146     ~111676106~
+  147     ~111676107~
+  148     ~111676108~
+  149     ~111676109~
+  150     ~111676110~
+  151     ~111676111~
+  152     ~111676112~
+  153     ~111676113~
+  155     ~111676113~
+*** 7Gnon REACH 9 - Tuscawilla Lake    Location  765
+  161     ~111676101~
+  162     ~111676102~
+  163     ~111676103~
+  164     ~111676104~
+  165     ~111676105~
+  166     ~111676106~
+  167     ~111676107~
+  168     ~111676108~
+  169     ~111676109~
+  170     ~111676110~
+  171     ~111676111~
+  172     ~111676112~
+  173     ~111676113~
+  175     ~111676113~
+*** 7Gnon REACH 10 - Hawthorn Prairie  Location  765
+  181     ~111676101~
+  182     ~111676102~
+  183     ~111676103~
+  184     ~111676104~
+  185     ~111676105~
+  186     ~111676106~
+  187     ~111676107~
+  188     ~111676108~
+  189     ~111676109~
+  190     ~111676110~
+  191     ~111676111~
+  192     ~111676112~
+  193     ~111676113~
+  195     ~111676113~
+*** 7Gnon REACH 11 - Cowpen Lake       Location  764
+  201     ~111675301~
+  202     ~111675302~
+  203     ~111675303~
+  204     ~111675304~
+  205     ~111675305~
+  206     ~111675306~
+  207     ~111675307~
+  208     ~111675308~
+  209     ~111675309~
+  210     ~111675310~
+  211     ~111675311~
+  212     ~111675312~
+  213     ~111675313~
+  215     ~111675313~
+*** 7Gnon REACH 12 - Walberg Lake OutleLocation  765
+  221     ~111676101~
+  222     ~111676102~
+  223     ~111676103~
+  224     ~111676104~
+  225     ~111676105~
+  226     ~111676106~
+  227     ~111676107~
+  228     ~111676108~
+  229     ~111676109~
+  230     ~111676110~
+  231     ~111676111~
+  232     ~111676112~
+  233     ~111676113~
+  235     ~111676113~
+*** 7Gnon REACH 13 - Irvine Sink       Location  765
+  241     ~111676101~
+  242     ~111676102~
+  243     ~111676103~
+  244     ~111676104~
+  245     ~111676105~
+  246     ~111676106~
+  247     ~111676107~
+  248     ~111676108~
+  249     ~111676109~
+  250     ~111676110~
+  251     ~111676111~
+  252     ~111676112~
+  253     ~111676113~
+  255     ~111676113~
+  END PWAT-STATE1
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+    1  984    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+    1  984    6    6    5    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** <ILS > **** Binary-Output-flags **** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+    1  984    6    6    5    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***             Name             Unit-systems   Printer BinaryOut
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+    1  984Low Density Res              1    1   80    0   81    0
+    2  984Med Density Res              1    1   80    0   81    0
+    3  984High Density Res             1    1   80    0   81    0
+    4  984Industrial                   1    1   80    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+    1  984    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+*** <ILS >      LSUR     SLSUR      NSUR     RETSC
+*** x -  x      (ft)                          (in)
+    1  984       200     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+*** <ILS >    PETMAX    PETMIN
+*** x -  x   (deg F)   (deg F)
+    1  984       40.       35.
+  END IWAT-PARM3
+
+  IWAT-STATE1
+*** <ILS >  IWATER state variables (inches)
+*** x -  x      RETS      SURS
+    1  984      0.00      0.00
+  END IWAT-STATE1
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1   44    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1   44    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Binary Output level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1   44    3    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 7Gnon REACH 1
+    1     Bivans Arm              1         1    1   82    0    0   83    0
+*** 7Gnon REACH 2
+    2     Sweetwater Branch       1         1    1   82    0    0   83    0
+*** 7Gnon REACH 3
+    3     Paynes Prairie          1         1    1   82    0    0   83    0
+*** 7Gnon REACH 4
+    4     Liberty Hill Drain      1         1    1   82    0    0   83    0
+*** 7Gnon REACH 5
+    5     Hogtown Creek           1         1    1   82    0    0   83    0
+*** 7Gnon REACH 6
+    6     Irving Sink             1         1    1   82    0    0   83    0
+*** 7Gnon REACH 7
+    7     Lake Kanapaha           1         1    1   82    0    0   83    0
+*** 7Gnon REACH 8
+    8     Reddick Quarry          1         1    1   82    0    0   83    0
+*** 7Gnon REACH 9
+    9     Tuscawilla Lake         1         1    1   82    0    0   83    0
+*** 7Gnon REACH 10
+   10     Hawthorn Prairie        1         1    1   82    0    0   83    0
+*** 7Gnon REACH 11
+   11     Cowpen Lake             1         1    1   82    0    0   83    0
+*** 7Gnon REACH 12
+   12     Walberg Lake Outlet     1         1    1   82    0    0   83    0
+*** 7Gnon REACH 13
+   13     Irvine Sink             1         1    1   82    0    0   83    0
+  END GEN-INFO
+
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 7Gnon REACH 1 - Bivans Arm
+    1        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 2 - Sweetwater Branch
+    2        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 3 - Paynes Prairie
+    3        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 4 - Liberty Hill Drain
+    4        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 5 - Hogtown Creek
+    5        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 6 - Irving Sink
+    6        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 7 - Lake Kanapaha
+    7        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 8 - Reddick Quarry
+    8        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 9 - Tuscawilla Lake
+    9        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 10 - Hawthorn Prairie
+   10        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 11 - Cowpen Lake
+   11        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 12 - Walberg Lake Outlet
+   12        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 7Gnon REACH 13 - Irvine Sink
+   13        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 7Gnon REACH 1 - Bivans Arm
+    1             1.      1.00      1.00     52.00       0.5      0.01
+*** 7Gnon REACH 2 - Sweetwater Branch
+    2             2.      1.00      1.00     71.00       0.5      0.01
+*** 7Gnon REACH 3 - Paynes Prairie
+    3             3.      1.00      1.00     48.00       0.5      0.01
+*** 7Gnon REACH 4 - Liberty Hill Drain
+    4             4.      1.00      1.00     53.00       0.5      0.01
+*** 7Gnon REACH 5 - Hogtown Creek
+    5             5.      1.00      1.00     53.00       0.5      0.01
+*** 7Gnon REACH 6 - Irving Sink
+    6             6.      1.00      1.00     70.00       0.5      0.01
+*** 7Gnon REACH 7 - Lake Kanapaha
+    7             7.      1.00      1.00     46.00       0.5      0.01
+*** 7Gnon REACH 8 - Reddick Quarry
+    8             8.      1.00      1.00     55.00       0.5      0.01
+*** 7Gnon REACH 9 - Tuscawilla Lake
+    9             9.      1.00      1.00     68.00       0.5      0.01
+*** 7Gnon REACH 10 - Hawthorn Prairie
+   10            10.      1.00      1.00     48.00       0.5      0.01
+*** 7Gnon REACH 11 - Cowpen Lake
+   11            11.      1.00      1.00     62.50       0.5      0.01
+*** 7Gnon REACH 12 - Walberg Lake Outlet
+   12            12.      1.00      1.00     50.00       0.5      0.01
+*** 7Gnon REACH 13 - Irvine Sink
+   13            13.      1.00      1.00     95.00       0.5      0.01
+  END HYDR-PARM2
+
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 7Gnon REACH 1 - Bivans Arm
+    1         150.50       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 2 - Sweetwater Branch
+    2          10.28       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 3 - Paynes Prairie
+    3        1169.37       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 4 - Liberty Hill Drain
+    4         106.82       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 5 - Hogtown Creek
+    5          14.53       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 6 - Irving Sink
+    6          13.00       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 7 - Lake Kanapaha
+    7         141.45       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 8 - Reddick Quarry
+    8          31.12       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 9 - Tuscawilla Lake
+    9         124.00       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 10 - Hawthorn Prairie
+   10           7.80       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 11 - Cowpen Lake
+   11        3447.01       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 12 - Walberg Lake Outlet
+   12        1361.75       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 7Gnon REACH 13 - Irvine Sink
+   13          21.90       0.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+
+END RCHRES
+FTABLES
+  FTABLE    001
+ rows cols ***      Bivans Arm          STCOR          52.00
+   12    4
+     depth      area    volume  outflow1 ***
+      0.00       5.0      0.00       0.0
+      5.00      70.0    187.50       0.0
+      7.00     105.5    363.00       0.0
+      8.00     123.2    477.35       0.0
+      9.00     141.2    609.55       0.0
+      9.50     150.8    682.55       0.0
+     10.00     160.4    760.35       2.0
+     11.00     174.5    927.80      10.0
+     12.00     188.7   1109.40      30.0
+     14.00     217.2   1515.30     100.0
+     16.00     242.6   1975.10     200.0
+     18.00     268.1  99485.80     400.0
+  END FTABLE001
+
+  FTABLE    002
+ rows cols ***      Sweetwater Branch   STCOR          71.00
+   17    4
+     depth      area    volume  outflow1 ***
+      0.00       3.4      0.00       0.0
+      0.10       4.0      0.37       4.0
+      0.80       8.1      4.61       4.5
+      1.00       9.3      6.35      10.0
+      1.30      11.1      9.41      20.0
+      1.70      14.1     14.45      40.0
+      2.00      15.2     18.84      70.0
+      2.20      16.4     22.00     100.0
+      2.50      18.0     27.16     150.0
+      3.00      21.1     36.94     230.0
+      3.50      24.0     48.21     330.0
+      4.00      27.0     60.96     450.0
+      4.50      33.5     76.09     600.0
+      5.00      40.0     94.46     800.0
+      5.50      50.0    116.96    1200.0
+      6.00      60.0    144.46    1650.0
+     10.00     160.0  99584.46    5700.0
+  END FTABLE002
+
+  FTABLE    003
+ rows cols ***      Paynes Prairie      STCOR          48.00
+   21    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      1.00       0.5      0.26       0.0
+      2.00      17.1      9.07       0.0
+      3.00     116.7     75.98       0.0
+      4.00     417.5    343.11       0.0
+      5.00    1234.8   1169.27       0.0
+      6.00    2874.9   3224.12       0.0
+      7.00    5618.1   7470.62       0.0
+      8.00    8382.3  14470.80       0.0
+      9.00    9816.7  23570.30       0.0
+     10.00   11036.2  33996.77       0.0
+     11.00   12101.1  45565.41       0.0
+     12.00   12751.6  57991.77       0.0
+     13.00   13199.3  70967.25       0.0
+     14.00   13583.7  84358.74       0.0
+     15.00   13880.9  98091.01       0.0
+     16.00   14052.6 112057.74       0.0
+     17.00   14170.6 126169.31       0.0
+     18.00   14301.8 140405.47       0.0
+     20.00   14530.5 169236.87       0.0
+     22.00   14772.39998533.99       0.0
+  END FTABLE003
+
+  FTABLE    004
+ rows cols ***      Liberty Hill Drain  STCOR          53.00
+   19    4
+     depth      area    volume  outflow1 ***
+      0.00      14.2      0.00       0.0
+      3.00      57.0    106.82       0.0
+      3.50      64.1    137.08       0.5
+      4.00      71.2    170.90       2.0
+      4.50      78.3    208.29       4.0
+      5.00      85.5    249.24       8.0
+      5.50      92.6    293.74      15.0
+      6.00      99.7    341.81      25.0
+      6.50     257.1    431.01      40.0
+      7.00     414.5    598.92      60.0
+      7.50     572.0    845.54      90.0
+      8.00     729.4   1170.87     130.0
+      8.50     887.6   1575.11     180.0
+      9.00    1045.8   2058.44     240.0
+      9.50    1204.0   2620.87     310.0
+     10.00    1362.2   3262.39     390.0
+     10.50    1541.0   3988.18     480.0
+     11.00    1719.8   4803.38     580.0
+     12.00    2077.5  99702.05     810.0
+  END FTABLE004
+
+  FTABLE    005
+ rows cols ***      Hogtown Creek       STCOR          53.00
+   13    4
+     depth      area    volume   outflow1 ***
+      0.00       0.6      0.00       0.0
+      1.20       3.1      2.22       0.0
+      2.00      10.0     10.57      10.0
+      2.50      20.0     18.07      30.0
+      3.00     135.8     57.02      60.0
+      3.50     223.9    146.95     100.0
+      4.00     312.0    280.92     150.0
+      5.00     488.2    681.02     280.0
+      6.00     594.5   1222.37     480.0
+      7.00     700.8   1870.02     760.0
+      8.00     807.1   2623.97    1100.0
+      9.00     913.4   3484.22    1500.0
+     16.00    9500.09999104.32   93000.0
+  END FTABLE005
+
+  FTABLE    006
+ rows cols ***      Irving Sink         STCOR          70.00
+    8    4
+     depth      area    volume   outflow1 ***
+      0.00       0.1      0.00       0.0
+      5.00       5.1     13.00       0.0
+      7.50      17.9     41.75       0.0
+     10.00      30.8    102.63       0.0
+     12.50      52.8    207.13       0.0
+     15.00      74.8    366.63       0.0
+     17.50     101.7    587.25       0.0
+     30.00     128.69999975.13       0.0
+  END FTABLE006
+
+  FTABLE    007
+ rows cols ***      Lake Kanapaha       STCOR          46.00
+   10    4
+     depth      area    volume  outflow1 ***
+      0.00       0.1      0.00       0.0
+      1.00      10.0      5.05       0.0
+      2.00      65.7     42.90       0.0
+      3.00     131.4    141.45       0.0
+      4.00     198.1    306.20       0.0
+      5.00     264.8    537.65       0.0
+      6.00     355.2    847.65       0.0
+      7.00     445.5   1248.00       0.0
+     11.00     548.8   3236.60       0.0
+     15.00     652.2 999638.60       0.0
+  END FTABLE007
+
+  FTABLE    008
+ rows cols ***      Reddick Quarry      STCOR          55.00
+    8    4
+     depth      area    volume  outflow1 ***
+      0.00       0.1      0.00       0.0
+      2.50       5.0      6.38       0.0
+      5.00      10.0     31.12       0.0
+      7.50      20.3     63.00       0.0
+     10.00      30.7    126.75       0.0
+     12.50      61.0    241.37       0.0
+     15.00      91.4    431.87       0.0
+     25.00     183.6 999119.37       0.0
+  END FTABLE008
+
+  FTABLE    009
+ rows cols ***      Tuscawilla Lake     STCOR          68.00
+   12    4
+     depth      area    volume  outflow1 ***
+      0.00      10.0      0.00       0.0
+      2.00      31.1     41.10       0.0
+      4.00      52.2    124.00       0.0
+      6.00     482.0    658.60       0.0
+      8.00     547.5   1688.10       0.0
+     10.00     613.0   2848.60       0.0
+     12.00     679.8   4141.40       0.0
+     14.00     746.6   5567.80       0.0
+     16.00     798.0   7112.40       0.0
+     18.00     849.4   8759.80       0.0
+     20.00    1013.1  10622.30       0.0
+     22.00    9074.09992709.40       0.0
+  END FTABLE009
+
+  FTABLE    010
+ rows cols ***      Hawthorn Prairie    STCOR          48.00
+    9    4
+     depth      area    volume  outflow1 ***
+      0.00       1.0      0.00       0.0
+      1.00      15.5      7.80       0.0
+      2.00      47.9     39.50       0.0
+      3.00      85.2    106.05       0.0
+      4.00     122.6    209.95       0.0
+      6.00     197.4    529.95       0.0
+      8.00     254.2    981.55       0.0
+     10.00     444.4   1680.15       0.0
+     12.00     634.6 999759.15       0.0
+  END FTABLE010
+
+  FTABLE    011
+ rows cols ***      Cowpen Lake         STCOR          62.50
+   15    4
+     depth      area    volume  outflow1 ***
+        0.       0.0       0.0        0.
+      0.96       3.0       1.0        0.
+      2.96      17.3      23.4        0.
+      4.96      25.3      65.3        0.
+      6.96      43.8      133.        0.
+      8.96      63.3      239.        0.
+     10.96      86.7      387.        0.
+     12.96      122.      593.        0.
+     14.96      170.      882.        0.
+     16.96      236.     1282.        0.
+     18.96      372.     1886.        0.
+     20.96      441.     2701.        0.
+     22.96      483.     3622.        0.
+     27.50      594.     6066.        0.
+     36.50      868.   992645.        0.
+  END FTABLE011
+
+  FTABLE    012
+ rows cols ***      Walberg Lake Outlet STCOR          50.00
+    9    4
+     depth      area    volume  outflow1 ***
+      0.00      20.0      0.00       0.0
+      5.00     150.0    425.00       0.0
+     10.00     224.7   1361.75       0.0
+     12.00     345.6   1932.05       2.0
+     14.00     435.8   2713.45      10.0
+     16.00     645.1   3794.35      50.0
+     18.00     794.9   5234.35     150.0
+     20.00     944.8   6974.05     300.0
+     22.00    1094.6 999013.45     500.0
+  END FTABLE012
+
+  FTABLE    013
+ rows cols ***      Irvine Sink         STCOR          95.00
+   10    4
+     depth      area    volume  outflow1 ***
+      0.00       0.5       0.0       0.0
+      6.00       6.8     21.90       0.0
+      8.00      33.2     61.90       0.0
+     10.00      59.7    154.80       0.0
+     12.50     176.1    449.55       0.0
+     15.00     292.6   1035.42       0.0
+     17.50     357.7   1848.30       0.0
+     20.00     422.9   2824.05       0.0
+     22.50     475.8   3947.42       0.0
+     25.00     528.7  99203.05       0.0
+  END FTABLE013
+
+  FTABLE    901
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ $inv001 $       0.0
+      12. $r12_001 $
+      24. $r24_001 $
+      36. $r36_001 $
+  END FTABLE901
+
+  FTABLE    902
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ $inv002 $       0.0
+      12. $r12_002 $
+      24. $r24_002 $
+      36. $r36_002 $
+  END FTABLE902
+
+  FTABLE    904
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ $inv004 $       0.0
+      12. $r12_004 $
+      24. $r24_004 $
+      36. $r36_004 $
+  END FTABLE904
+
+  FTABLE    908
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ $inv008 $       0.0
+      12. $r12_008 $
+      24. $r24_008 $
+      36. $r36_008 $
+  END FTABLE908
+END FTABLES
+
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - Bivans Arm
+*** Rain station Gainesville AP
+WDM1  1702 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - Sweetwater Branch
+*** Rain station Gainesville AP
+WDM1  1702 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - Paynes Prairie
+*** Rain station Gainesville AP
+WDM1  1702 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Liberty Hill Drain
+*** Rain station Gainesville 11 WNW
+WDM1  1602 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1  1602 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1  1602 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - Hogtown Creek
+*** Rain station Gainesville AP
+WDM1  1702 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - Irving Sink
+*** Rain station Gainesville AP
+WDM1  1702 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+*** Reach 7 - Lake Kanapaha
+*** Rain station Gainesville 11 WNW
+WDM1  1602 HPCP     ENGL                   PERLND 121 139 EXTNL  PREC
+WDM1  1602 HPCP     ENGL                   IMPLND 121 139 EXTNL  PREC
+WDM1  1602 HPCP     ENGL                   RCHRES   7     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND 121 139 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND 121 139 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES   7     EXTNL  POTEV
+
+*** Reach 8 - Reddick Quarry
+*** Rain station Ocala
+WDM1  3702 HPCP     ENGL                   PERLND 141 159 EXTNL  PREC
+WDM1  3702 HPCP     ENGL                   IMPLND 141 159 EXTNL  PREC
+WDM1  3702 HPCP     ENGL                   RCHRES   8     EXTNL  PREC
+*** Evap station Ocala
+WDM1  3706 HPET     ENGL        1.0000     PERLND 141 159 EXTNL  PETINP
+WDM1  3706 HPET     ENGL        1.0000     IMPLND 141 159 EXTNL  PETINP
+WDM1  3706 HPET     ENGL        1.0000     RCHRES   8     EXTNL  POTEV
+
+*** Reach 9 - Tuscawilla Lake
+*** Rain station Gainesville AP
+WDM1  1702 HPCP     ENGL                   PERLND 161 179 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   IMPLND 161 179 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   RCHRES   9     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND 161 179 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND 161 179 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES   9     EXTNL  POTEV
+
+*** Reach 10 - Hawthorn Prairie
+*** Rain station Ocala
+WDM1  3702 HPCP     ENGL                   PERLND 181 199 EXTNL  PREC
+WDM1  3702 HPCP     ENGL                   IMPLND 181 199 EXTNL  PREC
+WDM1  3702 HPCP     ENGL                   RCHRES  10     EXTNL  PREC
+*** Evap station Ocala
+WDM1  3706 HPET     ENGL        1.0000     PERLND 181 199 EXTNL  PETINP
+WDM1  3706 HPET     ENGL        1.0000     IMPLND 181 199 EXTNL  PETINP
+WDM1  3706 HPET     ENGL        1.0000     RCHRES  10     EXTNL  POTEV
+
+*** Reach 11 - Cowpen Lake
+*** Rain station Cowpen
+WDM1  8002 HPCP     ENGL                   PERLND 201 219 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   IMPLND 201 219 EXTNL  PREC
+WDM1  8002 HPCP     ENGL                   RCHRES  11     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND 201 219 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND 201 219 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES  11     EXTNL  POTEV
+
+*** Reach 12 - Walberg Lake Outlet
+*** Rain station Gainesville AP
+WDM1  1702 HPCP     ENGL                   PERLND 221 239 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   IMPLND 221 239 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   RCHRES  12     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND 221 239 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND 221 239 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES  12     EXTNL  POTEV
+
+*** Reach 13 - Irvine Sink
+*** Rain station Gainesville AP
+WDM1  1702 HPCP     ENGL                   PERLND 241 259 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   IMPLND 241 259 EXTNL  PREC
+WDM1  1702 HPCP     ENGL                   RCHRES  13     EXTNL  PREC
+*** Evap station Gainesville AP
+WDM1  1706 HPET     ENGL        1.0000     PERLND 241 259 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     IMPLND 241 259 EXTNL  PETINP
+WDM1  1706 HPET     ENGL        1.0000     RCHRES  13     EXTNL  POTEV
+
+*** Tributary inflows - Transfers
+*** None
+END EXT SOURCES
+
+
+NETWORK
+*** Lochloosa Lake GW to Orange Lake
+*** Surface water - GW interaction
+*** Groundwater Discharge to Lochloosa Lake (multiplier = ft3/s -> ac.ft/hr)
+***GENER   54 OUTPUT TIMSER      0.082645     RCHRES  12     INFLOW IVOL
+***Groundwater Discharge from Paynes Prairie
+GENER   61 OUTPUT TIMSER                   RCHRES  12     EXTNL  OUTDGT 1
+*** Newnans Lake Recharge to GW
+***GENER   52 OUTPUT TIMSER                   RCHRES  13     EXTNL  OUTDGT 1
+*** Groundwater Discharge to Lochloosa Lake (multiplier = ft3/s -> ac.ft/hr)
+*** GENER   54 OUTPUT TIMSER      0.082645     RCHRES  26     INFLOW IVOL
+*** Orange Lake Sink
+*** GENER   50 OUTPUT TIMSER                   RCHRES  37     EXTNL  OUTDGT 1
+*** Hatchet Creek Recharge to GW
+***GENER   55 OUTPUT TIMSER                   RCHRES   5     EXTNL  OUTDGT 1
+*** Bee Tree Creek Recharge to GW
+*** GENER   56 OUTPUT TIMSER                   RCHRES   7     EXTNL  OUTDGT 1
+*** Lochloosa Creek Recharge to GW
+*** GENER   57 OUTPUT TIMSER                   RCHRES  19     EXTNL  OUTDGT 1
+
+END NETWORK
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 7Gnon REACH 1
+PERLND   1                       113.6     RCHRES   1      1
+PERLND   2                       163.9     RCHRES   1      1
+PERLND   3                        68.1     RCHRES   1      1
+PERLND   4                       392.8     RCHRES   1      1
+PERLND   5                         0.0     RCHRES   1      1
+PERLND   6                         7.9     RCHRES   1      1
+PERLND   7                        70.1     RCHRES   1      1
+PERLND   8                       103.5     RCHRES   1      1
+PERLND   9                         0.0     RCHRES   1      1
+PERLND  10                         0.0     RCHRES   1      1
+PERLND  11                        90.2     RCHRES   1      1
+PERLND  12                       165.0     RCHRES   1      1
+PERLND  13                        22.2     RCHRES   1      1
+PERLND  15                       333.0     RCHRES   1      1
+IMPLND   1                         6.0     RCHRES   1      2
+IMPLND   2                        28.9     RCHRES   1      2
+IMPLND   3                        36.6     RCHRES   1      2
+IMPLND   4                       392.8     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                        45.9     PERLND  15     11
+PERLND   2                       241.0     PERLND  15     11
+PERLND   3                       223.7     PERLND  15     11
+PERLND   4                       474.2     PERLND  15     11
+PERLND   5                         0.0     PERLND  15     11
+PERLND   6                         5.8     PERLND  15     11
+PERLND   7                        13.9     PERLND  15     11
+PERLND   8                        31.4     PERLND  15     11
+PERLND   9                         0.0     PERLND  15     11
+PERLND  10                         5.6     PERLND  15     11
+PERLND  11                        97.3     PERLND  15     11
+PERLND  12                        31.4     PERLND  15     11
+IMPLND   1                         2.4     PERLND  15     12
+IMPLND   2                        42.5     PERLND  15     12
+IMPLND   3                       120.5     PERLND  15     12
+IMPLND   4                       474.2     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                        45.9     RCHRES   1      9
+PERLND   2                       241.0     RCHRES   1      9
+PERLND   3                       223.7     RCHRES   1      9
+PERLND   4                       474.2     RCHRES   1      9
+PERLND   5                         0.0     RCHRES   1      9
+PERLND   6                         5.8     RCHRES   1      9
+PERLND   7                        13.9     RCHRES   1      9
+PERLND   8                        31.4     RCHRES   1      9
+PERLND   9                         0.0     RCHRES   1      9
+PERLND  10                         5.6     RCHRES   1      9
+PERLND  11                        97.3     RCHRES   1      9
+PERLND  12                        31.4     RCHRES   1      9
+
+*** 7Gnon REACH 2
+PERLND  21                         0.1     RCHRES   2      1
+PERLND  22                       420.7     RCHRES   2      1
+PERLND  23                        16.4     RCHRES   2      1
+PERLND  24                       229.9     RCHRES   2      1
+PERLND  25                         0.0     RCHRES   2      1
+PERLND  26                        12.7     RCHRES   2      1
+PERLND  27                         0.0     RCHRES   2      1
+PERLND  28                         0.0     RCHRES   2      1
+PERLND  29                         0.0     RCHRES   2      1
+PERLND  30                         4.4     RCHRES   2      1
+PERLND  31                        12.0     RCHRES   2      1
+PERLND  32                         2.4     RCHRES   2      1
+PERLND  33                         0.3     RCHRES   2      1
+PERLND  35                        59.0     RCHRES   2      1
+IMPLND  21                         0.0     RCHRES   2      2
+IMPLND  22                        74.2     RCHRES   2      2
+IMPLND  23                         8.8     RCHRES   2      2
+IMPLND  24                       229.9     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                         5.8     PERLND  35     21
+PERLND  22                       186.1     PERLND  35     21
+PERLND  23                        16.2     PERLND  35     21
+PERLND  24                       119.5     PERLND  35     21
+PERLND  25                         0.0     PERLND  35     21
+PERLND  26                        13.1     PERLND  35     21
+PERLND  27                         0.0     PERLND  35     21
+PERLND  28                         0.0     PERLND  35     21
+PERLND  29                         0.0     PERLND  35     21
+PERLND  30                         0.6     PERLND  35     21
+PERLND  31                        46.6     PERLND  35     21
+PERLND  32                         3.3     PERLND  35     21
+IMPLND  21                         0.3     PERLND  35     22
+IMPLND  22                        32.8     PERLND  35     22
+IMPLND  23                         8.7     PERLND  35     22
+IMPLND  24                       119.5     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                         5.8     RCHRES   2      9
+PERLND  22                       186.1     RCHRES   2      9
+PERLND  23                        16.2     RCHRES   2      9
+PERLND  24                       119.5     RCHRES   2      9
+PERLND  25                         0.0     RCHRES   2      9
+PERLND  26                        13.1     RCHRES   2      9
+PERLND  27                         0.0     RCHRES   2      9
+PERLND  28                         0.0     RCHRES   2      9
+PERLND  29                         0.0     RCHRES   2      9
+PERLND  30                         0.6     RCHRES   2      9
+PERLND  31                        46.6     RCHRES   2      9
+PERLND  32                         3.3     RCHRES   2      9
+
+*** 7Gnon REACH 3
+PERLND  41                      1095.7     RCHRES   3      1
+PERLND  42                       896.8     RCHRES   3      1
+PERLND  43                       424.9     RCHRES   3      1
+PERLND  44                       348.9     RCHRES   3      1
+PERLND  45                         0.0     RCHRES   3      1
+PERLND  46                       154.6     RCHRES   3      1
+PERLND  47                      1680.1     RCHRES   3      1
+PERLND  48                       514.3     RCHRES   3      1
+PERLND  49                         0.0     RCHRES   3      1
+PERLND  50                       637.4     RCHRES   3      1
+PERLND  51                      6425.5     RCHRES   3      1
+PERLND  52                       224.8     RCHRES   3      1
+PERLND  53                     14103.5     RCHRES   3      1
+PERLND  55                      1371.2     RCHRES   3      1
+IMPLND  41                        57.7     RCHRES   3      2
+IMPLND  42                       158.3     RCHRES   3      2
+IMPLND  43                       228.8     RCHRES   3      2
+IMPLND  44                       348.9     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                       467.2     PERLND  55     31
+PERLND  42                       511.0     PERLND  55     31
+PERLND  43                       206.6     PERLND  55     31
+PERLND  44                       168.4     PERLND  55     31
+PERLND  45                         0.0     PERLND  55     31
+PERLND  46                       157.5     PERLND  55     31
+PERLND  47                       621.7     PERLND  55     31
+PERLND  48                       133.6     PERLND  55     31
+PERLND  49                         0.0     PERLND  55     31
+PERLND  50                       234.0     PERLND  55     31
+PERLND  51                      2366.6     PERLND  55     31
+PERLND  52                        15.6     PERLND  55     31
+IMPLND  41                        24.6     PERLND  55     32
+IMPLND  42                        90.2     PERLND  55     32
+IMPLND  43                       111.2     PERLND  55     32
+IMPLND  44                       168.4     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                       467.2     RCHRES   3      9
+PERLND  42                       511.0     RCHRES   3      9
+PERLND  43                       206.6     RCHRES   3      9
+PERLND  44                       168.4     RCHRES   3      9
+PERLND  45                         0.0     RCHRES   3      9
+PERLND  46                       157.5     RCHRES   3      9
+PERLND  47                       621.7     RCHRES   3      9
+PERLND  48                       133.6     RCHRES   3      9
+PERLND  49                         0.0     RCHRES   3      9
+PERLND  50                       234.0     RCHRES   3      9
+PERLND  51                      2366.6     RCHRES   3      9
+PERLND  52                        15.6     RCHRES   3      9
+
+*** 7Gnon REACH 4
+PERLND  61                       624.7     RCHRES   4      1
+PERLND  62                       420.2     RCHRES   4      1
+PERLND  63                       322.3     RCHRES   4      1
+PERLND  64                       497.0     RCHRES   4      1
+PERLND  65                         0.0     RCHRES   4      1
+PERLND  66                       122.4     RCHRES   4      1
+PERLND  67                       279.5     RCHRES   4      1
+PERLND  68                       223.5     RCHRES   4      1
+PERLND  69                        12.8     RCHRES   4      1
+PERLND  70                        59.0     RCHRES   4      1
+PERLND  71                      1296.0     RCHRES   4      1
+PERLND  72                        43.4     RCHRES   4      1
+PERLND  73                        64.5     RCHRES   4      1
+PERLND  75                      1031.0     RCHRES   4      1
+IMPLND  61                        32.9     RCHRES   4      2
+IMPLND  62                        74.2     RCHRES   4      2
+IMPLND  63                       173.5     RCHRES   4      2
+IMPLND  64                       497.0     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                       981.3     PERLND  75     41
+PERLND  62                       642.5     PERLND  75     41
+PERLND  63                       264.0     PERLND  75     41
+PERLND  64                       301.9     PERLND  75     41
+PERLND  65                         0.0     PERLND  75     41
+PERLND  66                        36.3     PERLND  75     41
+PERLND  67                       194.7     PERLND  75     41
+PERLND  68                       265.7     PERLND  75     41
+PERLND  69                         5.3     PERLND  75     41
+PERLND  70                        42.1     PERLND  75     41
+PERLND  71                      1513.8     PERLND  75     41
+PERLND  72                        40.7     PERLND  75     41
+IMPLND  61                        51.6     PERLND  75     42
+IMPLND  62                       113.4     PERLND  75     42
+IMPLND  63                       142.1     PERLND  75     42
+IMPLND  64                       301.9     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                       981.3     RCHRES   4      9
+PERLND  62                       642.5     RCHRES   4      9
+PERLND  63                       264.0     RCHRES   4      9
+PERLND  64                       301.9     RCHRES   4      9
+PERLND  65                         0.0     RCHRES   4      9
+PERLND  66                        36.3     RCHRES   4      9
+PERLND  67                       194.7     RCHRES   4      9
+PERLND  68                       265.7     RCHRES   4      9
+PERLND  69                         5.3     RCHRES   4      9
+PERLND  70                        42.1     RCHRES   4      9
+PERLND  71                      1513.8     RCHRES   4      9
+PERLND  72                        40.7     RCHRES   4      9
+
+*** 7Gnon REACH 5
+PERLND  81                       236.0     RCHRES   5      1
+PERLND  82                      1468.9     RCHRES   5      1
+PERLND  83                       244.3     RCHRES   5      1
+PERLND  84                       446.8     RCHRES   5      1
+PERLND  85                         0.0     RCHRES   5      1
+PERLND  86                        48.7     RCHRES   5      1
+PERLND  87                         8.7     RCHRES   5      1
+PERLND  88                         4.0     RCHRES   5      1
+PERLND  89                         0.0     RCHRES   5      1
+PERLND  90                        15.3     RCHRES   5      1
+PERLND  91                       228.2     RCHRES   5      1
+PERLND  92                        36.9     RCHRES   5      1
+PERLND  93                         5.3     RCHRES   5      1
+PERLND  95                      1847.1     RCHRES   5      1
+IMPLND  81                        12.4     RCHRES   5      2
+IMPLND  82                       259.2     RCHRES   5      2
+IMPLND  83                       131.6     RCHRES   5      2
+IMPLND  84                       446.8     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                       780.3     PERLND  95     51
+PERLND  82                      3438.9     PERLND  95     51
+PERLND  83                       573.6     PERLND  95     51
+PERLND  84                       696.4     PERLND  95     51
+PERLND  85                         4.3     PERLND  95     51
+PERLND  86                       212.8     PERLND  95     51
+PERLND  87                        27.9     PERLND  95     51
+PERLND  88                         0.1     PERLND  95     51
+PERLND  89                         0.0     PERLND  95     51
+PERLND  90                        21.9     PERLND  95     51
+PERLND  91                       986.1     PERLND  95     51
+PERLND  92                        64.2     PERLND  95     51
+IMPLND  81                        41.1     PERLND  95     52
+IMPLND  82                       606.9     PERLND  95     52
+IMPLND  83                       308.8     PERLND  95     52
+IMPLND  84                       696.4     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                       780.3     RCHRES   5      9
+PERLND  82                      3438.9     RCHRES   5      9
+PERLND  83                       573.6     RCHRES   5      9
+PERLND  84                       696.4     RCHRES   5      9
+PERLND  85                         4.3     RCHRES   5      9
+PERLND  86                       212.8     RCHRES   5      9
+PERLND  87                        27.9     RCHRES   5      9
+PERLND  88                         0.1     RCHRES   5      9
+PERLND  89                         0.0     RCHRES   5      9
+PERLND  90                        21.9     RCHRES   5      9
+PERLND  91                       986.1     RCHRES   5      9
+PERLND  92                        64.2     RCHRES   5      9
+
+*** 7Gnon REACH 6
+PERLND 101                       179.8     RCHRES   6      1
+PERLND 102                        17.4     RCHRES   6      1
+PERLND 103                         0.0     RCHRES   6      1
+PERLND 104                        58.4     RCHRES   6      1
+PERLND 105                         0.0     RCHRES   6      1
+PERLND 106                        20.4     RCHRES   6      1
+PERLND 107                      1850.1     RCHRES   6      1
+PERLND 108                       158.4     RCHRES   6      1
+PERLND 109                         0.0     RCHRES   6      1
+PERLND 110                       119.6     RCHRES   6      1
+PERLND 111                       624.6     RCHRES   6      1
+PERLND 112                        15.2     RCHRES   6      1
+PERLND 113                         0.8     RCHRES   6      1
+PERLND 115                       318.5     RCHRES   6      1
+IMPLND 101                         9.5     RCHRES   6      2
+IMPLND 102                         3.1     RCHRES   6      2
+IMPLND 103                         0.0     RCHRES   6      2
+IMPLND 104                        58.4     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                        20.0     PERLND 115     61
+PERLND 102                         0.0     PERLND 115     61
+PERLND 103                         1.8     PERLND 115     61
+PERLND 104                        69.6     PERLND 115     61
+PERLND 105                         0.0     PERLND 115     61
+PERLND 106                        16.8     PERLND 115     61
+PERLND 107                       759.2     PERLND 115     61
+PERLND 108                       154.8     PERLND 115     61
+PERLND 109                         0.0     PERLND 115     61
+PERLND 110                       150.9     PERLND 115     61
+PERLND 111                       591.6     PERLND 115     61
+PERLND 112                         7.0     PERLND 115     61
+IMPLND 101                         1.1     PERLND 115     62
+IMPLND 102                         0.0     PERLND 115     62
+IMPLND 103                         1.0     PERLND 115     62
+IMPLND 104                        69.6     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                        20.0     RCHRES   6      9
+PERLND 102                         0.0     RCHRES   6      9
+PERLND 103                         1.8     RCHRES   6      9
+PERLND 104                        69.6     RCHRES   6      9
+PERLND 105                         0.0     RCHRES   6      9
+PERLND 106                        16.8     RCHRES   6      9
+PERLND 107                       759.2     RCHRES   6      9
+PERLND 108                       154.8     RCHRES   6      9
+PERLND 109                         0.0     RCHRES   6      9
+PERLND 110                       150.9     RCHRES   6      9
+PERLND 111                       591.6     RCHRES   6      9
+PERLND 112                         7.0     RCHRES   6      9
+
+*** 7Gnon REACH 7
+PERLND 121                       711.0     RCHRES   7      1
+PERLND 122                       429.1     RCHRES   7      1
+PERLND 123                       503.0     RCHRES   7      1
+PERLND 124                       341.3     RCHRES   7      1
+PERLND 125                         0.0     RCHRES   7      1
+PERLND 126                        52.6     RCHRES   7      1
+PERLND 127                       119.0     RCHRES   7      1
+PERLND 128                        16.4     RCHRES   7      1
+PERLND 129                         2.2     RCHRES   7      1
+PERLND 130                        79.5     RCHRES   7      1
+PERLND 131                       942.7     RCHRES   7      1
+PERLND 132                        30.8     RCHRES   7      1
+PERLND 133                        14.8     RCHRES   7      1
+PERLND 135                       939.0     RCHRES   7      1
+IMPLND 121                        37.4     RCHRES   7      2
+IMPLND 122                        75.7     RCHRES   7      2
+IMPLND 123                       270.9     RCHRES   7      2
+IMPLND 124                       341.3     RCHRES   7      2
+      *** Surface runoff to non-reach wetland
+PERLND 121                       118.6     PERLND 135     71
+PERLND 122                       120.6     PERLND 135     71
+PERLND 123                       272.9     PERLND 135     71
+PERLND 124                       162.1     PERLND 135     71
+PERLND 125                         0.0     PERLND 135     71
+PERLND 126                        82.8     PERLND 135     71
+PERLND 127                        49.3     PERLND 135     71
+PERLND 128                         7.2     PERLND 135     71
+PERLND 129                         0.0     PERLND 135     71
+PERLND 130                        29.1     PERLND 135     71
+PERLND 131                       659.8     PERLND 135     71
+PERLND 132                        11.2     PERLND 135     71
+IMPLND 121                         6.2     PERLND 135     72
+IMPLND 122                        21.3     PERLND 135     72
+IMPLND 123                       147.0     PERLND 135     72
+IMPLND 124                       162.1     PERLND 135     72
+      *** Baseflow to reach
+PERLND 121                       118.6     RCHRES   7      9
+PERLND 122                       120.6     RCHRES   7      9
+PERLND 123                       272.9     RCHRES   7      9
+PERLND 124                       162.1     RCHRES   7      9
+PERLND 125                         0.0     RCHRES   7      9
+PERLND 126                        82.8     RCHRES   7      9
+PERLND 127                        49.3     RCHRES   7      9
+PERLND 128                         7.2     RCHRES   7      9
+PERLND 129                         0.0     RCHRES   7      9
+PERLND 130                        29.1     RCHRES   7      9
+PERLND 131                       659.8     RCHRES   7      9
+PERLND 132                        11.2     RCHRES   7      9
+
+*** 7Gnon REACH 8
+PERLND 141                       602.1     RCHRES   8      1
+PERLND 142                        20.3     RCHRES   8      1
+PERLND 143                         0.0     RCHRES   8      1
+PERLND 144                       107.9     RCHRES   8      1
+PERLND 145                         0.0     RCHRES   8      1
+PERLND 146                        51.9     RCHRES   8      1
+PERLND 147                      4381.5     RCHRES   8      1
+PERLND 148                       311.2     RCHRES   8      1
+PERLND 149                         0.0     RCHRES   8      1
+PERLND 150                       235.5     RCHRES   8      1
+PERLND 151                       893.3     RCHRES   8      1
+PERLND 152                        19.4     RCHRES   8      1
+PERLND 153                         0.9     RCHRES   8      1
+PERLND 155                        61.9     RCHRES   8      1
+IMPLND 141                        31.7     RCHRES   8      2
+IMPLND 142                         3.6     RCHRES   8      2
+IMPLND 143                         0.0     RCHRES   8      2
+IMPLND 144                       107.9     RCHRES   8      2
+      *** Surface runoff to non-reach wetland
+PERLND 141                        25.6     PERLND 155     81
+PERLND 142                         0.0     PERLND 155     81
+PERLND 143                         0.0     PERLND 155     81
+PERLND 144                         7.7     PERLND 155     81
+PERLND 145                         0.0     PERLND 155     81
+PERLND 146                         4.9     PERLND 155     81
+PERLND 147                      1007.8     PERLND 155     81
+PERLND 148                         0.0     PERLND 155     81
+PERLND 149                         0.0     PERLND 155     81
+PERLND 150                        29.7     PERLND 155     81
+PERLND 151                       186.5     PERLND 155     81
+PERLND 152                         8.5     PERLND 155     81
+IMPLND 141                         1.3     PERLND 155     82
+IMPLND 142                         0.0     PERLND 155     82
+IMPLND 143                         0.0     PERLND 155     82
+IMPLND 144                         7.7     PERLND 155     82
+      *** Baseflow to reach
+PERLND 141                        25.6     RCHRES   8      9
+PERLND 142                         0.0     RCHRES   8      9
+PERLND 143                         0.0     RCHRES   8      9
+PERLND 144                         7.7     RCHRES   8      9
+PERLND 145                         0.0     RCHRES   8      9
+PERLND 146                         4.9     RCHRES   8      9
+PERLND 147                      1007.8     RCHRES   8      9
+PERLND 148                         0.0     RCHRES   8      9
+PERLND 149                         0.0     RCHRES   8      9
+PERLND 150                        29.7     RCHRES   8      9
+PERLND 151                       186.5     RCHRES   8      9
+PERLND 152                         8.5     RCHRES   8      9
+
+*** 7Gnon REACH 9
+PERLND 161                        31.0     RCHRES   9      1
+PERLND 162                        16.5     RCHRES   9      1
+PERLND 163                         0.0     RCHRES   9      1
+PERLND 164                        13.9     RCHRES   9      1
+PERLND 165                         0.0     RCHRES   9      1
+PERLND 166                         1.0     RCHRES   9      1
+PERLND 167                       241.5     RCHRES   9      1
+PERLND 168                        27.2     RCHRES   9      1
+PERLND 169                         0.0     RCHRES   9      1
+PERLND 170                        29.6     RCHRES   9      1
+PERLND 171                       389.5     RCHRES   9      1
+PERLND 172                        71.0     RCHRES   9      1
+PERLND 173                         4.2     RCHRES   9      1
+PERLND 175                      1324.8     RCHRES   9      1
+IMPLND 161                         1.6     RCHRES   9      2
+IMPLND 162                         2.9     RCHRES   9      2
+IMPLND 163                         0.0     RCHRES   9      2
+IMPLND 164                        13.9     RCHRES   9      2
+      *** Surface runoff to non-reach wetland
+PERLND 161                       184.7     PERLND 175     91
+PERLND 162                        33.0     PERLND 175     91
+PERLND 163                         0.0     PERLND 175     91
+PERLND 164                        51.1     PERLND 175     91
+PERLND 165                         0.0     PERLND 175     91
+PERLND 166                        15.6     PERLND 175     91
+PERLND 167                       537.6     PERLND 175     91
+PERLND 168                        99.8     PERLND 175     91
+PERLND 169                         0.0     PERLND 175     91
+PERLND 170                        38.9     PERLND 175     91
+PERLND 171                      2710.9     PERLND 175     91
+PERLND 172                        23.1     PERLND 175     91
+IMPLND 161                         9.7     PERLND 175     92
+IMPLND 162                         5.8     PERLND 175     92
+IMPLND 163                         0.0     PERLND 175     92
+IMPLND 164                        51.1     PERLND 175     92
+      *** Baseflow to reach
+PERLND 161                       184.7     RCHRES   9      9
+PERLND 162                        33.0     RCHRES   9      9
+PERLND 163                         0.0     RCHRES   9      9
+PERLND 164                        51.1     RCHRES   9      9
+PERLND 165                         0.0     RCHRES   9      9
+PERLND 166                        15.6     RCHRES   9      9
+PERLND 167                       537.6     RCHRES   9      9
+PERLND 168                        99.8     RCHRES   9      9
+PERLND 169                         0.0     RCHRES   9      9
+PERLND 170                        38.9     RCHRES   9      9
+PERLND 171                      2710.9     RCHRES   9      9
+PERLND 172                        23.1     RCHRES   9      9
+
+*** 7Gnon REACH 10
+PERLND 181                      1204.8     RCHRES  10      1
+PERLND 182                        29.5     RCHRES  10      1
+PERLND 183                         0.0     RCHRES  10      1
+PERLND 184                       342.6     RCHRES  10      1
+PERLND 185                       300.0     RCHRES  10      1
+PERLND 186                       219.5     RCHRES  10      1
+PERLND 187                     10036.4     RCHRES  10      1
+PERLND 188                      2334.2     RCHRES  10      1
+PERLND 189                        13.3     RCHRES  10      1
+PERLND 190                       513.4     RCHRES  10      1
+PERLND 191                      2505.5     RCHRES  10      1
+PERLND 192                       106.3     RCHRES  10      1
+PERLND 193                         7.5     RCHRES  10      1
+PERLND 195                       116.4     RCHRES  10      1
+IMPLND 181                        63.4     RCHRES  10      2
+IMPLND 182                         5.2     RCHRES  10      2
+IMPLND 183                         0.0     RCHRES  10      2
+IMPLND 184                       342.6     RCHRES  10      2
+      *** Surface runoff to non-reach wetland
+PERLND 181                        30.5     PERLND 195    101
+PERLND 182                         0.3     PERLND 195    101
+PERLND 183                         0.0     PERLND 195    101
+PERLND 184                        69.0     PERLND 195    101
+PERLND 185                         6.1     PERLND 195    101
+PERLND 186                         5.1     PERLND 195    101
+PERLND 187                       667.3     PERLND 195    101
+PERLND 188                       256.4     PERLND 195    101
+PERLND 189                         4.3     PERLND 195    101
+PERLND 190                        19.8     PERLND 195    101
+PERLND 191                       278.8     PERLND 195    101
+PERLND 192                        82.0     PERLND 195    101
+IMPLND 181                         1.6     PERLND 195    102
+IMPLND 182                         0.1     PERLND 195    102
+IMPLND 183                         0.0     PERLND 195    102
+IMPLND 184                        69.0     PERLND 195    102
+      *** Baseflow to reach
+PERLND 181                        30.5     RCHRES  10      9
+PERLND 182                         0.3     RCHRES  10      9
+PERLND 183                         0.0     RCHRES  10      9
+PERLND 184                        69.0     RCHRES  10      9
+PERLND 185                         6.1     RCHRES  10      9
+PERLND 186                         5.1     RCHRES  10      9
+PERLND 187                       667.3     RCHRES  10      9
+PERLND 188                       256.4     RCHRES  10      9
+PERLND 189                         4.3     RCHRES  10      9
+PERLND 190                        19.8     RCHRES  10      9
+PERLND 191                       278.8     RCHRES  10      9
+PERLND 192                        82.0     RCHRES  10      9
+
+*** 7Gnon REACH 11
+PERLND 201                       290.6     RCHRES  11      1
+PERLND 202                         1.8     RCHRES  11      1
+PERLND 203                         0.0     RCHRES  11      1
+PERLND 204                         1.7     RCHRES  11      1
+PERLND 205                        39.6     RCHRES  11      1
+PERLND 206                         6.1     RCHRES  11      1
+PERLND 207                        34.2     RCHRES  11      1
+PERLND 208                        11.8     RCHRES  11      1
+PERLND 209                         0.0     RCHRES  11      1
+PERLND 210                        13.0     RCHRES  11      1
+PERLND 211                       612.4     RCHRES  11      1
+PERLND 212                        75.0     RCHRES  11      1
+PERLND 213                         0.8     RCHRES  11      1
+PERLND 215                       406.5     RCHRES  11      1
+IMPLND 201                        15.3     RCHRES  11      2
+IMPLND 202                         0.3     RCHRES  11      2
+IMPLND 203                         0.0     RCHRES  11      2
+IMPLND 204                         1.7     RCHRES  11      2
+      *** Surface runoff to non-reach wetland
+PERLND 201                       532.8     PERLND 215    111
+PERLND 202                         2.9     PERLND 215    111
+PERLND 203                         0.0     PERLND 215    111
+PERLND 204                        29.3     PERLND 215    111
+PERLND 205                         0.0     PERLND 215    111
+PERLND 206                         0.7     PERLND 215    111
+PERLND 207                        33.6     PERLND 215    111
+PERLND 208                         4.5     PERLND 215    111
+PERLND 209                         0.0     PERLND 215    111
+PERLND 210                        22.2     PERLND 215    111
+PERLND 211                       808.9     PERLND 215    111
+PERLND 212                       210.6     PERLND 215    111
+IMPLND 201                        28.0     PERLND 215    112
+IMPLND 202                         0.5     PERLND 215    112
+IMPLND 203                         0.0     PERLND 215    112
+IMPLND 204                        29.3     PERLND 215    112
+      *** Baseflow to reach
+PERLND 201                       532.8     RCHRES  11      9
+PERLND 202                         2.9     RCHRES  11      9
+PERLND 203                         0.0     RCHRES  11      9
+PERLND 204                        29.3     RCHRES  11      9
+PERLND 205                         0.0     RCHRES  11      9
+PERLND 206                         0.7     RCHRES  11      9
+PERLND 207                        33.6     RCHRES  11      9
+PERLND 208                         4.5     RCHRES  11      9
+PERLND 209                         0.0     RCHRES  11      9
+PERLND 210                        22.2     RCHRES  11      9
+PERLND 211                       808.9     RCHRES  11      9
+PERLND 212                       210.6     RCHRES  11      9
+
+*** 7Gnon REACH 12
+PERLND 221                         9.6     RCHRES  12      1
+PERLND 222                         0.0     RCHRES  12      1
+PERLND 223                         0.0     RCHRES  12      1
+PERLND 224                         3.6     RCHRES  12      1
+PERLND 225                         0.0     RCHRES  12      1
+PERLND 226                         7.3     RCHRES  12      1
+PERLND 227                        26.9     RCHRES  12      1
+PERLND 228                         0.4     RCHRES  12      1
+PERLND 229                         0.0     RCHRES  12      1
+PERLND 230                         5.0     RCHRES  12      1
+PERLND 231                       121.5     RCHRES  12      1
+PERLND 232                        46.0     RCHRES  12      1
+PERLND 233                         0.5     RCHRES  12      1
+PERLND 235                      1179.8     RCHRES  12      1
+IMPLND 221                         0.5     RCHRES  12      2
+IMPLND 222                         0.0     RCHRES  12      2
+IMPLND 223                         0.0     RCHRES  12      2
+IMPLND 224                         3.6     RCHRES  12      2
+      *** Surface runoff to non-reach wetland
+PERLND 221                       110.0     PERLND 235    121
+PERLND 222                         0.0     PERLND 235    121
+PERLND 223                         0.0     PERLND 235    121
+PERLND 224                        41.9     PERLND 235    121
+PERLND 225                         0.0     PERLND 235    121
+PERLND 226                        56.6     PERLND 235    121
+PERLND 227                       229.0     PERLND 235    121
+PERLND 228                        44.1     PERLND 235    121
+PERLND 229                         0.0     PERLND 235    121
+PERLND 230                        71.0     PERLND 235    121
+PERLND 231                      1133.1     PERLND 235    121
+PERLND 232                       255.0     PERLND 235    121
+IMPLND 221                         5.8     PERLND 235    122
+IMPLND 222                         0.0     PERLND 235    122
+IMPLND 223                         0.0     PERLND 235    122
+IMPLND 224                        41.9     PERLND 235    122
+      *** Baseflow to reach
+PERLND 221                       110.0     RCHRES  12      9
+PERLND 222                         0.0     RCHRES  12      9
+PERLND 223                         0.0     RCHRES  12      9
+PERLND 224                        41.9     RCHRES  12      9
+PERLND 225                         0.0     RCHRES  12      9
+PERLND 226                        56.6     RCHRES  12      9
+PERLND 227                       229.0     RCHRES  12      9
+PERLND 228                        44.1     RCHRES  12      9
+PERLND 229                         0.0     RCHRES  12      9
+PERLND 230                        71.0     RCHRES  12      9
+PERLND 231                      1133.1     RCHRES  12      9
+PERLND 232                       255.0     RCHRES  12      9
+
+*** 7Gnon REACH 13
+PERLND 241                         0.2     RCHRES  13      1
+PERLND 242                         0.0     RCHRES  13      1
+PERLND 243                         0.0     RCHRES  13      1
+PERLND 244                        13.6     RCHRES  13      1
+PERLND 245                         0.0     RCHRES  13      1
+PERLND 246                         0.0     RCHRES  13      1
+PERLND 247                       286.2     RCHRES  13      1
+PERLND 248                         3.1     RCHRES  13      1
+PERLND 249                         0.0     RCHRES  13      1
+PERLND 250                        15.3     RCHRES  13      1
+PERLND 251                       408.7     RCHRES  13      1
+PERLND 252                        10.1     RCHRES  13      1
+PERLND 253                         0.6     RCHRES  13      1
+PERLND 255                       353.1     RCHRES  13      1
+IMPLND 241                         0.0     RCHRES  13      2
+IMPLND 242                         0.0     RCHRES  13      2
+IMPLND 243                         0.0     RCHRES  13      2
+IMPLND 244                        13.6     RCHRES  13      2
+      *** Surface runoff to non-reach wetland
+PERLND 241                        23.6     PERLND 255    131
+PERLND 242                         0.0     PERLND 255    131
+PERLND 243                         0.0     PERLND 255    131
+PERLND 244                        17.7     PERLND 255    131
+PERLND 245                         0.0     PERLND 255    131
+PERLND 246                         0.0     PERLND 255    131
+PERLND 247                       721.2     PERLND 255    131
+PERLND 248                        33.9     PERLND 255    131
+PERLND 249                         0.0     PERLND 255    131
+PERLND 250                        26.0     PERLND 255    131
+PERLND 251                       856.4     PERLND 255    131
+PERLND 252                         0.6     PERLND 255    131
+IMPLND 241                         1.2     PERLND 255    132
+IMPLND 242                         0.0     PERLND 255    132
+IMPLND 243                         0.0     PERLND 255    132
+IMPLND 244                        17.7     PERLND 255    132
+      *** Baseflow to reach
+PERLND 241                        23.6     RCHRES  13      9
+PERLND 242                         0.0     RCHRES  13      9
+PERLND 243                         0.0     RCHRES  13      9
+PERLND 244                        17.7     RCHRES  13      9
+PERLND 245                         0.0     RCHRES  13      9
+PERLND 246                         0.0     RCHRES  13      9
+PERLND 247                       721.2     RCHRES  13      9
+PERLND 248                        33.9     RCHRES  13      9
+PERLND 249                         0.0     RCHRES  13      9
+PERLND 250                        26.0     RCHRES  13      9
+PERLND 251                       856.4     RCHRES  13      9
+PERLND 252                         0.6     RCHRES  13      9
+
+*** 7Gnon-1 Bivans Arm TO 7Gnon-3 Paynes Prairie
+RCHRES   1                                 RCHRES   3      3
+*** 7Gnon-2 Sweetwater Branch TO 7Gnon-3 Paynes Prairie
+RCHRES   2                                 RCHRES   3      3
+***RCHRES   3                                 RCHRES   3      3
+RCHRES   4                                 RCHRES   5      3
+*** 7Gnon-5 Hogtown Creek TO 7Gnon-7 Lake Kanapaha
+RCHRES   5                                 RCHRES   7      3
+***RCHRES   6                                 RCHRES   6      3
+***RCHRES   7                                 RCHRES   7      3
+***RCHRES   8                                 RCHRES   8      3
+***RCHRES   9                                 RCHRES   9      3
+***RCHRES  10                                 RCHRES  10      3
+***RCHRES  11                                 RCHRES  11      3
+*** 7Gnon-12 Walberg Lake Outlet TO 7Gnon-3 Paynes Prairie
+RCHRES  12                                 RCHRES   3      3
+***RCHRES  13                                 RCHRES  13      3
+END SCHEMATIC
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+*** Transfer datasets - hourly volume/mass                                        Reach   Exit
+***RCHRES   0 HYDR   ROVOL                    WDM2  #N/A FLOW     ENGL AGGR REPL
+
+*** Gages
+*** 7Gnon-3 - Paynes Pr STAGE
+RCHRES   3 HYDR   STAGE                    WDM2   100 STAG     ENGL AGGR REPL
+
+***7Gnon-5  - Hogtown Creek Flow
+RCHRES   5 HYDR   RO     1                 WDM2   101 FLOW     ENGL AGGR REPL
+
+***RCHRES  12 HYDR   STAGE                    WDM2   300 STAGE    ENGL AGGR REPL
+***RCHRES  21 HYDR   RO                       WDM2  #N/A FLOW     ENGL AGGR REPL
+***RCHRES  26 HYDR   O      1                 WDM2  #N/A FLOW     ENGL AGGR REPL
+***RCHRES  26 HYDR   STAGE                    WDM2  #N/A STAGE    ENGL AGGR REPL
+***RCHRES  31 HYDR   RO                       WDM2  #N/A FLOW     ENGL AGGR REPL
+***RCHRES  34 HYDR   RO                       WDM2  #N/A FLOW     ENGL AGGR REPL
+***RCHRES  34 HYDR   STAGE                    WDM2  #N/A STAGE    ENGL AGGR REPL
+***RCHRES  36 HYDR   RO                       WDM2  #N/A FLOW     ENGL AGGR REPL
+END EXT TARGETS
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 7Gnon REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.003003     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.003003     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.003003     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 7Gnon REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.016948     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.016948     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.016948     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 7Gnon REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000729     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000729     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000729     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 7Gnon REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000970     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000970     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000970     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 7Gnon REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000541     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000541     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000541     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 7Gnon REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.003140     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.003140     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.003140     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+*** 7Gnon REACH 7
+  MASS-LINK       71
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001065     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001065     PERLND         EXTNL  SURLI
+  END MASS-LINK   71
+
+  MASS-LINK       72
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001065     PERLND         EXTNL  SURLI
+  END MASS-LINK   72
+*** 7Gnon REACH 8
+  MASS-LINK       81
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.016157     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.016157     PERLND         EXTNL  SURLI
+  END MASS-LINK   81
+
+  MASS-LINK       82
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.016157     PERLND         EXTNL  SURLI
+  END MASS-LINK   82
+*** 7Gnon REACH 9
+  MASS-LINK       91
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000755     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000755     PERLND         EXTNL  SURLI
+  END MASS-LINK   91
+
+  MASS-LINK       92
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000755     PERLND         EXTNL  SURLI
+  END MASS-LINK   92
+*** 7Gnon REACH 10
+  MASS-LINK      101
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.008588     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.008588     PERLND         EXTNL  SURLI
+  END MASS-LINK  101
+
+  MASS-LINK      102
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.008588     PERLND         EXTNL  SURLI
+  END MASS-LINK  102
+*** 7Gnon REACH 11
+  MASS-LINK      111
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002460     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002460     PERLND         EXTNL  SURLI
+  END MASS-LINK  111
+
+  MASS-LINK      112
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002460     PERLND         EXTNL  SURLI
+  END MASS-LINK  112
+*** 7Gnon REACH 12
+  MASS-LINK      121
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000848     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000848     PERLND         EXTNL  SURLI
+  END MASS-LINK  121
+
+  MASS-LINK      122
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000848     PERLND         EXTNL  SURLI
+  END MASS-LINK  122
+*** 7Gnon REACH 13
+  MASS-LINK      131
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002832     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002832     PERLND         EXTNL  SURLI
+  END MASS-LINK  131
+
+  MASS-LINK      132
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002832     PERLND         EXTNL  SURLI
+  END MASS-LINK  132
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+  UVQUAN rca7   RCHRES   7 SAREA            3 2.296E-05
+  UVQUAN rca8   RCHRES   8 SAREA            3 2.296E-05
+  UVQUAN rca9   RCHRES   9 SAREA            3 2.296E-05
+  UVQUAN rca10  RCHRES  10 SAREA            3 2.296E-05
+  UVQUAN rca11  RCHRES  11 SAREA            3 2.296E-05
+  UVQUAN rca12  RCHRES  12 SAREA            3 2.296E-05
+  UVQUAN rca13  RCHRES  13 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01
+  UVQUAN wla033 GLOBAL     WORKSP 02
+  UVQUAN wla053 GLOBAL     WORKSP 03
+  UVQUAN wla073 GLOBAL     WORKSP 04
+  UVQUAN wla093 GLOBAL     WORKSP 05
+  UVQUAN wla113 GLOBAL     WORKSP 06
+  UVQUAN wla133 GLOBAL     WORKSP 07
+  UVQUAN wla153 GLOBAL     WORKSP 08
+  UVQUAN wla173 GLOBAL     WORKSP 09
+  UVQUAN wla193 GLOBAL     WORKSP 10
+  UVQUAN wla213 GLOBAL     WORKSP 11
+  UVQUAN wla233 GLOBAL     WORKSP 12
+  UVQUAN wla253 GLOBAL     WORKSP 13
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+  UVNAME  WLA133  1 WORKSP 07        1.0  QUAN
+  UVNAME  WLA153  1 WORKSP 08        1.0  QUAN
+  UVNAME  WLA173  1 WORKSP 09        1.0  QUAN
+  UVNAME  WLA193  1 WORKSP 10        1.0  QUAN
+  UVNAME  WLA213  1 WORKSP 11        1.0  QUAN
+  UVNAME  WLA233  1 WORKSP 12        1.0  QUAN
+  UVNAME  WLA253  1 WORKSP 13        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =     187.2
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =       2.7
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =   14328.3
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =     107.9
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =      42.2
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =      16.0
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+*** Reach 7
+  COPY   99                               WLA133           =      45.6
+  COPY   99                               WLA133          -=    rca7
+  COPY   99                               WLA133         MAX       0.0
+*** Reach 8
+  COPY   99                               WLA153           =      20.3
+  COPY   99                               WLA153          -=    rca8
+  COPY   99                               WLA153         MAX       0.0
+*** Reach 9
+  COPY   99                               WLA173           =      75.2
+  COPY   99                               WLA173          -=    rca9
+  COPY   99                               WLA173         MAX       0.0
+*** Reach 10
+  COPY   99                               WLA193           =     113.8
+  COPY   99                               WLA193          -=    rca10
+  COPY   99                               WLA193         MAX       0.0
+*** Reach 11
+  COPY   99                               WLA213           =      75.8
+  COPY   99                               WLA213          -=    rca11
+  COPY   99                               WLA213         MAX       0.0
+*** Reach 12
+  COPY   99                               WLA233           =      46.5
+  COPY   99                               WLA233          -=    rca12
+  COPY   99                               WLA233         MAX       0.0
+*** Reach 13
+  COPY   99                               WLA253           =      10.7
+  COPY   99                               WLA253          -=    rca13
+  COPY   99                               WLA253         MAX       0.0
+
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+MULT PERLND 133                    wla133= RCHRES  07
+MULT PERLND 153                    wla153= RCHRES  08
+MULT PERLND 173                    wla173= RCHRES  09
+MULT PERLND 193                    wla193= RCHRES  10
+MULT PERLND 213                    wla213= RCHRES  11
+MULT PERLND 233                    wla233= RCHRES  12
+MULT PERLND 253                    wla253= RCHRES  13
+
+*** ************************************************************ ***
+*** Special Actions for Groundwater Discharge from Paynes Prairie  ***
+*** ************************************************************ ***
+***
+***             cnt   or                  act        or                 act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+     UVNAME  STDPYN  1 WORKSP 61        1.0  QUAN
+     UVNAME  KVAPYN  1 WORKSP 62        1.0  QUAN
+***
+***                         or                          lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+     UVQUAN gwspyn COPY    61 MEAN    1
+     UVQUAN lkspyn RCHRES  12 STAGE
+     UVQUAN lkapyn RCHRES  12 SAREA
+     UVQUAN stdpyn GLOBAL     WORKSP 61
+     UVQUAN kvapyn GLOBAL     WORKSP 62
+***
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+***The K value was increased from .38895 to 7.38895
+***
+  GENER  61                               KVAPYN           =9.388950000
+***
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+***
+  GENER  61                               STDPYN           =    gwspyn
+***
+  GENER  61                               STDPYN          -=    lkspyn
+  GENER  61                               STDPYN          *=    kvapyn
+***
+  GENER  61                            3  K       1        =    stdpyn
+
+***
+***
+END SPEC-ACTIONS
+END RUN

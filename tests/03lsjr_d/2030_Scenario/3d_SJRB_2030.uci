@@ -1,0 +1,2302 @@
+RUN
+
+GLOBAL
+  Planning Unit: 3C
+  START       1995/01/01 00:00  END    2016/12/31 24:00
+  RUN INTERP OUTPT LEVELS    4    0
+  RESUME     0 RUN     1                          UNITS    1
+END GLOBAL
+
+FILES
+<FILE>  <UN#>***<----FILE NAME------------------------------------------------->
+MESSU      24   3d.ech
+WDM1       25   sjrb_met.wdm
+WDM2       26   sjrb_lsj.wdm
+           80   3d_land.out
+           82   3d_reach.out
+BINO       81   3d_land.hbn
+BINO       83   3d_reach.hbn
+PESTSU     41   3d_hspf.sup
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** Main1 REACH 1   Upper Ortega River
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** Main1 REACH 2   Middle Ortega River
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** Main1 REACH 3   Wills Branch
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      RCHRES       3
+
+*** Main1 REACH 4   Upper Cedar River
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** Main1 REACH 5   Williamson Creek
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** Main1 REACH 6   Butcher Pen Creek
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+*** Main1 REACH 7   Fishing Creek
+      PERLND     121
+      PERLND     122
+      PERLND     123
+      PERLND     124
+      PERLND     125
+      PERLND     126
+      PERLND     127
+      PERLND     128
+      PERLND     129
+      PERLND     130
+      PERLND     131
+      PERLND     132
+      PERLND     133
+      IMPLND     121
+      IMPLND     122
+      IMPLND     123
+      IMPLND     124
+      PERLND     135
+      RCHRES       7
+
+*** Main1 REACH 8   Lower Cedar River
+      PERLND     141
+      PERLND     142
+      PERLND     143
+      PERLND     144
+      PERLND     145
+      PERLND     146
+      PERLND     147
+      PERLND     148
+      PERLND     149
+      PERLND     150
+      PERLND     151
+      PERLND     152
+      PERLND     153
+      IMPLND     141
+      IMPLND     142
+      IMPLND     143
+      IMPLND     144
+      PERLND     155
+      RCHRES       8
+
+*** Main1 REACH 9   Lower Ortega River
+      PERLND     161
+      PERLND     162
+      PERLND     163
+      PERLND     164
+      PERLND     165
+      PERLND     166
+      PERLND     167
+      PERLND     168
+      PERLND     169
+      PERLND     170
+      PERLND     171
+      PERLND     172
+      PERLND     173
+      IMPLND     161
+      IMPLND     162
+      IMPLND     163
+      IMPLND     164
+      PERLND     175
+      RCHRES       9
+
+*** Main1 REACH 10  Big Flounder
+      PERLND     181
+      PERLND     182
+      PERLND     183
+      PERLND     184
+      PERLND     185
+      PERLND     186
+      PERLND     187
+      PERLND     188
+      PERLND     189
+      PERLND     190
+      PERLND     191
+      PERLND     192
+      PERLND     193
+      IMPLND     181
+      IMPLND     182
+      IMPLND     183
+      IMPLND     184
+      PERLND     195
+      RCHRES      10
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+  001  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>                       Print-flags                           BIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 3D REACH 1
+    1   19Upper Ortega River                1    1   80    0   81    0
+*** 3D REACH 2
+   21   39Middle Ortega River               1    1   80    0   81    0
+*** 3D REACH 3
+   41   59Wills Branch                      1    1   80    0   81    0
+*** 3D REACH 4
+   61   79Upper Cedar River                 1    1   80    0   81    0
+*** 3D REACH 5
+   81   99Williamson Creek                  1    1   80    0   81    0
+*** 3D REACH 6
+  101  119Butcher Pen Creek                 1    1   80    0   81    0
+*** 3D REACH 7
+  121  139Fishing Creek                     1    1   80    0   81    0
+*** 3D REACH 8
+  141  159Lower Cedar River                 1    1   80    0   81    0
+*** 3D REACH 9
+  161  179Lower Ortega River                1    1   80    0   81    0
+*** 3D REACH 10
+  181  199Big Flounder                      1    1   80    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 3D REACH 1 - Upper Ortega River
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 2 - Middle Ortega River
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 3 - Wills Branch
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 4 - Upper Cedar River
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 5 - Williamson Creek
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 6 - Butcher Pen Creek
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 7 - Fishing Creek
+  121  131    0    0    1    0    0    0    0    0    0    1    0    0    0
+  132  133    0    3    1    0    0    0    0    0    0    1    0    0    0
+  135         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 8 - Lower Cedar River
+  141  151    0    0    1    0    0    0    0    0    0    1    0    0    0
+  152  153    0    3    1    0    0    0    0    0    0    1    0    0    0
+  155         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 9 - Lower Ortega River
+  161  171    0    0    1    0    0    0    0    0    0    1    0    0    0
+  172  173    0    3    1    0    0    0    0    0    0    1    0    0    0
+  175         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3D REACH 10 - Big Flounder
+  181  191    0    0    1    0    0    0    0    0    0    1    0    0    0
+  192  193    0    3    1    0    0    0    0    0    0    1    0    0    0
+  195         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+  PWAT-PARM2
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   1
+*** 3D REACH 1 - Upper Ortega River    Location  310
+    1     ~111131001~
+    2     ~111131002~
+    3     ~111131003~
+    4     ~111131004~
+    5     ~111131005~
+    6     ~111131006~
+    7     ~111131007~
+    8     ~111131008~
+    9     ~111131009~
+   10     ~111131010~
+   11     ~111131011~
+   12     ~111131012~
+   13     ~111131013~
+   15     ~111131013~
+*** 3D REACH 2 - Middle Ortega River   Location  310
+   21     ~111131001~
+   22     ~111131002~
+   23     ~111131003~
+   24     ~111131004~
+   25     ~111131005~
+   26     ~111131006~
+   27     ~111131007~
+   28     ~111131008~
+   29     ~111131009~
+   30     ~111131010~
+   31     ~111131011~
+   32     ~111131012~
+   33     ~111131013~
+   35     ~111131013~
+*** 3D REACH 3 - Wills Branch          Location  310
+   41     ~111131001~
+   42     ~111131002~
+   43     ~111131003~
+   44     ~111131004~
+   45     ~111131005~
+   46     ~111131006~
+   47     ~111131007~
+   48     ~111131008~
+   49     ~111131009~
+   50     ~111131010~
+   51     ~111131011~
+   52     ~111131012~
+   53     ~111131013~
+   55     ~111131013~
+*** 3D REACH 4 - Upper Cedar River     Location  310
+   61     ~111131001~
+   62     ~111131002~
+   63     ~111131003~
+   64     ~111131004~
+   65     ~111131005~
+   66     ~111131006~
+   67     ~111131007~
+   68     ~111131008~
+   69     ~111131009~
+   70     ~111131010~
+   71     ~111131011~
+   72     ~111131012~
+   73     ~111131013~
+   75     ~111131013~
+*** 3D REACH 5 - Williamson Creek      Location  310
+   81     ~111131001~
+   82     ~111131002~
+   83     ~111131003~
+   84     ~111131004~
+   85     ~111131005~
+   86     ~111131006~
+   87     ~111131007~
+   88     ~111131008~
+   89     ~111131009~
+   90     ~111131010~
+   91     ~111131011~
+   92     ~111131012~
+   93     ~111131013~
+   95     ~111131013~
+*** 3D REACH 6 - Butcher Pen Creek     Location  310
+  101     ~111131001~
+  102     ~111131002~
+  103     ~111131003~
+  104     ~111131004~
+  105     ~111131005~
+  106     ~111131006~
+  107     ~111131007~
+  108     ~111131008~
+  109     ~111131009~
+  110     ~111131010~
+  111     ~111131011~
+  112     ~111131012~
+  113     ~111131013~
+  115     ~111131013~
+*** 3D REACH 7 - Fishing Creek         Location  310
+  121     ~111131001~
+  122     ~111131002~
+  123     ~111131003~
+  124     ~111131004~
+  125     ~111131005~
+  126     ~111131006~
+  127     ~111131007~
+  128     ~111131008~
+  129     ~111131009~
+  130     ~111131010~
+  131     ~111131011~
+  132     ~111131012~
+  133     ~111131013~
+  135     ~111131013~
+*** 3D REACH 8 - Lower Cedar River     Location  310
+  141     ~111131001~
+  142     ~111131002~
+  143     ~111131003~
+  144     ~111131004~
+  145     ~111131005~
+  146     ~111131006~
+  147     ~111131007~
+  148     ~111131008~
+  149     ~111131009~
+  150     ~111131010~
+  151     ~111131011~
+  152     ~111131012~
+  153     ~111131013~
+  155     ~111131013~
+*** 3D REACH 9 - Lower Ortega River    Location  310
+  161     ~111131001~
+  162     ~111131002~
+  163     ~111131003~
+  164     ~111131004~
+  165     ~111131005~
+  166     ~111131006~
+  167     ~111131007~
+  168     ~111131008~
+  169     ~111131009~
+  170     ~111131010~
+  171     ~111131011~
+  172     ~111131012~
+  173     ~111131013~
+  175     ~111131013~
+*** 3D REACH 10 - Big Flounder         Location  310
+  181     ~111131001~
+  182     ~111131002~
+  183     ~111131003~
+  184     ~111131004~
+  185     ~111131005~
+  186     ~111131006~
+  187     ~111131007~
+  188     ~111131008~
+  189     ~111131009~
+  190     ~111131010~
+  191     ~111131011~
+  192     ~111131012~
+  193     ~111131013~
+  195     ~111131013~
+  END PWAT-PARM2
+
+  PWAT-PARM3
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   2
+*** 3D REACH 1 - Upper Ortega River    Location  310
+    1     ~111231001~
+    2     ~111231002~
+    3     ~111231003~
+    4     ~111231004~
+    5     ~111231005~
+    6     ~111231006~
+    7     ~111231007~
+    8     ~111231008~
+    9     ~111231009~
+   10     ~111231010~
+   11     ~111231011~
+   12     ~111231012~
+   13     ~111231013~
+   15     ~111231013~
+*** 3D REACH 2 - Middle Ortega River   Location  310
+   21     ~111231001~
+   22     ~111231002~
+   23     ~111231003~
+   24     ~111231004~
+   25     ~111231005~
+   26     ~111231006~
+   27     ~111231007~
+   28     ~111231008~
+   29     ~111231009~
+   30     ~111231010~
+   31     ~111231011~
+   32     ~111231012~
+   33     ~111231013~
+   35     ~111231013~
+*** 3D REACH 3 - Wills Branch          Location  310
+   41     ~111231001~
+   42     ~111231002~
+   43     ~111231003~
+   44     ~111231004~
+   45     ~111231005~
+   46     ~111231006~
+   47     ~111231007~
+   48     ~111231008~
+   49     ~111231009~
+   50     ~111231010~
+   51     ~111231011~
+   52     ~111231012~
+   53     ~111231013~
+   55     ~111231013~
+*** 3D REACH 4 - Upper Cedar River     Location  310
+   61     ~111231001~
+   62     ~111231002~
+   63     ~111231003~
+   64     ~111231004~
+   65     ~111231005~
+   66     ~111231006~
+   67     ~111231007~
+   68     ~111231008~
+   69     ~111231009~
+   70     ~111231010~
+   71     ~111231011~
+   72     ~111231012~
+   73     ~111231013~
+   75     ~111231013~
+*** 3D REACH 5 - Williamson Creek      Location  310
+   81     ~111231001~
+   82     ~111231002~
+   83     ~111231003~
+   84     ~111231004~
+   85     ~111231005~
+   86     ~111231006~
+   87     ~111231007~
+   88     ~111231008~
+   89     ~111231009~
+   90     ~111231010~
+   91     ~111231011~
+   92     ~111231012~
+   93     ~111231013~
+   95     ~111231013~
+*** 3D REACH 6 - Butcher Pen Creek     Location  310
+  101     ~111231001~
+  102     ~111231002~
+  103     ~111231003~
+  104     ~111231004~
+  105     ~111231005~
+  106     ~111231006~
+  107     ~111231007~
+  108     ~111231008~
+  109     ~111231009~
+  110     ~111231010~
+  111     ~111231011~
+  112     ~111231012~
+  113     ~111231013~
+  115     ~111231013~
+*** 3D REACH 7 - Fishing Creek         Location  310
+  121     ~111231001~
+  122     ~111231002~
+  123     ~111231003~
+  124     ~111231004~
+  125     ~111231005~
+  126     ~111231006~
+  127     ~111231007~
+  128     ~111231008~
+  129     ~111231009~
+  130     ~111231010~
+  131     ~111231011~
+  132     ~111231012~
+  133     ~111231013~
+  135     ~111231013~
+*** 3D REACH 8 - Lower Cedar River     Location  310
+  141     ~111231001~
+  142     ~111231002~
+  143     ~111231003~
+  144     ~111231004~
+  145     ~111231005~
+  146     ~111231006~
+  147     ~111231007~
+  148     ~111231008~
+  149     ~111231009~
+  150     ~111231010~
+  151     ~111231011~
+  152     ~111231012~
+  153     ~111231013~
+  155     ~111231013~
+*** 3D REACH 9 - Lower Ortega River    Location  310
+  161     ~111231001~
+  162     ~111231002~
+  163     ~111231003~
+  164     ~111231004~
+  165     ~111231005~
+  166     ~111231006~
+  167     ~111231007~
+  168     ~111231008~
+  169     ~111231009~
+  170     ~111231010~
+  171     ~111231011~
+  172     ~111231012~
+  173     ~111231013~
+  175     ~111231013~
+*** 3D REACH 10 - Big Flounder         Location  310
+  181     ~111231001~
+  182     ~111231002~
+  183     ~111231003~
+  184     ~111231004~
+  185     ~111231005~
+  186     ~111231006~
+  187     ~111231007~
+  188     ~111231008~
+  189     ~111231009~
+  190     ~111231010~
+  191     ~111231011~
+  192     ~111231012~
+  193     ~111231013~
+  195     ~111231013~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   3
+*** 3D REACH 1 - Upper Ortega River    Location  310
+    1     ~111331001~
+    2     ~111331002~
+    3     ~111331003~
+    4     ~111331004~
+    5     ~111331005~
+    6     ~111331006~
+    7     ~111331007~
+    8     ~111331008~
+    9     ~111331009~
+   10     ~111331010~
+   11     ~111331011~
+   12     ~111331012~
+   13     ~111331013~
+   15     ~111331013~
+*** 3D REACH 2 - Middle Ortega River   Location  310
+   21     ~111331001~
+   22     ~111331002~
+   23     ~111331003~
+   24     ~111331004~
+   25     ~111331005~
+   26     ~111331006~
+   27     ~111331007~
+   28     ~111331008~
+   29     ~111331009~
+   30     ~111331010~
+   31     ~111331011~
+   32     ~111331012~
+   33     ~111331013~
+   35     ~111331013~
+*** 3D REACH 3 - Wills Branch          Location  310
+   41     ~111331001~
+   42     ~111331002~
+   43     ~111331003~
+   44     ~111331004~
+   45     ~111331005~
+   46     ~111331006~
+   47     ~111331007~
+   48     ~111331008~
+   49     ~111331009~
+   50     ~111331010~
+   51     ~111331011~
+   52     ~111331012~
+   53     ~111331013~
+   55     ~111331013~
+*** 3D REACH 4 - Upper Cedar River     Location  310
+   61     ~111331001~
+   62     ~111331002~
+   63     ~111331003~
+   64     ~111331004~
+   65     ~111331005~
+   66     ~111331006~
+   67     ~111331007~
+   68     ~111331008~
+   69     ~111331009~
+   70     ~111331010~
+   71     ~111331011~
+   72     ~111331012~
+   73     ~111331013~
+   75     ~111331013~
+*** 3D REACH 5 - Williamson Creek      Location  310
+   81     ~111331001~
+   82     ~111331002~
+   83     ~111331003~
+   84     ~111331004~
+   85     ~111331005~
+   86     ~111331006~
+   87     ~111331007~
+   88     ~111331008~
+   89     ~111331009~
+   90     ~111331010~
+   91     ~111331011~
+   92     ~111331012~
+   93     ~111331013~
+   95     ~111331013~
+*** 3D REACH 6 - Butcher Pen Creek     Location  310
+  101     ~111331001~
+  102     ~111331002~
+  103     ~111331003~
+  104     ~111331004~
+  105     ~111331005~
+  106     ~111331006~
+  107     ~111331007~
+  108     ~111331008~
+  109     ~111331009~
+  110     ~111331010~
+  111     ~111331011~
+  112     ~111331012~
+  113     ~111331013~
+  115     ~111331013~
+*** 3D REACH 7 - Fishing Creek         Location  310
+  121     ~111331001~
+  122     ~111331002~
+  123     ~111331003~
+  124     ~111331004~
+  125     ~111331005~
+  126     ~111331006~
+  127     ~111331007~
+  128     ~111331008~
+  129     ~111331009~
+  130     ~111331010~
+  131     ~111331011~
+  132     ~111331012~
+  133     ~111331013~
+  135     ~111331013~
+*** 3D REACH 8 - Lower Cedar River     Location  310
+  141     ~111331001~
+  142     ~111331002~
+  143     ~111331003~
+  144     ~111331004~
+  145     ~111331005~
+  146     ~111331006~
+  147     ~111331007~
+  148     ~111331008~
+  149     ~111331009~
+  150     ~111331010~
+  151     ~111331011~
+  152     ~111331012~
+  153     ~111331013~
+  155     ~111331013~
+*** 3D REACH 9 - Lower Ortega River    Location  310
+  161     ~111331001~
+  162     ~111331002~
+  163     ~111331003~
+  164     ~111331004~
+  165     ~111331005~
+  166     ~111331006~
+  167     ~111331007~
+  168     ~111331008~
+  169     ~111331009~
+  170     ~111331010~
+  171     ~111331011~
+  172     ~111331012~
+  173     ~111331013~
+  175     ~111331013~
+*** 3D REACH 10 - Big Flounder         Location  310
+  181     ~111331001~
+  182     ~111331002~
+  183     ~111331003~
+  184     ~111331004~
+  185     ~111331005~
+  186     ~111331006~
+  187     ~111331007~
+  188     ~111331008~
+  189     ~111331009~
+  190     ~111331010~
+  191     ~111331011~
+  192     ~111331012~
+  193     ~111331013~
+  195     ~111331013~
+  END PWAT-PARM4
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 3D REACH 1 - Upper Ortega River               Location  310
+    1   19       910
+*** 3D REACH 2 - Middle Ortega River              Location  310
+   21   39       910
+*** 3D REACH 3 - Wills Branch                     Location  310
+   41   59       910
+*** 3D REACH 4 - Upper Cedar River                Location  310
+   61   79       910
+*** 3D REACH 5 - Williamson Creek                 Location  310
+   81   99       910
+*** 3D REACH 6 - Butcher Pen Creek                Location  310
+  101  119       910
+*** 3D REACH 7 - Fishing Creek                    Location  310
+  121  139       910
+*** 3D REACH 8 - Lower Cedar River                Location  310
+  141  159       910
+*** 3D REACH 9 - Lower Ortega River               Location  310
+  161  179       910
+*** 3D REACH 10 - Big Flounder                    Location  310
+  181  199       910
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 3D REACH 1 - Upper Ortega River    Location  310
+    1     ~111631001~
+    2     ~111631002~
+    3     ~111631003~
+    4     ~111631004~
+    5     ~111631005~
+    6     ~111631006~
+    7     ~111631007~
+    8     ~111631008~
+    9     ~111631009~
+   10     ~111631010~
+   11     ~111631011~
+   12     ~111631012~
+   13     ~111631013~
+   15     ~111631013~
+*** 3D REACH 2 - Middle Ortega River   Location  310
+   21     ~111631001~
+   22     ~111631002~
+   23     ~111631003~
+   24     ~111631004~
+   25     ~111631005~
+   26     ~111631006~
+   27     ~111631007~
+   28     ~111631008~
+   29     ~111631009~
+   30     ~111631010~
+   31     ~111631011~
+   32     ~111631012~
+   33     ~111631013~
+   35     ~111631013~
+*** 3D REACH 3 - Wills Branch          Location  310
+   41     ~111631001~
+   42     ~111631002~
+   43     ~111631003~
+   44     ~111631004~
+   45     ~111631005~
+   46     ~111631006~
+   47     ~111631007~
+   48     ~111631008~
+   49     ~111631009~
+   50     ~111631010~
+   51     ~111631011~
+   52     ~111631012~
+   53     ~111631013~
+   55     ~111631013~
+*** 3D REACH 4 - Upper Cedar River     Location  310
+   61     ~111631001~
+   62     ~111631002~
+   63     ~111631003~
+   64     ~111631004~
+   65     ~111631005~
+   66     ~111631006~
+   67     ~111631007~
+   68     ~111631008~
+   69     ~111631009~
+   70     ~111631010~
+   71     ~111631011~
+   72     ~111631012~
+   73     ~111631013~
+   75     ~111631013~
+*** 3D REACH 5 - Williamson Creek      Location  310
+   81     ~111631001~
+   82     ~111631002~
+   83     ~111631003~
+   84     ~111631004~
+   85     ~111631005~
+   86     ~111631006~
+   87     ~111631007~
+   88     ~111631008~
+   89     ~111631009~
+   90     ~111631010~
+   91     ~111631011~
+   92     ~111631012~
+   93     ~111631013~
+   95     ~111631013~
+*** 3D REACH 6 - Butcher Pen Creek     Location  310
+  101     ~111631001~
+  102     ~111631002~
+  103     ~111631003~
+  104     ~111631004~
+  105     ~111631005~
+  106     ~111631006~
+  107     ~111631007~
+  108     ~111631008~
+  109     ~111631009~
+  110     ~111631010~
+  111     ~111631011~
+  112     ~111631012~
+  113     ~111631013~
+  115     ~111631013~
+*** 3D REACH 7 - Fishing Creek         Location  310
+  121     ~111631001~
+  122     ~111631002~
+  123     ~111631003~
+  124     ~111631004~
+  125     ~111631005~
+  126     ~111631006~
+  127     ~111631007~
+  128     ~111631008~
+  129     ~111631009~
+  130     ~111631010~
+  131     ~111631011~
+  132     ~111631012~
+  133     ~111631013~
+  135     ~111631013~
+*** 3D REACH 8 - Lower Cedar River     Location  310
+  141     ~111631001~
+  142     ~111631002~
+  143     ~111631003~
+  144     ~111631004~
+  145     ~111631005~
+  146     ~111631006~
+  147     ~111631007~
+  148     ~111631008~
+  149     ~111631009~
+  150     ~111631010~
+  151     ~111631011~
+  152     ~111631012~
+  153     ~111631013~
+  155     ~111631013~
+*** 3D REACH 9 - Lower Ortega River    Location  310
+  161     ~111631001~
+  162     ~111631002~
+  163     ~111631003~
+  164     ~111631004~
+  165     ~111631005~
+  166     ~111631006~
+  167     ~111631007~
+  168     ~111631008~
+  169     ~111631009~
+  170     ~111631010~
+  171     ~111631011~
+  172     ~111631012~
+  173     ~111631013~
+  175     ~111631013~
+*** 3D REACH 10 - Big Flounder         Location  310
+  181     ~111631001~
+  182     ~111631002~
+  183     ~111631003~
+  184     ~111631004~
+  185     ~111631005~
+  186     ~111631006~
+  187     ~111631007~
+  188     ~111631008~
+  189     ~111631009~
+  190     ~111631010~
+  191     ~111631011~
+  192     ~111631012~
+  193     ~111631013~
+  195     ~111631013~
+  END PWAT-STATE1
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+  001  999    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** <ILS > ******** Print-flags ******** BIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***             Name             Unit-systems   Printer BinaryOut
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+  001  999                             1    1   80    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+  001  999    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+*** <ILS >      LSUR     SLSUR      NSUR     RETSC
+*** x -  x      (ft)                          (in)
+  001  999      150.     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+*** <ILS >    PETMAX    PETMIN
+*** x -  x   (deg F)   (deg F)
+  001  999       40.       35.
+  END IWAT-PARM3
+
+  IWAT-STATE1
+*** <ILS >  IWATER state variables (inches)
+*** x -  x      RETS      SURS
+  001  999     0.000     0.000
+  END IWAT-STATE1
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1   10    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1   10    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1   10    3    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 3D REACH 1
+    1     Upper Ortega River      1         1    1   82    0    0   83    0
+*** 3D REACH 2
+    2     Middle Ortega River     1         1    1   82    0    0   83    0
+*** 3D REACH 3
+    3     Wills Branch            1         1    1   82    0    0   83    0
+*** 3D REACH 4
+    4     Upper Cedar River       1         1    1   82    0    0   83    0
+*** 3D REACH 5
+    5     Williamson Creek        1         1    1   82    0    0   83    0
+*** 3D REACH 6
+    6     Butcher Pen Creek       1         1    1   82    0    0   83    0
+*** 3D REACH 7
+    7     Fishing Creek           1         1    1   82    0    0   83    0
+*** 3D REACH 8
+    8     Lower Cedar River       1         1    1   82    0    0   83    0
+*** 3D REACH 9
+    9     Lower Ortega River      1         1    1   82    0    0   83    0
+*** 3D REACH 10
+   10     Big Flounder            1         1    1   82    0    0   83    0
+  END GEN-INFO
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 3D REACH 1 - Upper Ortega River
+    1        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 2 - Middle Ortega River
+    2        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 3 - Wills Branch
+    3        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 4 - Upper Cedar River
+    4        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 5 - Williamson Creek
+    5        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 6 - Butcher Pen Creek
+    6        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 7 - Fishing Creek
+    7        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 8 - Lower Cedar River
+    8        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 9 - Lower Ortega River
+    9        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3D REACH 10 - Big Flounder
+   10        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 3D REACH 1 - Upper Ortega River
+    1             1.      9.10     60.72      0.00       0.5      0.01
+*** 3D REACH 2 - Middle Ortega River
+    2             2.      4.36     23.71      0.00       0.5      0.01
+*** 3D REACH 3 - Wills Branch
+    3             3.      5.70     77.30      0.00       0.5      0.01
+*** 3D REACH 4 - Upper Cedar River
+    4             4.      4.78     14.57      0.00       0.5      0.01
+*** 3D REACH 5 - Williamson Creek
+    5             5.      1.11     13.14      0.00       0.5      0.01
+*** 3D REACH 6 - Butcher Pen Creek
+    6             6.      1.66     15.91      0.00       0.5      0.01
+*** 3D REACH 7 - Fishing Creek
+    7             7.      3.27     20.52      0.00       0.5      0.01
+*** 3D REACH 8 - Lower Cedar River
+    8             8.      1.75      0.00      0.00       0.5      0.01
+*** 3D REACH 9 - Lower Ortega River
+    9             9.     10.87      9.99      0.00       0.5      0.01
+*** 3D REACH 10 - Big Flounder
+   10            10.      2.28     16.56      0.00       0.5      0.01
+  END HYDR-PARM2
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 3D REACH 1 - Upper Ortega River
+    1          57.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 2 - Middle Ortega River
+    2          34.00       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 3 - Wills Branch
+    3          69.90       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 4 - Upper Cedar River
+    4         121.70       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 5 - Williamson Creek
+    5          64.40       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 6 - Butcher Pen Creek
+    6         175.10       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 7 - Fishing Creek
+    7          30.90       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 8 - Lower Cedar River
+    8           5.99       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 9 - Lower Ortega River
+    9          30.80       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3D REACH 10 - Big Flounder
+   10          44.10       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+
+END RCHRES
+
+FTABLES
+  FTABLE    001
+ rows cols ***      Upper Ortega River  STCOR           0.00
+   10    4
+     depth      area    volume  outflow1 ***
+      0.00      30.0      0.00       0.0
+      1.92      50.0     76.80      27.6
+      2.36     177.0    127.00      41.4
+      2.66     200.0    183.00      55.0
+      3.82     248.0    443.00     173.0
+      4.75     428.0    757.00     347.0
+      5.55     666.0   1195.00     697.0
+      7.13     856.0   2397.00    1396.0
+      8.95    1253.0   4315.00    2794.0
+     11.60    1628.0   8176.00    5593.0
+  END FTABLE001
+
+  FTABLE    002
+ rows cols ***      Middle Ortega River STCOR           0.00
+   10    4
+     depth      area    volume  outflow1 ***
+      0.00       3.0      0.00       0.0
+      2.96      10.0     19.80      39.5
+      3.40      12.0     25.00      59.3
+      3.76      41.0     34.00      78.9
+      5.46      60.0    120.00     248.0
+      6.61     231.0    288.00     496.0
+      7.46     261.0    497.00     995.0
+      8.96     493.0   1063.00    1994.0
+     10.60     580.0   1916.00    3992.0
+     12.70     697.0   3277.00    7990.0
+  END FTABLE002
+
+  FTABLE    003
+ rows cols ***      Wills Branch        STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       0.0      0.00       0.0
+      1.00       1.9      1.90       3.3
+      2.00       3.9      7.80      21.1
+      3.00       5.8     17.50      62.2
+      4.00       7.8     31.10     133.9
+      5.00       9.7     48.50     242.7
+      6.00      11.6     69.90     394.7
+      7.00      13.6     95.10     595.3
+      8.00      15.5    124.20     850.0
+      9.00      17.5    157.20    1163.6
+     10.00      19.4    194.10    1541.1
+     12.00      23.3    279.60    2506.0
+     15.00      29.1    436.80    4543.7
+     99.00     999.9  99999.90   99999.9
+  END FTABLE003
+
+  FTABLE    004
+ rows cols ***      Upper Cedar River   STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       2.9      0.00       0.0
+      1.00       5.8      5.80      12.0
+      2.00       8.7     17.40      57.0
+      3.00      11.6     34.80     149.2
+      4.00      14.5     57.90     301.1
+      5.00      17.4     86.90     523.9
+      6.00      20.3    121.70     828.0
+      7.00      23.2    162.20    1223.2
+      8.00      26.1    208.60    1718.8
+      9.00      29.0    260.70    2323.7
+     10.00      31.9    318.70    3046.3
+     12.00      37.7    451.90    4877.7
+     15.00      46.4    695.30    8706.2
+     99.00     999.9  99999.90   99999.9
+  END FTABLE004
+
+  FTABLE    005
+ rows cols ***      Williamson Creek    STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       2.1      0.00       0.0
+      1.00       4.3      4.30      72.9
+      2.00       6.4     12.90     346.9
+      3.00       8.6     25.70     909.0
+      4.00      10.7     42.90    1835.1
+      5.00      12.9     64.40    3194.1
+      6.00      15.0     90.10    5049.4
+      7.00      17.2    120.10    7461.1
+      8.00      19.3    154.50   10485.7
+      9.00      21.5    193.10   14177.6
+     10.00      23.6    236.00   18588.8
+     12.00      27.9    334.70   29768.9
+     15.00      34.3    514.90   53143.1
+     99.00     999.9  99999.90   99999.9
+  END FTABLE005
+
+  FTABLE    006
+ rows cols ***      Butcher Pen Creek   STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       4.2      0.00       0.0
+      1.00       8.3      8.30      92.9
+      2.00      12.5     25.00     442.5
+      3.00      16.7     50.00    1159.7
+      4.00      20.8     83.40    2341.4
+      5.00      25.0    125.10    4075.3
+      6.00      29.2    175.10    6442.7
+      7.00      33.4    233.50    9519.9
+      8.00      37.5    300.20   13379.3
+      9.00      41.7    375.30   18090.1
+     10.00      45.9    458.70   23718.8
+     12.00      54.2    650.50   37984.5
+     15.00      66.7   1000.70   67810.1
+     99.00     999.9  99999.90   99999.9
+  END FTABLE006
+
+  FTABLE    007
+ rows cols ***      Fishing Creek       STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       2.1      0.00       0.0
+      1.00       2.9      2.90      13.9
+      2.00       3.7      7.40      55.9
+      3.00       4.5     13.60     133.3
+      4.00       5.4     21.40     253.2
+      5.00       6.2     30.90     422.2
+      6.00       7.0     42.00     646.5
+      7.00       7.8     54.80     932.2
+      8.00       8.7     69.20    1284.8
+      9.00       9.5     85.30    1709.8
+     10.00      10.3    103.00    2212.5
+     12.00      12.0    143.40    3471.0
+     15.00      14.4    216.40    6063.4
+     99.00     999.9  99999.90   99999.9
+  END FTABLE007
+
+  FTABLE    008
+ rows cols ***      Lower Cedar River   STCOR           0.00
+   7    4
+     depth      area    volume  outflow1 ***
+      0.00       0.1      0.00       0.0
+      1.00       0.1      0.98       1.0
+      2.00       0.1      1.99      10.0
+      3.00       0.1      2.99     100.0
+      4.00       0.1      3.99    1000.0
+      5.00       0.2      4.99   10000.0
+      6.00       0.2      5.99 1000000.0
+  END FTABLE008
+
+  FTABLE    009
+ rows cols ***      Lower Ortega River  STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00     289.7      0.00       0.0
+      1.00     291.9      1.20       1.0
+      2.00     294.1      4.90       6.5
+      3.00     296.3     11.10      19.2
+      4.00     298.5     19.70      41.3
+      5.00     300.7     30.80      74.8
+      6.00     302.8     44.40     121.6
+      7.00     305.0     60.40     183.5
+      8.00     307.2     78.90     261.9
+      9.00     309.4     99.80     358.6
+     10.00     311.6    123.20     474.9
+     12.00     316.0    177.40     772.3
+     15.00     322.6    277.20    1400.3
+     99.00     999.9  99999.90   99999.9
+  END FTABLE009
+
+  FTABLE    010
+ rows cols ***      Big Flounder        STCOR           0.00
+   14    4
+     depth      area    volume  outflow1 ***
+      0.00       2.2      0.00       0.0
+      1.00       2.8      2.80       9.2
+      2.00       3.4      6.70      34.8
+      3.00       4.0     11.90      79.8
+      4.00       4.5     18.20     147.2
+      5.00       5.1     25.70     240.0
+      6.00       5.7     34.30     361.3
+      7.00       6.3     44.10     513.6
+      8.00       6.9     55.10     699.8
+      9.00       7.5     67.30     922.4
+     10.00       8.1     80.70    1183.9
+     12.00       9.2    110.90    1833.0
+     15.00      11.0    165.00    3156.6
+     99.00     999.9  99999.90   99999.9
+  END FTABLE010
+
+*** From Pest calibration of SOUTH FORK BLACK CK PENNEY FARMS
+*** Used single surface-ftable for PLNs drains to 02246300, 02246318 USGS gages
+  FTABLE    910
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 6.0000000       0.0
+      12. 1.02400E-8
+      24. 6.04662E-4
+      36. .100000000
+  END FTABLE910
+
+END FTABLES
+
+
+COPY
+  TIMESERIES
+  Copy-opn***
+*** x -  x  NPT  NMN
+   99         0    1
+  END TIMESERIES
+END COPY
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - Upper Ortega River
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - Middle Ortega River
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - Wills Branch
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Upper Cedar River
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - Williamson Creek
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - Butcher Pen Creek
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+*** Reach 7 - Fishing Creek
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND 121 139 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND 121 139 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   7     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND 121 139 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND 121 139 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   7     EXTNL  POTEV
+
+*** Reach 8 - Lower Cedar River
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND 141 159 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND 141 159 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   8     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND 141 159 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND 141 159 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   8     EXTNL  POTEV
+
+*** Reach 9 - Lower Ortega River
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND 161 179 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND 161 179 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   9     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND 161 179 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND 161 179 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   9     EXTNL  POTEV
+
+*** Reach 10 - Big Flounder
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND 181 199 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND 181 199 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES  10     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND 181 199 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND 181 199 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES  10     EXTNL  POTEV
+
+*** Point Sources
+****** Unit conversion from MGD to acft/day: 3.06888785
+*** FL0039691
+WDM2   949 FLOW     ENGL    3.06888785DIV  RCHRES  10     EXTNL  IVOL
+
+END EXT SOURCES
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 3D REACH 1
+PERLND   1                      1540.2     RCHRES   1      1
+PERLND   2                      3161.7     RCHRES   1      1
+PERLND   3                       350.8     RCHRES   1      1
+PERLND   4                      1001.4     RCHRES   1      1
+PERLND   5                         2.2     RCHRES   1      1
+PERLND   6                        26.7     RCHRES   1      1
+PERLND   7                         8.7     RCHRES   1      1
+PERLND   8                        82.1     RCHRES   1      1
+PERLND   9                         0.2     RCHRES   1      1
+PERLND  10                        69.6     RCHRES   1      1
+PERLND  11                       503.5     RCHRES   1      1
+*** water perlnd area commented out (6/11/19) and added to rchres
+PERLND  12***                    288.1     RCHRES   1      1
+PERLND  13                      2354.7     RCHRES   1      1
+PERLND  15                      1874.6     RCHRES   1      1
+IMPLND   1                        81.1     RCHRES   1      2
+IMPLND   2                       558.0     RCHRES   1      2
+IMPLND   3                       188.9     RCHRES   1      2
+IMPLND   4                      1001.4     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                      1226.2     PERLND  15     11
+PERLND   2                      2517.1     PERLND  15     11
+PERLND   3                       279.2     PERLND  15     11
+PERLND   4                       797.3     PERLND  15     11
+PERLND   5                         1.7     PERLND  15     11
+PERLND   6                        21.3     PERLND  15     11
+PERLND   7                         6.9     PERLND  15     11
+PERLND   8                        65.4     PERLND  15     11
+PERLND   9                         0.2     PERLND  15     11
+PERLND  10                        55.4     PERLND  15     11
+PERLND  11                       400.8     PERLND  15     11
+PERLND  12                        80.2     PERLND  15     11
+IMPLND   1                        64.5     PERLND  15     12
+IMPLND   2                       444.2     PERLND  15     12
+IMPLND   3                       150.4     PERLND  15     12
+IMPLND   4                       797.3     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                      1226.2     RCHRES   1      9
+PERLND   2                      2517.1     RCHRES   1      9
+PERLND   3                       279.2     RCHRES   1      9
+PERLND   4                       797.3     RCHRES   1      9
+PERLND   5                         1.7     RCHRES   1      9
+PERLND   6                        21.3     RCHRES   1      9
+PERLND   7                         6.9     RCHRES   1      9
+PERLND   8                        65.4     RCHRES   1      9
+PERLND   9                         0.2     RCHRES   1      9
+PERLND  10                        55.4     RCHRES   1      9
+PERLND  11                       400.8     RCHRES   1      9
+PERLND  12                        80.2     RCHRES   1      9
+
+*** 3D REACH 2
+PERLND  21                       237.2     RCHRES   2      1
+PERLND  22                      1405.5     RCHRES   2      1
+PERLND  23                       645.1     RCHRES   2      1
+PERLND  24                       361.0     RCHRES   2      1
+PERLND  25                         3.8     RCHRES   2      1
+PERLND  26                        34.0     RCHRES   2      1
+PERLND  27                        10.1     RCHRES   2      1
+PERLND  28                        49.2     RCHRES   2      1
+PERLND  29                         0.0     RCHRES   2      1
+PERLND  30                        28.0     RCHRES   2      1
+PERLND  31                       289.0     RCHRES   2      1
+PERLND  32***                        95.5     RCHRES   2      1
+PERLND  33                      1103.0     RCHRES   2      1
+PERLND  35                       659.0     RCHRES   2      1
+IMPLND  21                        12.5     RCHRES   2      2
+IMPLND  22                       248.0     RCHRES   2      2
+IMPLND  23                       347.3     RCHRES   2      2
+IMPLND  24                       361.0     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                       141.7     PERLND  35     21
+PERLND  22                       839.7     PERLND  35     21
+PERLND  23                       385.4     PERLND  35     21
+PERLND  24                       215.7     PERLND  35     21
+PERLND  25                         2.2     PERLND  35     21
+PERLND  26                        20.3     PERLND  35     21
+PERLND  27                         6.0     PERLND  35     21
+PERLND  28                        29.4     PERLND  35     21
+PERLND  29                         0.0     PERLND  35     21
+PERLND  30                        16.7     PERLND  35     21
+PERLND  31                       172.7     PERLND  35     21
+PERLND  32                        34.4     PERLND  35     21
+IMPLND  21                         7.5     PERLND  35     22
+IMPLND  22                       148.2     PERLND  35     22
+IMPLND  23                       207.5     PERLND  35     22
+IMPLND  24                       215.7     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                       141.7     RCHRES   2      9
+PERLND  22                       839.7     RCHRES   2      9
+PERLND  23                       385.4     RCHRES   2      9
+PERLND  24                       215.7     RCHRES   2      9
+PERLND  25                         2.2     RCHRES   2      9
+PERLND  26                        20.3     RCHRES   2      9
+PERLND  27                         6.0     RCHRES   2      9
+PERLND  28                        29.4     RCHRES   2      9
+PERLND  29                         0.0     RCHRES   2      9
+PERLND  30                        16.7     RCHRES   2      9
+PERLND  31                       172.7     RCHRES   2      9
+PERLND  32                        34.4     RCHRES   2      9
+
+*** 3D REACH 3
+PERLND  41                       452.9     RCHRES   3      1
+PERLND  42                      1516.4     RCHRES   3      1
+PERLND  43                       354.3     RCHRES   3      1
+PERLND  44                       527.1     RCHRES   3      1
+PERLND  45                        23.9     RCHRES   3      1
+PERLND  46                        18.6     RCHRES   3      1
+PERLND  47                         8.1     RCHRES   3      1
+PERLND  48                        15.4     RCHRES   3      1
+PERLND  49                         0.0     RCHRES   3      1
+PERLND  50                        60.2     RCHRES   3      1
+PERLND  51                       105.6     RCHRES   3      1
+PERLND  52***                       157.9     RCHRES   3      1
+PERLND  53                       360.3     RCHRES   3      1
+PERLND  55                       130.8     RCHRES   3      1
+IMPLND  41                        23.8     RCHRES   3      2
+IMPLND  42                       267.6     RCHRES   3      2
+IMPLND  43                       190.8     RCHRES   3      2
+IMPLND  44                       527.1     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                       164.4     PERLND  55     31
+PERLND  42                       550.5     PERLND  55     31
+PERLND  43                       128.6     PERLND  55     31
+PERLND  44                       191.3     PERLND  55     31
+PERLND  45                         8.7     PERLND  55     31
+PERLND  46                         6.8     PERLND  55     31
+PERLND  47                         2.9     PERLND  55     31
+PERLND  48                         5.6     PERLND  55     31
+PERLND  49                         0.0     PERLND  55     31
+PERLND  50                        21.9     PERLND  55     31
+PERLND  51                        38.4     PERLND  55     31
+PERLND  52                        39.3     PERLND  55     31
+IMPLND  41                         8.7     PERLND  55     32
+IMPLND  42                        97.1     PERLND  55     32
+IMPLND  43                        69.3     PERLND  55     32
+IMPLND  44                       191.3     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                       164.4     RCHRES   3      9
+PERLND  42                       550.5     RCHRES   3      9
+PERLND  43                       128.6     RCHRES   3      9
+PERLND  44                       191.3     RCHRES   3      9
+PERLND  45                         8.7     RCHRES   3      9
+PERLND  46                         6.8     RCHRES   3      9
+PERLND  47                         2.9     RCHRES   3      9
+PERLND  48                         5.6     RCHRES   3      9
+PERLND  49                         0.0     RCHRES   3      9
+PERLND  50                        21.9     RCHRES   3      9
+PERLND  51                        38.4     RCHRES   3      9
+PERLND  52                        39.3     RCHRES   3      9
+
+*** 3D REACH 4
+PERLND  61                       236.8     RCHRES   4      1
+PERLND  62                       987.9     RCHRES   4      1
+PERLND  63                       206.2     RCHRES   4      1
+PERLND  64                       819.7     RCHRES   4      1
+PERLND  65                         8.6     RCHRES   4      1
+PERLND  66                       129.5     RCHRES   4      1
+PERLND  67                         9.7     RCHRES   4      1
+PERLND  68                        56.1     RCHRES   4      1
+PERLND  69                         0.0     RCHRES   4      1
+PERLND  70                       106.5     RCHRES   4      1
+PERLND  71                       302.8     RCHRES   4      1
+PERLND  72***                       187.3     RCHRES   4      1
+PERLND  73                       617.6     RCHRES   4      1
+PERLND  75                       385.7     RCHRES   4      1
+IMPLND  61                        12.5     RCHRES   4      2
+IMPLND  62                       174.3     RCHRES   4      2
+IMPLND  63                       111.0     RCHRES   4      2
+IMPLND  64                       819.7     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                       147.9     PERLND  75     41
+PERLND  62                       617.0     PERLND  75     41
+PERLND  63                       128.8     PERLND  75     41
+PERLND  64                       512.0     PERLND  75     41
+PERLND  65                         5.4     PERLND  75     41
+PERLND  66                        80.9     PERLND  75     41
+PERLND  67                         6.1     PERLND  75     41
+PERLND  68                        35.0     PERLND  75     41
+PERLND  69                         0.0     PERLND  75     41
+PERLND  70                        66.5     PERLND  75     41
+PERLND  71                       189.1     PERLND  75     41
+PERLND  72                        49.9     PERLND  75     41
+IMPLND  61                         7.8     PERLND  75     42
+IMPLND  62                       108.9     PERLND  75     42
+IMPLND  63                        69.4     PERLND  75     42
+IMPLND  64                       512.0     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                       147.9     RCHRES   4      9
+PERLND  62                       617.0     RCHRES   4      9
+PERLND  63                       128.8     RCHRES   4      9
+PERLND  64                       512.0     RCHRES   4      9
+PERLND  65                         5.4     RCHRES   4      9
+PERLND  66                        80.9     RCHRES   4      9
+PERLND  67                         6.1     RCHRES   4      9
+PERLND  68                        35.0     RCHRES   4      9
+PERLND  69                         0.0     RCHRES   4      9
+PERLND  70                        66.5     RCHRES   4      9
+PERLND  71                       189.1     RCHRES   4      9
+PERLND  72                        49.9     RCHRES   4      9
+
+*** 3D REACH 5
+PERLND  81                        51.2     RCHRES   5      1
+PERLND  82                       151.1     RCHRES   5      1
+PERLND  83                       337.6     RCHRES   5      1
+PERLND  84                        49.8     RCHRES   5      1
+PERLND  85                         0.0     RCHRES   5      1
+PERLND  86                         0.6     RCHRES   5      1
+PERLND  87                         0.3     RCHRES   5      1
+PERLND  88                         0.0     RCHRES   5      1
+PERLND  89                         0.0     RCHRES   5      1
+PERLND  90                         0.6     RCHRES   5      1
+PERLND  91                         1.1     RCHRES   5      1
+PERLND  92***                        26.1     RCHRES   5      1
+PERLND  93                        22.4     RCHRES   5      1
+PERLND  95                         2.8     RCHRES   5      1
+IMPLND  81                         2.7     RCHRES   5      2
+IMPLND  82                        26.7     RCHRES   5      2
+IMPLND  83                       181.8     RCHRES   5      2
+IMPLND  84                        49.8     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                         6.4     PERLND  95     51
+PERLND  82                        19.0     PERLND  95     51
+PERLND  83                        42.4     PERLND  95     51
+PERLND  84                         6.3     PERLND  95     51
+PERLND  85                         0.0     PERLND  95     51
+PERLND  86                         0.1     PERLND  95     51
+PERLND  87                         0.0     PERLND  95     51
+PERLND  88                         0.0     PERLND  95     51
+PERLND  89                         0.0     PERLND  95     51
+PERLND  90                         0.1     PERLND  95     51
+PERLND  91                         0.1     PERLND  95     51
+PERLND  92                         2.5     PERLND  95     51
+IMPLND  81                         0.3     PERLND  95     52
+IMPLND  82                         3.3     PERLND  95     52
+IMPLND  83                        22.8     PERLND  95     52
+IMPLND  84                         6.3     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                         6.4     RCHRES   5      9
+PERLND  82                        19.0     RCHRES   5      9
+PERLND  83                        42.4     RCHRES   5      9
+PERLND  84                         6.3     RCHRES   5      9
+PERLND  85                         0.0     RCHRES   5      9
+PERLND  86                         0.1     RCHRES   5      9
+PERLND  87                         0.0     RCHRES   5      9
+PERLND  88                         0.0     RCHRES   5      9
+PERLND  89                         0.0     RCHRES   5      9
+PERLND  90                         0.1     RCHRES   5      9
+PERLND  91                         0.1     RCHRES   5      9
+PERLND  92                         2.5     RCHRES   5      9
+
+*** 3D REACH 6
+PERLND 101                        11.8     RCHRES   6      1
+PERLND 102                       174.1     RCHRES   6      1
+PERLND 103                       312.9     RCHRES   6      1
+PERLND 104                        81.1     RCHRES   6      1
+PERLND 105                         0.0     RCHRES   6      1
+PERLND 106                         0.2     RCHRES   6      1
+PERLND 107                         0.1     RCHRES   6      1
+PERLND 108                         0.0     RCHRES   6      1
+PERLND 109                         0.0     RCHRES   6      1
+PERLND 110                         0.2     RCHRES   6      1
+PERLND 111                         0.4     RCHRES   6      1
+PERLND 112***                        13.1     RCHRES   6      1
+PERLND 113                        18.1     RCHRES   6      1
+PERLND 115                         0.4     RCHRES   6      1
+IMPLND 101                         0.6     RCHRES   6      2
+IMPLND 102                        30.7     RCHRES   6      2
+IMPLND 103                       168.5     RCHRES   6      2
+IMPLND 104                        81.1     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                         0.3     PERLND 115     61
+PERLND 102                         4.0     PERLND 115     61
+PERLND 103                         7.3     PERLND 115     61
+PERLND 104                         1.9     PERLND 115     61
+PERLND 105                         0.0     PERLND 115     61
+PERLND 106                         0.0     PERLND 115     61
+PERLND 107                         0.0     PERLND 115     61
+PERLND 108                         0.0     PERLND 115     61
+PERLND 109                         0.0     PERLND 115     61
+PERLND 110                         0.0     PERLND 115     61
+PERLND 111                         0.0     PERLND 115     61
+PERLND 112                         0.3     PERLND 115     61
+IMPLND 101                         0.0     PERLND 115     62
+IMPLND 102                         0.7     PERLND 115     62
+IMPLND 103                         3.9     PERLND 115     62
+IMPLND 104                         1.9     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                         0.3     RCHRES   6      9
+PERLND 102                         4.0     RCHRES   6      9
+PERLND 103                         7.3     RCHRES   6      9
+PERLND 104                         1.9     RCHRES   6      9
+PERLND 105                         0.0     RCHRES   6      9
+PERLND 106                         0.0     RCHRES   6      9
+PERLND 107                         0.0     RCHRES   6      9
+PERLND 108                         0.0     RCHRES   6      9
+PERLND 109                         0.0     RCHRES   6      9
+PERLND 110                         0.0     RCHRES   6      9
+PERLND 111                         0.0     RCHRES   6      9
+PERLND 112                         0.3     RCHRES   6      9
+
+*** 3D REACH 7
+PERLND 121                       149.0     RCHRES   7      1
+PERLND 122                       676.1     RCHRES   7      1
+PERLND 123                       668.2     RCHRES   7      1
+PERLND 124                       298.0     RCHRES   7      1
+PERLND 125                        10.6     RCHRES   7      1
+PERLND 126                         0.0     RCHRES   7      1
+PERLND 127                         0.0     RCHRES   7      1
+PERLND 128                         0.0     RCHRES   7      1
+PERLND 129                         0.0     RCHRES   7      1
+PERLND 130                         0.0     RCHRES   7      1
+PERLND 131                         0.0     RCHRES   7      1
+PERLND 132***                        84.0     RCHRES   7      1
+PERLND 133                       479.0     RCHRES   7      1
+PERLND 135                       144.0     RCHRES   7      1
+IMPLND 121                         7.8     RCHRES   7      2
+IMPLND 122                       119.3     RCHRES   7      2
+IMPLND 123                       359.8     RCHRES   7      2
+IMPLND 124                       298.0     RCHRES   7      2
+      *** Surface runoff to non-reach wetland
+PERLND 121                        44.8     PERLND 135     71
+PERLND 122                       203.2     PERLND 135     71
+PERLND 123                       200.8     PERLND 135     71
+PERLND 124                        89.6     PERLND 135     71
+PERLND 125                         3.2     PERLND 135     71
+PERLND 126                         0.0     PERLND 135     71
+PERLND 127                         0.0     PERLND 135     71
+PERLND 128                         0.0     PERLND 135     71
+PERLND 129                         0.0     PERLND 135     71
+PERLND 130                         0.0     PERLND 135     71
+PERLND 131                         0.0     PERLND 135     71
+PERLND 132                        13.0     PERLND 135     71
+IMPLND 121                         2.4     PERLND 135     72
+IMPLND 122                        35.9     PERLND 135     72
+IMPLND 123                       108.1     PERLND 135     72
+IMPLND 124                        89.6     PERLND 135     72
+      *** Baseflow to reach
+PERLND 121                        44.8     RCHRES   7      9
+PERLND 122                       203.2     RCHRES   7      9
+PERLND 123                       200.8     RCHRES   7      9
+PERLND 124                        89.6     RCHRES   7      9
+PERLND 125                         3.2     RCHRES   7      9
+PERLND 126                         0.0     RCHRES   7      9
+PERLND 127                         0.0     RCHRES   7      9
+PERLND 128                         0.0     RCHRES   7      9
+PERLND 129                         0.0     RCHRES   7      9
+PERLND 130                         0.0     RCHRES   7      9
+PERLND 131                         0.0     RCHRES   7      9
+PERLND 132                        13.0     RCHRES   7      9
+
+*** 3D REACH 8
+PERLND 141                         9.4     RCHRES   8      1
+PERLND 142                       135.2     RCHRES   8      1
+PERLND 143                       174.3     RCHRES   8      1
+PERLND 144                        42.1     RCHRES   8      1
+PERLND 145                         0.0     RCHRES   8      1
+PERLND 146                         0.0     RCHRES   8      1
+PERLND 147                         0.0     RCHRES   8      1
+PERLND 148                         0.0     RCHRES   8      1
+PERLND 149                         0.0     RCHRES   8      1
+PERLND 150                         0.0     RCHRES   8      1
+PERLND 151                         0.0     RCHRES   8      1
+PERLND 152***                        28.2     RCHRES   8      1
+PERLND 153                         4.5     RCHRES   8      1
+PERLND 155                         0.9     RCHRES   8      1
+IMPLND 141                         0.5     RCHRES   8      2
+IMPLND 142                        23.9     RCHRES   8      2
+IMPLND 143                        93.9     RCHRES   8      2
+IMPLND 144                        42.1     RCHRES   8      2
+      *** Surface runoff to non-reach wetland
+PERLND 141                         1.8     PERLND 155     81
+PERLND 142                        25.6     PERLND 155     81
+PERLND 143                        33.1     PERLND 155     81
+PERLND 144                         8.0     PERLND 155     81
+PERLND 145                         0.0     PERLND 155     81
+PERLND 146                         0.0     PERLND 155     81
+PERLND 147                         0.0     PERLND 155     81
+PERLND 148                         0.0     PERLND 155     81
+PERLND 149                         0.0     PERLND 155     81
+PERLND 150                         0.0     PERLND 155     81
+PERLND 151                         0.0     PERLND 155     81
+PERLND 152                         4.4     PERLND 155     81
+IMPLND 141                         0.1     PERLND 155     82
+IMPLND 142                         4.5     PERLND 155     82
+IMPLND 143                        17.8     PERLND 155     82
+IMPLND 144                         8.0     PERLND 155     82
+      *** Baseflow to reach
+PERLND 141                         1.8     RCHRES   8      9
+PERLND 142                        25.6     RCHRES   8      9
+PERLND 143                        33.1     RCHRES   8      9
+PERLND 144                         8.0     RCHRES   8      9
+PERLND 145                         0.0     RCHRES   8      9
+PERLND 146                         0.0     RCHRES   8      9
+PERLND 147                         0.0     RCHRES   8      9
+PERLND 148                         0.0     RCHRES   8      9
+PERLND 149                         0.0     RCHRES   8      9
+PERLND 150                         0.0     RCHRES   8      9
+PERLND 151                         0.0     RCHRES   8      9
+PERLND 152                         4.4     RCHRES   8      9
+
+*** 3D REACH 9
+PERLND 161                       528.6     RCHRES   9      1
+PERLND 162                      3131.9     RCHRES   9      1
+PERLND 163                      1437.4     RCHRES   9      1
+PERLND 164                       804.3     RCHRES   9      1
+PERLND 165                         7.8     RCHRES   9      1
+PERLND 166                        71.0     RCHRES   9      1
+PERLND 167                        21.1     RCHRES   9      1
+PERLND 168                       102.7     RCHRES   9      1
+PERLND 169                         1.2     RCHRES   9      1
+PERLND 170                        58.5     RCHRES   9      1
+PERLND 171                       164.2     RCHRES   9      1
+PERLND 172***                       473.2     RCHRES   9      1
+PERLND 173                      2743.4     RCHRES   9      1
+PERLND 175                       861.3     RCHRES   9      1
+IMPLND 161                        27.8     RCHRES   9      2
+IMPLND 162                       552.7     RCHRES   9      2
+IMPLND 163                       774.0     RCHRES   9      2
+IMPLND 164                       804.3     RCHRES   9      2
+      *** Surface runoff to non-reach wetland
+PERLND 161                       166.0     PERLND 175     91
+PERLND 162                       983.3     PERLND 175     91
+PERLND 163                       451.3     PERLND 175     91
+PERLND 164                       252.5     PERLND 175     91
+PERLND 165                         2.5     PERLND 175     91
+PERLND 166                        22.3     PERLND 175     91
+PERLND 167                         6.6     PERLND 175     91
+PERLND 168                        32.2     PERLND 175     91
+PERLND 169                         0.4     PERLND 175     91
+PERLND 170                        18.4     PERLND 175     91
+PERLND 171                        51.5     PERLND 175     91
+PERLND 172                       100.8     PERLND 175     91
+IMPLND 161                         8.7     PERLND 175     92
+IMPLND 162                       173.5     PERLND 175     92
+IMPLND 163                       243.0     PERLND 175     92
+IMPLND 164                       252.5     PERLND 175     92
+      *** Baseflow to reach
+PERLND 161                       166.0     RCHRES   9      9
+PERLND 162                       983.3     RCHRES   9      9
+PERLND 163                       451.3     RCHRES   9      9
+PERLND 164                       252.5     RCHRES   9      9
+PERLND 165                         2.5     RCHRES   9      9
+PERLND 166                        22.3     RCHRES   9      9
+PERLND 167                         6.6     RCHRES   9      9
+PERLND 168                        32.2     RCHRES   9      9
+PERLND 169                         0.4     RCHRES   9      9
+PERLND 170                        18.4     RCHRES   9      9
+PERLND 171                        51.5     RCHRES   9      9
+PERLND 172                       100.8     RCHRES   9      9
+
+*** 3D REACH 10
+PERLND 181                        29.4     RCHRES  10      1
+PERLND 182                       343.2     RCHRES  10      1
+PERLND 183                       901.6     RCHRES  10      1
+PERLND 184                       240.8     RCHRES  10      1
+PERLND 185                         0.0     RCHRES  10      1
+PERLND 186                         2.6     RCHRES  10      1
+PERLND 187                         0.0     RCHRES  10      1
+PERLND 188                         0.0     RCHRES  10      1
+PERLND 189                         0.0     RCHRES  10      1
+PERLND 190                         2.1     RCHRES  10      1
+PERLND 191                         6.1     RCHRES  10      1
+PERLND 192***                        33.3     RCHRES  10      1
+PERLND 193                        12.7     RCHRES  10      1
+PERLND 195                         0.2     RCHRES  10      1
+IMPLND 181                         1.5     RCHRES  10      2
+IMPLND 182                        60.6     RCHRES  10      2
+IMPLND 183                       485.5     RCHRES  10      2
+IMPLND 184                       240.8     RCHRES  10      2
+      *** Surface runoff to non-reach wetland
+PERLND 181                         0.5     PERLND 195    101
+PERLND 182                         6.1     PERLND 195    101
+PERLND 183                        16.1     PERLND 195    101
+PERLND 184                         4.3     PERLND 195    101
+PERLND 185                         0.0     PERLND 195    101
+PERLND 186                         0.0     PERLND 195    101
+PERLND 187                         0.0     PERLND 195    101
+PERLND 188                         0.0     PERLND 195    101
+PERLND 189                         0.0     PERLND 195    101
+PERLND 190                         0.0     PERLND 195    101
+PERLND 191                         0.1     PERLND 195    101
+PERLND 192                         0.5     PERLND 195    101
+IMPLND 181                         0.0     PERLND 195    102
+IMPLND 182                         1.1     PERLND 195    102
+IMPLND 183                         8.7     PERLND 195    102
+IMPLND 184                         4.3     PERLND 195    102
+      *** Baseflow to reach
+PERLND 181                         0.5     RCHRES  10      9
+PERLND 182                         6.1     RCHRES  10      9
+PERLND 183                        16.1     RCHRES  10      9
+PERLND 184                         4.3     RCHRES  10      9
+PERLND 185                         0.0     RCHRES  10      9
+PERLND 186                         0.0     RCHRES  10      9
+PERLND 187                         0.0     RCHRES  10      9
+PERLND 188                         0.0     RCHRES  10      9
+PERLND 189                         0.0     RCHRES  10      9
+PERLND 190                         0.0     RCHRES  10      9
+PERLND 191                         0.1     RCHRES  10      9
+PERLND 192                         0.5     RCHRES  10      9
+
+
+*** 3D-1 Upper Ortega River TO 3D-2 Middle Ortega River
+RCHRES   1                                 RCHRES   2      3
+*** 3D-2 Middle Ortega River TO 3D-9 Lower Ortega River
+RCHRES   2                                 RCHRES   9      3
+*** 3D-3 Wills Branch TO 3D-4 Upper Cedar River
+RCHRES   3                                 RCHRES   4      3
+*** 3D-4 Upper Cedar River TO 3D-8 Lower Cedar River
+*** 3D-5 Williamson Creek TO 3D-8 Lower Cedar River
+*** 3D-6 Butcher Pen Creek TO 3D-8 Lower Cedar River
+*** 3D-7 Fishing Creek TO 3D-9 Lower Ortega River
+*** 3D-8 Lower Cedar River TO 3D-9 Lower Ortega River
+*** 3D-9 Lower Ortega River TO 3K-1 SJR u/s Acosta Br
+*** 3D-10 Big Flounder TO 3K-1 SJR u/s Acosta Br
+END SCHEMATIC
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+*** Transfer datasets - hourly volume/mass                                        Reach   Exit
+*** 3D-4 Upper Cedar River TO 3D-8                                                       4        1
+RCHRES   4 HYDR   ROVOL                    WDM2  4081 FLOW     ENGL AGGR REPL
+*** 3D-5 Williamson Creek TO 3D-8                                                        5        1
+RCHRES   5 HYDR   ROVOL                    WDM2  4082 FLOW     ENGL AGGR REPL
+*** 3D-6 Butcher Pen Creek TO 3D-8                                                       6        1
+RCHRES   6 HYDR   ROVOL                    WDM2  4083 FLOW     ENGL AGGR REPL
+*** 3D-7 Fishing Creek TO 3D-9                                                           7        1
+RCHRES   7 HYDR   ROVOL                    WDM2  4091 FLOW     ENGL AGGR REPL
+*** 3D-8 Lower Cedar River TO 3D-9                                                       8        1
+RCHRES   8 HYDR   ROVOL                    WDM2  4092 FLOW     ENGL AGGR REPL
+*** 3D-9 Lower Ortega River TO 3K-1                                                      9        1
+RCHRES   9 HYDR   ROVOL                    WDM2  4090 FLOW     ENGL AGGR REPL
+*** 3D-10 Big Flounder TO 3K-1                                                          10        1
+RCHRES  10 HYDR   ROVOL                    WDM2  4100 FLOW     ENGL AGGR REPL
+
+*** Gages
+***validation
+*** 3D-1 309 - Ortega River Jacksonville
+RCHRES   1 HYDR   RO                       WDM2  2009 FLOW     ENGL AGGR REPL
+
+***calibration
+*** 3D-2 310 - Ortega River Kirwin Rd Jacksonville
+RCHRES   2 HYDR   RO                       WDM2  2010 FLOW     ENGL AGGR REPL
+
+END EXT TARGETS
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 3D REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000533     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000533     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000533     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 3D REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001517     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001517     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001517     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 3D REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.007646     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.007646     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.007646     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 3D REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002593     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002593     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002593     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 3D REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.355477     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.355477     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.355477     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 3D REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        2.387513     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        2.387513     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        2.387513     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+*** 3D REACH 7
+  MASS-LINK       71
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.006946     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.006946     PERLND         EXTNL  SURLI
+  END MASS-LINK   71
+
+  MASS-LINK       72
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.006946     PERLND         EXTNL  SURLI
+  END MASS-LINK   72
+*** 3D REACH 8
+  MASS-LINK       81
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        1.172217     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        1.172217     PERLND         EXTNL  SURLI
+  END MASS-LINK   81
+
+  MASS-LINK       82
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        1.172217     PERLND         EXTNL  SURLI
+  END MASS-LINK   82
+*** 3D REACH 9
+  MASS-LINK       91
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.001161     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.001161     PERLND         EXTNL  SURLI
+  END MASS-LINK   91
+
+  MASS-LINK       92
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.001161     PERLND         EXTNL  SURLI
+  END MASS-LINK   92
+*** 3D REACH 10
+  MASS-LINK      101
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        4.403912     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        4.403912     PERLND         EXTNL  SURLI
+  END MASS-LINK  101
+
+  MASS-LINK      102
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        4.403912     PERLND         EXTNL  SURLI
+  END MASS-LINK  102
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+  UVQUAN rca7   RCHRES   7 SAREA            3 2.296E-05
+  UVQUAN rca8   RCHRES   8 SAREA            3 2.296E-05
+  UVQUAN rca9   RCHRES   9 SAREA            3 2.296E-05
+  UVQUAN rca10  RCHRES  10 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01
+  UVQUAN wla033 GLOBAL     WORKSP 02
+  UVQUAN wla053 GLOBAL     WORKSP 03
+  UVQUAN wla073 GLOBAL     WORKSP 04
+  UVQUAN wla093 GLOBAL     WORKSP 05
+  UVQUAN wla113 GLOBAL     WORKSP 06
+  UVQUAN wla133 GLOBAL     WORKSP 07
+  UVQUAN wla153 GLOBAL     WORKSP 08
+  UVQUAN wla173 GLOBAL     WORKSP 09
+  UVQUAN wla193 GLOBAL     WORKSP 10
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+  UVNAME  WLA133  1 WORKSP 07        1.0  QUAN
+  UVNAME  WLA153  1 WORKSP 08        1.0  QUAN
+  UVNAME  WLA173  1 WORKSP 09        1.0  QUAN
+  UVNAME  WLA193  1 WORKSP 10        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+*** recomputed by adding commented perlnd water area above
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =    2455.4
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =    1160.6
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =     468.5
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =     697.5
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =      42.6
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =      30.9
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+*** Reach 7
+  COPY   99                               WLA133           =     522.1
+  COPY   99                               WLA133          -=    rca7
+  COPY   99                               WLA133         MAX       0.0
+*** Reach 8
+  COPY   99                               WLA153           =      27.9
+  COPY   99                               WLA153          -=    rca8
+  COPY   99                               WLA153         MAX       0.0
+*** Reach 9
+  COPY   99                               WLA173           =    3064.4
+  COPY   99                               WLA173          -=    rca9
+  COPY   99                               WLA173         MAX       0.0
+*** Reach 10
+  COPY   99                               WLA193           =      39.4
+  COPY   99                               WLA193          -=    rca10
+  COPY   99                               WLA193         MAX       0.0
+
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+MULT PERLND 133                    wla133= RCHRES  07
+MULT PERLND 153                    wla153= RCHRES  08
+MULT PERLND 173                    wla173= RCHRES  09
+MULT PERLND 193                    wla193= RCHRES  10
+END SPEC-ACTIONS
+
+END RUN

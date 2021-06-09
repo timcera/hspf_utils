@@ -1,0 +1,1658 @@
+RUN
+
+GLOBAL
+  LSJRB 3K MODEL
+  START       1995/01/01 00:00  END    2016/12/31 24:00
+  RUN INTERP OUTPT LEVELS    4    0
+  RESUME     0 RUN     1                          UNITS    1
+END GLOBAL
+
+FILES
+<FILE>  <UN#>***<----FILE NAME------------------------------------------------->
+MESSU      24   3k.ech
+WDM1       25   sjrb_met.wdm
+WDM2       26   sjrb_lsj.wdm
+           80   3k_land.out
+           82   3k_reach.out
+BINO       81   3k_land.hbn
+BINO       83   3k_reach.hbn
+PESTSU     41   3k_hspf.sup
+END FILES
+
+OPN SEQUENCE
+    INGRP              INDELT  1:00
+*** Main1 REACH 1   SJR u/s Acosta Br
+      PERLND       1
+      PERLND       2
+      PERLND       3
+      PERLND       4
+      PERLND       5
+      PERLND       6
+      PERLND       7
+      PERLND       8
+      PERLND       9
+      PERLND      10
+      PERLND      11
+      PERLND      12
+      PERLND      13
+      IMPLND       1
+      IMPLND       2
+      IMPLND       3
+      IMPLND       4
+      PERLND      15
+      RCHRES       1
+
+*** Main1 REACH 2   Pottsburg Creek
+      PERLND      21
+      PERLND      22
+      PERLND      23
+      PERLND      24
+      PERLND      25
+      PERLND      26
+      PERLND      27
+      PERLND      28
+      PERLND      29
+      PERLND      30
+      PERLND      31
+      PERLND      32
+      PERLND      33
+      IMPLND      21
+      IMPLND      22
+      IMPLND      23
+      IMPLND      24
+      PERLND      35
+      RCHRES       2
+
+*** Main1 REACH 3   Broward River
+      PERLND      41
+      PERLND      42
+      PERLND      43
+      PERLND      44
+      PERLND      45
+      PERLND      46
+      PERLND      47
+      PERLND      48
+      PERLND      49
+      PERLND      50
+      PERLND      51
+      PERLND      52
+      PERLND      53
+      IMPLND      41
+      IMPLND      42
+      IMPLND      43
+      IMPLND      44
+      PERLND      55
+      RCHRES       3
+
+*** Main1 REACH 4   Caney Creek
+      PERLND      61
+      PERLND      62
+      PERLND      63
+      PERLND      64
+      PERLND      65
+      PERLND      66
+      PERLND      67
+      PERLND      68
+      PERLND      69
+      PERLND      70
+      PERLND      71
+      PERLND      72
+      PERLND      73
+      IMPLND      61
+      IMPLND      62
+      IMPLND      63
+      IMPLND      64
+      PERLND      75
+      RCHRES       4
+
+*** Main1 REACH 5   SJR d/s Acosta Br
+      PERLND      81
+      PERLND      82
+      PERLND      83
+      PERLND      84
+      PERLND      85
+      PERLND      86
+      PERLND      87
+      PERLND      88
+      PERLND      89
+      PERLND      90
+      PERLND      91
+      PERLND      92
+      PERLND      93
+      IMPLND      81
+      IMPLND      82
+      IMPLND      83
+      IMPLND      84
+      PERLND      95
+      RCHRES       5
+
+*** Main1 REACH 6   Clapboard Creek
+      PERLND     101
+      PERLND     102
+      PERLND     103
+      PERLND     104
+      PERLND     105
+      PERLND     106
+      PERLND     107
+      PERLND     108
+      PERLND     109
+      PERLND     110
+      PERLND     111
+      PERLND     112
+      PERLND     113
+      IMPLND     101
+      IMPLND     102
+      IMPLND     103
+      IMPLND     104
+      PERLND     115
+      RCHRES       6
+
+*** Main1 REACH 7   SJR Mayport
+      PERLND     121
+      PERLND     122
+      PERLND     123
+      PERLND     124
+      PERLND     125
+      PERLND     126
+      PERLND     127
+      PERLND     128
+      PERLND     129
+      PERLND     130
+      PERLND     131
+      PERLND     132
+      PERLND     133
+      IMPLND     121
+      IMPLND     122
+      IMPLND     123
+      IMPLND     124
+      PERLND     135
+      RCHRES       7
+
+      COPY        99
+    END INGRP
+END OPN SEQUENCE
+
+PERLND
+  ACTIVITY
+*** <PLS >               Active Sections                               ***
+*** x -  x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC ***
+  001  999    0    0    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** < PLS>                       Print-flags                           PIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** < PLS>                       Print-flags                           BIVL  PYR
+*** x  - x ATMP SNOW PWAT  SED  PST  PWG PQAL MSTL PEST NITR PHOS TRAC
+  001  999    6    6    5    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***                                     Unit sys T  Printer   Binary
+***       NAME                            in  out Engl Metr Engl Metr
+*** 3K REACH 1
+    1   19SJR u/s Acosta Br                 1    1   80    0   81    0
+*** 3K REACH 2
+   21   39Pottsburg Creek                   1    1   80    0   81    0
+*** 3K REACH 3
+   41   59Broward River                     1    1   80    0   81    0
+*** 3K REACH 4
+   61   79Caney Creek                       1    1   80    0   81    0
+*** 3K REACH 5
+   81   99SJR d/s Acosta Br                 1    1   80    0   81    0
+*** 3K REACH 6
+  101  119Clapboard Creek                   1    1   80    0   81    0
+*** 3K REACH 7
+  121  139SJR Mayport                       1    1   80    0   81    0
+  END GEN-INFO
+
+  PWAT-PARM1
+***       CSNO RTOP UZFG  VCS  VUZ  VNN VIFW VIRC  VLE IFFC  HWT IRRG IFRD
+*** 3K REACH 1 - SJR u/s Acosta Br
+    1   11    0    0    1    0    0    0    0    0    0    1    0    0    0
+   12   13    0    3    1    0    0    0    0    0    0    1    0    0    0
+   15         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3K REACH 2 - Pottsburg Creek
+   21   31    0    0    1    0    0    0    0    0    0    1    0    0    0
+   32   33    0    3    1    0    0    0    0    0    0    1    0    0    0
+   35         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3K REACH 3 - Broward River
+   41   51    0    0    1    0    0    0    0    0    0    1    0    0    0
+   52   53    0    3    1    0    0    0    0    0    0    1    0    0    0
+   55         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3K REACH 4 - Caney Creek
+   61   71    0    0    1    0    0    0    0    0    0    1    0    0    0
+   72   73    0    3    1    0    0    0    0    0    0    1    0    0    0
+   75         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3K REACH 5 - SJR d/s Acosta Br
+   81   91    0    0    1    0    0    0    0    0    0    1    0    0    0
+   92   93    0    3    1    0    0    0    0    0    0    1    0    0    0
+   95         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3K REACH 6 - Clapboard Creek
+  101  111    0    0    1    0    0    0    0    0    0    1    0    0    0
+  112  113    0    3    1    0    0    0    0    0    0    1    0    0    0
+  115         0    3    1    0    0    0    0    0    0    1    0    0    0
+*** 3K REACH 7 - SJR Mayport
+  121  131    0    0    1    0    0    0    0    0    0    1    0    0    0
+  132  133    0    3    1    0    0    0    0    0    0    1    0    0    0
+  135         0    3    1    0    0    0    0    0    0    1    0    0    0
+  END PWAT-PARM1
+
+  PWAT-PARM2
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   1
+*** 3K REACH 1 - SJR u/s Acosta Br     Location  001
+    1     ~111131301~
+    2     ~111131302~
+    3     ~111131303~
+    4     ~111131304~
+    5     ~111131305~
+    6     ~111131306~
+    7     ~111131307~
+    8     ~111131308~
+    9     ~111131309~
+   10     ~111131310~
+   11     ~111131311~
+   12     ~111131312~
+   13     ~111131313~
+   15     ~111131313~
+*** 3K REACH 2 - Pottsburg Creek       Location  001
+   21     ~111131301~
+   22     ~111131302~
+   23     ~111131303~
+   24     ~111131304~
+   25     ~111131305~
+   26     ~111131306~
+   27     ~111131307~
+   28     ~111131308~
+   29     ~111131309~
+   30     ~111131310~
+   31     ~111131311~
+   32     ~111131312~
+   33     ~111131313~
+   35     ~111131313~
+*** 3K REACH 3 - Broward River         Location  001
+   41     ~111131501~
+   42     ~111131502~
+   43     ~111131503~
+   44     ~111131504~
+   45     ~111131505~
+   46     ~111131506~
+   47     ~111131507~
+   48     ~111131508~
+   49     ~111131509~
+   50     ~111131510~
+   51     ~111131511~
+   52     ~111131512~
+   53     ~111131513~
+   55     ~111131513~
+*** 3K REACH 4 - Caney Creek           Location  001
+   61     ~111131501~
+   62     ~111131502~
+   63     ~111131503~
+   64     ~111131504~
+   65     ~111131505~
+   66     ~111131506~
+   67     ~111131507~
+   68     ~111131508~
+   69     ~111131509~
+   70     ~111131510~
+   71     ~111131511~
+   72     ~111131512~
+   73     ~111131513~
+   75     ~111131513~
+*** 3K REACH 5 - SJR d/s Acosta Br     Location  001
+   81     ~111131501~
+   82     ~111131502~
+   83     ~111131503~
+   84     ~111131504~
+   85     ~111131505~
+   86     ~111131506~
+   87     ~111131507~
+   88     ~111131508~
+   89     ~111131509~
+   90     ~111131510~
+   91     ~111131511~
+   92     ~111131512~
+   93     ~111131513~
+   95     ~111131513~
+*** 3K REACH 6 - Clapboard Creek       Location  001
+  101     ~111131401~
+  102     ~111131402~
+  103     ~111131403~
+  104     ~111131404~
+  105     ~111131405~
+  106     ~111131406~
+  107     ~111131407~
+  108     ~111131408~
+  109     ~111131409~
+  110     ~111131410~
+  111     ~111131411~
+  112     ~111131412~
+  113     ~111131413~
+  115     ~111131413~
+*** 3K REACH 7 - SJR Mayport           Location  001
+  121     ~111131401~
+  122     ~111131402~
+  123     ~111131403~
+  124     ~111131404~
+  125     ~111131405~
+  126     ~111131406~
+  127     ~111131407~
+  128     ~111131408~
+  129     ~111131409~
+  130     ~111131410~
+  131     ~111131411~
+  132     ~111131412~
+  133     ~111131413~
+  135     ~111131413~
+  END PWAT-PARM2
+
+  PWAT-PARM3
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   2
+*** 3K REACH 1 - SJR u/s Acosta Br     Location  001
+    1     ~111231301~
+    2     ~111231302~
+    3     ~111231303~
+    4     ~111231304~
+    5     ~111231305~
+    6     ~111231306~
+    7     ~111231307~
+    8     ~111231308~
+    9     ~111231309~
+   10     ~111231310~
+   11     ~111231311~
+   12     ~111231312~
+   13     ~111231313~
+   15     ~111231313~
+*** 3K REACH 2 - Pottsburg Creek       Location  001
+   21     ~111231301~
+   22     ~111231302~
+   23     ~111231303~
+   24     ~111231304~
+   25     ~111231305~
+   26     ~111231306~
+   27     ~111231307~
+   28     ~111231308~
+   29     ~111231309~
+   30     ~111231310~
+   31     ~111231311~
+   32     ~111231312~
+   33     ~111231313~
+   35     ~111231313~
+*** 3K REACH 3 - Broward River         Location  001
+   41     ~111231501~
+   42     ~111231502~
+   43     ~111231503~
+   44     ~111231504~
+   45     ~111231505~
+   46     ~111231506~
+   47     ~111231507~
+   48     ~111231508~
+   49     ~111231509~
+   50     ~111231510~
+   51     ~111231511~
+   52     ~111231512~
+   53     ~111231513~
+   55     ~111231513~
+*** 3K REACH 4 - Caney Creek           Location  001
+   61     ~111231501~
+   62     ~111231502~
+   63     ~111231503~
+   64     ~111231504~
+   65     ~111231505~
+   66     ~111231506~
+   67     ~111231507~
+   68     ~111231508~
+   69     ~111231509~
+   70     ~111231510~
+   71     ~111231511~
+   72     ~111231512~
+   73     ~111231513~
+   75     ~111231513~
+*** 3K REACH 5 - SJR d/s Acosta Br     Location  001
+   81     ~111231501~
+   82     ~111231502~
+   83     ~111231503~
+   84     ~111231504~
+   85     ~111231505~
+   86     ~111231506~
+   87     ~111231507~
+   88     ~111231508~
+   89     ~111231509~
+   90     ~111231510~
+   91     ~111231511~
+   92     ~111231512~
+   93     ~111231513~
+   95     ~111231513~
+*** 3K REACH 6 - Clapboard Creek       Location  001
+  101     ~111231401~
+  102     ~111231402~
+  103     ~111231403~
+  104     ~111231404~
+  105     ~111231405~
+  106     ~111231406~
+  107     ~111231407~
+  108     ~111231408~
+  109     ~111231409~
+  110     ~111231410~
+  111     ~111231411~
+  112     ~111231412~
+  113     ~111231413~
+  115     ~111231413~
+*** 3K REACH 7 - SJR Mayport           Location  001
+  121     ~111231401~
+  122     ~111231402~
+  123     ~111231403~
+  124     ~111231404~
+  125     ~111231405~
+  126     ~111231406~
+  127     ~111231407~
+  128     ~111231408~
+  129     ~111231409~
+  130     ~111231410~
+  131     ~111231411~
+  132     ~111231412~
+  133     ~111231413~
+  135     ~111231413~
+  END PWAT-PARM3
+
+  PWAT-PARM4
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   3
+*** 3K REACH 1 - SJR u/s Acosta Br     Location  001
+    1     ~111331301~
+    2     ~111331302~
+    3     ~111331303~
+    4     ~111331304~
+    5     ~111331305~
+    6     ~111331306~
+    7     ~111331307~
+    8     ~111331308~
+    9     ~111331309~
+   10     ~111331310~
+   11     ~111331311~
+   12     ~111331312~
+   13     ~111331313~
+   15     ~111331313~
+*** 3K REACH 2 - Pottsburg Creek       Location  001
+   21     ~111331301~
+   22     ~111331302~
+   23     ~111331303~
+   24     ~111331304~
+   25     ~111331305~
+   26     ~111331306~
+   27     ~111331307~
+   28     ~111331308~
+   29     ~111331309~
+   30     ~111331310~
+   31     ~111331311~
+   32     ~111331312~
+   33     ~111331313~
+   35     ~111331313~
+*** 3K REACH 3 - Broward River         Location  001
+   41     ~111331501~
+   42     ~111331502~
+   43     ~111331503~
+   44     ~111331504~
+   45     ~111331505~
+   46     ~111331506~
+   47     ~111331507~
+   48     ~111331508~
+   49     ~111331509~
+   50     ~111331510~
+   51     ~111331511~
+   52     ~111331512~
+   53     ~111331513~
+   55     ~111331513~
+*** 3K REACH 4 - Caney Creek           Location  001
+   61     ~111331501~
+   62     ~111331502~
+   63     ~111331503~
+   64     ~111331504~
+   65     ~111331505~
+   66     ~111331506~
+   67     ~111331507~
+   68     ~111331508~
+   69     ~111331509~
+   70     ~111331510~
+   71     ~111331511~
+   72     ~111331512~
+   73     ~111331513~
+   75     ~111331513~
+*** 3K REACH 5 - SJR d/s Acosta Br     Location  001
+   81     ~111331501~
+   82     ~111331502~
+   83     ~111331503~
+   84     ~111331504~
+   85     ~111331505~
+   86     ~111331506~
+   87     ~111331507~
+   88     ~111331508~
+   89     ~111331509~
+   90     ~111331510~
+   91     ~111331511~
+   92     ~111331512~
+   93     ~111331513~
+   95     ~111331513~
+*** 3K REACH 6 - Clapboard Creek       Location  001
+  101     ~111331401~
+  102     ~111331402~
+  103     ~111331403~
+  104     ~111331404~
+  105     ~111331405~
+  106     ~111331406~
+  107     ~111331407~
+  108     ~111331408~
+  109     ~111331409~
+  110     ~111331410~
+  111     ~111331411~
+  112     ~111331412~
+  113     ~111331413~
+  115     ~111331413~
+*** 3K REACH 7 - SJR Mayport           Location  001
+  121     ~111331401~
+  122     ~111331402~
+  123     ~111331403~
+  124     ~111331404~
+  125     ~111331405~
+  126     ~111331406~
+  127     ~111331407~
+  128     ~111331408~
+  129     ~111331409~
+  130     ~111331410~
+  131     ~111331411~
+  132     ~111331412~
+  133     ~111331413~
+  135     ~111331413~
+  END PWAT-PARM4
+
+  PWAT-PARM7
+***          STABNO      SRRC     SREXP     IFWSC     DELTA    UELFAC    LELFAC
+***                       /hr              inches    inches
+*** 3K REACH 1 - SJR u/s Acosta Br                Location  001
+    1   19       901
+*** 3K REACH 2 - Pottsburg Creek                  Location  001
+   21   39       901
+*** 3K REACH 3 - Broward River                    Location  001
+   41   59       901
+*** 3K REACH 4 - Caney Creek                      Location  001
+   61   79       901
+*** 3K REACH 5 - SJR d/s Acosta Br                Location  001
+   81   99       901
+*** 3K REACH 6 - Clapboard Creek                  Location  001
+  101  119       901
+*** 3K REACH 7 - SJR Mayport                      Location  001
+  121  139       901
+  END PWAT-PARM7
+
+  PWAT-STATE1
+***                          HYDROLOGY           PERLND              PWATER              PARM2
+***                                   1                   1                   1                   6
+*** 3K REACH 1 - SJR u/s Acosta Br     Location  001
+    1     ~111631301~
+    2     ~111631302~
+    3     ~111631303~
+    4     ~111631304~
+    5     ~111631305~
+    6     ~111631306~
+    7     ~111631307~
+    8     ~111631308~
+    9     ~111631309~
+   10     ~111631310~
+   11     ~111631311~
+   12     ~111631312~
+   13     ~111631313~
+   15     ~111631313~
+*** 3K REACH 2 - Pottsburg Creek       Location  001
+   21     ~111631301~
+   22     ~111631302~
+   23     ~111631303~
+   24     ~111631304~
+   25     ~111631305~
+   26     ~111631306~
+   27     ~111631307~
+   28     ~111631308~
+   29     ~111631309~
+   30     ~111631310~
+   31     ~111631311~
+   32     ~111631312~
+   33     ~111631313~
+   35     ~111631313~
+*** 3K REACH 3 - Broward River         Location  001
+   41     ~111631501~
+   42     ~111631502~
+   43     ~111631503~
+   44     ~111631504~
+   45     ~111631505~
+   46     ~111631506~
+   47     ~111631507~
+   48     ~111631508~
+   49     ~111631509~
+   50     ~111631510~
+   51     ~111631511~
+   52     ~111631512~
+   53     ~111631513~
+   55     ~111631513~
+*** 3K REACH 4 - Caney Creek           Location  001
+   61     ~111631501~
+   62     ~111631502~
+   63     ~111631503~
+   64     ~111631504~
+   65     ~111631505~
+   66     ~111631506~
+   67     ~111631507~
+   68     ~111631508~
+   69     ~111631509~
+   70     ~111631510~
+   71     ~111631511~
+   72     ~111631512~
+   73     ~111631513~
+   75     ~111631513~
+*** 3K REACH 5 - SJR d/s Acosta Br     Location  001
+   81     ~111631501~
+   82     ~111631502~
+   83     ~111631503~
+   84     ~111631504~
+   85     ~111631505~
+   86     ~111631506~
+   87     ~111631507~
+   88     ~111631508~
+   89     ~111631509~
+   90     ~111631510~
+   91     ~111631511~
+   92     ~111631512~
+   93     ~111631513~
+   95     ~111631513~
+*** 3K REACH 6 - Clapboard Creek       Location  001
+  101     ~111631401~
+  102     ~111631402~
+  103     ~111631403~
+  104     ~111631404~
+  105     ~111631405~
+  106     ~111631406~
+  107     ~111631407~
+  108     ~111631408~
+  109     ~111631409~
+  110     ~111631410~
+  111     ~111631411~
+  112     ~111631412~
+  113     ~111631413~
+  115     ~111631413~
+*** 3K REACH 7 - SJR Mayport           Location  001
+  121     ~111631401~
+  122     ~111631402~
+  123     ~111631403~
+  124     ~111631404~
+  125     ~111631405~
+  126     ~111631406~
+  127     ~111631407~
+  128     ~111631408~
+  129     ~111631409~
+  130     ~111631410~
+  131     ~111631411~
+  132     ~111631412~
+  133     ~111631413~
+  135     ~111631413~
+  END PWAT-STATE1
+END PERLND
+
+IMPLND
+  ACTIVITY
+*** <ILS >               Active Sections
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL
+  001  999    0    0    1    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** <ILS > ******** Print-flags ******** PIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** <ILS > ******** Print-flags ******** BIVL  PYR
+*** x -  x ATMP SNOW IWAT  SLD  IWG IQAL *********
+  001  999    6    6    5    6    6    6    1   12
+  END BINARY-INFO
+
+  GEN-INFO
+***             Name             Unit-systems   Printer BinaryOut
+*** <ILS >                           t-series Engl Metr Engl Metr
+*** x -  x                            in  out
+  001  999                             1    1   80    0   81    0
+  END GEN-INFO
+
+  IWAT-PARM1
+*** <ILS >        Flags
+*** x -  x CSNO RTOP  VRS  VNN RTLI
+  001  999    0    0    0    0    0
+  END IWAT-PARM1
+
+  IWAT-PARM2
+*** <ILS >      LSUR     SLSUR      NSUR     RETSC
+*** x -  x      (ft)                          (in)
+  001  999      150.     0.001     0.015      0.10
+  END IWAT-PARM2
+
+  IWAT-PARM3
+*** <ILS >    PETMAX    PETMIN
+*** x -  x   (deg F)   (deg F)
+  001  999       40.       35.
+  END IWAT-PARM3
+
+  IWAT-STATE1
+*** <ILS >  IWATER state variables (inches)
+*** x -  x      RETS      SURS
+  001  999     0.000     0.000
+  END IWAT-STATE1
+END IMPLND
+
+RCHRES
+  ACTIVITY
+*** RCHRES  Active sections
+*** x -  x HYFG ADFG CNFG HTFG SDFG GQFG OXFG NUFG PKFG PHFG
+    1    7    1    0    0    0    0    0    0    0    0    0
+  END ACTIVITY
+
+  PRINT-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1    7    5    6    6    6    6    6    6    6    6    6    1   12
+  END PRINT-INFO
+
+  BINARY-INFO
+*** RCHRES  Printout level flags
+*** x -  x HYDR ADCA CONS HEAT  SED  GQL OXRX NUTR PLNK PHCB PIVL  PYR
+    1    7    3    6    6    6    6    6    6    6    6    6    1   12
+  END BINARY-INFO
+  GEN-INFO
+***                                     Unit sys T  Printer        Binary
+***       NAME                Nexit       in  out Engl Metr Lkfg Engl Metr
+*** 3K REACH 1
+    1     SJR u/s Acosta Br       1         1    1   82    0    0   83    0
+*** 3K REACH 2
+    2     Pottsburg Creek         1         1    1   82    0    0   83    0
+*** 3K REACH 3
+    3     Broward River           1         1    1   82    0    0   83    0
+*** 3K REACH 4
+    4     Caney Creek             1         1    1   82    0    0   83    0
+*** 3K REACH 5
+    5     SJR d/s Acosta Br       1         1    1   82    0    0   83    0
+*** 3K REACH 6
+    6     Clapboard Creek         1         1    1   82    0    0   83    0
+*** 3K REACH 7
+    7     SJR Mayport             1         1    1   82    0    0   83    0
+  END GEN-INFO
+
+  HYDR-PARM1
+***           AUX FLAGS  <----ODFVFG--->     <----ODGTFG--->     <----FUNCT---->
+***        VCFA1 A2 A3     1  2  3  4  5       1  2  3  4  5       1  2  3  4  5
+*** 3K REACH 1 - SJR u/s Acosta Br
+    1        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3K REACH 2 - Pottsburg Creek
+    2        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3K REACH 3 - Broward River
+    3        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3K REACH 4 - Caney Creek
+    4        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3K REACH 5 - SJR d/s Acosta Br
+    5        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3K REACH 6 - Clapboard Creek
+    6        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+*** 3K REACH 7 - SJR Mayport
+    7        0  1  0  0    4  0  0  0  0       0  0  0  0  0       1  1  1  1  1
+  END HYDR-PARM1
+
+  HYDR-PARM2
+***            FTAB       LEN     DELTH     STCOR        KS      DB50
+***                   (miles)      (ft) (ft NAVD)                (in)
+*** 3K REACH 1 - SJR u/s Acosta Br
+    1             1.      9.77      0.00      0.00       0.5      0.01
+*** 3K REACH 2 - Pottsburg Creek
+    2             2.     10.70     18.74      0.00       0.5      0.01
+*** 3K REACH 3 - Broward River
+    3             3.     10.52     19.07      0.00       0.5      0.01
+*** 3K REACH 4 - Caney Creek
+    4             4.      9.36     17.53      0.00       0.5      0.01
+*** 3K REACH 5 - SJR d/s Acosta Br
+    5             5.     13.28      0.00      0.00       0.5      0.01
+*** 3K REACH 6 - Clapboard Creek
+    6             6.      8.60      4.81      0.00       0.5      0.01
+*** 3K REACH 7 - SJR Mayport
+    7             7.     10.59      0.00      0.00       0.5      0.01
+  END HYDR-PARM2
+
+  HYDR-INIT
+***       Initial        <Initial value of COLIND>     <Initial value of OUTDGT>
+***             VOL          1    2    3    4    5         1    2    3    4    5
+*** 3K REACH 1 - SJR u/s Acosta Br
+    1        1474.59       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3K REACH 2 - Pottsburg Creek
+    2        1474.59       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3K REACH 3 - Broward River
+    3        1474.59       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3K REACH 4 - Caney Creek
+    4        1474.59       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3K REACH 5 - SJR d/s Acosta Br
+    5        1474.59       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3K REACH 6 - Clapboard Creek
+    6        1474.59       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+*** 3K REACH 7 - SJR Mayport
+    7        1474.59       4.0  0.0  0.0  0.0  0.0       0.0  0.0  0.0  0.0  0.0
+  END HYDR-INIT
+
+END RCHRES
+
+FTABLES
+  FTABLE    001
+ rows cols ***      SJR u/s Acosta Br   STCOR           0.00
+   8    4
+     depth      area    volume  outflow1 ***
+      0.00     901.7      0.00       0.0
+      1.62     915.5   1474.59     141.5
+     16.23    1039.6  15753.09    6528.7
+     20.29    1074.1  20041.08    9473.2
+     25.36    3239.5  36252.15   12511.9
+     30.43    3325.7  52900.35   23045.4
+    522.37   11686.33745451.5011599835.0
+   1014.32   20046.9999999999952548840.0
+  END FTABLE001
+
+  FTABLE    002
+ rows cols ***      SJR u/s Acosta Br   STCOR           0.00
+   8    4
+     depth      area    volume  outflow1 ***
+      0.00     901.7      0.00       0.0
+      1.62     915.5   1474.59     141.5
+     16.23    1039.6  15753.09    6528.7
+     20.29    1074.1  20041.08    9473.2
+     25.36    3239.5  36252.15   12511.9
+     30.43    3325.7  52900.35   23045.4
+    522.37   11686.33745451.5011599835.0
+   1014.32   20046.9999999999952548840.0
+  END FTABLE002
+
+  FTABLE    003
+ rows cols ***      SJR u/s Acosta Br   STCOR           0.00
+   8    4
+     depth      area    volume  outflow1 ***
+      0.00     901.7      0.00       0.0
+      1.62     915.5   1474.59     141.5
+     16.23    1039.6  15753.09    6528.7
+     20.29    1074.1  20041.08    9473.2
+     25.36    3239.5  36252.15   12511.9
+     30.43    3325.7  52900.35   23045.4
+    522.37   11686.33745451.5011599835.0
+   1014.32   20046.9999999999952548840.0
+  END FTABLE003
+
+  FTABLE    004
+ rows cols ***      SJR u/s Acosta Br   STCOR           0.00
+   8    4
+     depth      area    volume  outflow1 ***
+      0.00     901.7      0.00       0.0
+      1.62     915.5   1474.59     141.5
+     16.23    1039.6  15753.09    6528.7
+     20.29    1074.1  20041.08    9473.2
+     25.36    3239.5  36252.15   12511.9
+     30.43    3325.7  52900.35   23045.4
+    522.37   11686.33745451.5011599835.0
+   1014.32   20046.9999999999952548840.0
+  END FTABLE004
+
+  FTABLE    005
+ rows cols ***      SJR u/s Acosta Br   STCOR           0.00
+   8    4
+     depth      area    volume  outflow1 ***
+      0.00     901.7      0.00       0.0
+      1.62     915.5   1474.59     141.5
+     16.23    1039.6  15753.09    6528.7
+     20.29    1074.1  20041.08    9473.2
+     25.36    3239.5  36252.15   12511.9
+     30.43    3325.7  52900.35   23045.4
+    522.37   11686.33745451.5011599835.0
+   1014.32   20046.9999999999952548840.0
+  END FTABLE005
+
+  FTABLE    006
+ rows cols ***      SJR u/s Acosta Br   STCOR           0.00
+   8    4
+     depth      area    volume  outflow1 ***
+      0.00     901.7      0.00       0.0
+      1.62     915.5   1474.59     141.5
+     16.23    1039.6  15753.09    6528.7
+     20.29    1074.1  20041.08    9473.2
+     25.36    3239.5  36252.15   12511.9
+     30.43    3325.7  52900.35   23045.4
+    522.37   11686.33745451.5011599835.0
+   1014.32   20046.9999999999952548840.0
+  END FTABLE006
+
+  FTABLE    007
+ rows cols ***      SJR u/s Acosta Br   STCOR           0.00
+   8    4
+     depth      area    volume  outflow1 ***
+      0.00     901.7      0.00       0.0
+      1.62     915.5   1474.59     141.5
+     16.23    1039.6  15753.09    6528.7
+     20.29    1074.1  20041.08    9473.2
+     25.36    3239.5  36252.15   12511.9
+     30.43    3325.7  52900.35   23045.4
+    522.37   11686.33745451.5011599835.0
+   1014.32   20046.9999999999952548840.0
+  END FTABLE007
+
+  FTABLE    901
+ rows cols ***
+    5    2
+    DEPTH    OUTFLOW  ***
+      (in)     (/hr)  ***
+       0.0       0.0
+ 11.825160       0.0
+      12. 7.18106E-4
+      24. .050004729
+      36. .099291351
+  END FTABLE901
+
+END FTABLES
+
+COPY
+  TIMESERIES
+  Copy-opn***
+*** x -  x  NPT  NMN
+   99         0    1
+  END TIMESERIES
+END COPY
+
+EXT SOURCES
+<-Volume-> <Member> SsysSgap<--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>   # <Name> #  temstrg<-factor->strg <Name>   #   # <Name> <Name> # # ***
+*** Reach 1 - SJR u/s Acosta Br
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND   1  19 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND   1  19 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   1     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND   1  19 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND   1  19 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   1     EXTNL  POTEV
+
+*** Reach 2 - Pottsburg Creek
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  21  39 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  21  39 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   2     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND  21  39 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND  21  39 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   2     EXTNL  POTEV
+
+*** Reach 3 - Broward River
+*** Rain station Jacksonville AP
+WDM1  2402 HPCP     ENGL                   PERLND  41  59 EXTNL  PREC
+WDM1  2402 HPCP     ENGL                   IMPLND  41  59 EXTNL  PREC
+WDM1  2402 HPCP     ENGL                   RCHRES   3     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND  41  59 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND  41  59 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   3     EXTNL  POTEV
+
+*** Reach 4 - Caney Creek
+*** Rain station Jacksonville AP
+WDM1  2402 HPCP     ENGL                   PERLND  61  79 EXTNL  PREC
+WDM1  2402 HPCP     ENGL                   IMPLND  61  79 EXTNL  PREC
+WDM1  2402 HPCP     ENGL                   RCHRES   4     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND  61  79 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND  61  79 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   4     EXTNL  POTEV
+
+*** Reach 5 - SJR d/s Acosta Br
+*** Rain station Jacksonville NAS
+WDM1  5002 HPCP     ENGL                   PERLND  81  99 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   IMPLND  81  99 EXTNL  PREC
+WDM1  5002 HPCP     ENGL                   RCHRES   5     EXTNL  PREC
+*** Evap station Jacksonville AP
+WDM1  2406 HPET     ENGL        1.0000     PERLND  81  99 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     IMPLND  81  99 EXTNL  PETINP
+WDM1  2406 HPET     ENGL        1.0000     RCHRES   5     EXTNL  POTEV
+
+*** Reach 6 - Clapboard Creek
+*** Rain station Jacksonville Beach
+WDM1  2502 HPCP     ENGL                   PERLND 101 119 EXTNL  PREC
+WDM1  2502 HPCP     ENGL                   IMPLND 101 119 EXTNL  PREC
+WDM1  2502 HPCP     ENGL                   RCHRES   6     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND 101 119 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND 101 119 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   6     EXTNL  POTEV
+
+*** Reach 7 - SJR Mayport
+*** Rain station Jacksonville Beach
+WDM1  2502 HPCP     ENGL                   PERLND 121 139 EXTNL  PREC
+WDM1  2502 HPCP     ENGL                   IMPLND 121 139 EXTNL  PREC
+WDM1  2502 HPCP     ENGL                   RCHRES   7     EXTNL  PREC
+*** Evap station Jacksonville Beach
+WDM1  2506 HPET     ENGL        1.0000     PERLND 121 139 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     IMPLND 121 139 EXTNL  PETINP
+WDM1  2506 HPET     ENGL        1.0000     RCHRES   7     EXTNL  POTEV
+
+END EXT SOURCES
+
+SCHEMATIC
+<-Volume->                  <--Area-->     <-Volume->  <ML#> ***       <sb***
+<Name>   x                  <-factor->     <Name>   x        ***        x ***
+*** 3K REACH 1
+PERLND   1                       210.7     RCHRES   1      1
+PERLND   2                      3770.4     RCHRES   1      1
+PERLND   3                      1967.9     RCHRES   1      1
+PERLND   4                      2801.2     RCHRES   1      1
+PERLND   5                         0.0     RCHRES   1      1
+PERLND   6                       488.2     RCHRES   1      1
+PERLND   7                         4.2     RCHRES   1      1
+PERLND   8                       349.7     RCHRES   1      1
+PERLND   9                         0.0     RCHRES   1      1
+PERLND  10                        95.5     RCHRES   1      1
+PERLND  11                       755.2     RCHRES   1      1
+*** perlnd water commented out (7/1/19) but added to rchres
+PERLND  12***                    795.9     RCHRES   1      1
+PERLND  13                       377.4     RCHRES   1      1
+PERLND  15                       450.2     RCHRES   1      1
+IMPLND   1                        11.1     RCHRES   1      2
+IMPLND   2                       665.4     RCHRES   1      2
+IMPLND   3                      1059.7     RCHRES   1      2
+IMPLND   4                      2801.2     RCHRES   1      2
+      *** Surface runoff to non-reach wetland
+PERLND   1                        51.8     PERLND  15     11
+PERLND   2                       596.8     PERLND  15     11
+PERLND   3                       619.2     PERLND  15     11
+PERLND   4                       591.7     PERLND  15     11
+PERLND   5                         0.0     PERLND  15     11
+PERLND   6                       174.3     PERLND  15     11
+PERLND   7                         1.1     PERLND  15     11
+PERLND   8                        12.2     PERLND  15     11
+PERLND   9                         0.0     PERLND  15     11
+PERLND  10                        76.8     PERLND  15     11
+PERLND  11                       162.6     PERLND  15     11
+PERLND  12                        75.8     PERLND  15     11
+IMPLND   1                         2.7     PERLND  15     12
+IMPLND   2                       105.3     PERLND  15     12
+IMPLND   3                       333.4     PERLND  15     12
+IMPLND   4                       591.7     PERLND  15     12
+      *** Baseflow to reach
+PERLND   1                        51.8     RCHRES   1      9
+PERLND   2                       596.8     RCHRES   1      9
+PERLND   3                       619.2     RCHRES   1      9
+PERLND   4                       591.7     RCHRES   1      9
+PERLND   5                         0.0     RCHRES   1      9
+PERLND   6                       174.3     RCHRES   1      9
+PERLND   7                         1.1     RCHRES   1      9
+PERLND   8                        12.2     RCHRES   1      9
+PERLND   9                         0.0     RCHRES   1      9
+PERLND  10                        76.8     RCHRES   1      9
+PERLND  11                       162.6     RCHRES   1      9
+PERLND  12                        75.8     RCHRES   1      9
+
+*** 3K REACH 2
+PERLND  21                      1107.7     RCHRES   2      1
+PERLND  22                      4219.1     RCHRES   2      1
+PERLND  23                      1273.7     RCHRES   2      1
+PERLND  24                      2286.2     RCHRES   2      1
+PERLND  25                         0.0     RCHRES   2      1
+PERLND  26                       292.0     RCHRES   2      1
+PERLND  27                         5.7     RCHRES   2      1
+PERLND  28                       124.2     RCHRES   2      1
+PERLND  29                         0.0     RCHRES   2      1
+PERLND  30                       151.0     RCHRES   2      1
+PERLND  31                       759.8     RCHRES   2      1
+PERLND  32***                    734.3     RCHRES   2      1
+PERLND  33                      1855.2     RCHRES   2      1
+PERLND  35                       475.6     RCHRES   2      1
+IMPLND  21                        58.3     RCHRES   2      2
+IMPLND  22                       744.5     RCHRES   2      2
+IMPLND  23                       685.8     RCHRES   2      2
+IMPLND  24                      2286.2     RCHRES   2      2
+      *** Surface runoff to non-reach wetland
+PERLND  21                       341.1     PERLND  35     21
+PERLND  22                       512.0     PERLND  35     21
+PERLND  23                       112.5     PERLND  35     21
+PERLND  24                       371.8     PERLND  35     21
+PERLND  25                         0.0     PERLND  35     21
+PERLND  26                        54.7     PERLND  35     21
+PERLND  27                         8.5     PERLND  35     21
+PERLND  28                        19.7     PERLND  35     21
+PERLND  29                         0.0     PERLND  35     21
+PERLND  30                        45.3     PERLND  35     21
+PERLND  31                       107.5     PERLND  35     21
+PERLND  32                        36.9     PERLND  35     21
+IMPLND  21                        18.0     PERLND  35     22
+IMPLND  22                        90.3     PERLND  35     22
+IMPLND  23                        60.6     PERLND  35     22
+IMPLND  24                       371.8     PERLND  35     22
+      *** Baseflow to reach
+PERLND  21                       341.1     RCHRES   2      9
+PERLND  22                       512.0     RCHRES   2      9
+PERLND  23                       112.5     RCHRES   2      9
+PERLND  24                       371.8     RCHRES   2      9
+PERLND  25                         0.0     RCHRES   2      9
+PERLND  26                        54.7     RCHRES   2      9
+PERLND  27                         8.5     RCHRES   2      9
+PERLND  28                        19.7     RCHRES   2      9
+PERLND  29                         0.0     RCHRES   2      9
+PERLND  30                        45.3     RCHRES   2      9
+PERLND  31                       107.5     RCHRES   2      9
+PERLND  32                        36.9     RCHRES   2      9
+
+*** 3K REACH 3
+PERLND  41                       668.4     RCHRES   3      1
+PERLND  42                       908.3     RCHRES   3      1
+PERLND  43                       111.6     RCHRES   3      1
+PERLND  44                      1676.6     RCHRES   3      1
+PERLND  45                        11.3     RCHRES   3      1
+PERLND  46                       153.6     RCHRES   3      1
+PERLND  47                       161.1     RCHRES   3      1
+PERLND  48                       302.3     RCHRES   3      1
+PERLND  49                         5.3     RCHRES   3      1
+PERLND  50                      1014.4     RCHRES   3      1
+PERLND  51                      3271.6     RCHRES   3      1
+PERLND  52***                    438.9     RCHRES   3      1
+PERLND  53                      2398.1     RCHRES   3      1
+PERLND  55                      1359.7     RCHRES   3      1
+IMPLND  41                        35.2     RCHRES   3      2
+IMPLND  42                       160.3     RCHRES   3      2
+IMPLND  43                        60.1     RCHRES   3      2
+IMPLND  44                      1676.6     RCHRES   3      2
+      *** Surface runoff to non-reach wetland
+PERLND  41                       242.7     PERLND  55     31
+PERLND  42                       351.4     PERLND  55     31
+PERLND  43                        23.6     PERLND  55     31
+PERLND  44                       755.9     PERLND  55     31
+PERLND  45                         0.0     PERLND  55     31
+PERLND  46                        88.0     PERLND  55     31
+PERLND  47                        30.9     PERLND  55     31
+PERLND  48                        98.0     PERLND  55     31
+PERLND  49                         0.0     PERLND  55     31
+PERLND  50                       325.3     PERLND  55     31
+PERLND  51                      1038.9     PERLND  55     31
+PERLND  52                        74.0     PERLND  55     31
+IMPLND  41                        12.8     PERLND  55     32
+IMPLND  42                        62.0     PERLND  55     32
+IMPLND  43                        12.7     PERLND  55     32
+IMPLND  44                       755.9     PERLND  55     32
+      *** Baseflow to reach
+PERLND  41                       242.7     RCHRES   3      9
+PERLND  42                       351.4     RCHRES   3      9
+PERLND  43                        23.6     RCHRES   3      9
+PERLND  44                       755.9     RCHRES   3      9
+PERLND  45                         0.0     RCHRES   3      9
+PERLND  46                        88.0     RCHRES   3      9
+PERLND  47                        30.9     RCHRES   3      9
+PERLND  48                        98.0     RCHRES   3      9
+PERLND  49                         0.0     RCHRES   3      9
+PERLND  50                       325.3     RCHRES   3      9
+PERLND  51                      1038.9     RCHRES   3      9
+PERLND  52                        74.0     RCHRES   3      9
+
+*** 3K REACH 4
+PERLND  61                      1557.5     RCHRES   4      1
+PERLND  62                      1042.8     RCHRES   4      1
+PERLND  63                        17.6     RCHRES   4      1
+PERLND  64                       472.3     RCHRES   4      1
+PERLND  65                         6.4     RCHRES   4      1
+PERLND  66                       153.6     RCHRES   4      1
+PERLND  67                       280.9     RCHRES   4      1
+PERLND  68                       117.1     RCHRES   4      1
+PERLND  69                         2.3     RCHRES   4      1
+PERLND  70                       497.5     RCHRES   4      1
+PERLND  71                      1527.6     RCHRES   4      1
+PERLND  72***                    547.1     RCHRES   4      1
+PERLND  73                      2129.1     RCHRES   4      1
+PERLND  75                      1424.5     RCHRES   4      1
+IMPLND  61                        82.0     RCHRES   4      2
+IMPLND  62                       184.0     RCHRES   4      2
+IMPLND  63                         9.5     RCHRES   4      2
+IMPLND  64                       472.3     RCHRES   4      2
+      *** Surface runoff to non-reach wetland
+PERLND  61                       677.3     PERLND  75     41
+PERLND  62                       816.7     PERLND  75     41
+PERLND  63                        67.4     PERLND  75     41
+PERLND  64                       224.2     PERLND  75     41
+PERLND  65                        24.8     PERLND  75     41
+PERLND  66                        86.2     PERLND  75     41
+PERLND  67                        73.6     PERLND  75     41
+PERLND  68                        33.7     PERLND  75     41
+PERLND  69                         4.3     PERLND  75     41
+PERLND  70                       372.7     PERLND  75     41
+PERLND  71                       671.1     PERLND  75     41
+PERLND  72                       166.1     PERLND  75     41
+IMPLND  61                        35.6     PERLND  75     42
+IMPLND  62                       144.1     PERLND  75     42
+IMPLND  63                        36.3     PERLND  75     42
+IMPLND  64                       224.2     PERLND  75     42
+      *** Baseflow to reach
+PERLND  61                       677.3     RCHRES   4      9
+PERLND  62                       816.7     RCHRES   4      9
+PERLND  63                        67.4     RCHRES   4      9
+PERLND  64                       224.2     RCHRES   4      9
+PERLND  65                        24.8     RCHRES   4      9
+PERLND  66                        86.2     RCHRES   4      9
+PERLND  67                        73.6     RCHRES   4      9
+PERLND  68                        33.7     RCHRES   4      9
+PERLND  69                         4.3     RCHRES   4      9
+PERLND  70                       372.7     RCHRES   4      9
+PERLND  71                       671.1     RCHRES   4      9
+PERLND  72                       166.1     RCHRES   4      9
+
+*** 3K REACH 5
+PERLND  81                       325.0     RCHRES   5      1
+PERLND  82                      2335.3     RCHRES   5      1
+PERLND  83                      1776.0     RCHRES   5      1
+PERLND  84                      2278.6     RCHRES   5      1
+PERLND  85                         0.0     RCHRES   5      1
+PERLND  86                      1050.4     RCHRES   5      1
+PERLND  87                         0.0     RCHRES   5      1
+PERLND  88                        82.5     RCHRES   5      1
+PERLND  89                         0.0     RCHRES   5      1
+PERLND  90                       282.5     RCHRES   5      1
+PERLND  91                       683.9     RCHRES   5      1
+PERLND  92***                    375.2     RCHRES   5      1
+PERLND  93                       555.0     RCHRES   5      1
+PERLND  95                       132.9     RCHRES   5      1
+IMPLND  81                        17.1     RCHRES   5      2
+IMPLND  82                       412.1     RCHRES   5      2
+IMPLND  83                       956.3     RCHRES   5      2
+IMPLND  84                      2278.6     RCHRES   5      2
+      *** Surface runoff to non-reach wetland
+PERLND  81                         8.6     PERLND  95     51
+PERLND  82                       399.4     PERLND  95     51
+PERLND  83                        74.5     PERLND  95     51
+PERLND  84                       173.0     PERLND  95     51
+PERLND  85                         0.0     PERLND  95     51
+PERLND  86                        40.9     PERLND  95     51
+PERLND  87                         0.0     PERLND  95     51
+PERLND  88                         0.0     PERLND  95     51
+PERLND  89                         0.0     PERLND  95     51
+PERLND  90                        14.7     PERLND  95     51
+PERLND  91                        20.7     PERLND  95     51
+PERLND  92                        15.3     PERLND  95     51
+IMPLND  81                         0.5     PERLND  95     52
+IMPLND  82                        70.5     PERLND  95     52
+IMPLND  83                        40.1     PERLND  95     52
+IMPLND  84                       173.0     PERLND  95     52
+      *** Baseflow to reach
+PERLND  81                         8.6     RCHRES   5      9
+PERLND  82                       399.4     RCHRES   5      9
+PERLND  83                        74.5     RCHRES   5      9
+PERLND  84                       173.0     RCHRES   5      9
+PERLND  85                         0.0     RCHRES   5      9
+PERLND  86                        40.9     RCHRES   5      9
+PERLND  87                         0.0     RCHRES   5      9
+PERLND  88                         0.0     RCHRES   5      9
+PERLND  89                         0.0     RCHRES   5      9
+PERLND  90                        14.7     RCHRES   5      9
+PERLND  91                        20.7     RCHRES   5      9
+PERLND  92                        15.3     RCHRES   5      9
+
+*** 3K REACH 6
+PERLND 101                       585.0     RCHRES   6      1
+PERLND 102                        77.1     RCHRES   6      1
+PERLND 103                         0.0     RCHRES   6      1
+PERLND 104                       512.8     RCHRES   6      1
+PERLND 105                         0.0     RCHRES   6      1
+PERLND 106                       146.7     RCHRES   6      1
+PERLND 107                        44.9     RCHRES   6      1
+PERLND 108                         8.1     RCHRES   6      1
+PERLND 109                         0.0     RCHRES   6      1
+PERLND 110                       485.8     RCHRES   6      1
+PERLND 111                      3540.0     RCHRES   6      1
+PERLND 112***                   1286.9     RCHRES   6      1
+PERLND 113                      7365.9     RCHRES   6      1
+PERLND 115                       425.6     RCHRES   6      1
+IMPLND 101                        30.8     RCHRES   6      2
+IMPLND 102                        13.6     RCHRES   6      2
+IMPLND 103                         0.0     RCHRES   6      2
+IMPLND 104                       512.8     RCHRES   6      2
+      *** Surface runoff to non-reach wetland
+PERLND 101                        87.7     PERLND 115     61
+PERLND 102                        24.1     PERLND 115     61
+PERLND 103                         0.0     PERLND 115     61
+PERLND 104                        77.9     PERLND 115     61
+PERLND 105                         0.0     PERLND 115     61
+PERLND 106                         2.7     PERLND 115     61
+PERLND 107                         2.5     PERLND 115     61
+PERLND 108                         6.2     PERLND 115     61
+PERLND 109                         0.0     PERLND 115     61
+PERLND 110                       111.4     PERLND 115     61
+PERLND 111                       873.1     PERLND 115     61
+PERLND 112                        21.8     PERLND 115     61
+IMPLND 101                         4.6     PERLND 115     62
+IMPLND 102                         4.3     PERLND 115     62
+IMPLND 103                         0.0     PERLND 115     62
+IMPLND 104                        77.9     PERLND 115     62
+      *** Baseflow to reach
+PERLND 101                        87.7     RCHRES   6      9
+PERLND 102                        24.1     RCHRES   6      9
+PERLND 103                         0.0     RCHRES   6      9
+PERLND 104                        77.9     RCHRES   6      9
+PERLND 105                         0.0     RCHRES   6      9
+PERLND 106                         2.7     RCHRES   6      9
+PERLND 107                         2.5     RCHRES   6      9
+PERLND 108                         6.2     RCHRES   6      9
+PERLND 109                         0.0     RCHRES   6      9
+PERLND 110                       111.4     RCHRES   6      9
+PERLND 111                       873.1     RCHRES   6      9
+PERLND 112                        21.8     RCHRES   6      9
+
+*** 3K REACH 7
+PERLND 121                       670.3     RCHRES   7      1
+PERLND 122                      2966.0     RCHRES   7      1
+PERLND 123                      1027.6     RCHRES   7      1
+PERLND 124                      1665.7     RCHRES   7      1
+PERLND 125                        13.1     RCHRES   7      1
+PERLND 126                       387.4     RCHRES   7      1
+PERLND 127                         4.8     RCHRES   7      1
+PERLND 128                       360.2     RCHRES   7      1
+PERLND 129                         0.0     RCHRES   7      1
+PERLND 130                       490.4     RCHRES   7      1
+PERLND 131                       905.4     RCHRES   7      1
+PERLND 132***                   1137.6     RCHRES   7      1
+PERLND 133                      2160.6     RCHRES   7      1
+PERLND 135                      1747.0     RCHRES   7      1
+IMPLND 121                        35.3     RCHRES   7      2
+IMPLND 122                       523.4     RCHRES   7      2
+IMPLND 123                       553.3     RCHRES   7      2
+IMPLND 124                      1665.7     RCHRES   7      2
+      *** Surface runoff to non-reach wetland
+PERLND 121                       139.2     PERLND 135     71
+PERLND 122                       794.8     PERLND 135     71
+PERLND 123                       379.9     PERLND 135     71
+PERLND 124                       481.0     PERLND 135     71
+PERLND 125                         0.0     PERLND 135     71
+PERLND 126                        99.0     PERLND 135     71
+PERLND 127                         0.0     PERLND 135     71
+PERLND 128                        72.4     PERLND 135     71
+PERLND 129                         0.0     PERLND 135     71
+PERLND 130                       130.6     PERLND 135     71
+PERLND 131                       431.1     PERLND 135     71
+PERLND 132                       192.3     PERLND 135     71
+IMPLND 121                         7.3     PERLND 135     72
+IMPLND 122                       140.3     PERLND 135     72
+IMPLND 123                       204.6     PERLND 135     72
+IMPLND 124                       481.0     PERLND 135     72
+      *** Baseflow to reach
+PERLND 121                       139.2     RCHRES   7      9
+PERLND 122                       794.8     RCHRES   7      9
+PERLND 123                       379.9     RCHRES   7      9
+PERLND 124                       481.0     RCHRES   7      9
+PERLND 125                         0.0     RCHRES   7      9
+PERLND 126                        99.0     RCHRES   7      9
+PERLND 127                         0.0     RCHRES   7      9
+PERLND 128                        72.4     RCHRES   7      9
+PERLND 129                         0.0     RCHRES   7      9
+PERLND 130                       130.6     RCHRES   7      9
+PERLND 131                       431.1     RCHRES   7      9
+PERLND 132                       192.3     RCHRES   7      9
+
+
+*** 3K-1 SJR u/s Acosta Br TO 3K-5 SJR d/s Acosta Br
+*** 3K-2 Pottsburg Creek TO 3K-5 SJR d/s Acosta Br
+*** 3K-3 Broward River TO 3K-5 SJR d/s Acosta Br
+*** 3K-4 Caney Creek TO 3K-5 SJR d/s Acosta Br
+*** 3K-5 SJR d/s Acosta Br TO 3K-7 SJR Mayport
+*** 3K-6 Clapboard Creek TO 3K-7 SJR Mayport
+END SCHEMATIC
+
+EXT TARGETS
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Volume-> <Member> Tsys Aggr Amd  ***
+<Name>   x        <Name> x x<-factor->strg <Name>   x <Name>qf  tem strg strg ***
+*** Transfer datasets - hourly volume/mass                                        Reach   Exit
+*** 3K-1 SJR u/s Acosta Br TO 3K-5                                                       1        1
+RCHRES   1 HYDR   ROVOL                    WDM2  9610 FLOW     ENGL AGGR REPL
+*** 3K-2 Pottsburg Creek TO 3K-5                                                         2        1
+RCHRES   2 HYDR   ROVOL                    WDM2  9620 FLOW     ENGL AGGR REPL
+*** 3K-3 Broward River TO 3K-5                                                           3        1
+RCHRES   3 HYDR   ROVOL                    WDM2  9630 FLOW     ENGL AGGR REPL
+*** 3K-4 Caney Creek TO 3K-5                                                             4        1
+RCHRES   4 HYDR   ROVOL                    WDM2  9640 FLOW     ENGL AGGR REPL
+*** 3K-5 SJR d/s Acosta Br TO 3K-7                                                       5        1
+RCHRES   5 HYDR   ROVOL                    WDM2  9650 FLOW     ENGL AGGR REPL
+*** 3K-6 Clapboard Creek TO 3K-7                                                         6        1
+RCHRES   6 HYDR   ROVOL                    WDM2  9660 FLOW     ENGL AGGR REPL
+*** 3K-7 SJR Mayport TO Atlantic                                                         7        1
+RCHRES   7 HYDR   ROVOL                    WDM2  9670 FLOW     ENGL AGGR REPL
+
+*** Gages
+END EXT TARGETS
+
+MASS-LINK
+  MASS-LINK        1
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER PERO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    1
+
+  MASS-LINK        2
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    2
+
+  MASS-LINK        3
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     ROFLOW                          RCHRES         INFLOW
+  END MASS-LINK    3
+
+  MASS-LINK        4
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         1                 RCHRES         INFLOW
+  END MASS-LINK    4
+
+  MASS-LINK        5
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         2                 RCHRES         INFLOW
+  END MASS-LINK    5
+
+  MASS-LINK        6
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         3                 RCHRES         INFLOW
+  END MASS-LINK    6
+
+  MASS-LINK        7
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         4                 RCHRES         INFLOW
+  END MASS-LINK    7
+
+  MASS-LINK        8
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+RCHRES     OFLOW         5                 RCHRES         INFLOW
+  END MASS-LINK    8
+
+*** 3K REACH 1
+  MASS-LINK       11
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002221     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002221     PERLND         EXTNL  SURLI
+  END MASS-LINK   11
+
+  MASS-LINK       12
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002221     PERLND         EXTNL  SURLI
+  END MASS-LINK   12
+*** 3K REACH 2
+  MASS-LINK       21
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002102     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002102     PERLND         EXTNL  SURLI
+  END MASS-LINK   21
+
+  MASS-LINK       22
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002102     PERLND         EXTNL  SURLI
+  END MASS-LINK   22
+*** 3K REACH 3
+  MASS-LINK       31
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000735     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000735     PERLND         EXTNL  SURLI
+  END MASS-LINK   31
+
+  MASS-LINK       32
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000735     PERLND         EXTNL  SURLI
+  END MASS-LINK   32
+*** 3K REACH 4
+  MASS-LINK       41
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000702     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000702     PERLND         EXTNL  SURLI
+  END MASS-LINK   41
+
+  MASS-LINK       42
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000702     PERLND         EXTNL  SURLI
+  END MASS-LINK   42
+*** 3K REACH 5
+  MASS-LINK       51
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.007526     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.007526     PERLND         EXTNL  SURLI
+  END MASS-LINK   51
+
+  MASS-LINK       52
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.007526     PERLND         EXTNL  SURLI
+  END MASS-LINK   52
+*** 3K REACH 6
+  MASS-LINK       61
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.002350     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.002350     PERLND         EXTNL  SURLI
+  END MASS-LINK   61
+
+  MASS-LINK       62
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.002350     PERLND         EXTNL  SURLI
+  END MASS-LINK   62
+*** 3K REACH 7
+  MASS-LINK       71
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER SURO        0.000572     PERLND         EXTNL  SURLI
+PERLND     PWATER IFWO        0.000572     PERLND         EXTNL  SURLI
+  END MASS-LINK   71
+
+  MASS-LINK       72
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+IMPLND     IWATER SURO        0.000572     PERLND         EXTNL  SURLI
+  END MASS-LINK   72
+
+  MASS-LINK        9
+<-Volume-> <-Grp> <-Member-><--Mult-->Tran <-Target vols> <-Grp> <-Member-> ***
+<Name>            <Name> x x<-factor->strg <Name>                <Name> x x ***
+PERLND     PWATER AGWO        0.083333     RCHRES         INFLOW IVOL
+  END MASS-LINK    9
+END MASS-LINK
+
+SPEC-ACTIONS
+*** Variable reach surface area - declarations
+***                                                     lc ls ac as agfn
+***kwrd> <uqnm> <oper> <#> <vari><1><2><3><t><multfact> <>< > <>< > <  >
+  UVQUAN rca1   RCHRES   1 SAREA            3 2.296E-05
+  UVQUAN rca2   RCHRES   2 SAREA            3 2.296E-05
+  UVQUAN rca3   RCHRES   3 SAREA            3 2.296E-05
+  UVQUAN rca4   RCHRES   4 SAREA            3 2.296E-05
+  UVQUAN rca5   RCHRES   5 SAREA            3 2.296E-05
+  UVQUAN rca6   RCHRES   6 SAREA            3 2.296E-05
+  UVQUAN rca7   RCHRES   7 SAREA            3 2.296E-05
+
+  UVQUAN wla013 GLOBAL     WORKSP 01
+  UVQUAN wla033 GLOBAL     WORKSP 02
+  UVQUAN wla053 GLOBAL     WORKSP 03
+  UVQUAN wla073 GLOBAL     WORKSP 04
+  UVQUAN wla093 GLOBAL     WORKSP 05
+  UVQUAN wla113 GLOBAL     WORKSP 06
+  UVQUAN wla133 GLOBAL     WORKSP 07
+
+***             cnt                       act                           act
+***kwrd>  <unam>< > <vari><1><2><3> <frc> <  >    <vari><1><2><3> <frc> <  >
+*** Variable reach surface area - declarations
+  UVNAME  WLA013  1 WORKSP 01        1.0  QUAN
+  UVNAME  WLA033  1 WORKSP 02        1.0  QUAN
+  UVNAME  WLA053  1 WORKSP 03        1.0  QUAN
+  UVNAME  WLA073  1 WORKSP 04        1.0  QUAN
+  UVNAME  WLA093  1 WORKSP 05        1.0  QUAN
+  UVNAME  WLA113  1 WORKSP 06        1.0  QUAN
+  UVNAME  WLA133  1 WORKSP 07        1.0  QUAN
+
+*** Vary surface area of rchres and riparian wetland perlnd
+***
+*** Compute current remaining riparian wetland area
+*** Recomputed by adding perlnd water area (commented out in schematic blck) directly draining to rchres (7/1/19)
+***            dc ds                 d t                               tc ts num
+***oper><f><-l><>< ><yr><m><d><h><m><><>  <vari><1><2><3><a><-value--> <> < >< >
+*** Reach 1
+  COPY   99                               WLA013           =    1173.3
+  COPY   99                               WLA013          -=    rca1
+  COPY   99                               WLA013         MAX       0.0
+*** Reach 2
+  COPY   99                               WLA033           =    2589.5
+  COPY   99                               WLA033          -=    rca2
+  COPY   99                               WLA033         MAX       0.0
+*** Reach 3
+  COPY   99                               WLA053           =    2837.0
+  COPY   99                               WLA053          -=    rca3
+  COPY   99                               WLA053         MAX       0.0
+*** Reach 4
+  COPY   99                               WLA073           =    2676.3
+  COPY   99                               WLA073          -=    rca4
+  COPY   99                               WLA073         MAX       0.0
+*** Reach 5
+  COPY   99                               WLA093           =     930.2
+  COPY   99                               WLA093          -=    rca5
+  COPY   99                               WLA093         MAX       0.0
+*** Reach 6
+  COPY   99                               WLA113           =    8652.8
+  COPY   99                               WLA113          -=    rca6
+  COPY   99                               WLA113         MAX       0.0
+*** Reach 7
+  COPY   99                               WLA133           =    3298.2
+  COPY   99                               WLA133          -=    rca7
+  COPY   99                               WLA133         MAX       0.0
+
+*** Set current multiplication factors every timestep
+***  <svol><sn><sgrp><smem>s1s2<--mfac-->op<tvol><tn><tgrp><tmem>s1s2<-date->hr
+MULT PERLND 013                    wla013= RCHRES  01
+MULT PERLND 033                    wla033= RCHRES  02
+MULT PERLND 053                    wla053= RCHRES  03
+MULT PERLND 073                    wla073= RCHRES  04
+MULT PERLND 093                    wla093= RCHRES  05
+MULT PERLND 113                    wla113= RCHRES  06
+MULT PERLND 133                    wla133= RCHRES  07
+END SPEC-ACTIONS
+
+END RUN
