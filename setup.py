@@ -16,6 +16,7 @@ os.environ["MPLCONFIGDIR"] = "."
 version = open("VERSION").readline().strip()
 
 if sys.argv[-1] == "publish":
+    os.system("cleanpy .")
     os.system("python setup.py sdist")
     os.system("twine upload dist/{pkg_name}-{version}.tar.gz".format(**locals()))
     sys.exit()
@@ -24,9 +25,22 @@ README = open("README.rst").read()
 
 install_requires = [
     # http://packages.python.org/distribute/setuptools.html#declaring-dependencies
-    "tstoolbox",
     "hspfbintoolbox",
 ]
+
+extras_require = {
+    "dev": [
+        "black",
+        "cleanpy",
+        "twine",
+        "pytest",
+        "coverage",
+        "flake8",
+        "pytest-cov",
+        "pytest-mpl",
+        "pre-commit",
+    ]
+}
 
 setup(
     name=pkg_name,
@@ -44,9 +58,9 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Natural Language :: English",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Topic :: Scientific/Engineering :: Information Analysis",
         "Topic :: Scientific/Engineering",
         "Topic :: Software Development :: Libraries :: Python Modules",
@@ -63,5 +77,6 @@ setup(
         "console_scripts": ["{pkg_name}={pkg_name}.{pkg_name}:main".format(**locals())]
     },
     test_suite="tests",
-    python_requires=">=3.6",
+    extras_require=extras_require,
+    python_requires=">=3.7.1",
 )

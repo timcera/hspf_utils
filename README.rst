@@ -24,7 +24,7 @@ lifting.
 Requirements
 ------------
 * tstoolbox - Time-series toolbox; collected and installed by 'pip' or
-  'easy_install' command.  
+  'easy_install' command.
 * hspfbintoolbox - Utility to extract time-series from HSFP binary output
   files; collected and installed by 'pip' or 'easy_install' command.
 
@@ -38,7 +38,7 @@ Usage - Command Line
 Just run 'hspf_utils --help' to get a list of subcommands::
 
   usage: hspf_utils [-h] {about,detailed,summary,mapping,parameters} ...
-  
+
   positional arguments:
     {about,detailed,summary,mapping,parameters}
       about               Display version number and system information.
@@ -47,7 +47,7 @@ Just run 'hspf_utils --help' to get a list of subcommands::
       mapping             Develops a csv file appropriate for joining to a GIS
                           layer.
       parameters          Develops a table of parameter values.
-  
+
   optional arguments:
     -h, --help            show this help message and exit
 
@@ -67,7 +67,6 @@ Simply import hspf_utils::
 
   # Then you could call the functions
 
-  # Once you have a PANDAS DataFrame you can use that as input to other 
+  # Once you have a PANDAS DataFrame you can use that as input to other
   # hspf_utils functions.
   ntsd = hspf_utils.aggregate(statistic='mean', agg_interval='daily', input_ts=ntsd)
-

@@ -160,7 +160,7 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
         masslink = [i for i in masslink if len(i.strip()) > 0]
         masslink = " ".join(masslink)
         mlgroups = re.findall(
-            r"  MASS-LINK +?([0-9]+).*?LND     [PI]WATER.*?  END MASS-LINK +?\1 ",
+            r"  MASS-LINK +?([0-9]+).*?LND     [PI]WATER [PS][EU]RO.*?  END MASS-LINK +?\1 ",
             masslink,
         )
 
@@ -179,16 +179,16 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
         pdf = extract(hbn, "yearly", ",,,")
     except ValueError:
         raise ValueError(
-            """
-*
-*   The binary file does not have consistent ending months between PERLND and
-*   IMPLND.  This could be caused by the BYREND (Binary YeaR END) being set
-*   differently in the PERLND:BINARY-INFO and IMPLND:BINARY-INFO, or you could
-*   have the PRINT-INFO bug.  To work around the PRINT-INFO bug, add a PERLND
-*   PRINT-INFO block, setting the PYREND here will actually work in the
-*   BINARY-INFO block.
-*
+            tsutils.error_wrapper(
+                f"""
+The binary file "{hbn}" does not have consistent ending months between PERLND and
+IMPLND.  This could be caused by the BYREND (Binary YeaR END) being set
+differently in the PERLND:BINARY-INFO and IMPLND:BINARY-INFO, or you could
+have the PRINT-INFO bug.  To work around the PRINT-INFO bug, add a PERLND
+PRINT-INFO block, setting the PYREND here will actually work in the
+BINARY-INFO block.
 """
+            )
         )
 
     if year is not None:
@@ -216,6 +216,7 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
     mindex = pd.MultiIndex.from_tuples(
         mindex, names=["op", "number", "wbt", "lc", "area", "lcname"]
     )
+    print(mindex)
     pdf.columns = mindex
 
     nsum = {}
@@ -277,9 +278,23 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
     mapipratio["IMPLND"] = 1.0
 
     if uci is not None:
-        pareas = [areas[i] for i in sorted(areas) if i[0] == "PERLND"]
-        iareas = [areas[i] for i in sorted(areas) if i[0] == "IMPLND"]
+        pareas = []
+        pnl = []
+        iareas = []
+        for nloper, nllc in namelist:
+            if nloper == "PERLND":
+                pnl.append((nloper, nllc))
+                pareas.append(areas[("PERLND", nllc)])
+        # If there is a PERLND there must be a IMPLND.
+        for ploper, pllc in pnl:
+            try:
+                iareas.append(areas[("IMPLND", pllc)])
+            except KeyError:
+                iareas.append(0.0)
         ipratio = np.array(iareas) / (np.array(pareas) + np.array(iareas))
+        print(ipratio)
+        ipratio = np.nan_to_num(ipratio)
+        ipratio = np.pad(ipratio, (0, len(pareas) - len(iareas)), "constant")
         sumareas = sum(pareas) + sum(iareas)
 
         percent_areas = {}
@@ -338,17 +353,15 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
         te = [0.0]
         for sterm, operation in op:
             try:
-                te = (
-                    te
-                    + np.array(
-                        [
-                            nsum[(*i, sterm)]
-                            for i in sorted(namelist)
-                            if i[0] == operation
-                        ]
-                    )
-                    * maprat[operation]
+                tmp = np.array(
+                    [nsum[(*i, sterm)] for i in sorted(namelist) if i[0] == operation]
                 )
+                if uci is not None:
+                    tmp = (
+                        np.pad(tmp, (0, len(pareas) - len(tmp)), "constant")
+                        * maprat[operation]
+                    )
+                te = te + tmp
             except KeyError:
                 pass
         if uci is None:
@@ -358,10 +371,11 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
                 + [str(sum(te) / len(te))]
             )
         else:
+            nte = np.pad(te, (0, len(iareas) - len(te)), "constant")
             te = (
                 [term]
-                + [str(i) if i > 0 else "" for i in te]
-                + [str(sum(te * percent_areas[sumop]) / 100)]
+                + [str(i) if i > 0 else "" for i in nte]
+                + [str(sum(nte * percent_areas[sumop]) / 100)]
             )
         printlist.append(te)
 
@@ -420,10 +434,12 @@ def detailed(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_n
             ["IMPEV: IMPERVIOUS", [("IMPEV", "IMPLND")]],
             ["", [("", "")]],
             ["PET", [("PET", "PERLND")]],
+            ["", [("", "")]],
+            ["PERS", [("PERS", "PERLND")]],
         )
     else:
         pwbe = (
-            ["SUPY", [("SUPY", "PERLND")]],
+            ["SUPY", [("SUPY", "PERLND"), ("SUPY", "IMPLND")]],
             ["SURLI", [("SURLI", "PERLND")]],
             ["UZLI", [("UZLI", "PERLND")]],
             ["LZLI", [("LZLI", "PERLND")]],
@@ -450,7 +466,9 @@ def detailed(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_n
             ["IMPEV: IMPERVIOUS", [("IMPEV", "IMPLND")]],
             ["ET: COMBINED", [("TAET", "PERLND"), ("IMPEV", "IMPLND")]],
             ["", [("", "")]],
-            ["PET", [("PET", "PERLND")]],
+            ["PET", [("PET", "PERLND"), ("PET", "IMPLND")]],
+            ["", [("", "")]],
+            ["PERS", [("PERS", "PERLND")]],
         )
     process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt)
 
@@ -476,6 +494,7 @@ def summary(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_no
                 "Rainfall and irrigation",
                 [
                     ("SUPY", "PERLND"),
+                    ("SUPY", "IMPLND"),
                     ("SURLI", "PERLND"),
                     ("UZLI", "PERLND"),
                     ("LZLI", "PERLND"),
@@ -484,7 +503,7 @@ def summary(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_no
             ["", [("", "")]],
             [
                 "Runoff:Pervious",
-                [("SURO", "PERLND"), ("IFWO", "PERLND"), ("AGWO", "PERLND")],
+                [("PERO", "PERLND")],
             ],
             ["Runoff:Impervious", [("SURO", "IMPLND")]],
             ["", [("", "")]],
@@ -499,6 +518,7 @@ def summary(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_no
                 "Rainfall and irrigation",
                 [
                     ("SUPY", "PERLND"),
+                    ("SUPY", "IMPLND"),
                     ("SURLI", "PERLND"),
                     ("UZLI", "PERLND"),
                     ("LZLI", "PERLND"),
@@ -507,15 +527,13 @@ def summary(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_no
             ["", [("", "")]],
             [
                 "Runoff:Pervious",
-                [("SURO", "PERLND"), ("IFWO", "PERLND"), ("AGWO", "PERLND")],
+                [("PERO", "PERLND")],
             ],
             ["Runoff:Impervious", [("SURO", "IMPLND")]],
             [
                 "Runoff:Combined",
                 [
-                    ("SURO", "PERLND"),
-                    ("IFWO", "PERLND"),
-                    ("AGWO", "PERLND"),
+                    ("PERO", "PERLND"),
                     ("SURO", "IMPLND"),
                 ],
             ],
