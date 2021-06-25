@@ -1,18 +1,14 @@
-#!/bin/env python
+# -*- coding: utf-8 -*-
 
 import os
-import sys
 import re
+import sys
 import warnings
 
 import numpy as np
 import pandas as pd
-
-from mando import command
-from mando import main
-from tabulate import simple_separated_format
-from tabulate import tabulate
-
+from mando import command, main
+from tabulate import simple_separated_format, tabulate
 from tstoolbox import tsutils
 
 docstrings = {
@@ -87,7 +83,7 @@ This may be OK, but FYI there are negative values at:
         )
 
 
-def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt):
+def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2f"):
 
     from hspfbintoolbox.hspfbintoolbox import extract
 
@@ -216,7 +212,6 @@ BINARY-INFO block.
     mindex = pd.MultiIndex.from_tuples(
         mindex, names=["op", "number", "wbt", "lc", "area", "lcname"]
     )
-    print(mindex)
     pdf.columns = mindex
 
     nsum = {}
@@ -292,7 +287,6 @@ BINARY-INFO block.
             except KeyError:
                 iareas.append(0.0)
         ipratio = np.array(iareas) / (np.array(pareas) + np.array(iareas))
-        print(ipratio)
         ipratio = np.nan_to_num(ipratio)
         ipratio = np.pad(ipratio, (0, len(pareas) - len(iareas)), "constant")
         sumareas = sum(pareas) + sum(iareas)
@@ -385,14 +379,26 @@ BINARY-INFO block.
     else:
         fmt = tablefmt
     if tablefmt in ["csv_nos", "tsv_nos"]:
-        print(re.sub(" *, *", ",", tabulate(printlist, tablefmt=fmt)))
+        print(
+            re.sub(
+                " *, *", ",", tabulate(printlist, tablefmt=fmt, floatfmt=float_format)
+            )
+        )
     else:
-        print(tabulate(printlist, tablefmt=fmt))
+        print(tabulate(printlist, tablefmt=fmt, floatfmt=float_format))
 
 
 @command(doctype="numpy")
 @tsutils.doc(docstrings)
-def detailed(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_nos"):
+def detailed(
+    hbn,
+    uci=None,
+    year=None,
+    ofilename="",
+    modulus=20,
+    tablefmt="csv_nos",
+    float_format=".2f",
+):
     """Develops a detailed water balance.
 
     Parameters
@@ -403,7 +409,7 @@ def detailed(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_n
     {ofilename}
     {modulus}
     {tablefmt}
-
+    {float_format}
     """
 
     if uci is None:
@@ -470,12 +476,22 @@ def detailed(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_n
             ["", [("", "")]],
             ["PERS", [("PERS", "PERLND")]],
         )
-    process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt)
+    process(
+        uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=float_format
+    )
 
 
 @command(doctype="numpy")
 @tsutils.doc(docstrings)
-def summary(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_nos"):
+def summary(
+    hbn,
+    uci=None,
+    year=None,
+    ofilename="",
+    modulus=20,
+    tablefmt="csv_nos",
+    float_format=".2f",
+):
     """Develops a summary water balance.
 
     Parameters
@@ -486,6 +502,7 @@ def summary(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_no
     {ofilename}
     {modulus}
     {tablefmt}
+    {float_format}
 
     """
     if uci is None:
@@ -544,12 +561,16 @@ def summary(hbn, uci=None, year=None, ofilename="", modulus=20, tablefmt="csv_no
             ["Evaporation:Impervious", [("IMPEV", "IMPLND")]],
             ["Evaporation:Combined", [("TAET", "PERLND"), ("IMPEV", "IMPLND")]],
         )
-    process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt)
+    process(
+        uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=float_format
+    )
 
 
 @command(doctype="numpy")
 @tsutils.doc(docstrings)
-def mapping(hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix=""):
+def mapping(
+    hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix="", float_format="g"
+):
     """Develops a csv file appropriate for joining to a GIS layer.
 
     Parameters
@@ -564,6 +585,7 @@ def mapping(hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix=""):
         A string prepended to the PERLND code, which would allow being
         run on different models and collected into one dataset by
         creating a unique ID.
+    {float_format}
 
     """
     from hspfbintoolbox.hspfbintoolbox import extract
@@ -623,17 +645,28 @@ def mapping(hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix=""):
             re.sub(
                 " *, *",
                 ",",
-                tabulate(pdf, tablefmt=fmt, headers="keys").replace("nan", ""),
+                tabulate(
+                    pdf, tablefmt=fmt, headers="keys", floatfmt=float_format
+                ).replace("nan", ""),
             )
         )
     else:
-        print(tabulate(pdf, tablefmt=fmt, headers="keys").replace("nan", ""))
+        print(
+            tabulate(pdf, tablefmt=fmt, headers="keys", floatfmt=float_format).replace(
+                "nan", ""
+            )
+        )
 
 
 @command(doctype="numpy")
 @tsutils.doc(docstrings)
 def parameters(
-    uci, index_prefix="", index_delimiter="", modulus=20, tablefmt="csv_nos"
+    uci,
+    index_prefix="",
+    index_delimiter="",
+    modulus=20,
+    tablefmt="csv_nos",
+    float_format="g",
 ):
     """Develops a table of parameter values.
 
@@ -644,6 +677,7 @@ def parameters(
     {index_delimiter}
     {modulus}
     {tablefmt}
+    {float_format}
 
     """
     blocklist = ["PWAT-PARM2", "PWAT-PARM3", "PWAT-PARM4"]  # , 'PWAT-STATE1']
@@ -790,11 +824,23 @@ def parameters(
         fmt = tablefmt
 
     if tablefmt == "csv_nos":
-        print(re.sub(" *, *", ",", tabulate(df, headers="keys", tablefmt=fmt)))
+        print(
+            re.sub(
+                " *, *",
+                ",",
+                tabulate(df, headers="keys", tablefmt=fmt, floatfmt=float_format),
+            )
+        )
     elif tablefmt == "tsv_nos":
-        print(re.sub(" *\t *", "\t", tabulate(df, headers="keys", tablefmt=fmt)))
+        print(
+            re.sub(
+                " *\t *",
+                "\t",
+                tabulate(df, headers="keys", tablefmt=fmt, floatfmt=float_format),
+            )
+        )
     else:
-        print(tabulate(df, headers="keys", tablefmt=fmt))
+        print(tabulate(df, headers="keys", tablefmt=fmt, floatfmt=float_format))
 
 
 if __name__ == "__main__":
