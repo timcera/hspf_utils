@@ -445,7 +445,7 @@ def detailed(
         )
     else:
         pwbe = (
-            ["SUPY", [("SUPY", "PERLND"), ("SUPY", "IMPLND")]],
+            ["SUPY", [("SUPY", "PERLND"), ("SUPY", "IMPLND"), ("IRRAPP6", "PERLND")]],
             ["SURLI", [("SURLI", "PERLND")]],
             ["UZLI", [("UZLI", "PERLND")]],
             ["LZLI", [("LZLI", "PERLND")]],
@@ -512,9 +512,7 @@ def summary(
                 [
                     ("SUPY", "PERLND"),
                     ("SUPY", "IMPLND"),
-                    ("SURLI", "PERLND"),
-                    ("UZLI", "PERLND"),
-                    ("LZLI", "PERLND"),
+                    ("IRRAPP6", "PERLND"),
                 ],
             ],
             ["", [("", "")]],
