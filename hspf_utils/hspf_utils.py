@@ -109,7 +109,7 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
             raise ValueError(
                 """
 *
-*   File {0} does not exist.
+*   File {} does not exist.
 *
 """.format(
                     hbn
@@ -188,7 +188,7 @@ BINARY-INFO block.
         )
 
     if year is not None:
-        pdf = pd.DataFrame(pdf.loc["{0}-01-01".format(year), :]).T
+        pdf = pd.DataFrame(pdf.loc["{}-01-01".format(year), :]).T
     pdf = pdf[[i for i in pdf.columns if "PERLND" in i or "IMPLND" in i]]
 
     mindex = [i.split("_") for i in pdf.columns]
@@ -261,9 +261,9 @@ BINARY-INFO block.
         if key[0] != "PERLND":
             continue
         if key[1] == value:
-            newnamelist.append("{0}".format(key[1]))
+            newnamelist.append("{}".format(key[1]))
         else:
-            newnamelist.append("{0}-{1}".format(key[1], value))
+            newnamelist.append("{}-{}".format(key[1], value))
 
     printlist = []
     printlist.append([" "] + newnamelist + ["ALL"])
@@ -574,15 +574,20 @@ def mapping(
     Parameters
     ----------
     {hbn}
+
     {year}
+
     {ofilename}
+
     {tablefmt}
+
     {index_prefix}
         [optional, defaults to '']
 
         A string prepended to the PERLND code, which would allow being
         run on different models and collected into one dataset by
         creating a unique ID.
+
     {float_format}
 
     """
@@ -608,7 +613,7 @@ def mapping(
         )
 
     if year is not None:
-        pdf = pd.DataFrame(pdf.loc["{0}-01-01".format(year), :]).T
+        pdf = pd.DataFrame(pdf.loc["{}-01-01".format(year), :]).T
     pdf = pdf[[i for i in pdf.columns if "PERLND" in i or "IMPLND" in i]]
 
     mindex = [i.split("_") for i in pdf.columns]
@@ -748,18 +753,16 @@ def parameters(
             supfname = [i.strip() for i in supfname if "***" not in i]
             supfname = [i.strip() for i in supfname if i]
 
-        supfname = dict(
-            [
-                (key.split()[0], [float(i) for i in value.split()])
-                for key, value in zip(supfname[:-1:2], supfname[1::2])
-            ]
-        )
+        supfname = {
+            key.split()[0]: [float(i) for i in value.split()]
+            for key, value in zip(supfname[:-1:2], supfname[1::2])
+        }
 
     rngdata = []
     order = []
     for blk in blocklist:
-        start = content.index("  {0}".format(blk))
-        end = content.index("  END {0}".format(blk))
+        start = content.index("  {}".format(blk))
+        end = content.index("  END {}".format(blk))
         block_lines = content[start + 1 : end]
 
         order.extend(params[blk])
