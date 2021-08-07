@@ -3,7 +3,7 @@
 import os
 import sys
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 pkg_name = "hspf_utils"
 
@@ -23,6 +23,8 @@ if sys.argv[-1] == "publish":
 README = open("README.rst").read()
 
 install_requires = [
+    # List your project dependencies here.
+    # For more details, see:
     # http://packages.python.org/distribute/setuptools.html#declaring-dependencies
     "hspfbintoolbox",
 ]
@@ -38,6 +40,13 @@ extras_require = {
         "pytest-cov",
         "pytest-mpl",
         "pre-commit",
+        "black-nbconvert",
+        "blacken-docs",
+        "velin",
+        "isort",
+        "pyroma",
+        "pyupgrade",
+        "commitizen",
     ]
 }
 
@@ -65,17 +74,20 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],  # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     keywords="time_series",
-    author="Tim Cera, P.E.",
+    author="Tim Cera, PE",
     author_email="tim@cerazone.net",
     url="http://timcera.bitbucket.io/{pkg_name}/docsrc/index.html".format(**locals()),
-    packages=[pkg_name],
+    license="BSD",
+    packages=find_packages("src"),
+    package_dir={"": "src"},
+    package_data={"SciencePlots": ["*.mplstyle"]},
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
+    extras_require=extras_require,
     entry_points={
         "console_scripts": ["{pkg_name}={pkg_name}.{pkg_name}:main".format(**locals())]
     },
     test_suite="tests",
-    extras_require=extras_require,
     python_requires=">=3.7.1",
 )
