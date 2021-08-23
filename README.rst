@@ -15,7 +15,7 @@
     :target: https://pypi.python.org/pypi/hspf_utils/
 
 hspf_utils - Quick Guide
-================================
+========================
 The hspf_utils is a command line script and Python library of utilities to work
 with the Hydrological Simulation Program - FORTRAN (HSPF).  Uses pandas
 (http://pandas.pydata.org/) or numpy (http://numpy.scipy.org) for any heavy
