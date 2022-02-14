@@ -403,13 +403,13 @@ def detailed(
 
     Parameters
     ----------
-    {hbn}
-    {uci}
-    {year}
-    {ofilename}
-    {modulus}
-    {tablefmt}
-    {float_format}
+    ${hbn}
+    ${uci}
+    ${year}
+    ${ofilename}
+    ${modulus}
+    ${tablefmt}
+    ${float_format}
     """
 
     if uci is None:
@@ -496,14 +496,13 @@ def summary(
 
     Parameters
     ----------
-    {hbn}
-    {uci}
-    {year}
-    {ofilename}
-    {modulus}
-    {tablefmt}
-    {float_format}
-
+    ${hbn}
+    ${uci}
+    ${year}
+    ${ofilename}
+    ${modulus}
+    ${tablefmt}
+    ${float_format}
     """
     if uci is None:
         pwbe = (
@@ -573,23 +572,17 @@ def mapping(
 
     Parameters
     ----------
-    {hbn}
-
-    {year}
-
-    {ofilename}
-
-    {tablefmt}
-
-    {index_prefix}
+    ${hbn}
+    ${year}
+    ${ofilename}
+    ${tablefmt}
+    ${index_prefix}
         [optional, defaults to '']
 
         A string prepended to the PERLND code, which would allow being
         run on different models and collected into one dataset by
         creating a unique ID.
-
-    {float_format}
-
+    ${float_format}
     """
     from hspfbintoolbox.hspfbintoolbox import extract
 
@@ -675,13 +668,12 @@ def parameters(
 
     Parameters
     ----------
-    {uci}
-    {index_prefix}
-    {index_delimiter}
-    {modulus}
-    {tablefmt}
-    {float_format}
-
+    ${uci}
+    ${index_prefix}
+    ${index_delimiter}
+    ${modulus}
+    ${tablefmt}
+    ${float_format}
     """
     blocklist = ["PWAT-PARM2", "PWAT-PARM3", "PWAT-PARM4"]  # , 'PWAT-STATE1']
 
