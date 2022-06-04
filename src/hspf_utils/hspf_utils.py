@@ -107,13 +107,11 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
 
         if not os.path.exists(hbn):
             raise ValueError(
-                """
+                f"""
 *
-*   File {} does not exist.
+*   File {hbn} does not exist.
 *
-""".format(
-                    hbn
-                )
+"""
             )
 
         content = [i[:80] for i in content]
@@ -188,7 +186,7 @@ BINARY-INFO block.
         )
 
     if year is not None:
-        pdf = pd.DataFrame(pdf.loc["{}-01-01".format(year), :]).T
+        pdf = pd.DataFrame(pdf.loc[f"{year}-01-01", :]).T
     pdf = pdf[[i for i in pdf.columns if "PERLND" in i or "IMPLND" in i]]
 
     mindex = [i.split("_") for i in pdf.columns]
@@ -261,9 +259,9 @@ BINARY-INFO block.
         if key[0] != "PERLND":
             continue
         if key[1] == value:
-            newnamelist.append("{}".format(key[1]))
+            newnamelist.append(f"{key[1]}")
         else:
-            newnamelist.append("{}-{}".format(key[1], value))
+            newnamelist.append(f"{key[1]}-{value}")
 
     printlist = []
     printlist.append([" "] + newnamelist + ["ALL"])
@@ -606,7 +604,7 @@ def mapping(
         )
 
     if year is not None:
-        pdf = pd.DataFrame(pdf.loc["{}-01-01".format(year), :]).T
+        pdf = pd.DataFrame(pdf.loc[f"{year}-01-01", :]).T
     pdf = pdf[[i for i in pdf.columns if "PERLND" in i or "IMPLND" in i]]
 
     mindex = [i.split("_") for i in pdf.columns]
@@ -753,8 +751,8 @@ def parameters(
     rngdata = []
     order = []
     for blk in blocklist:
-        start = content.index("  {}".format(blk))
-        end = content.index("  END {}".format(blk))
+        start = content.index(f"  {blk}")
+        end = content.index(f"  END {blk}")
         block_lines = content[start + 1 : end]
 
         order.extend(params[blk])

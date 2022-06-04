@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import os
+import shlex
+import subprocess
 import sys
 
 from setuptools import find_packages, setup
@@ -15,9 +17,11 @@ os.environ["MPLCONFIGDIR"] = "."
 version = open("VERSION").readline().strip()
 
 if sys.argv[-1] == "publish":
-    os.system("cleanpy .")
-    os.system("python setup.py sdist")
-    os.system("twine upload dist/{pkg_name}-{version}.tar.gz".format(**locals()))
+    subprocess.run(shlex.split("cleanpy ."), check=True)
+    subprocess.run(shlex.split("python setup.py sdist"), check=True)
+    subprocess.run(
+        shlex.split(f"twine upload dist/{pkg_name}-{version}.tar.gz"), check=True
+    )
     sys.exit()
 
 README = open("README.rst").read()
@@ -76,7 +80,7 @@ setup(
     keywords="time_series",
     author="Tim Cera, PE",
     author_email="tim@cerazone.net",
-    url="http://timcera.bitbucket.io/{pkg_name}/docs/index.html".format(**locals()),
+    url=f"http://timcera.bitbucket.io/{pkg_name}/docs/index.html",
     license="BSD",
     packages=find_packages("src"),
     package_dir={"": "src"},
@@ -85,9 +89,7 @@ setup(
     zip_safe=False,
     install_requires=install_requires,
     extras_require=extras_require,
-    entry_points={
-        "console_scripts": ["{pkg_name}={pkg_name}.{pkg_name}:main".format(**locals())]
-    },
+    entry_points={"console_scripts": [f"{pkg_name}={pkg_name}.{pkg_name}:main"]},
     test_suite="tests",
     python_requires=">=3.7.1",
 )
