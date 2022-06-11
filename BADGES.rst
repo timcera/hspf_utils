@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.org/timcera/hspf_utils.svg?branch=master
-    :target: https://travis-ci.org/timcera/hspf_utils
+.. image:: https://github.com/timcera/hspf_utils/actions/workflows/python-package.yml/badge.svg
+    :target: https://github.com/timcera/hspf_utils/actions/workflows/python-package.yml
     :height: 20
 
 .. image:: https://coveralls.io/repos/timcera/hspf_utils/badge.png?branch=master

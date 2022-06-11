@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.org/timcera/hspf_utils.svg?branch=master
-    :target: https://travis-ci.org/timcera/hspf_utils
+.. image:: https://github.com/timcera/hspf_utils/actions/workflows/python-package.yml/badge.svg
+    :target: https://github.com/timcera/hspf_utils/actions/workflows/python-package.yml
     :height: 20
 
 .. image:: https://coveralls.io/repos/timcera/hspf_utils/badge.png?branch=master
@@ -11,7 +11,11 @@
     :target: https://pypi.python.org/pypi/hspf_utils
 
 .. image:: http://img.shields.io/badge/license-BSD-lightgrey.svg
-    :alt: hspf_utils license
+    :alt: BSD-3 clause license
+    :target: https://pypi.python.org/pypi/hspf_utils/
+
+.. image:: http://img.shields.io/pypi/dd/hspf_utils.svg
+    :alt: hspf_utils downloads
     :target: https://pypi.python.org/pypi/hspf_utils/
 
 hspf_utils - Quick Guide
