@@ -50,8 +50,8 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = u"hspf_utils"
-copyright = u"2013, Tim Cera, P.E."
+project = "hspf_utils"
+copyright = "2013, Tim Cera, P.E."
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -194,8 +194,8 @@ latex_documents = [
     (
         "index",
         "hspf_utils.tex",
-        u"hspf_utils Documentation",
-        u"Tim Cera, P.E.",
+        "hspf_utils Documentation",
+        "Tim Cera, P.E.",
         "manual",
     )
 ]
@@ -225,9 +225,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    ("index", "hspf_utils", u"hspf_utils Documentation", [u"Tim Cera, P.E."], 1)
-]
+man_pages = [("index", "hspf_utils", "hspf_utils Documentation", ["Tim Cera, P.E."], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
@@ -242,8 +240,8 @@ texinfo_documents = [
     (
         "index",
         "hspf_utils",
-        u"hspf_utils Documentation",
-        u"Tim Cera, P.E.",
+        "hspf_utils Documentation",
+        "Tim Cera, P.E.",
         "hspf_utils",
         "One line description of project.",
         "Miscellaneous",
@@ -263,10 +261,10 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u"hspf_utils"
-epub_author = u"Tim Cera, P.E."
-epub_publisher = u"Tim Cera, P.E."
-epub_copyright = u"2013, Tim Cera, P.E."
+epub_title = "hspf_utils"
+epub_author = "Tim Cera, P.E."
+epub_publisher = "Tim Cera, P.E."
+epub_copyright = "2013, Tim Cera, P.E."
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

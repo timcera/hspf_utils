@@ -354,7 +354,7 @@ BINARY-INFO block.
                         * maprat[operation]
                     )
                 te = te + tmp
-            except KeyError:
+            except (KeyError, ValueError):
                 pass
         if uci is None:
             te = (
