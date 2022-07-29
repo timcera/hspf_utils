@@ -186,7 +186,7 @@ BINARY-INFO block.
         )
 
     if year is not None:
-        pdf = pd.DataFrame(pdf.loc[f"{year}-01-01", :]).T
+        pdf = pd.DataFrame(pdf.loc[f"{year}", :]).T
     pdf = pdf[[i for i in pdf.columns if "PERLND" in i or "IMPLND" in i]]
 
     mindex = [i.split("_") for i in pdf.columns]
@@ -604,7 +604,7 @@ def mapping(
         )
 
     if year is not None:
-        pdf = pd.DataFrame(pdf.loc[f"{year}-01-01", :]).T
+        pdf = pd.DataFrame(pdf.loc[f"{year}", :]).T
     pdf = pdf[[i for i in pdf.columns if "PERLND" in i or "IMPLND" in i]]
 
     mindex = [i.split("_") for i in pdf.columns]
