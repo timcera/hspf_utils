@@ -1,3 +1,13 @@
+## v5.3.1 (2022-07-29)
+
+### Fix
+
+- adopted new hspfbintoolbox format for years
+
+### Refactor
+
+- shifted to f strings
+
 ## v5.3.0 (2022-02-14)
 
 ### Feat
