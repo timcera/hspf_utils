@@ -7,7 +7,7 @@ import warnings
 
 import numpy as np
 import pandas as pd
-from mando import command, main
+from cltoolbox import command, main
 from tabulate import simple_separated_format, tabulate
 from tstoolbox import tsutils
 
@@ -21,8 +21,14 @@ docstrings = {
 
         This uci file will be read to determine all of the areas and other
         aspects of the model.  If available it will read the land cover names
-        from the PERLND GEN-INFO table.  Required if you want the water balance
-        area-weighted between land covers.""",
+        from the PERLND GEN-INFO table.
+
+        The `uci` keyword and file is required if you want the water balance
+        area-weighted between land covers.
+
+        WARNING:  The areas used come only from the SCHEMATIC block and if
+        areas are adjusted by SPECIAL ACTIONS those changes are not used in the
+        mass balance.""",
     "year": r"""year
         [optional, defaults to None]
 
@@ -175,13 +181,14 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
         raise ValueError(
             tsutils.error_wrapper(
                 f"""
-The binary file "{hbn}" does not have consistent ending months between PERLND and
-IMPLND.  This could be caused by the BYREND (Binary YeaR END) being set
-differently in the PERLND:BINARY-INFO and IMPLND:BINARY-INFO, or you could
-have the PRINT-INFO bug.  To work around the PRINT-INFO bug, add a PERLND
-PRINT-INFO block, setting the PYREND here will actually work in the
-BINARY-INFO block.
-"""
+                The binary file "{hbn}" does not have consistent ending months
+                between PERLND and IMPLND.  This could be caused by the BYREND
+                (Binary YeaR END) being set differently in the
+                PERLND:BINARY-INFO and IMPLND:BINARY-INFO, or you could have
+                the PRINT-INFO bug.  To work around the PRINT-INFO bug, add
+                a PERLND PRINT-INFO block, setting the PYREND here will
+                actually work in the BINARY-INFO block.
+                """
             )
         )
 
@@ -279,7 +286,7 @@ BINARY-INFO block.
                 pnl.append((nloper, nllc))
                 pareas.append(areas[("PERLND", nllc)])
         # If there is a PERLND there must be a IMPLND.
-        for ploper, pllc in pnl:
+        for _, pllc in pnl:
             try:
                 iareas.append(areas[("IMPLND", pllc)])
             except KeyError:
@@ -370,25 +377,17 @@ BINARY-INFO block.
                 + [str(sum(nte * percent_areas[sumop]) / 100)]
             )
         printlist.append(te)
-
-    if tablefmt in ["csv", "tsv", "csv_nos", "tsv_nos"]:
-        sep = {"csv": ",", "tsv": "\\t", "csv_nos": ",", "tsv_nos": "\\t"}[tablefmt]
-        fmt = simple_separated_format(sep)
-    else:
-        fmt = tablefmt
-    if tablefmt in ["csv_nos", "tsv_nos"]:
-        print(
-            re.sub(
-                " *, *", ",", tabulate(printlist, tablefmt=fmt, floatfmt=float_format)
-            )
-        )
-    else:
-        print(tabulate(printlist, tablefmt=fmt, floatfmt=float_format))
+    df = pd.DataFrame(printlist)
+    df = df.set_index(0)
+    df.columns = df.iloc[0, :]
+    df = df[1:]
+    df.index.name = "WBTERM"
+    return df
 
 
-@command(doctype="numpy")
+@command("detailed")
 @tsutils.doc(docstrings)
-def detailed(
+def _detailed_cli(
     hbn,
     uci=None,
     year=None,
@@ -409,6 +408,30 @@ def detailed(
     ${tablefmt}
     ${float_format}
     """
+    tsutils.printiso(
+        detailed(
+            hbn,
+            uci=uci,
+            year=year,
+            ofilename=ofilename,
+            modulus=modulus,
+            tablefmt=tablefmt,
+            float_format=float_format,
+        )
+    )
+
+
+@tsutils.copy_doc(_detailed_cli)
+def detailed(
+    hbn,
+    uci=None,
+    year=None,
+    ofilename="",
+    modulus=20,
+    tablefmt="csv_nos",
+    float_format=".2f",
+):
+    """Develops a detailed water balance."""
 
     if uci is None:
         pwbe = (
@@ -474,12 +497,12 @@ def detailed(
             ["", [("", "")]],
             ["PERS", [("PERS", "PERLND")]],
         )
-    process(
+    return process(
         uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=float_format
     )
 
 
-@command(doctype="numpy")
+@command()
 @tsutils.doc(docstrings)
 def summary(
     hbn,
@@ -561,7 +584,7 @@ def summary(
     )
 
 
-@command(doctype="numpy")
+@command()
 @tsutils.doc(docstrings)
 def mapping(
     hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix="", float_format="g"
@@ -652,7 +675,7 @@ def mapping(
         )
 
 
-@command(doctype="numpy")
+@command()
 @tsutils.doc(docstrings)
 def parameters(
     uci,

@@ -1,7 +1,94 @@
+[project]
+name = "hspf_utils"
+dynamic = ["version"]
+readme = "README.rst"
+description = "Command line script and Python library to develop water balance from HSPF models"
+requires-python = ">=3.7.1"
+dependencies = [
+    "toolbox_utils < 1.0.0",
+    "cltoolbox > 1.1.0",
+    "hspfbintoolbox >= 7.0.2",
+    ]
+license = {file = "LICENSE.txt"}
+authors = [
+    {name = "Tim Cera", email = "tim@cerazone.net"}
+    ]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "Environment :: Console",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    ]
+keywords = ["python",
+            "cli-app",
+            "hspf",
+            "watershed",
+            "hydrology",
+            "hydrologic",
+            "simulation",
+            ]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "cleanpy",
+    "twine",
+    "pytest",
+    "coverage",
+    "flake8",
+    "pytest-cov",
+    "pytest-mpl",
+    "pre-commit",
+    "black-nbconvert",
+    "blacken-docs",
+    "velin",
+    "isort",
+    "pyupgrade",
+    "commitizen",
+    ]
+
+[project.scripts]
+hspf_utils = "hspf_utils.hspf_utils:main"
+
+[project_urls]
+documentation = "https://timcera.bitbucket.io/hspf_utils/docs/index.html#hspf_utils-documentation"
+github = "https://github.com/timcera/hspf_utils"
+bitbucket = "https://bitbucket.org/timcera/hspf_utils/src/main/"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["examples*", "tools*", "docs*", "hspf_utils.tests*"]
+
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    "oldest-supported-numpy",
+]
+build-backend = "setuptools.build_meta"
 
 [tool.check-manifest]
-ignore = [".travis.yml",
-          "docs/_function_autosummary/*"]
+ignore = ["docs/_function_autosummary/*",
+          ".coverage",
+          ".deepsource.toml",
+          ".ipynb_checkpoints/*"]
 
 [tool.commitizen]
 name = "cz_conventional_commits"
