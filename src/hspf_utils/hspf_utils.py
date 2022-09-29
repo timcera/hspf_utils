@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from cltoolbox import command, main
 from tabulate import simple_separated_format, tabulate
-from tstoolbox import tsutils
+from toolbox_utils import tsutils
 
 docstrings = {
     "hbn": r"""hbn : str

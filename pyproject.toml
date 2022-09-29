@@ -9,7 +9,7 @@ dependencies = [
     "cltoolbox > 1.1.0",
     "hspfbintoolbox >= 7.0.2",
     ]
-license = {file = "LICENSE.txt"}
+license = {text = "BSD-3-Clause"}
 authors = [
     {name = "Tim Cera", email = "tim@cerazone.net"}
     ]
@@ -67,9 +67,11 @@ github = "https://github.com/timcera/hspf_utils"
 bitbucket = "https://bitbucket.org/timcera/hspf_utils/src/main/"
 
 [tool.setuptools]
+license-files = ["LICENSE.txt"]
 include-package-data = true
 
 [tool.setuptools.dynamic]
+readme = {file = "README.rst"}
 version = {file = "VERSION"}
 
 [tool.setuptools.packages.find]
