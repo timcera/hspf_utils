@@ -1,3 +1,9 @@
+## v5.3.2 (2022-09-28)
+
+### Refactor
+
+- moved from tstoolbox.tsutils to toolbox_utils.tsutils and completed pyproject.toml
+
 ## v5.3.1 (2022-07-29)
 
 ### Fix
