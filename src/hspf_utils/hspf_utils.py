@@ -56,17 +56,207 @@ docstrings = {
         'jira', 'presto', 'psql', 'rst', 'mediawiki', 'moinmoin', 'youtrack',
         'html', 'latex', 'latex_raw', 'latex_booktabs' and
         'textile'.""",
+    "float_format": r"""float_format : str
+        [optional, default is '.2f']
+
+        The format for floating point numbers in the output table.""",
     "index_prefix": r"""index_prefix
         [optional, defaults to '']
 
         A string prepended to the PERLND code, which would allow being
         run on different models and collected into one dataset by
         creating a unique ID.""",
-    "index_delimiter": r"""index_delimiter
+    "index_delimiter": r"""index_delimiter: str
         [optional, defaults to '-']
 
         Useful to separate the `index_prefix` from the PERLND/IMPLND number.
         """,
+    "constituent": r"""constituent: str
+        [optional, defaults to 'flow']
+
+        The constituent to summarize in the table.
+
+        Currently available constituents are: 'flow' for PWATER/IWATER and 'qual' for
+        PQUAL/IQUAL.
+
+        if 'qual' is chosen, then the option 'qualnames' specifies the names to be
+        found in the HBN file.
+        """,
+    "qualnames": r"""qualnames : str
+        [optional, defaults to '']
+
+        If 'constituent' is 'qual, then this is a comma-separated
+        list of constituent names to be found in the HBN file.
+
+        Example:
+            --qualnames 'TOTAL N','TOTAL P'
+
+        This will find PQUAL/IQUAL variables named 'SOQUAL-TOTAL N', etc, which
+        occurs if the QUALID in QUAL-PROPS is 'TOTAL N'.
+        """,
+}
+
+_mass_balance = {
+    ("flow", "detailed", True): (
+        ["SUPY", [("SUPY", "PERLND"), ("SUPY", "IMPLND"), ("IRRAPP6", "PERLND")]],
+        ["SURLI", [("SURLI", "PERLND")]],
+        ["UZLI", [("UZLI", "PERLND")]],
+        ["LZLI", [("LZLI", "PERLND")]],
+        ["", [("", "")]],
+        ["SURO: PERVIOUS", [("SURO", "PERLND")]],
+        ["SURO: IMPERVIOUS", [("SURO", "IMPLND")]],
+        ["SURO: COMBINED", [("SURO", "PERLND"), ("SURO", "IMPLND")]],
+        ["IFWO", [("IFWO", "PERLND")]],
+        ["AGWO", [("AGWO", "PERLND")]],
+        ["", [("", "")]],
+        ["AGWI", [("AGWI", "PERLND")]],
+        ["IGWI", [("IGWI", "PERLND")]],
+        ["", [("", "")]],
+        ["CEPE", [("CEPE", "PERLND")]],
+        ["UZET", [("UZET", "PERLND")]],
+        ["LZET", [("LZET", "PERLND")]],
+        ["AGWET", [("AGWET", "PERLND")]],
+        ["BASET", [("BASET", "PERLND")]],
+        ["SURET", [("SURET", "PERLND")]],
+        ["", [("", "")]],
+        ["PERO", [("PERO", "PERLND")]],
+        ["IGWI", [("IGWI", "PERLND")]],
+        ["TAET: PERVIOUS", [("TAET", "PERLND")]],
+        ["IMPEV: IMPERVIOUS", [("IMPEV", "IMPLND")]],
+        ["ET: COMBINED", [("TAET", "PERLND"), ("IMPEV", "IMPLND")]],
+        ["", [("", "")]],
+        ["PET", [("PET", "PERLND"), ("PET", "IMPLND")]],
+        ["", [("", "")]],
+        ["PERS", [("PERS", "PERLND")]],
+    ),
+    ("flow", "detailed", False): (
+        ["SUPY", [("SUPY", "PERLND")]],
+        ["SURLI", [("SURLI", "PERLND")]],
+        ["UZLI", [("UZLI", "PERLND")]],
+        ["LZLI", [("LZLI", "PERLND")]],
+        ["", [("", "")]],
+        ["SURO: PERVIOUS", [("SURO", "PERLND")]],
+        ["SURO: IMPERVIOUS", [("SURO", "IMPLND")]],
+        ["IFWO", [("IFWO", "PERLND")]],
+        ["AGWO", [("AGWO", "PERLND")]],
+        ["", [("", "")]],
+        ["AGWI", [("AGWI", "PERLND")]],
+        ["IGWI", [("IGWI", "PERLND")]],
+        ["", [("", "")]],
+        ["CEPE", [("CEPE", "PERLND")]],
+        ["UZET", [("UZET", "PERLND")]],
+        ["LZET", [("LZET", "PERLND")]],
+        ["AGWET", [("AGWET", "PERLND")]],
+        ["BASET", [("BASET", "PERLND")]],
+        ["SURET", [("SURET", "PERLND")]],
+        ["", [("", "")]],
+        ["PERO", [("PERO", "PERLND")]],
+        ["IGWI", [("IGWI", "PERLND")]],
+        ["TAET: PERVIOUS", [("TAET", "PERLND")]],
+        ["IMPEV: IMPERVIOUS", [("IMPEV", "IMPLND")]],
+        ["", [("", "")]],
+        ["PET", [("PET", "PERLND")]],
+        ["", [("", "")]],
+        ["PERS", [("PERS", "PERLND")]],
+    ),
+    ("flow", "summary", True): (
+        [
+            "Rainfall and irrigation",
+            [
+                ("SUPY", "PERLND"),
+                ("SUPY", "IMPLND"),
+                ("SURLI", "PERLND"),
+                ("UZLI", "PERLND"),
+                ("LZLI", "PERLND"),
+            ],
+        ],
+        ["", [("", "")]],
+        [
+            "Runoff:Pervious",
+            [("PERO", "PERLND")],
+        ],
+        ["Runoff:Impervious", [("SURO", "IMPLND")]],
+        [
+            "Runoff:Combined",
+            [
+                ("PERO", "PERLND"),
+                ("SURO", "IMPLND"),
+            ],
+        ],
+        ["", [("", "")]],
+        ["Deep recharge", [("IGWI", "PERLND")]],
+        ["", [("", "")]],
+        ["Evaporation:Pervious", [("TAET", "PERLND")]],
+        ["Evaporation:Impervious", [("IMPEV", "IMPLND")]],
+        ["Evaporation:Combined", [("TAET", "PERLND"), ("IMPEV", "IMPLND")]],
+    ),
+    ("flow", "summary", False): (
+        [
+            "Rainfall and irrigation",
+            [
+                ("SUPY", "PERLND"),
+                ("SUPY", "IMPLND"),
+                ("IRRAPP6", "PERLND"),
+            ],
+        ],
+        ["", [("", "")]],
+        [
+            "Runoff:Pervious",
+            [("PERO", "PERLND")],
+        ],
+        ["Runoff:Impervious", [("SURO", "IMPLND")]],
+        ["", [("", "")]],
+        ["Deep recharge", [("IGWI", "PERLND")]],
+        ["", [("", "")]],
+        ["Evaporation:Pervious", [("TAET", "PERLND")]],
+        ["Evaporation:Impervious", [("IMPEV", "IMPLND")]],
+    ),
+    ("qual", "detailed", False): (
+        # ["SOQO: PERVIOUS", [("SOQO", "PERLND")]],
+        # ["SOQO: IMPERVIOUS", [("SOQO", "IMPLND")]],
+        # ["WASHQS: PERVIOUS", [("WASHQS", "PERLND")]],
+        # ["WASHQS: IMPERVIOUS", [("WASHQS", "IMPLND")]],
+        # ["SOQS: PERVIOUS", [("SOQS", "PERLND")]],
+        # ["SOQS: IMPERVIOUS", [("SOQS", "IMPLND")]],
+        ["SOQUAL: PERVIOUS", [("SOQUAL", "PERLND")]],
+        ["SOQUAL: IMPERVIOUS", [("SOQUAL", "IMPLND")]],
+        ["IOQUAL", [("IOQUAL", "PERLND")]],
+        ["AOQUAL", [("AOQUAL", "PERLND")]],
+        ["POQUAL", [("POQUAL", "PERLND")]],
+    ),
+    ("qual", "detailed", True): (
+        # ["SOQO: PERVIOUS", [("SOQO", "PERLND")]],
+        # ["SOQO: IMPERVIOUS", [("SOQO", "IMPLND")]],
+        # ["SOQO: COMBINED", [("SOQO", "PERLND"),("SOQO", "IMPLND")]],
+        # ["WASHQS: PERVIOUS", [("WASHQS", "PERLND")]],
+        # ["WASHQS: IMPERVIOUS", [("WASHQS", "IMPLND")]],
+        # ["WASHQS: COMBINED", [("WASHQS", "PERLND"),("WASHQS", "IMPLND")]],
+        # ["SCRQS", [("SCRQS", "PERLND")]],
+        # ["SOQS: PERVIOUS", [("SOQS", "PERLND")]],
+        # ["SOQS: IMPERVIOUS", [("SOQS", "IMPLND")]],
+        # ["SOQS: COMBINED", [("SOQS", "PERLND"),("SOQS", "IMPLND")]],
+        ["SOQUAL: PERVIOUS", [("SOQUAL", "PERLND")]],
+        ["SOQUAL: IMPERVIOUS", [("SOQUAL", "IMPLND")]],
+        ["SOQUAL: COMBINED", [("SOQUAL", "PERLND"), ("SOQUAL", "IMPLND")]],
+        ["IOQUAL", [("IOQUAL", "PERLND")]],
+        ["AOQUAL", [("AOQUAL", "PERLND")]],
+        ["POQUAL", [("POQUAL", "PERLND")]],
+    ),
+    ("qual", "summary", False): (
+        ["SOQUAL: PERVIOUS", [("SOQUAL", "PERLND")]],
+        ["SOQUAL: IMPERVIOUS", [("SOQUAL", "IMPLND")]],
+        ["IOQUAL", [("IOQUAL", "PERLND")]],
+        ["AOQUAL", [("AOQUAL", "PERLND")]],
+        ["POQUAL", [("POQUAL", "PERLND")]],
+    ),
+    ("qual", "summary", True): (
+        ["SOQUAL: PERVIOUS", [("SOQUAL", "PERLND")]],
+        ["SOQUAL: IMPERVIOUS", [("SOQUAL", "IMPLND")]],
+        ["SOQUAL: COMBINED", [("SOQUAL", "PERLND"), ("SOQUAL", "IMPLND")]],
+        ["IOQUAL", [("IOQUAL", "PERLND")]],
+        ["AOQUAL", [("AOQUAL", "PERLND")]],
+        ["POQUAL", [("POQUAL", "PERLND")]],
+    ),
 }
 
 
@@ -89,7 +279,7 @@ This may be OK, but FYI there are negative values at:
         )
 
 
-def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2f"):
+def process(uci, hbn, elements, year, ofilename, modulus):
 
     from hspfbintoolbox.hspfbintoolbox import extract
 
@@ -198,7 +388,7 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
 
     mindex = [i.split("_") for i in pdf.columns]
     mindex = [(i[0], int(i[1]), i[2], int(i[1]) % modulus) for i in mindex]
-    mindex = pd.MultiIndex.from_tuples(mindex, names=["op", "number", "wbt", "lc"])
+    mindex = pd.MultiIndex.from_tuples(mindex, names=["op", "number", "balterm", "lc"])
     pdf.columns = mindex
     pdf = pdf.sort_index(axis="columns")
     mindex = pdf.columns
@@ -215,21 +405,21 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
         for i, j in zip(mindex, aindex)
     ]
     mindex = pd.MultiIndex.from_tuples(
-        mindex, names=["op", "number", "wbt", "lc", "area", "lcname"]
+        mindex, names=["op", "number", "balterm", "lc", "area", "lcname"]
     )
     pdf.columns = mindex
 
     nsum = {}
     areas = {}
     namelist = {}
-    setl = [i[1] for i in pwbe]
+    setl = [i[1] for i in elements]
     setl = [item for sublist in setl for item in sublist]
     for lue in ["PERLND", "IMPLND"]:
-        for wbterm in [i[0] for i in setl if i[0]]:
+        for bterm in [i[0] for i in setl if i[0]]:
             for lc in list(range(1, modulus + 1)):
                 try:
                     subset = pdf.loc[
-                        :, (lue, slice(None), wbterm, lc, slice(None), slice(None))
+                        :, (lue, slice(None), bterm, lc, slice(None), slice(None))
                     ]
                 except KeyError:
                     continue
@@ -238,11 +428,11 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
 
                 if uci is None:
                     if subset.empty is True:
-                        nsum[(lue, lc, wbterm)] = 0.0
+                        nsum[(lue, lc, bterm)] = 0.0
                         if (lue, lc) not in namelist:
                             namelist[(lue, lc)] = ""
                     else:
-                        nsum[(lue, lc, wbterm)] = subset.mean(axis="columns").mean()
+                        nsum[(lue, lc, bterm)] = subset.mean(axis="columns").mean()
                         namelist[(lue, lc)] = inverse_lc.setdefault(lc, lc)
                 else:
                     sareas = subset.columns.get_level_values("area")
@@ -251,12 +441,12 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
                         areas[(lue, lc)] = ssareas
 
                     if subset.empty is True or ssareas == 0:
-                        nsum[(lue, lc, wbterm)] = 0.0
+                        nsum[(lue, lc, bterm)] = 0.0
                         if (lue, lc) not in namelist:
                             namelist[(lue, lc)] = ""
                     else:
                         fa = sareas / areas[(lue, lc)]
-                        nsum[(lue, lc, wbterm)] = (
+                        nsum[(lue, lc, bterm)] = (
                             (subset * fa).sum(axis="columns").mean()
                         )
                         namelist[(lue, lc)] = inverse_lc.setdefault(lc, lc)
@@ -271,7 +461,7 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
             newnamelist.append(f"{key[1]}-{value}")
 
     printlist = []
-    printlist.append([" "] + newnamelist + ["ALL"])
+    printlist.append(["BALANCE TERM"] + newnamelist + ["ALL"])
 
     mapipratio = {}
     mapipratio["PERLND"] = 1.0
@@ -301,31 +491,31 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
         percent_areas["IMPLND"] = np.array(iareas) / sumareas * 100
         percent_areas["COMBINED"] = percent_areas["PERLND"] + percent_areas["IMPLND"]
 
-        printlist.append(["PERVIOUS"])
+        # printlist.append(["PERVIOUS"])
         printlist.append(
-            ["AREA(acres)"]
-            + [str(i) if i > 0 else "" for i in pareas]
-            + [str(sum(pareas))]
+            ["PERVIOUS AREA(acres)"]
+            + [i if i > 0 else None for i in pareas]
+            + [sum(pareas)]
         )
 
         printlist.append(
-            ["AREA(%)"]
-            + [str(i) if i > 0 else "" for i in percent_areas["PERLND"]]
-            + [str(sum(percent_areas["PERLND"]))]
+            ["PERVIOUS AREA(%)"]
+            + [i if i > 0 else None for i in percent_areas["PERLND"]]
+            + [sum(percent_areas["PERLND"])]
         )
 
         printlist.append([])
-        printlist.append(["IMPERVIOUS"])
+        # printlist.append(["IMPERVIOUS"])
         printlist.append(
-            ["AREA(acres)"]
-            + [str(i) if i > 0 else "" for i in iareas]
-            + [str(sum(iareas))]
+            ["IMPERVIOUS AREA(acres)"]
+            + [i if i > 0 else None for i in iareas]
+            + [sum(iareas)]
         )
 
         printlist.append(
-            ["AREA(%)"]
-            + [str(i) if i > 0 else "" for i in percent_areas["IMPLND"]]
-            + [str(sum(percent_areas["IMPLND"]))]
+            ["IMPERVIOUS AREA(%)"]
+            + [i if i > 0 else None for i in percent_areas["IMPLND"]]
+            + [sum(percent_areas["IMPLND"])]
         )
         printlist.append([])
 
@@ -336,8 +526,9 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
     mapr["PERLND"] = 1.0
     mapr["IMPLND"] = 1.0
 
-    for term, op in pwbe:
+    for term, op in elements:
         if not term:
+            # term is None - insert a blank line
             printlist.append([])
             continue
 
@@ -364,27 +555,49 @@ def process(uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=".2
             except (KeyError, ValueError):
                 pass
         if uci is None:
-            te = (
-                [term]
-                + [str(i) if i > 0 else "" for i in te]
-                + [str(sum(te) / len(te))]
-            )
+            te = [term] + [i for i in te] + [sum(te) / len(te)]
+            # + [i if i > 0 else None for i in te]
         else:
+            # this line assumes iareas are all at the beginning - fix?
             nte = np.pad(te, (0, len(iareas) - len(te)), "constant")
-            te = (
-                [term]
-                + [str(i) if i > 0 else "" for i in nte]
-                + [str(sum(nte * percent_areas[sumop]) / 100)]
-            )
+            te = [term] + [i for i in nte] + [sum(nte * percent_areas[sumop]) / 100]
+            # + [i if i > 0 else None for i in nte]
         printlist.append(te)
     df = pd.DataFrame(printlist)
-    df = df.set_index(0)
     df.columns = df.iloc[0, :]
     df = df[1:]
-    df.index.name = "WBTERM"
+    df = df.set_index("BALANCE TERM")
     return df
 
 
+def process_qual_names(qualnames, tempelements):
+    qnames = qualnames.split(",")
+    elemlist = []
+    for qname in qnames:
+        for tmp in tempelements:
+            tmplabel = tmp[0]
+            labelpos = min(len(tmplabel.split(" ")[0]), len(tmplabel.split(":")[0]))
+            label = tmplabel[:labelpos] + "-" + qname
+            if len(tmplabel) > labelpos:
+                label = label + tmplabel[labelpos:]
+            tmpvar = tmp[1]
+            tmpvarnametuple = tmpvar[0]
+            tmpvarname = tmpvarnametuple[0]
+            tmpopname = tmpvarnametuple[1]
+            varpos = len(tmpvarname)
+            varname = tmpvarname[:varpos] + "-" + qname
+            if len(tmpvarname) > varpos:
+                varname = varname + tmpvarname[varpos:]
+            varnametuple = (varname, tmpopname)
+            varnamelist = []
+            varnamelist.append(varnametuple)
+            var = [label, varnamelist]
+            elemlist.append(var)
+            elements = tuple(elemlist)
+    return elements
+
+
+@command()
 @command("detailed")
 @tsutils.doc(docstrings)
 def _detailed_cli(
@@ -395,6 +608,69 @@ def _detailed_cli(
     modulus=20,
     tablefmt="csv_nos",
     float_format=".2f",
+    constituent="flow",
+    qualnames="",
+):
+    """Develops a detailed water or mass balance.
+
+    Parameters
+    ----------
+    ${hbn}
+    ${uci}
+    ${year}
+    ${ofilename}
+    ${modulus}
+    ${tablefmt}
+    ${float_format}
+    ${constituent}
+    ${qualnames}
+    """
+    tsutils.printiso(
+        detailed(
+            hbn,
+            uci=uci,
+            year=year,
+            ofilename=ofilename,
+            modulus=modulus,
+            constituent=constituent,
+            qualnames=qualnames,
+        ),
+        float_format=float_format,
+        headers="keys",
+        tablefmt=tablefmt,
+    )
+
+
+@tsutils.copy_doc(_detailed_cli)
+def detailed(
+    hbn,
+    uci=None,
+    year=None,
+    ofilename="",
+    modulus=20,
+    constituent="flow",
+    qualnames="",
+):
+    """Develops a detailed water balance."""
+
+    elements = _mass_balance[(constituent, "detailed", bool(uci))]
+    if constituent == "qual":
+        elements = process_qual_names(qualnames, elements)
+    return process(uci, hbn, elements, year, ofilename, modulus)
+
+
+@command("summary")
+@tsutils.doc(docstrings)
+def _summary_cli(
+    hbn,
+    uci=None,
+    year=None,
+    ofilename="",
+    modulus=20,
+    tablefmt="csv_nos",
+    float_format=".2f",
+    constituent="flow",
+    qualnames="",
 ):
     """Develops a detailed water balance.
 
@@ -407,113 +683,36 @@ def _detailed_cli(
     ${modulus}
     ${tablefmt}
     ${float_format}
+    ${constituent}
+    ${qualnames}
     """
     tsutils.printiso(
-        detailed(
+        summary(
             hbn,
             uci=uci,
             year=year,
             ofilename=ofilename,
             modulus=modulus,
-            tablefmt=tablefmt,
-            float_format=float_format,
-        )
+            constituent=constituent,
+            qualnames=qualnames,
+        ),
+        float_format=float_format,
+        headers="keys",
+        tablefmt=tablefmt,
     )
 
 
-@tsutils.copy_doc(_detailed_cli)
-def detailed(
-    hbn,
-    uci=None,
-    year=None,
-    ofilename="",
-    modulus=20,
-    tablefmt="csv_nos",
-    float_format=".2f",
-):
-    """Develops a detailed water balance."""
-
-    if uci is None:
-        pwbe = (
-            ["SUPY", [("SUPY", "PERLND")]],
-            ["SURLI", [("SURLI", "PERLND")]],
-            ["UZLI", [("UZLI", "PERLND")]],
-            ["LZLI", [("LZLI", "PERLND")]],
-            ["", [("", "")]],
-            ["SURO: PERVIOUS", [("SURO", "PERLND")]],
-            ["SURO: IMPERVIOUS", [("SURO", "IMPLND")]],
-            ["IFWO", [("IFWO", "PERLND")]],
-            ["AGWO", [("AGWO", "PERLND")]],
-            ["", [("", "")]],
-            ["AGWI", [("AGWI", "PERLND")]],
-            ["IGWI", [("IGWI", "PERLND")]],
-            ["", [("", "")]],
-            ["CEPE", [("CEPE", "PERLND")]],
-            ["UZET", [("UZET", "PERLND")]],
-            ["LZET", [("LZET", "PERLND")]],
-            ["AGWET", [("AGWET", "PERLND")]],
-            ["BASET", [("BASET", "PERLND")]],
-            ["SURET", [("SURET", "PERLND")]],
-            ["", [("", "")]],
-            ["PERO", [("PERO", "PERLND")]],
-            ["IGWI", [("IGWI", "PERLND")]],
-            ["TAET: PERVIOUS", [("TAET", "PERLND")]],
-            ["IMPEV: IMPERVIOUS", [("IMPEV", "IMPLND")]],
-            ["", [("", "")]],
-            ["PET", [("PET", "PERLND")]],
-            ["", [("", "")]],
-            ["PERS", [("PERS", "PERLND")]],
-        )
-    else:
-        pwbe = (
-            ["SUPY", [("SUPY", "PERLND"), ("SUPY", "IMPLND"), ("IRRAPP6", "PERLND")]],
-            ["SURLI", [("SURLI", "PERLND")]],
-            ["UZLI", [("UZLI", "PERLND")]],
-            ["LZLI", [("LZLI", "PERLND")]],
-            ["", [("", "")]],
-            ["SURO: PERVIOUS", [("SURO", "PERLND")]],
-            ["SURO: IMPERVIOUS", [("SURO", "IMPLND")]],
-            ["SURO: COMBINED", [("SURO", "PERLND"), ("SURO", "IMPLND")]],
-            ["IFWO", [("IFWO", "PERLND")]],
-            ["AGWO", [("AGWO", "PERLND")]],
-            ["", [("", "")]],
-            ["AGWI", [("AGWI", "PERLND")]],
-            ["IGWI", [("IGWI", "PERLND")]],
-            ["", [("", "")]],
-            ["CEPE", [("CEPE", "PERLND")]],
-            ["UZET", [("UZET", "PERLND")]],
-            ["LZET", [("LZET", "PERLND")]],
-            ["AGWET", [("AGWET", "PERLND")]],
-            ["BASET", [("BASET", "PERLND")]],
-            ["SURET", [("SURET", "PERLND")]],
-            ["", [("", "")]],
-            ["PERO", [("PERO", "PERLND")]],
-            ["IGWI", [("IGWI", "PERLND")]],
-            ["TAET: PERVIOUS", [("TAET", "PERLND")]],
-            ["IMPEV: IMPERVIOUS", [("IMPEV", "IMPLND")]],
-            ["ET: COMBINED", [("TAET", "PERLND"), ("IMPEV", "IMPLND")]],
-            ["", [("", "")]],
-            ["PET", [("PET", "PERLND"), ("PET", "IMPLND")]],
-            ["", [("", "")]],
-            ["PERS", [("PERS", "PERLND")]],
-        )
-    return process(
-        uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=float_format
-    )
-
-
-@command()
-@tsutils.doc(docstrings)
+@tsutils.copy_doc(_summary_cli)
 def summary(
     hbn,
     uci=None,
     year=None,
     ofilename="",
     modulus=20,
-    tablefmt="csv_nos",
-    float_format=".2f",
+    constituent="flow",
+    qualnames="",
 ):
-    """Develops a summary water balance.
+    """Develops a summary mass balance.
 
     Parameters
     ----------
@@ -522,66 +721,13 @@ def summary(
     ${year}
     ${ofilename}
     ${modulus}
-    ${tablefmt}
-    ${float_format}
+    ${constituent}
+    ${qualnames}
     """
-    if uci is None:
-        pwbe = (
-            [
-                "Rainfall and irrigation",
-                [
-                    ("SUPY", "PERLND"),
-                    ("SUPY", "IMPLND"),
-                    ("IRRAPP6", "PERLND"),
-                ],
-            ],
-            ["", [("", "")]],
-            [
-                "Runoff:Pervious",
-                [("PERO", "PERLND")],
-            ],
-            ["Runoff:Impervious", [("SURO", "IMPLND")]],
-            ["", [("", "")]],
-            ["Deep recharge", [("IGWI", "PERLND")]],
-            ["", [("", "")]],
-            ["Evaporation:Pervious", [("TAET", "PERLND")]],
-            ["Evaporation:Impervious", [("IMPEV", "IMPLND")]],
-        )
-    else:
-        pwbe = (
-            [
-                "Rainfall and irrigation",
-                [
-                    ("SUPY", "PERLND"),
-                    ("SUPY", "IMPLND"),
-                    ("SURLI", "PERLND"),
-                    ("UZLI", "PERLND"),
-                    ("LZLI", "PERLND"),
-                ],
-            ],
-            ["", [("", "")]],
-            [
-                "Runoff:Pervious",
-                [("PERO", "PERLND")],
-            ],
-            ["Runoff:Impervious", [("SURO", "IMPLND")]],
-            [
-                "Runoff:Combined",
-                [
-                    ("PERO", "PERLND"),
-                    ("SURO", "IMPLND"),
-                ],
-            ],
-            ["", [("", "")]],
-            ["Deep recharge", [("IGWI", "PERLND")]],
-            ["", [("", "")]],
-            ["Evaporation:Pervious", [("TAET", "PERLND")]],
-            ["Evaporation:Impervious", [("IMPEV", "IMPLND")]],
-            ["Evaporation:Combined", [("TAET", "PERLND"), ("IMPEV", "IMPLND")]],
-        )
-    process(
-        uci, hbn, pwbe, year, ofilename, modulus, tablefmt, float_format=float_format
-    )
+    elements = _mass_balance[(constituent, "summary", bool(uci))]
+    if constituent == "qual":
+        elements = process_qual_names(qualnames, elements)
+    return process(uci, hbn, elements, year, ofilename, modulus)
 
 
 @command()
@@ -632,7 +778,7 @@ def mapping(
 
     mindex = [i.split("_") for i in pdf.columns]
     mindex = [(i[0][0], int(i[1]), i[2]) for i in mindex]
-    mindex = pd.MultiIndex.from_tuples(mindex, names=["op", "number", "wbt"])
+    mindex = pd.MultiIndex.from_tuples(mindex, names=["op", "number", "balterm"])
     pdf.columns = mindex
 
     _give_negative_warning(pdf)
@@ -640,9 +786,9 @@ def mapping(
     pdf = pdf.mean(axis="index").to_frame()
 
     mindex = [("_".join([i[0], i[2]]), i[1]) for i in pdf.index]
-    mindex = pd.MultiIndex.from_tuples(mindex, names=["wbt", "number"])
+    mindex = pd.MultiIndex.from_tuples(mindex, names=["balterm", "number"])
     pdf.index = mindex
-    pdf = pdf.unstack("wbt")
+    pdf = pdf.unstack("balterm")
 
     mindex = [i[1] for i in pdf.columns]
     pdf.columns = mindex
