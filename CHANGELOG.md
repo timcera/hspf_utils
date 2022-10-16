@@ -1,3 +1,17 @@
+## v6.0.0 (2022-10-16)
+
+### BREAKING CHANGE
+
+- more to latest toolbox_utils which uses pydantic
+
+### Feat
+
+- added python api for all command line functions and corrected calls to tsutils.printiso
+
+### Fix
+
+- update to latest toolbox_utils and misc. modernizations
+
 ## v5.3.2 (2022-09-28)
 
 ### Refactor
