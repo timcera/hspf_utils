@@ -5,7 +5,7 @@ Command Line
 
 Help::
 
-     hspf_utils –help
+    hspf_utils --help
 
 about
 ~~~~~
@@ -17,9 +17,9 @@ detailed
 .. program-output:: hspf_utils detailed --help
    :prompt:
 
-summary
-~~~~~~~
-.. program-output:: hspf_utils summary --help
+_detailed_cli
+~~~~~~~~~~~~~
+.. program-output:: hspf_utils _detailed_cli --help
    :prompt:
 
 mapping
@@ -30,4 +30,9 @@ mapping
 parameters
 ~~~~~~~~~~
 .. program-output:: hspf_utils parameters --help
+   :prompt:
+
+summary
+~~~~~~~
+.. program-output:: hspf_utils summary --help
    :prompt:

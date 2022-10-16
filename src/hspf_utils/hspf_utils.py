@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import os
 import re
 import sys
@@ -76,11 +74,11 @@ docstrings = {
 
         The constituent to summarize in the table.
 
-        Currently available constituents are: 'flow' for PWATER/IWATER and 'qual' for
-        PQUAL/IQUAL.
+        Currently available constituents are: 'flow' for PWATER/IWATER and
+        'qual' for PQUAL/IQUAL.
 
-        if 'qual' is chosen, then the option 'qualnames' specifies the names to be
-        found in the HBN file.
+        if 'qual' is chosen, then the option 'qualnames' specifies the names to
+        be found in the HBN file.
         """,
     "qualnames": r"""qualnames : str
         [optional, defaults to '']

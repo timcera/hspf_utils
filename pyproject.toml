@@ -1,3 +1,11 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    "oldest-supported-numpy",
+]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "hspf_utils"
 dynamic = ["version"]
@@ -5,7 +13,7 @@ readme = "README.rst"
 description = "Command line script and Python library to develop water balance from HSPF models"
 requires-python = ">=3.7.1"
 dependencies = [
-    "toolbox_utils < 1.0.0",
+    "toolbox_utils >= 1.0.0, < 2.0.0",
     "cltoolbox > 1.1.0",
     "hspfbintoolbox >= 7.0.2",
     ]
@@ -61,30 +69,12 @@ dev = [
 [project.scripts]
 hspf_utils = "hspf_utils.hspf_utils:main"
 
-[project_urls]
+[project.urls]
 documentation = "https://timcera.bitbucket.io/hspf_utils/docs/index.html#hspf_utils-documentation"
 github = "https://github.com/timcera/hspf_utils"
 bitbucket = "https://bitbucket.org/timcera/hspf_utils/src/main/"
 
-[tool.setuptools]
-license-files = ["LICENSE.txt"]
-include-package-data = true
-
-[tool.setuptools.dynamic]
-readme = {file = "README.rst"}
-version = {file = "VERSION"}
-
-[tool.setuptools.packages.find]
-where = ["src"]
-exclude = ["examples*", "tools*", "docs*", "hspf_utils.tests*"]
-
-[build-system]
-requires = [
-    "setuptools",
-    "wheel",
-    "oldest-supported-numpy",
-]
-build-backend = "setuptools.build_meta"
+[tool]
 
 [tool.check-manifest]
 ignore = ["docs/_function_autosummary/*",
@@ -98,3 +88,15 @@ version = "5.3.2"
 tag_format = "v$version"
 version_files = ["VERSION"]
 update_changelog_on_bump = true
+
+[tool.setuptools]
+license-files = ["LICENSE.txt"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+readme = {file = "README.rst"}
+version = {file = "VERSION"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["examples*", "tools*", "docs*", "hspf_utils.tests*"]
