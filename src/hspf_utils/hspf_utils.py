@@ -1,3 +1,5 @@
+"""Utility functions to work with HSPF models for mass balance tables."""
+
 import os
 import re
 import sys
@@ -6,7 +8,8 @@ import warnings
 import numpy as np
 import pandas as pd
 from cltoolbox import command, main
-from tabulate import simple_separated_format, tabulate
+from hspfbintoolbox.hspfbintoolbox import extract
+from tabulate import simple_separated_format
 from toolbox_utils import tsutils
 
 docstrings = {
@@ -268,12 +271,13 @@ def _give_negative_warning(df):
     testpdf = df < 0
     if testpdf.any(None):
         warnings.warn(
-            f"""
-This may be OK, but FYI there are negative values at:
+            tsutils.error_wrapper(
+                f"""
+            This may be OK, but FYI there are negative values at:
 
-{df.loc[testpdf.any(1), testpdf.any(0)]}
-
-                                            """
+            {df.loc[testpdf.any(1), testpdf.any(0)]}
+            """
+            )
         )
 
 
@@ -595,7 +599,6 @@ def process_qual_names(qualnames, tempelements):
     return elements
 
 
-@command()
 @command("detailed")
 @tsutils.doc(docstrings)
 def _detailed_cli(
@@ -728,11 +731,9 @@ def summary(
     return process(uci, hbn, elements, year, ofilename, modulus)
 
 
-@command()
+@command("mapping")
 @tsutils.doc(docstrings)
-def mapping(
-    hbn, year=None, ofilename="", tablefmt="csv_nos", index_prefix="", float_format="g"
-):
+def _mapping_cli(hbn, year=None, tablefmt="csv_nos", index_prefix="", float_format="g"):
     """Develops a csv file appropriate for joining to a GIS layer.
 
     Parameters
@@ -749,26 +750,36 @@ def mapping(
         creating a unique ID.
     ${float_format}
     """
-    from hspfbintoolbox.hspfbintoolbox import extract
+    tsutils.printiso(
+        mapping(
+            hbn,
+            year=year,
+            index_prefix=index_prefix,
+        ),
+        float_format=float_format,
+        headers="keys",
+        tablefmt=tablefmt,
+    )
 
-    if ofilename:
-        sys.stdout = open(ofilename, "w")
 
+@tsutils.copy_doc(_mapping_cli)
+def mapping(hbn, year=None, index_prefix=""):
     try:
         pdf = extract(hbn, "yearly", ",,,")
-    except ValueError:
+    except ValueError as exc:
         raise ValueError(
-            """
-*
-*   The binary file does not have consistent ending months between PERLND and
-*   IMPLND.  This could be caused by the BYREND (Binary YeaR END) being set
-*   differently in the PERLND:BINARY-INFO and IMPLND:BINARY-INFO, or you could
-*   have the PRINT-INFO bug.  To work around the PRINT-INFO bug, add a PERLND
-*   PRINT-INFO block, setting the PYREND here will actually work in the
-*   BINARY-INFO block.
-*
-"""
-        )
+            tsutils.error_wrapper(
+                """
+                The binary file does not have consistent ending months between
+                PERLND and IMPLND.  This could be caused by the BYREND (Binary
+                YeaR END) being set differently in the PERLND:BINARY-INFO and
+                IMPLND:BINARY-INFO, or you could have the PRINT-INFO bug.  To
+                work around the PRINT-INFO bug, add a PERLND PRINT-INFO block,
+                setting the PYREND there will actually work in the BINARY-INFO
+                block.
+                """
+            )
+        ) from exc
 
     if year is not None:
         pdf = pd.DataFrame(pdf.loc[f"{year}", :]).T
@@ -796,32 +807,12 @@ def mapping(
     if index_prefix:
         pdf.index = [index_prefix + str(i) for i in pdf.index]
 
-    if tablefmt in ["csv", "tsv", "csv_nos", "tsv_nos"]:
-        sep = {"csv": ",", "tsv": "\\t", "csv_nos": ",", "tsv_nos": "\\t"}[tablefmt]
-        fmt = simple_separated_format(sep)
-    else:
-        fmt = tablefmt
-    if tablefmt in ["csv_nos", "tsv_nos"]:
-        print(
-            re.sub(
-                " *, *",
-                ",",
-                tabulate(
-                    pdf, tablefmt=fmt, headers="keys", floatfmt=float_format
-                ).replace("nan", ""),
-            )
-        )
-    else:
-        print(
-            tabulate(pdf, tablefmt=fmt, headers="keys", floatfmt=float_format).replace(
-                "nan", ""
-            )
-        )
+    return pdf
 
 
-@command()
+@command("parameter")
 @tsutils.doc(docstrings)
-def parameters(
+def _parameters_cli(
     uci,
     index_prefix="",
     index_delimiter="",
@@ -840,6 +831,26 @@ def parameters(
     ${tablefmt}
     ${float_format}
     """
+    tsutils.printiso(
+        parameters(
+            uci,
+            index_prefix=index_prefix,
+            index_delimiter=index_delimiter,
+            modulus=modulus,
+        ),
+        float_format=float_format,
+        headers="keys",
+        tablefmt=tablefmt,
+    )
+
+
+@tsutils.copy_doc(_parameters_cli)
+def parameters(
+    uci,
+    index_prefix="",
+    index_delimiter="",
+    modulus=20,
+):
     blocklist = ["PWAT-PARM2", "PWAT-PARM3", "PWAT-PARM4"]  # , 'PWAT-STATE1']
 
     params = {}
@@ -888,7 +899,7 @@ def parameters(
     # defaults['AGWS'] = 0.0
     # defaults['GWVS'] = 0.0
 
-    with open(uci) as fp:
+    with open(uci, encoding="ascii") as fp:
         content = fp.readlines()
 
     content = [i[:81].rstrip() for i in content if "***" not in i]
@@ -905,7 +916,7 @@ def parameters(
             supfname = words[2]
     if supfname:
         ucipath = os.path.dirname(uci)
-        with open(os.path.join(ucipath, supfname)) as sfp:
+        with open(os.path.join(ucipath, supfname), encoding="ascii") as sfp:
             supfname = sfp.readlines()
             supfname = [i.strip() for i in supfname if "***" not in i]
             supfname = [i.strip() for i in supfname if i]
@@ -975,30 +986,7 @@ def parameters(
         df.index = df.index.astype(int)
         df = df.sort_index()
 
-    if tablefmt in ["csv", "tsv", "csv_nos", "tsv_nos"]:
-        sep = {"csv": ",", "tsv": "\t", "csv_nos": ",", "tsv_nos": "\t"}[tablefmt]
-        fmt = simple_separated_format(sep)
-    else:
-        fmt = tablefmt
-
-    if tablefmt == "csv_nos":
-        print(
-            re.sub(
-                " *, *",
-                ",",
-                tabulate(df, headers="keys", tablefmt=fmt, floatfmt=float_format),
-            )
-        )
-    elif tablefmt == "tsv_nos":
-        print(
-            re.sub(
-                " *\t *",
-                "\t",
-                tabulate(df, headers="keys", tablefmt=fmt, floatfmt=float_format),
-            )
-        )
-    else:
-        print(tabulate(df, headers="keys", tablefmt=fmt, floatfmt=float_format))
+    return df
 
 
 if __name__ == "__main__":
