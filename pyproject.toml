@@ -15,7 +15,7 @@ description = "Command line script and Python library to develop water balance f
 dependencies = [
     "toolbox_utils >= 3.0.0, < 4.0.0",
     "cltoolbox > 1.1.0",
-    "hspfbintoolbox >= 8.0.0"
+    "hspfbintoolbox >= 9.0.0, < 10.0.0"
 ]
 authors = [
     {name = "Tim Cera", email = "tim@cerazone.net"}
