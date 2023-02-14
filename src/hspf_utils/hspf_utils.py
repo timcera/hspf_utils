@@ -9,7 +9,6 @@ import numpy as np
 import pandas as pd
 from cltoolbox import command, main
 from hspfbintoolbox.hspfbintoolbox import extract
-from tabulate import simple_separated_format
 from toolbox_utils import tsutils
 
 docstrings = {
@@ -282,7 +281,6 @@ def _give_negative_warning(df):
 
 
 def process(uci, hbn, elements, year, ofilename, modulus):
-
     from hspfbintoolbox.hspfbintoolbox import extract
 
     if ofilename:
@@ -739,15 +737,20 @@ def _mapping_cli(hbn, year=None, tablefmt="csv_nos", index_prefix="", float_form
     Parameters
     ----------
     ${hbn}
+
     ${year}
+
     ${ofilename}
+
     ${tablefmt}
+
     ${index_prefix}
         [optional, defaults to '']
 
         A string prepended to the PERLND code, which would allow being
         run on different models and collected into one dataset by
         creating a unique ID.
+
     ${float_format}
     """
     tsutils.printiso(
