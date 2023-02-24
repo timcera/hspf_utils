@@ -1,3 +1,9 @@
+## v6.0.4 (2023-02-23)
+
+### Fix
+
+- corrected command line functions so that aren't imported
+
 ## v6.0.3 (2023-02-13)
 
 ### Refactor
