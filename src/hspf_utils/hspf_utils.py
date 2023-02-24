@@ -7,9 +7,10 @@ import warnings
 
 import numpy as np
 import pandas as pd
-from cltoolbox import command, main
 from hspfbintoolbox.hspfbintoolbox import extract
 from toolbox_utils import tsutils
+
+__all__ = ["detailed", "summary", "mapping", "parameters"]
 
 docstrings = {
     "hbn": r"""hbn : str
@@ -258,12 +259,6 @@ _mass_balance = {
         ["POQUAL", [("POQUAL", "PERLND")]],
     ),
 }
-
-
-@command()
-def about():
-    """Display version number and system information."""
-    tsutils.about(__name__)
 
 
 def _give_negative_warning(df):
@@ -597,16 +592,13 @@ def process_qual_names(qualnames, tempelements):
     return elements
 
 
-@command("detailed")
 @tsutils.doc(docstrings)
-def _detailed_cli(
+def detailed(
     hbn,
     uci=None,
     year=None,
     ofilename="",
     modulus=20,
-    tablefmt="csv_nos",
-    float_format=".2f",
     constituent="flow",
     qualnames="",
 ):
@@ -624,84 +616,13 @@ def _detailed_cli(
     ${constituent}
     ${qualnames}
     """
-    tsutils.printiso(
-        detailed(
-            hbn,
-            uci=uci,
-            year=year,
-            ofilename=ofilename,
-            modulus=modulus,
-            constituent=constituent,
-            qualnames=qualnames,
-        ),
-        float_format=float_format,
-        headers="keys",
-        tablefmt=tablefmt,
-    )
-
-
-@tsutils.copy_doc(_detailed_cli)
-def detailed(
-    hbn,
-    uci=None,
-    year=None,
-    ofilename="",
-    modulus=20,
-    constituent="flow",
-    qualnames="",
-):
-    """Develops a detailed water balance."""
-
     elements = _mass_balance[(constituent, "detailed", bool(uci))]
     if constituent == "qual":
         elements = process_qual_names(qualnames, elements)
     return process(uci, hbn, elements, year, ofilename, modulus)
 
 
-@command("summary")
 @tsutils.doc(docstrings)
-def _summary_cli(
-    hbn,
-    uci=None,
-    year=None,
-    ofilename="",
-    modulus=20,
-    tablefmt="csv_nos",
-    float_format=".2f",
-    constituent="flow",
-    qualnames="",
-):
-    """Develops a detailed water balance.
-
-    Parameters
-    ----------
-    ${hbn}
-    ${uci}
-    ${year}
-    ${ofilename}
-    ${modulus}
-    ${tablefmt}
-    ${float_format}
-    ${constituent}
-    ${qualnames}
-    """
-    tsutils.printiso(
-        summary(
-            hbn,
-            uci=uci,
-            year=year,
-            ofilename=ofilename,
-            modulus=modulus,
-            constituent=constituent,
-            qualnames=qualnames,
-        ),
-        float_format=float_format,
-        headers="keys",
-        tablefmt=tablefmt,
-    )
-
-
-@tsutils.copy_doc(_summary_cli)
 def summary(
     hbn,
     uci=None,
@@ -729,9 +650,8 @@ def summary(
     return process(uci, hbn, elements, year, ofilename, modulus)
 
 
-@command("mapping")
 @tsutils.doc(docstrings)
-def _mapping_cli(hbn, year=None, tablefmt="csv_nos", index_prefix="", float_format="g"):
+def mapping(hbn, year=None, index_prefix=""):
     """Develops a csv file appropriate for joining to a GIS layer.
 
     Parameters
@@ -753,20 +673,6 @@ def _mapping_cli(hbn, year=None, tablefmt="csv_nos", index_prefix="", float_form
 
     ${float_format}
     """
-    tsutils.printiso(
-        mapping(
-            hbn,
-            year=year,
-            index_prefix=index_prefix,
-        ),
-        float_format=float_format,
-        headers="keys",
-        tablefmt=tablefmt,
-    )
-
-
-@tsutils.copy_doc(_mapping_cli)
-def mapping(hbn, year=None, index_prefix=""):
     try:
         pdf = extract(hbn, "yearly", ",,,")
     except ValueError as exc:
@@ -813,15 +719,12 @@ def mapping(hbn, year=None, index_prefix=""):
     return pdf
 
 
-@command("parameter")
 @tsutils.doc(docstrings)
-def _parameters_cli(
+def parameters(
     uci,
     index_prefix="",
     index_delimiter="",
     modulus=20,
-    tablefmt="csv_nos",
-    float_format="g",
 ):
     """Develops a table of parameter values.
 
@@ -834,26 +737,6 @@ def _parameters_cli(
     ${tablefmt}
     ${float_format}
     """
-    tsutils.printiso(
-        parameters(
-            uci,
-            index_prefix=index_prefix,
-            index_delimiter=index_delimiter,
-            modulus=modulus,
-        ),
-        float_format=float_format,
-        headers="keys",
-        tablefmt=tablefmt,
-    )
-
-
-@tsutils.copy_doc(_parameters_cli)
-def parameters(
-    uci,
-    index_prefix="",
-    index_delimiter="",
-    modulus=20,
-):
     blocklist = ["PWAT-PARM2", "PWAT-PARM3", "PWAT-PARM4"]  # , 'PWAT-STATE1']
 
     params = {}
@@ -990,6 +873,111 @@ def parameters(
         df = df.sort_index()
 
     return df
+
+
+def main():
+    import cltoolbox
+
+    @cltoolbox.command()
+    def about():
+        """Display version number and system information."""
+        tsutils.about(__name__)
+
+    @cltoolbox.command("detailed")
+    @tsutils.copy_doc(detailed)
+    def _detailed_cli(
+        hbn,
+        uci=None,
+        year=None,
+        ofilename="",
+        modulus=20,
+        tablefmt="csv_nos",
+        float_format=".2f",
+        constituent="flow",
+        qualnames="",
+    ):
+        tsutils.printiso(
+            detailed(
+                hbn,
+                uci=uci,
+                year=year,
+                ofilename=ofilename,
+                modulus=modulus,
+                constituent=constituent,
+                qualnames=qualnames,
+            ),
+            float_format=float_format,
+            headers="keys",
+            tablefmt=tablefmt,
+        )
+
+    @cltoolbox.command("summary")
+    @tsutils.copy_doc(summary)
+    def _summary_cli(
+        hbn,
+        uci=None,
+        year=None,
+        ofilename="",
+        modulus=20,
+        tablefmt="csv_nos",
+        float_format=".2f",
+        constituent="flow",
+        qualnames="",
+    ):
+        tsutils.printiso(
+            summary(
+                hbn,
+                uci=uci,
+                year=year,
+                ofilename=ofilename,
+                modulus=modulus,
+                constituent=constituent,
+                qualnames=qualnames,
+            ),
+            float_format=float_format,
+            headers="keys",
+            tablefmt=tablefmt,
+        )
+
+    @cltoolbox.command("mapping")
+    @tsutils.copy_doc(mapping)
+    def _mapping_cli(
+        hbn, year=None, tablefmt="csv_nos", index_prefix="", float_format="g"
+    ):
+        tsutils.printiso(
+            mapping(
+                hbn,
+                year=year,
+                index_prefix=index_prefix,
+            ),
+            float_format=float_format,
+            headers="keys",
+            tablefmt=tablefmt,
+        )
+
+    @cltoolbox.command("parameters")
+    @tsutils.copy_doc(parameters)
+    def _parameters_cli(
+        uci,
+        index_prefix="",
+        index_delimiter="",
+        modulus=20,
+        tablefmt="csv_nos",
+        float_format="g",
+    ):
+        tsutils.printiso(
+            parameters(
+                uci,
+                index_prefix=index_prefix,
+                index_delimiter=index_delimiter,
+                modulus=modulus,
+            ),
+            float_format=float_format,
+            headers="keys",
+            tablefmt=tablefmt,
+        )
+
+    cltoolbox.main()
 
 
 if __name__ == "__main__":
