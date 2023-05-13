@@ -2,7 +2,6 @@
 
 import os
 import re
-import sys
 import warnings
 
 import numpy as np
@@ -35,11 +34,6 @@ docstrings = {
 
         If None the water balance would cover the period of simulation.
         Otherwise the year for the water balance.""",
-    "ofilename": r"""ofilename
-        [optional, defaults to '']
-
-        If empty string '', then prints to stdout, else prints to
-        `ofilename`.""",
     "modulus": r"""modulus : int
         [optional, defaults to 20]
 
@@ -275,11 +269,8 @@ def _give_negative_warning(df):
         )
 
 
-def process(uci, hbn, elements, year, ofilename, modulus):
+def process(uci, hbn, elements, year, modulus):
     from hspfbintoolbox.hspfbintoolbox import extract
-
-    if ofilename:
-        sys.stdout = open(ofilename, "w")
 
     try:
         year = int(year)
@@ -597,10 +588,11 @@ def detailed(
     hbn,
     uci=None,
     year=None,
-    ofilename="",
     modulus=20,
     constituent="flow",
     qualnames="",
+    tablefmt="csv",
+    float_format="%.2f",
 ):
     """Develops a detailed water or mass balance.
 
@@ -609,17 +601,16 @@ def detailed(
     ${hbn}
     ${uci}
     ${year}
-    ${ofilename}
     ${modulus}
-    ${tablefmt}
-    ${float_format}
     ${constituent}
     ${qualnames}
+    ${tablefmt}
+    ${float_format}
     """
     elements = _mass_balance[(constituent, "detailed", bool(uci))]
     if constituent == "qual":
         elements = process_qual_names(qualnames, elements)
-    return process(uci, hbn, elements, year, ofilename, modulus)
+    return process(uci, hbn, elements, year, modulus)
 
 
 @tsutils.doc(docstrings)
@@ -627,10 +618,11 @@ def summary(
     hbn,
     uci=None,
     year=None,
-    ofilename="",
     modulus=20,
     constituent="flow",
     qualnames="",
+    tablefmt="csv",
+    float_format="%.2f",
 ):
     """Develops a summary mass balance.
 
@@ -639,19 +631,26 @@ def summary(
     ${hbn}
     ${uci}
     ${year}
-    ${ofilename}
     ${modulus}
     ${constituent}
     ${qualnames}
+    ${tablefmt}
+    ${float_format}
     """
     elements = _mass_balance[(constituent, "summary", bool(uci))]
     if constituent == "qual":
         elements = process_qual_names(qualnames, elements)
-    return process(uci, hbn, elements, year, ofilename, modulus)
+    return process(uci, hbn, elements, year, modulus)
 
 
 @tsutils.doc(docstrings)
-def mapping(hbn, year=None, index_prefix=""):
+def mapping(
+    hbn,
+    year=None,
+    index_prefix="",
+    tablefmt="csv",
+    float_format="%.2f",
+):
     """Develops a csv file appropriate for joining to a GIS layer.
 
     Parameters
@@ -660,16 +659,14 @@ def mapping(hbn, year=None, index_prefix=""):
 
     ${year}
 
-    ${ofilename}
-
-    ${tablefmt}
-
     ${index_prefix}
         [optional, defaults to '']
 
         A string prepended to the PERLND code, which would allow being
         run on different models and collected into one dataset by
         creating a unique ID.
+
+    ${tablefmt}
 
     ${float_format}
     """
@@ -724,7 +721,8 @@ def parameters(
     uci,
     index_prefix="",
     index_delimiter="",
-    modulus=20,
+    tablefmt="csv",
+    float_format="%.2f",
 ):
     """Develops a table of parameter values.
 
@@ -733,7 +731,6 @@ def parameters(
     ${uci}
     ${index_prefix}
     ${index_delimiter}
-    ${modulus}
     ${tablefmt}
     ${float_format}
     """
@@ -889,19 +886,17 @@ def main():
         hbn,
         uci=None,
         year=None,
-        ofilename="",
         modulus=20,
-        tablefmt="csv_nos",
-        float_format=".2f",
         constituent="flow",
         qualnames="",
+        tablefmt="csv_nos",
+        float_format=".2f",
     ):
         tsutils.printiso(
             detailed(
                 hbn,
                 uci=uci,
                 year=year,
-                ofilename=ofilename,
                 modulus=modulus,
                 constituent=constituent,
                 qualnames=qualnames,
@@ -917,19 +912,17 @@ def main():
         hbn,
         uci=None,
         year=None,
-        ofilename="",
         modulus=20,
-        tablefmt="csv_nos",
-        float_format=".2f",
         constituent="flow",
         qualnames="",
+        tablefmt="csv_nos",
+        float_format=".2f",
     ):
         tsutils.printiso(
             summary(
                 hbn,
                 uci=uci,
                 year=year,
-                ofilename=ofilename,
                 modulus=modulus,
                 constituent=constituent,
                 qualnames=qualnames,
@@ -942,7 +935,7 @@ def main():
     @cltoolbox.command("mapping")
     @tsutils.copy_doc(mapping)
     def _mapping_cli(
-        hbn, year=None, tablefmt="csv_nos", index_prefix="", float_format="g"
+        hbn, year=None, index_prefix="", tablefmt="csv_nos", float_format="g"
     ):
         tsutils.printiso(
             mapping(
@@ -961,7 +954,6 @@ def main():
         uci,
         index_prefix="",
         index_delimiter="",
-        modulus=20,
         tablefmt="csv_nos",
         float_format="g",
     ):
@@ -970,7 +962,6 @@ def main():
                 uci,
                 index_prefix=index_prefix,
                 index_delimiter=index_delimiter,
-                modulus=modulus,
             ),
             float_format=float_format,
             headers="keys",
