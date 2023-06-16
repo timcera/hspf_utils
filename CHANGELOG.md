@@ -1,3 +1,10 @@
+## v6.0.5 (2023-06-15)
+
+### Fix
+
+- fixed logic surrounding negative values test
+- added modulus of sub-watershed and updated pre-commit
+
 ## v6.0.4 (2023-02-23)
 
 ### Fix
