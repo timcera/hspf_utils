@@ -37,15 +37,13 @@ lifting.
 
 Requirements
 ------------
-* tstoolbox - Time-series toolbox; collected and installed by 'pip' or
-  'easy_install' command.
 * hspfbintoolbox - Utility to extract time-series from HSFP binary output
   files; collected and installed by 'pip' or 'easy_install' command.
 
 Installation
 ------------
 Should be as easy as running ``pip install hspf_utils`` or
-``easy_install hspf_utils`` at any command line.
+``conda install -c conda-forge hspf_utils`` at any command line.
 
 Usage - Command Line
 --------------------
@@ -77,10 +75,8 @@ DataFrame and is supplied to the function via the 'input_ts' keyword.
 
 Simply import hspf_utils::
 
-  from hspf_utils import hspf_utils
+    import hspf_utils
 
-  # Then you could call the functions
+    # Then you could call the functions
 
-  # Once you have a PANDAS DataFrame you can use that as input to other
-  # hspf_utils functions.
-  ntsd = hspf_utils.aggregate(statistic='mean', agg_interval='daily', input_ts=ntsd)
+    ntsd = hspf_utils.summary("test.hbn", uci="test.uci")

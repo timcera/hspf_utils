@@ -256,22 +256,20 @@ _mass_balance = {
 
 
 def _give_negative_warning(df):
-    testpdf = df < 0
-    if testpdf.any(None):
+    testpdf = pd.DataFrame(df) < 0
+    if testpdf.any().any():
         warnings.warn(
             tsutils.error_wrapper(
                 f"""
             This may be OK, but FYI there are negative values at:
 
-            {df.loc[testpdf.any(1), testpdf.any(0)]}
+            {df[testpdf].dropna(how='all').dropna(axis=1, how='all')}
             """
             )
         )
 
 
 def process(uci, hbn, elements, year, modulus):
-    from hspfbintoolbox.hspfbintoolbox import extract
-
     try:
         year = int(year)
     except TypeError:
@@ -284,7 +282,7 @@ def process(uci, hbn, elements, year, modulus):
     lnds = {}
 
     if uci is not None:
-        with open(uci) as fp:
+        with open(uci, encoding="ascii") as fp:
             content = fp.readlines()
 
         if not os.path.exists(hbn):
@@ -541,12 +539,12 @@ def process(uci, hbn, elements, year, modulus):
             except (KeyError, ValueError):
                 pass
         if uci is None:
-            te = [term] + [i for i in te] + [sum(te) / len(te)]
+            te = [term] + list(te) + [sum(te) / len(te)]
             # + [i if i > 0 else None for i in te]
         else:
             # this line assumes iareas are all at the beginning - fix?
             nte = np.pad(te, (0, len(iareas) - len(te)), "constant")
-            te = [term] + [i for i in nte] + [sum(nte * percent_areas[sumop]) / 100]
+            te = [term] + list(nte) + [sum(nte * percent_areas[sumop]) / 100]
             # + [i if i > 0 else None for i in nte]
         printlist.append(te)
     df = pd.DataFrame(printlist)
@@ -591,8 +589,6 @@ def detailed(
     modulus=20,
     constituent="flow",
     qualnames="",
-    tablefmt="csv",
-    float_format="%.2f",
 ):
     """Develops a detailed water or mass balance.
 
@@ -621,8 +617,6 @@ def summary(
     modulus=20,
     constituent="flow",
     qualnames="",
-    tablefmt="csv",
-    float_format="%.2f",
 ):
     """Develops a summary mass balance.
 
@@ -648,8 +642,6 @@ def mapping(
     hbn,
     year=None,
     index_prefix="",
-    tablefmt="csv",
-    float_format="%.2f",
 ):
     """Develops a csv file appropriate for joining to a GIS layer.
 
@@ -721,8 +713,6 @@ def parameters(
     uci,
     index_prefix="",
     index_delimiter="",
-    tablefmt="csv",
-    float_format="%.2f",
 ):
     """Develops a table of parameter values.
 
@@ -878,7 +868,7 @@ def main():
     @cltoolbox.command()
     def about():
         """Display version number and system information."""
-        tsutils.about(__name__)
+        tsutils.about("hspf_utils")
 
     @cltoolbox.command("detailed")
     @tsutils.copy_doc(detailed)
