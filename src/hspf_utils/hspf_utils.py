@@ -319,7 +319,7 @@ def process(uci, hbn, elements, year, modulus):
         for line in pgeninfo[1:-1]:
             if "***" in line:
                 continue
-            if "" == line.strip():
+            if line.strip() == "":
                 continue
             try:
                 _ = int(line[5:10])
@@ -341,7 +341,7 @@ def process(uci, hbn, elements, year, modulus):
         for line in schematic[3:-1]:
             if "***" in line:
                 continue
-            if "" == line:
+            if line == "":
                 continue
             words = line.split()
             if words[0] in ["PERLND", "IMPLND"] and words[5] in mlgroups:
@@ -351,7 +351,7 @@ def process(uci, hbn, elements, year, modulus):
 
     try:
         pdf = extract(hbn, "yearly", ",,,")
-    except ValueError:
+    except ValueError as e:
         raise ValueError(
             tsutils.error_wrapper(
                 f"""
@@ -364,7 +364,7 @@ def process(uci, hbn, elements, year, modulus):
                 actually work in the BINARY-INFO block.
                 """
             )
-        )
+        ) from e
 
     if year is not None:
         pdf = pd.DataFrame(pdf.loc[f"{year}", :]).T
@@ -444,18 +444,13 @@ def process(uci, hbn, elements, year, modulus):
         else:
             newnamelist.append(f"{key[1]}-{value}")
 
-    printlist = []
-    printlist.append(["BALANCE TERM"] + newnamelist + ["ALL"])
-
-    mapipratio = {}
-    mapipratio["PERLND"] = 1.0
-    mapipratio["IMPLND"] = 1.0
-
+    printlist = [["BALANCE TERM"] + newnamelist + ["ALL"]]
+    mapipratio = {"PERLND": 1.0, "IMPLND": 1.0}
     if uci is not None:
         pareas = []
         pnl = []
         iareas = []
-        for nloper, nllc in namelist:
+        for nloper, nllc in namelist.items():
             if nloper == "PERLND":
                 pnl.append((nloper, nllc))
                 pareas.append(areas[("PERLND", nllc)])
@@ -470,46 +465,32 @@ def process(uci, hbn, elements, year, modulus):
         ipratio = np.pad(ipratio, (0, len(pareas) - len(iareas)), "constant")
         sumareas = sum(pareas) + sum(iareas)
 
-        percent_areas = {}
-        percent_areas["PERLND"] = np.array(pareas) / sumareas * 100
+        percent_areas = {"PERLND": np.array(pareas) / sumareas * 100}
         percent_areas["IMPLND"] = np.array(iareas) / sumareas * 100
         percent_areas["COMBINED"] = percent_areas["PERLND"] + percent_areas["IMPLND"]
 
-        # printlist.append(["PERVIOUS"])
-        printlist.append(
-            ["PERVIOUS AREA(acres)"]
-            + [i if i > 0 else None for i in pareas]
-            + [sum(pareas)]
+        printlist.extend(
+            (
+                ["PERVIOUS AREA(acres)"]
+                + [i if i > 0 else None for i in pareas]
+                + [sum(pareas)],
+                ["PERVIOUS AREA(%)"]
+                + [i if i > 0 else None for i in percent_areas["PERLND"]]
+                + [sum(percent_areas["PERLND"])],
+                [],
+                ["IMPERVIOUS AREA(acres)"]
+                + [i if i > 0 else None for i in iareas]
+                + [sum(iareas)],
+                ["IMPERVIOUS AREA(%)"]
+                + [i if i > 0 else None for i in percent_areas["IMPLND"]]
+                + [sum(percent_areas["IMPLND"])],
+                [],
+            )
         )
-
-        printlist.append(
-            ["PERVIOUS AREA(%)"]
-            + [i if i > 0 else None for i in percent_areas["PERLND"]]
-            + [sum(percent_areas["PERLND"])]
-        )
-
-        printlist.append([])
-        # printlist.append(["IMPERVIOUS"])
-        printlist.append(
-            ["IMPERVIOUS AREA(acres)"]
-            + [i if i > 0 else None for i in iareas]
-            + [sum(iareas)]
-        )
-
-        printlist.append(
-            ["IMPERVIOUS AREA(%)"]
-            + [i if i > 0 else None for i in percent_areas["IMPLND"]]
-            + [sum(percent_areas["IMPLND"])]
-        )
-        printlist.append([])
-
         mapipratio["PERLND"] = 1.0 - ipratio
         mapipratio["IMPLND"] = ipratio
 
-    mapr = {}
-    mapr["PERLND"] = 1.0
-    mapr["IMPLND"] = 1.0
-
+    mapr = {"PERLND": 1.0, "IMPLND": 1.0}
     for term, op in elements:
         if not term:
             # term is None - insert a blank line
@@ -550,8 +531,7 @@ def process(uci, hbn, elements, year, modulus):
     df = pd.DataFrame(printlist)
     df.columns = df.iloc[0, :]
     df = df[1:]
-    df = df.set_index("BALANCE TERM")
-    return df
+    return df.set_index("BALANCE TERM")
 
 
 def process_qual_names(qualnames, tempelements):
@@ -573,8 +553,7 @@ def process_qual_names(qualnames, tempelements):
             if len(tmpvarname) > varpos:
                 varname = varname + tmpvarname[varpos:]
             varnametuple = (varname, tmpopname)
-            varnamelist = []
-            varnamelist.append(varnametuple)
+            varnamelist = [varnametuple]
             var = [label, varnamelist]
             elemlist.append(var)
             elements = tuple(elemlist)
@@ -726,44 +705,43 @@ def parameters(
     """
     blocklist = ["PWAT-PARM2", "PWAT-PARM3", "PWAT-PARM4"]  # , 'PWAT-STATE1']
 
-    params = {}
-    params["PWAT-PARM2"] = [
-        "FOREST",
-        "LZSN",
-        "INFILT",
-        "LSUR",
-        "SLSUR",
-        "KVARY",
-        "AGWRC",
-    ]
-    params["PWAT-PARM3"] = [
-        "PETMAX",
-        "PETMIN",
-        "INFEXP",
-        "INFILD",
-        "DEEPFR",
-        "BASETP",
-        "AGWETP",
-    ]
-    params["PWAT-PARM4"] = ["CEPSC", "UZSN", "NSUR", "INTFW", "IRC", "LZETP"]
+    params = {
+        "PWAT-PARM2": [
+            "FOREST",
+            "LZSN",
+            "INFILT",
+            "LSUR",
+            "SLSUR",
+            "KVARY",
+            "AGWRC",
+        ],
+        "PWAT-PARM3": [
+            "PETMAX",
+            "PETMIN",
+            "INFEXP",
+            "INFILD",
+            "DEEPFR",
+            "BASETP",
+            "AGWETP",
+        ],
+        "PWAT-PARM4": ["CEPSC", "UZSN", "NSUR", "INTFW", "IRC", "LZETP"],
+    }
     #    params['PWAT-STATE1'] = ['CEPS',   'SURS',   'UZS',    'IFWS',   'LZS',    'AGWS',   'GWVS']
 
-    defaults = {}
-    defaults["FOREST"] = 0.0
-    defaults["KVARY"] = 0.0
-
-    defaults["PETMAX"] = 40.0
-    defaults["PETMIN"] = 35.0
-    defaults["INFEXP"] = 2.0
-    defaults["INFILD"] = 2.0
-    defaults["DEEPFR"] = 0.0
-    defaults["BASETP"] = 0.0
-    defaults["AGWETP"] = 0.0
-
-    defaults["CEPSC"] = 0.0
-    defaults["NSUR"] = 0.1
-    defaults["LZETP"] = 0.0
-
+    defaults = {
+        "FOREST": 0.0,
+        "KVARY": 0.0,
+        "PETMAX": 40.0,
+        "PETMIN": 35.0,
+        "INFEXP": 2.0,
+        "INFILD": 2.0,
+        "DEEPFR": 0.0,
+        "BASETP": 0.0,
+        "AGWETP": 0.0,
+        "CEPSC": 0.0,
+        "NSUR": 0.1,
+        "LZETP": 0.0,
+    }
     # defaults['CEPS'] = 0.0
     # defaults['SURS'] = 0.0
     # defaults['UZS'] = 0.001
@@ -847,7 +825,7 @@ def parameters(
     if index_delimiter:
         spliton = index_delimiter
     if index_prefix or index_delimiter:
-        df = df.reindex(
+        return df.reindex(
             index=df.index.to_series()
             .str.rsplit(spliton)
             .str[-1]
@@ -855,11 +833,8 @@ def parameters(
             .sort_values()
             .index
         )
-    else:
-        df.index = df.index.astype(int)
-        df = df.sort_index()
-
-    return df
+    df.index = df.index.astype(int)
+    return df.sort_index()
 
 
 def main():
