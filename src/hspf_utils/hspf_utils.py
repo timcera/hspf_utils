@@ -1,5 +1,6 @@
 """Utility functions to work with HSPF models for mass balance tables."""
 
+import contextlib
 import os
 import re
 import warnings
@@ -270,11 +271,8 @@ def _give_negative_warning(df):
 
 
 def process(uci, hbn, elements, year, modulus):
-    try:
+    with contextlib.suppress(TypeError):
         year = int(year)
-    except TypeError:
-        pass
-
     lcnames = dict(zip(range(modulus + 1, 1), zip(range(modulus + 1, 1))))
     inverse_lcnames = dict(zip(range(modulus + 1, 1), zip(range(modulus + 1, 1))))
     inverse_lc = {}
@@ -321,11 +319,9 @@ def process(uci, hbn, elements, year, modulus):
                 continue
             if line.strip() == "":
                 continue
-            try:
+            with contextlib.suppress(ValueError):
                 _ = int(line[5:10])
                 continue
-            except ValueError:
-                pass
             lcnames.setdefault(line[10:30].strip(), []).append(int(line[:5]))
             inverse_lcnames[int(line[:5])] = line[10:30].strip()
             inverse_lc[int(line[:5]) % modulus] = line[10:30].strip()
@@ -451,8 +447,8 @@ def process(uci, hbn, elements, year, modulus):
         pnl = []
         iareas = []
         for nloper, nllc in namelist.items():
-            if nloper == "PERLND":
-                pnl.append((nloper, nllc))
+            if nloper[0] == "PERLND":
+                pnl.append(("PERLND", nllc))
                 pareas.append(areas[("PERLND", nllc)])
         # If there is a PERLND there must be a IMPLND.
         for _, pllc in pnl:
@@ -507,7 +503,7 @@ def process(uci, hbn, elements, year, modulus):
 
         te = [0.0]
         for sterm, operation in op:
-            try:
+            with contextlib.suppress(KeyError, ValueError):
                 tmp = np.array(
                     [nsum[(*i, sterm)] for i in sorted(namelist) if i[0] == operation]
                 )
@@ -517,8 +513,6 @@ def process(uci, hbn, elements, year, modulus):
                         * maprat[operation]
                     )
                 te = te + tmp
-            except (KeyError, ValueError):
-                pass
         if uci is None:
             te = [term] + list(te) + [sum(te) / len(te)]
             # + [i if i > 0 else None for i in te]
