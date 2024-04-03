@@ -1,3 +1,9 @@
+## v6.0.8 (2024-04-03)
+
+### Fix
+
+- fix for collection of PERLND areas
+
 ## v6.0.7 (2024-03-31)
 
 ### Refactor
