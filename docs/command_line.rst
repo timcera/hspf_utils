@@ -7,11 +7,6 @@ Help::
 
     hspf_utils --help
 
-about
-~~~~~
-.. program-output:: hspf_utils about --help
-   :prompt:
-
 detailed
 ~~~~~~~~
 .. program-output:: hspf_utils detailed --help
