@@ -164,6 +164,7 @@ _mass_balance = {
                 ("SURLI", "PERLND"),
                 ("UZLI", "PERLND"),
                 ("LZLI", "PERLND"),
+                ("IRRAPP6", "PERLND"),
             ],
         ],
         ["", [("", "")]],
@@ -192,6 +193,9 @@ _mass_balance = {
             [
                 ("SUPY", "PERLND"),
                 ("SUPY", "IMPLND"),
+                ("SURLI", "PERLND"),
+                ("UZLI", "PERLND"),
+                ("LZLI", "PERLND"),
                 ("IRRAPP6", "PERLND"),
             ],
         ],
@@ -501,25 +505,45 @@ def process(uci, hbn, elements, year, modulus):
             maprat = mapr
             sumop = test[0]
 
-        te = [0.0]
+        te = []
         for sterm, operation in op:
-            with contextlib.suppress(KeyError, ValueError):
-                tmp = np.array(
-                    [nsum[(*i, sterm)] for i in sorted(namelist) if i[0] == operation]
+            tmp=[]
+            for i in sorted(namelist):
+                if i[0] == operation:
+                    try:
+                        tmp.append(nsum[(*i, sterm)])
+                    except:
+                        tmp.append(np.nan)
+            tmp = np.array(tmp)
+            if uci is not None:
+                tmp = (
+                    np.pad(tmp, (0, len(pareas) - len(tmp)), "constant", constant_values=np.nan)
+                    * maprat[operation]
                 )
-                if uci is not None:
-                    tmp = (
-                        np.pad(tmp, (0, len(pareas) - len(tmp)), "constant")
-                        * maprat[operation]
+            else:
+                tmp = (
+                    np.pad(tmp, (0, (len(printlist[0])-2) - len(tmp)), "constant", constant_values=np.nan)
+                )
+
+            if np.isfinite(tmp).any(): #need all for summary
+                if len(te) == 0:
+                    te = tmp
+                else:
+                    te = np.where(
+                        np.isnan(te + tmp),
+                        np.where(np.isnan(te), tmp, te),
+                        te + tmp
                     )
-                te = te + tmp
+
         if uci is None:
-            te = [term] + list(te) + [sum(te) / len(te)]
+            nte = np.pad(te, (0, (len(printlist[0])-2) - len(te)), "constant", constant_values=np.nan)
+            nte_mean=np.nanmean(nte)
+            te = [term] + list(nte) + [nte_mean]
             # + [i if i > 0 else None for i in te]
         else:
             # this line assumes iareas are all at the beginning - fix?
-            nte = np.pad(te, (0, len(iareas) - len(te)), "constant")
-            te = [term] + list(nte) + [sum(nte * percent_areas[sumop]) / 100]
+            nte = np.pad(te, (0, len(iareas) - len(te)), "constant", constant_values=np.nan)
+            te = [term] + list(nte) + [np.nansum(nte * percent_areas[sumop]) / 100]
             # + [i if i > 0 else None for i in nte]
         printlist.append(te)
     df = pd.DataFrame(printlist)
