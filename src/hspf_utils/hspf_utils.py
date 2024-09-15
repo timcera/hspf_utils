@@ -507,42 +507,55 @@ def process(uci, hbn, elements, year, modulus):
 
         te = []
         for sterm, operation in op:
-            tmp=[]
+            tmp = []
             for i in sorted(namelist):
                 if i[0] == operation:
                     try:
                         tmp.append(nsum[(*i, sterm)])
-                    except:
+                    except IndexError:
                         tmp.append(np.nan)
             tmp = np.array(tmp)
             if uci is not None:
                 tmp = (
-                    np.pad(tmp, (0, len(pareas) - len(tmp)), "constant", constant_values=np.nan)
+                    np.pad(
+                        tmp,
+                        (0, len(pareas) - len(tmp)),
+                        "constant",
+                        constant_values=np.nan,
+                    )
                     * maprat[operation]
                 )
             else:
-                tmp = (
-                    np.pad(tmp, (0, (len(printlist[0])-2) - len(tmp)), "constant", constant_values=np.nan)
+                tmp = np.pad(
+                    tmp,
+                    (0, (len(printlist[0]) - 2) - len(tmp)),
+                    "constant",
+                    constant_values=np.nan,
                 )
 
-            if np.isfinite(tmp).any(): #need all for summary
+            if np.isfinite(tmp).any():  # need all for summary
                 if len(te) == 0:
                     te = tmp
                 else:
                     te = np.where(
-                        np.isnan(te + tmp),
-                        np.where(np.isnan(te), tmp, te),
-                        te + tmp
+                        np.isnan(te + tmp), np.where(np.isnan(te), tmp, te), te + tmp
                     )
 
         if uci is None:
-            nte = np.pad(te, (0, (len(printlist[0])-2) - len(te)), "constant", constant_values=np.nan)
-            nte_mean=np.nanmean(nte)
+            nte = np.pad(
+                te,
+                (0, (len(printlist[0]) - 2) - len(te)),
+                "constant",
+                constant_values=np.nan,
+            )
+            nte_mean = np.nanmean(nte)
             te = [term] + list(nte) + [nte_mean]
             # + [i if i > 0 else None for i in te]
         else:
             # this line assumes iareas are all at the beginning - fix?
-            nte = np.pad(te, (0, len(iareas) - len(te)), "constant", constant_values=np.nan)
+            nte = np.pad(
+                te, (0, len(iareas) - len(te)), "constant", constant_values=np.nan
+            )
             te = [term] + list(nte) + [np.nansum(nte * percent_areas[sumop]) / 100]
             # + [i if i > 0 else None for i in nte]
         printlist.append(te)
@@ -746,20 +759,20 @@ def parameters(
     }
     #    params['PWAT-STATE1'] = ['CEPS',   'SURS',   'UZS',    'IFWS',   'LZS',    'AGWS',   'GWVS']
 
-    defaults = {
-        "FOREST": 0.0,
-        "KVARY": 0.0,
-        "PETMAX": 40.0,
-        "PETMIN": 35.0,
-        "INFEXP": 2.0,
-        "INFILD": 2.0,
-        "DEEPFR": 0.0,
-        "BASETP": 0.0,
-        "AGWETP": 0.0,
-        "CEPSC": 0.0,
-        "NSUR": 0.1,
-        "LZETP": 0.0,
-    }
+    # defaults = {
+    #     "FOREST": 0.0,
+    #     "KVARY": 0.0,
+    #     "PETMAX": 40.0,
+    #     "PETMIN": 35.0,
+    #     "INFEXP": 2.0,
+    #     "INFILD": 2.0,
+    #     "DEEPFR": 0.0,
+    #     "BASETP": 0.0,
+    #     "AGWETP": 0.0,
+    #     "CEPSC": 0.0,
+    #     "NSUR": 0.1,
+    #     "LZETP": 0.0,
+    # }
     # defaults['CEPS'] = 0.0
     # defaults['SURS'] = 0.0
     # defaults['UZS'] = 0.001
