@@ -512,7 +512,7 @@ def process(uci, hbn, elements, year, modulus):
                 if i[0] == operation:
                     try:
                         tmp.append(nsum[(*i, sterm)])
-                    except IndexError:
+                    except (IndexError, KeyError):
                         tmp.append(np.nan)
             tmp = np.array(tmp)
             if uci is not None:
