@@ -1,3 +1,9 @@
+## v6.0.10 (2024-09-14)
+
+### Fix
+
+- needed additional error in try/except
+
 ## v6.0.9 (2024-09-14)
 
 ### Refactor
