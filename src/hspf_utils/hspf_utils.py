@@ -44,6 +44,29 @@ docstrings = {
 
         The remainder of the PERLND label divided by the modulus is the land
         cover number.""",
+    "perlnd_num": r"""perlnd_num : str
+        [optional, defaults to None]
+
+        Here, the user can specify
+            - a single ID number to match
+            - no entry, matching any operation ID number
+            - a range, specified as any combination of simple integers and
+              groups of integers marked as "start:end", with multiple allowed
+              sub-ranges separated by the "+" sign.
+
+        Examples:
+
+            +-----------------------+-------------------------------+
+            | Label ID              | Expands to:                   |
+            +=======================+===============================+
+            | 1:10                  | 1,2,3,4,5,6,7,8,9,10          |
+            +-----------------------+-------------------------------+
+            | 101:119+221:239       | 101,102..119,221,221,...239   |
+            +-----------------------+-------------------------------+
+            | 3:5+7                 | 3,4,5,7                       |
+            +-----------------------+-------------------------------+
+
+        If None the water balance would cover all perlnds.""",
     "tablefmt": r"""tablefmt : str
         [optional, default is 'cvs_nos']
 
@@ -274,7 +297,7 @@ def _give_negative_warning(df):
         )
 
 
-def process(uci, hbn, elements, year, modulus):
+def process(uci, hbn, elements, year, modulus, luelist):
     with contextlib.suppress(TypeError):
         year = int(year)
     lcnames = dict(zip(range(modulus + 1, 1), zip(range(modulus + 1, 1))))
@@ -284,7 +307,7 @@ def process(uci, hbn, elements, year, modulus):
     lnds = {}
 
     if uci is not None:
-        with open(uci, encoding="ascii") as fp:
+        with open(uci, encoding="utf-8") as fp:
             content = fp.readlines()
 
         if not os.path.exists(hbn):
@@ -375,6 +398,17 @@ def process(uci, hbn, elements, year, modulus):
     mindex = pd.MultiIndex.from_tuples(mindex, names=["op", "number", "balterm", "lc"])
     pdf.columns = mindex
     pdf = pdf.sort_index(axis="columns")
+
+    if luelist is not None:
+        pdf_new=[]
+        for i in range(len(luelist)):
+            pdf_b=pdf.iloc[:,(pdf.columns.get_level_values('number')==luelist[i])]
+            if i==0:
+                pdf_new=pdf_b
+            else:
+                pdf_new=pd.concat([pdf_new,pdf_b],axis=1)
+        pdf=pdf_new
+
     mindex = pdf.columns
     aindex = [(i[0], i[1]) for i in pdf.columns]
     mindex = [
@@ -450,8 +484,8 @@ def process(uci, hbn, elements, year, modulus):
         pareas = []
         pnl = []
         iareas = []
-        for nloper, nllc in namelist.items():
-            if nloper[0] == "PERLND":
+        for nloper, nllc in namelist:
+            if nloper == "PERLND":
                 pnl.append(("PERLND", nllc))
                 pareas.append(areas[("PERLND", nllc)])
         # If there is a PERLND there must be a IMPLND.
@@ -533,7 +567,7 @@ def process(uci, hbn, elements, year, modulus):
                     constant_values=np.nan,
                 )
 
-            if np.isfinite(tmp).any():  # need all for summary
+            if np.isfinite(tmp).any():
                 if len(te) == 0:
                     te = tmp
                 else:
@@ -599,6 +633,7 @@ def detailed(
     modulus=20,
     constituent="flow",
     qualnames="",
+    perlnd_num=None,
 ):
     """Develops a detailed water or mass balance.
 
@@ -610,13 +645,35 @@ def detailed(
     ${modulus}
     ${constituent}
     ${qualnames}
+    ${perlnd_num}
     ${tablefmt}
     ${float_format}
     """
+
+    # must be integer 1-999 or None or range to parse
+    if perlnd_num is not None:
+        try:
+            perlnd_num = int(perlnd_num)
+            luelist = [perlnd_num]
+        except ValueError:
+            luelist = tsutils.range_to_numlist(perlnd_num)
+        for luenum in luelist:
+            if luenum < 1 or luenum > 999:
+                raise ValueError(
+                    tsutils.error_wrapper(
+                        f"""
+                        The land use element must be an integer from 1 to
+                        999 inclusive, instead of {luenum}.
+                        """
+                    )
+                )
+    else:
+        luelist = perlnd_num
+
     elements = _mass_balance[(constituent, "detailed", bool(uci))]
     if constituent == "qual":
         elements = process_qual_names(qualnames, elements)
-    return process(uci, hbn, elements, year, modulus)
+    return process(uci, hbn, elements, year, modulus, luelist)
 
 
 @tsutils.doc(docstrings)
@@ -627,6 +684,7 @@ def summary(
     modulus=20,
     constituent="flow",
     qualnames="",
+    perlnd_num=None,
 ):
     """Develops a summary mass balance.
 
@@ -640,11 +698,33 @@ def summary(
     ${qualnames}
     ${tablefmt}
     ${float_format}
+    ${perlnd_num}
     """
+    
+    # must be integer 1-999 or None or range to parse
+    if perlnd_num is not None:
+        try:
+            perlnd_num = int(perlnd_num)
+            luelist = [perlnd_num]
+        except ValueError:
+            luelist = tsutils.range_to_numlist(perlnd_num)
+        for luenum in luelist:
+            if luenum < 1 or luenum > 999:
+                raise ValueError(
+                    tsutils.error_wrapper(
+                        f"""
+                        The land use element must be an integer from 1 to
+                        999 inclusive, instead of {luenum}.
+                        """
+                    )
+                )
+    else:
+        luelist = perlnd_num
+
     elements = _mass_balance[(constituent, "summary", bool(uci))]
     if constituent == "qual":
         elements = process_qual_names(qualnames, elements)
-    return process(uci, hbn, elements, year, modulus)
+    return process(uci, hbn, elements, year, modulus, luelist)
 
 
 @tsutils.doc(docstrings)
@@ -781,7 +861,7 @@ def parameters(
     # defaults['AGWS'] = 0.0
     # defaults['GWVS'] = 0.0
 
-    with open(uci, encoding="ascii") as fp:
+    with open(uci, encoding="utf-8") as fp:
         content = fp.readlines()
 
     content = [i[:81].rstrip() for i in content if "***" not in i]
@@ -798,7 +878,7 @@ def parameters(
             supfname = words[2]
     if supfname:
         ucipath = os.path.dirname(uci)
-        with open(os.path.join(ucipath, supfname), encoding="ascii") as sfp:
+        with open(os.path.join(ucipath, supfname), encoding="utf-8") as sfp:
             supfname = sfp.readlines()
             supfname = [i.strip() for i in supfname if "***" not in i]
             supfname = [i.strip() for i in supfname if i]
@@ -885,6 +965,7 @@ def main():
         modulus=20,
         constituent="flow",
         qualnames="",
+        perlnd_num=None,
         tablefmt="csv_nos",
         float_format=".2f",
     ):
@@ -896,6 +977,7 @@ def main():
                 modulus=modulus,
                 constituent=constituent,
                 qualnames=qualnames,
+                perlnd_num=perlnd_num,
             ),
             float_format=float_format,
             headers="keys",
@@ -911,6 +993,7 @@ def main():
         modulus=20,
         constituent="flow",
         qualnames="",
+        perlnd_num=None,
         tablefmt="csv_nos",
         float_format=".2f",
     ):
@@ -922,6 +1005,7 @@ def main():
                 modulus=modulus,
                 constituent=constituent,
                 qualnames=qualnames,
+                perlnd_num=perlnd_num,
             ),
             float_format=float_format,
             headers="keys",
