@@ -10,7 +10,7 @@ import pandas as pd
 from hspfbintoolbox.hspfbintoolbox import extract
 from toolbox_utils import tsutils
 
-__all__ = ["detailed", "summary", "mapping", "parameters"]
+__all__ = ["about", "detailed", "summary", "mapping", "parameters"]
 
 docstrings = {
     "hbn": r"""hbn : str
@@ -591,6 +591,11 @@ def process_qual_names(qualnames, tempelements):
     return elements
 
 
+def about():
+    """Prints out information about the module."""
+    return tsutils.about("hspf_utils")
+
+
 @tsutils.doc(docstrings)
 def detailed(
     hbn,
@@ -874,7 +879,8 @@ def main():
     @cltoolbox.command()
     def about():
         """Display version number and system information."""
-        tsutils.about("hspf_utils")
+        for key, value in tsutils.about("hspf_utils").items():
+            print(f"{key}: {value}")
 
     @cltoolbox.command("detailed")
     @tsutils.copy_doc(detailed)

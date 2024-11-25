@@ -1,5 +1,5 @@
 """Define hspf_utils package."""
 
-from .hspf_utils import detailed, mapping, parameters, summary
+from .hspf_utils import about, detailed, mapping, parameters, summary
 
-__all__ = ["detailed", "summary", "mapping", "parameters"]
+__all__ = ["about", "detailed", "summary", "mapping", "parameters"]
