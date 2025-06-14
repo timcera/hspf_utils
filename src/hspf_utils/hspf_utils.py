@@ -291,7 +291,7 @@ def _give_negative_warning(df):
                 f"""
             This may be OK, but FYI there are negative values at:
 
-            {df[testpdf].dropna(how='all').dropna(axis=1, how='all')}
+            {df[testpdf].dropna(how="all").dropna(axis=1, how="all")}
             """
             )
         )
