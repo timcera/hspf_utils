@@ -18,11 +18,6 @@
     :target: https://pypi.python.org/pypi/hspf_utils/
     :height: 20
 
-.. image:: https://img.shields.io/pypi/dd/hspf_utils.svg
-    :alt: hspf_utils downloads
-    :target: https://pypi.python.org/pypi/hspf_utils/
-    :height: 20
-
 .. image:: https://img.shields.io/pypi/pyversions/hspf_utils
     :alt: PyPI - Python Version
     :target: https://pypi.org/project/hspf_utils/
