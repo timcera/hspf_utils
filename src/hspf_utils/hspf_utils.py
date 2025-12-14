@@ -8,7 +8,8 @@ import warnings
 import numpy as np
 import pandas as pd
 from hspfbintoolbox.hspfbintoolbox import extract
-from toolbox_utils import tsutils
+
+from hspf_utils.toolbox_utils.src.toolbox_utils import tsutils
 
 __all__ = ["about", "detailed", "summary", "mapping", "parameters"]
 
@@ -370,6 +371,8 @@ def process(uci, hbn, elements, year, modulus, luelist):
             if line.strip() == "":
                 continue
             with contextlib.suppress(ValueError):
+                # If these columns have an integer, then the NAME field is used
+                # to describe a range of land covers.  Need to skip these.
                 _ = int(line[5:10])
                 continue
             lcnames.setdefault(line[10:30].strip(), []).append(int(line[:5]))
@@ -424,13 +427,9 @@ def process(uci, hbn, elements, year, modulus, luelist):
 
     if luelist is not None:
         pdf_new = []
-        for i in range(len(luelist)):
-            pdf_b = pdf.iloc[:, (pdf.columns.get_level_values("number") == luelist[i])]
-            if i == 0:
-                pdf_new = pdf_b
-            else:
-                pdf_new = pd.concat([pdf_new, pdf_b], axis=1)
-        pdf = pdf_new
+        for val in luelist:
+            pdf_new.append(pdf.iloc[:, (pdf.columns.get_level_values("number") == val)])
+        pdf = pd.concat(pdf_new, axis=1)
 
     mindex = pdf.columns
     aindex = [(i[0], i[1]) for i in pdf.columns]
@@ -468,7 +467,7 @@ def process(uci, hbn, elements, year, modulus, luelist):
                 _give_negative_warning(subset)
 
                 if uci is None:
-                    if subset.empty is True:
+                    if subset.empty:
                         nsum[(lue, lc, bterm)] = 0.0
                         if (lue, lc) not in namelist:
                             namelist[(lue, lc)] = ""
@@ -478,13 +477,11 @@ def process(uci, hbn, elements, year, modulus, luelist):
                 else:
                     sareas = subset.columns.get_level_values("area")
                     ssareas = sum(sareas)
-                    if (lue, lc) not in areas:
-                        areas[(lue, lc)] = ssareas
+                    areas[(lue, lc)] = ssareas
 
-                    if subset.empty is True or ssareas == 0:
+                    if subset.empty or ssareas == 0:
                         nsum[(lue, lc, bterm)] = 0.0
-                        if (lue, lc) not in namelist:
-                            namelist[(lue, lc)] = ""
+                        namelist[(lue, lc)] = ""
                     else:
                         fa = sareas / areas[(lue, lc)]
                         nsum[(lue, lc, bterm)] = (
@@ -499,7 +496,10 @@ def process(uci, hbn, elements, year, modulus, luelist):
         if key[1] == value:
             newnamelist.append(f"{key[1]}")
         else:
-            newnamelist.append(f"{key[1]}-{value}")
+            if value:
+                newnamelist.append(f"{key[1]}_{value}")
+            else:
+                newnamelist.append(f"{key[1]}")
 
     printlist = [["BALANCE TERM"] + newnamelist + ["ALL"]]
     mapipratio = {"PERLND": 1.0, "IMPLND": 1.0}
@@ -511,7 +511,7 @@ def process(uci, hbn, elements, year, modulus, luelist):
             if nloper == "PERLND":
                 pnl.append(("PERLND", nllc))
                 pareas.append(areas[("PERLND", nllc)])
-        # If there is a PERLND there must be a IMPLND.
+        # If there is a PERLND there might be a IMPLND.
         for _, pllc in pnl:
             try:
                 iareas.append(areas[("IMPLND", pllc)])
