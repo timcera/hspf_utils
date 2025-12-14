@@ -41,7 +41,7 @@ dependencies = [
     "typing-extensions"
 ]
 description = "Command line script and Python library to develop water balance from HSPF models"
-dynamic = ["version"]
+dynamic = ["readme", "version"]
 keywords = [
     "cli",
     "cli-application",
@@ -56,7 +56,6 @@ keywords = [
 ]
 license = {text = "BSD-3-Clause"}
 name = "hspf_utils"
-readme = "README.rst"
 requires-python = ">=3.10"
 
 [project.scripts]
