@@ -1,3 +1,18 @@
+## v6.1.0 (2026-03-29)
+
+### Feat
+
+- readd about function
+
+### Fix
+
+- update toolbox_utils and updated docstrings
+- add _process_perlnd_num
+
+### Refactor
+
+- refactor
+
 ## v6.0.10 (2024-09-14)
 
 ### Fix
