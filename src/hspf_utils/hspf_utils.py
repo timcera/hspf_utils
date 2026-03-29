@@ -16,8 +16,8 @@ __all__ = ["about", "detailed", "summary", "mapping", "parameters"]
 docstrings = {
     "hbn": r"""hbn : str
         This is the binary output file containing PERLND and IMPLND
-        information.  This should be the binary output file created by the
-        `uci` file.""",
+        information.  If `uci` is given, this should be the binary output file
+        created when running the `uci` file.""",
     "uci": r"""uci
         [optional, defaults to None]
 
@@ -49,37 +49,33 @@ docstrings = {
         [optional, defaults to None]
 
         Here, the user can specify
+
             - a single ID number to match
             - no entry, matching any operation ID number
             - a range, specified as any combination of simple integers and
               groups of integers marked as "start:end", with multiple allowed
               sub-ranges separated by the "+" sign.
 
-        Examples:
-
-            +-----------------------+-------------------------------+
-            | Label ID              | Expands to:                   |
-            +=======================+===============================+
-            | 1:10                  | 1,2,3,4,5,6,7,8,9,10          |
-            +-----------------------+-------------------------------+
-            | 101:119+221:239       | 101,102..119,221,221,...239   |
-            +-----------------------+-------------------------------+
-            | 3:5+7                 | 3,4,5,7                       |
-            +-----------------------+-------------------------------+
+        +-----------------------+-------------------------------+
+        | Label ID              | Expands to:                   |
+        +=======================+===============================+
+        | 1:10                  | 1,2,3,4,5,6,7,8,9,10          |
+        +-----------------------+-------------------------------+
+        | 101:119+221:239       | 101,102..119,221,221,...239   |
+        +-----------------------+-------------------------------+
+        | 3:5+7                 | 3,4,5,7                       |
+        +-----------------------+-------------------------------+
 
         If None the water balance would cover all perlnds.""",
-    "tablefmt": r"""tablefmt : str
-        [optional, default is 'cvs_nos']
+    "tablefmt": r"""[optional, default is 'cvs_nos']
 
-        The table format.  Can be one of 'csv', 'tsv', 'csv_nos', 'tsv_nos',
-        'plain', 'simple', 'github', 'grid', 'fancy_grid', 'pipe', 'orgtbl',
-        'jira', 'presto', 'psql', 'rst', 'mediawiki', 'moinmoin', 'youtrack',
-        'html', 'latex', 'latex_raw', 'latex_booktabs' and
-        'textile'.""",
-    "float_format": r"""float_format : str
-        [optional, default is '.2f']
+The table format.  Can be one of 'csv', 'tsv', 'csv_nos', 'tsv_nos',
+'plain', 'simple', 'github', 'grid', 'fancy_grid', 'pipe', 'orgtbl',
+'jira', 'presto', 'psql', 'rst', 'mediawiki', 'moinmoin', 'youtrack',
+'html', 'latex', 'latex_raw', 'latex_booktabs' and 'textile'.""",
+    "float_format": r"""[optional, default is '.2f']
 
-        The format for floating point numbers in the output table.""",
+The format for floating point numbers in the output table.""",
     "index_prefix": r"""index_prefix
         [optional, defaults to '']
 
@@ -89,8 +85,8 @@ docstrings = {
     "index_delimiter": r"""index_delimiter: str
         [optional, defaults to '-']
 
-        Useful to separate the `index_prefix` from the PERLND/IMPLND number.
-        """,
+        Useful to separate the `index_prefix` from the PERLND/IMPLND
+        number.""",
     "constituent": r"""constituent: str
         [optional, defaults to 'flow']
 
@@ -100,8 +96,7 @@ docstrings = {
         'qual' for PQUAL/IQUAL.
 
         if 'qual' is chosen, then the option 'qualnames' specifies the names to
-        be found in the HBN file.
-        """,
+        be found in the HBN file.""",
     "qualnames": r"""qualnames : str
         [optional, defaults to '']
 
@@ -112,8 +107,7 @@ docstrings = {
             --qualnames 'TOTAL N','TOTAL P'
 
         This will find PQUAL/IQUAL variables named 'SOQUAL-TOTAL N', etc, which
-        occurs if the QUALID in QUAL-PROPS is 'TOTAL N'.
-        """,
+        occurs if the QUALID in QUAL-PROPS is 'TOTAL N'.""",
 }
 
 _mass_balance = {
@@ -663,7 +657,8 @@ def detailed(
     qualnames="",
     perlnd_num=None,
 ):
-    """Develops a detailed water or mass balance.
+    """
+    Develops a detailed water or mass balance.
 
     Parameters
     ----------
@@ -674,10 +669,7 @@ def detailed(
     ${constituent}
     ${qualnames}
     ${perlnd_num}
-    ${tablefmt}
-    ${float_format}
     """
-
     luelist = _process_perlnd_num(perlnd_num)
 
     elements = _mass_balance[(constituent, "detailed", bool(uci))]
@@ -696,7 +688,8 @@ def summary(
     qualnames="",
     perlnd_num=None,
 ):
-    """Develops a summary mass balance.
+    """
+    Develops a summary mass balance.
 
     Parameters
     ----------
@@ -706,11 +699,8 @@ def summary(
     ${modulus}
     ${constituent}
     ${qualnames}
-    ${tablefmt}
-    ${float_format}
     ${perlnd_num}
     """
-
     luelist = _process_perlnd_num(perlnd_num)
 
     elements = _mass_balance[(constituent, "summary", bool(uci))]
@@ -725,24 +715,14 @@ def mapping(
     year=None,
     index_prefix="",
 ):
-    """Develops a csv file appropriate for joining to a GIS layer.
+    """
+    Develops a csv file appropriate for joining to a GIS layer.
 
     Parameters
     ----------
     ${hbn}
-
     ${year}
-
     ${index_prefix}
-        [optional, defaults to '']
-
-        A string prepended to the PERLND code, which would allow being
-        run on different models and collected into one dataset by
-        creating a unique ID.
-
-    ${tablefmt}
-
-    ${float_format}
     """
     try:
         pdf = extract(hbn, "yearly", ",,,")
@@ -796,15 +776,14 @@ def parameters(
     index_prefix="",
     index_delimiter="",
 ):
-    """Develops a table of parameter values.
+    """
+    Develops a table of parameter values.
 
     Parameters
     ----------
     ${uci}
     ${index_prefix}
     ${index_delimiter}
-    ${tablefmt}
-    ${float_format}
     """
     blocklist = ["PWAT-PARM2", "PWAT-PARM3", "PWAT-PARM4"]  # , 'PWAT-STATE1']
 
@@ -941,15 +920,19 @@ def parameters(
 
 
 def main():
+    from argparse import RawTextHelpFormatter
+
     import cltoolbox
 
-    @cltoolbox.command()
+    @cltoolbox.command(formatter_class=RawTextHelpFormatter)
     def about():
         """Display version number and system information."""
         for key, value in tsutils.about("hspf_utils").items():
             print(f"{key}: {value}")
 
-    @cltoolbox.command("detailed")
+    @cltoolbox.command("detailed", formatter_class=RawTextHelpFormatter)
+    @cltoolbox.arg("tablefmt", help=docstrings["tablefmt"])
+    @cltoolbox.arg("float_format", help=docstrings["float_format"])
     @tsutils.copy_doc(detailed)
     def _detailed_cli(
         hbn,
@@ -977,7 +960,9 @@ def main():
             tablefmt=tablefmt,
         )
 
-    @cltoolbox.command("summary")
+    @cltoolbox.command("summary", formatter_class=RawTextHelpFormatter)
+    @cltoolbox.arg("tablefmt", help=docstrings["tablefmt"])
+    @cltoolbox.arg("float_format", help=docstrings["float_format"])
     @tsutils.copy_doc(summary)
     def _summary_cli(
         hbn,
@@ -1005,7 +990,9 @@ def main():
             tablefmt=tablefmt,
         )
 
-    @cltoolbox.command("mapping")
+    @cltoolbox.command("mapping", formatter_class=RawTextHelpFormatter)
+    @cltoolbox.arg("tablefmt", help=docstrings["tablefmt"])
+    @cltoolbox.arg("float_format", help=docstrings["float_format"])
     @tsutils.copy_doc(mapping)
     def _mapping_cli(
         hbn, year=None, index_prefix="", tablefmt="csv_nos", float_format="g"
@@ -1021,7 +1008,9 @@ def main():
             tablefmt=tablefmt,
         )
 
-    @cltoolbox.command("parameters")
+    @cltoolbox.command("parameters", formatter_class=RawTextHelpFormatter)
+    @cltoolbox.arg("tablefmt", help=docstrings["tablefmt"])
+    @cltoolbox.arg("float_format", help=docstrings["float_format"])
     @tsutils.copy_doc(parameters)
     def _parameters_cli(
         uci,
