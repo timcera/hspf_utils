@@ -73,7 +73,7 @@ The table format.  Can be one of 'csv', 'tsv', 'csv_nos', 'tsv_nos',
 'plain', 'simple', 'github', 'grid', 'fancy_grid', 'pipe', 'orgtbl',
 'jira', 'presto', 'psql', 'rst', 'mediawiki', 'moinmoin', 'youtrack',
 'html', 'latex', 'latex_raw', 'latex_booktabs' and 'textile'.""",
-    "float_format": r"""[optional, default is '.2f']
+    "float_format": r"""[optional, default is 'g']
 
 The format for floating point numbers in the output table.""",
     "index_prefix": r"""index_prefix
@@ -943,7 +943,7 @@ def main():
         qualnames="",
         perlnd_num=None,
         tablefmt="csv_nos",
-        float_format=".2f",
+        float_format="g",
     ):
         tsutils.printiso(
             detailed(
@@ -973,7 +973,7 @@ def main():
         qualnames="",
         perlnd_num=None,
         tablefmt="csv_nos",
-        float_format=".2f",
+        float_format="g",
     ):
         tsutils.printiso(
             summary(
