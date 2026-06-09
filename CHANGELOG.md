@@ -1,3 +1,9 @@
+## v6.1.1 (2026-06-09)
+
+### Fix
+
+- fixed naming of water balance table index name from "UniqueID" to "BALANCE TERM"
+
 ## v6.1.0 (2026-03-29)
 
 ### Feat
