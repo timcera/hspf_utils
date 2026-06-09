@@ -612,8 +612,7 @@ def process(uci, hbn, elements, year, modulus, luelist):
         printlist.append(te)
     df = pd.DataFrame(printlist)
     df.columns = df.iloc[0, :]
-    df = df[1:]
-    return df.set_index("BALANCE TERM")
+    return df[1:].set_index("BALANCE TERM")
 
 
 def process_qual_names(qualnames, tempelements):
@@ -958,6 +957,7 @@ def main():
             float_format=float_format,
             headers="keys",
             tablefmt=tablefmt,
+            rename_index=False,
         )
 
     @cltoolbox.command("summary", formatter_class=RawTextHelpFormatter)
@@ -988,6 +988,7 @@ def main():
             float_format=float_format,
             headers="keys",
             tablefmt=tablefmt,
+            rename_index=False,
         )
 
     @cltoolbox.command("mapping", formatter_class=RawTextHelpFormatter)
@@ -1006,6 +1007,7 @@ def main():
             float_format=float_format,
             headers="keys",
             tablefmt=tablefmt,
+            rename_index=False,
         )
 
     @cltoolbox.command("parameters", formatter_class=RawTextHelpFormatter)
@@ -1028,6 +1030,7 @@ def main():
             float_format=float_format,
             headers="keys",
             tablefmt=tablefmt,
+            rename_index=False,
         )
 
     cltoolbox.main()
